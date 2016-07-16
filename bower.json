@@ -1,0 +1,20 @@
+{
+  "name": "frontEnd",
+  "homepage": "https://github.com/TIY-LiveLocal/frontEnd",
+  "authors": [
+    "Jordan Long <jordan.long222@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

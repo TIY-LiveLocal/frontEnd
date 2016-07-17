@@ -1,0 +1,125 @@
+.container{
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 667px;
+  width: 375px;
+  background: #B2C9AB;
+}
+
+header {
+  display: block;
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px 5px 0 0;;
+  background-color: #92B6B1;
+  margin-left: auto;
+  margin-right: auto;
+  height: 55px;
+  padding-bottom: 5px;
+  padding-top: .5em;
+  color: black;
+}
+
+.fa-bars{
+  padding:5px;
+  font-size: 2em;
+  opacity:.5;
+  display: inline;
+  padding-left: .5em;
+  padding-top: .5em;
+}
+.pageTitle{
+  font:Orbitron;
+  color:black;
+  font-size: 2.5em;
+  text-align: center;
+  opacity:.5;
+  display: inline;
+  padding-top: .5em;
+  padding-left:1em;
+
+}
+.stripe{
+  background-color: #666A86;
+  margin-left: auto;
+  margin-right: auto;
+  height: 7px;
+  width:100%;
+}
+.stripe2{
+  background-color: #E8DDB5;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5px;
+  width:100%;
+}
+.stripe3{
+  background-color: #788AA3;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5px;
+  width:100%;
+  // padding-bottom: 10px;
+}
+
+.instructions{
+  color:black;
+  font-size: 1.75em;
+  text-align: center;
+  padding-top: .5em;
+}
+.instructions2{
+  color:black;
+  font-size: 1.75em;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.questions{
+  color:black;
+  font-size: 1.3em;
+  padding-left: .5em;
+  font-family: "Lato", Verdana, sans-serif;
+}
+
+.stripe4{
+  background-color: #666A86;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 122px;
+  height: 7px;
+  width:100%;
+}
+.stripe5{
+  background-color: #E8DDB5;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5px;
+  width:100%;
+}
+.stripe6{
+  background-color: #92B6B1;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5px;
+  width:100%;
+  // padding-bottom: 10px;
+}
+footer{
+  display: block;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  background-color: #788AA3;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35px;
+  padding-top: .5em;
+
+}
+
+.footerText{
+    color: black;
+    font-size: 1.3em;
+    padding-left: 1em;
+    opacity:.5;
+}

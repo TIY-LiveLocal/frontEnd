@@ -1,3 +1,4 @@
+
 var app = angular.module("app", ['ngRoute']);
 
 app.config(function($routeProvider){
@@ -8,6 +9,9 @@ app.config(function($routeProvider){
   .when('/dashboard',{
     templateUrl: 'views/dashboard.html',
     controller: 'testController'
+  })
+  .when('/places', {
+    templateUrl: '../../profile.html'
   })
   .otherwise({
     redirectTo: 'login'

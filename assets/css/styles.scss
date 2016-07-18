@@ -1,6 +1,19 @@
+
+@import '../../bower_components/meyer-reset/meyer-reset';
+
+$font1: 'Galada', cursive;
+$font2: 'Arimo', sans-serif;
+
+$blue: #9DDCDC;
+$tan: #FFF4E1;
+$yellow: #FFEBB7;
+$red: #E67A7A;
 $charcoal: #6F6F6F;
 $grey: #AEB9BD;
 $darkGrey: #9E9E9E;
 $white: #E0E0E0;
 
-@import 'profile';
+
+@import "partials/profile";
+@import "partials/login";
+@import "partials/dashboard";

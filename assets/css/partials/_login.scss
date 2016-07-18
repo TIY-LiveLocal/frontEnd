@@ -1,0 +1,50 @@
+#loginPage{
+  width: 80%;
+  margin: 0 auto;
+  font-family: $font2;
+
+  .loginWrap{
+    border: 1px solid $blue;
+    border-radius: 10px;
+    margin: 2em;
+    padding: 1em 1em 3em;
+    h2{
+      font-family: $font1;
+      color: $red;
+      text-align: center;
+    }
+    .new_user{
+      .field{
+        width: 40%;
+        margin: 0em auto;
+        padding: 1%;
+        #user_email{
+          font-size: 1.1em;
+          border: none;
+          border-bottom: 1px solid $blue;
+          padding: 1%;
+        }
+        #user_password{
+          @extend #user_email;
+        }
+        .rememberMe{
+          font-size: .75em;
+        }
+      }
+      .actions{
+        width: 40%;
+        margin: 0 auto;
+        input{
+          background: $blue;
+          color: $blue;
+          border: none;
+          padding: 2%;
+        }
+      }
+    }
+    .help{
+      margin: 30%;
+      font-size: .75em;
+    }
+  }
+}

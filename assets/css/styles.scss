@@ -1,0 +1,29 @@
+$font1: 'Galada', cursive;
+$font2: 'Arimo', sans-serif;
+
+$black: #011627;
+$mist: #EFFFE9;
+$green: #2EC4B6;
+$red: #E71D36;
+
+#dashboard{
+  .logo{
+    font-family: $font1;
+    h2{
+      border: 1px solid black;
+      border-radius: 10px 10px;
+      display: inline-block;
+    }
+    }
+    .options{
+      font-family: $font2;
+      h3{
+        display: inline-block;
+        width: 30%;
+        height: 10em;
+        border: 1px solid black;
+      }
+    }
+}
+
+@import "partials/login";

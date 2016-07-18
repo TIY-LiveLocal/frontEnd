@@ -1,0 +1,51 @@
+#dashboard .logo {
+  font-family: "Galada", cursive; }
+  #dashboard .logo h2 {
+    border: 1px solid black;
+    border-radius: 10px 10px;
+    display: inline-block; }
+#dashboard .options {
+  font-family: "Arimo", sans-serif; }
+  #dashboard .options h3 {
+    display: inline-block;
+    width: 30%;
+    height: 10em;
+    border: 1px solid black; }
+
+#loginPage {
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Arimo", sans-serif; }
+  #loginPage .loginWrap {
+    border: 1px solid #2EC4B6;
+    border-radius: 10px;
+    margin: 2em;
+    padding: 1em 1em 3em; }
+    #loginPage .loginWrap h2 {
+      font-family: "Galada", cursive;
+      color: #2EC4B6;
+      text-align: center; }
+    #loginPage .loginWrap .new_user .field {
+      width: 40%;
+      margin: 0em auto;
+      padding: 1%; }
+      #loginPage .loginWrap .new_user .field #user_email, #loginPage .loginWrap .new_user .field #user_password {
+        font-size: 1.1em;
+        border: none;
+        border-bottom: 1px solid #2EC4B6;
+        padding: 1%; }
+      #loginPage .loginWrap .new_user .field .rememberMe {
+        font-size: .75em; }
+    #loginPage .loginWrap .new_user .actions {
+      width: 40%;
+      margin: 0 auto; }
+      #loginPage .loginWrap .new_user .actions input {
+        background: #2EC4B6;
+        color: #EFFFE9;
+        border: none;
+        padding: 2%; }
+    #loginPage .loginWrap .help {
+      margin: 30%;
+      font-size: .75em; }
+
+/*# sourceMappingURL=styles.css.map */

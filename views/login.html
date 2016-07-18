@@ -1,0 +1,37 @@
+<div id="loginPage">
+
+  <div class="loginWrap">
+
+    <h2>Pearl</h2>
+
+    <form class="new_user" id="new_user" action="#/dashboard" accept-charset="UTF-8">
+        <div class="field">
+            <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" placeholder="username"/>
+        </div>
+
+        <div class="field">
+
+            <input autocomplete="off" type="password" name="user[password]" id="user_password" placeholder="password"/>
+        </div>
+
+        <div class="field">
+            <input name="user[remember_me]" type="hidden" value="0" />
+            <input class="rememberMe" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+            <label class="rememberMe" for="user_remember_me">Remember me</label>
+        </div>
+
+        <div class="actions"><a href="#/dashboard">
+            <input type="submit" name="commit" value="Log in" data-disable-with="Log in" />
+            </a>
+        </div>
+    </form>
+
+    <a class="help" href="/users/sign_up">Sign up</a>
+    <br />
+
+    <a class="help" href="/users/password/new">Forgot your password?</a>
+    <br />
+
+  </div>
+
+</div>

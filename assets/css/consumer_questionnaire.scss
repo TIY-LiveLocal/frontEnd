@@ -1,3 +1,5 @@
+// @media (max-width: 375px) {
+//   #consumer_questionnaire{
 .container{
   border: 1px solid black;
   border-radius: 5px;
@@ -37,6 +39,7 @@ header {
   display: inline;
   padding-top: .5em;
   padding-left:1em;
+  // padding-left: 20%;
 
 }
 .stripe{
@@ -123,3 +126,23 @@ footer{
     padding-left: 1em;
     opacity:.5;
 }
+//below closes #consumer_questionnaire wrapper for mobile view
+// }
+// below closes @media mobile view
+// }
+
+// if the display is larger than mobile-width, use the following CSS
+// @media (min-width: 376px){
+//   #consumer_questionnaire{
+  .container{
+    // border: 1px solid black;
+    border-radius: 5px;
+    height: 667px;
+    width: 100%;
+    background: #B2C9AB;
+    color: red;
+  }
+  //below closes #consumer_questionnaire wrapper for mobile view
+// }
+//below closes @media for desktop view
+// }

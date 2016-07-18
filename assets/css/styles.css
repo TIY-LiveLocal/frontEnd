@@ -1,29 +1,47 @@
-#dashboard .logo {
-  font-family: "Galada", cursive; }
-  #dashboard .logo h2 {
-    border: 1px solid black;
-    border-radius: 10px 10px;
-    display: inline-block; }
-#dashboard .options {
-  font-family: "Arimo", sans-serif; }
-  #dashboard .options h3 {
-    display: inline-block;
-    width: 30%;
-    height: 10em;
-    border: 1px solid black; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 #loginPage {
   width: 80%;
   margin: 0 auto;
   font-family: "Arimo", sans-serif; }
   #loginPage .loginWrap {
-    border: 1px solid #2EC4B6;
+    border: 1px solid #9DDCDC;
     border-radius: 10px;
     margin: 2em;
     padding: 1em 1em 3em; }
     #loginPage .loginWrap h2 {
       font-family: "Galada", cursive;
-      color: #2EC4B6;
+      color: #E67A7A;
       text-align: center; }
     #loginPage .loginWrap .new_user .field {
       width: 40%;
@@ -32,7 +50,7 @@
       #loginPage .loginWrap .new_user .field #user_email, #loginPage .loginWrap .new_user .field #user_password {
         font-size: 1.1em;
         border: none;
-        border-bottom: 1px solid #2EC4B6;
+        border-bottom: 1px solid #9DDCDC;
         padding: 1%; }
       #loginPage .loginWrap .new_user .field .rememberMe {
         font-size: .75em; }
@@ -40,12 +58,50 @@
       width: 40%;
       margin: 0 auto; }
       #loginPage .loginWrap .new_user .actions input {
-        background: #2EC4B6;
-        color: #EFFFE9;
+        background: #9DDCDC;
+        color: #9DDCDC;
         border: none;
         padding: 2%; }
     #loginPage .loginWrap .help {
       margin: 30%;
       font-size: .75em; }
+
+#dashboard .logo {
+  font-family: "Galada", cursive;
+  display: block;
+  background: #9DDCDC;
+  box-shadow: 1px 1px 1px grey; }
+  #dashboard .logo h1 {
+    font-size: 3em;
+    display: inline-block;
+    background: #9DDCDC;
+    padding: 1%;
+    color: #FFF4E1; }
+  #dashboard .logo img {
+    width: 2.5%; }
+#dashboard .options {
+  font-family: "Arimo", sans-serif; }
+  #dashboard .options h3 {
+    display: inline-block;
+    padding: .5%;
+    width: 20%;
+    background: #E67A7A;
+    color: rgba(10, 10, 10, 0.5);
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 1px 1px 1px grey; }
+#dashboard .ngDashboard {
+  font-family: "Arimo", sans-serif; }
+  #dashboard .ngDashboard .biz {
+    border: 1px solid #E67A7A;
+    width: 50%;
+    padding: 5%;
+    margin: 1%; }
+    #dashboard .ngDashboard .biz img {
+      width: 50%; }
+    #dashboard .ngDashboard .biz #bizName {
+      font-size: 2em; }
+    #dashboard .ngDashboard .biz #bizOwner {
+      font-size: 1.2em; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,7 +6,8 @@ app.config(function($routeProvider){
     templateUrl: 'views/login.html'
   })
   .when('/dashboard',{
-    templateUrl: 'views/dashboard.html'
+    templateUrl: 'views/dashboard.html',
+    controller: 'testController'
   })
   .otherwise({
     redirectTo: 'login'

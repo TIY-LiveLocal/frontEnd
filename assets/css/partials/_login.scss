@@ -4,13 +4,13 @@
   font-family: $font2;
 
   .loginWrap{
-    border: 1px solid $green;
+    border: 1px solid $blue;
     border-radius: 10px;
     margin: 2em;
     padding: 1em 1em 3em;
     h2{
       font-family: $font1;
-      color: $green;
+      color: $red;
       text-align: center;
     }
     .new_user{
@@ -21,7 +21,7 @@
         #user_email{
           font-size: 1.1em;
           border: none;
-          border-bottom: 1px solid $green;
+          border-bottom: 1px solid $blue;
           padding: 1%;
         }
         #user_password{
@@ -35,8 +35,8 @@
         width: 40%;
         margin: 0 auto;
         input{
-          background: $green;
-          color: $mist;
+          background: $blue;
+          color: $blue;
           border: none;
           padding: 2%;
         }

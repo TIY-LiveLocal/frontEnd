@@ -2,13 +2,23 @@
   <header>
     <div class="logo">
       <h1>Pearl</h1>
+      <img src="assets/img/pearlLogo.svg" alt="" />
     </div>
   </header>
   <main>
     <div class="options">
       <h3>Discover</h3>
-      <h3>Me</h3>
-      <h3>Friends</h3>
+      <h3>NAME</h3>
+      <h3>Around</h3>
+    </div>
+
+    <div ng-repeat="biz in businesses"  class="ngDashboard">
+      <div class="biz">
+        <div id="bizName"> {{biz.name}}</div>
+        <div id="bizOwner"> {{biz.owner}}</div>
+        <img src="../assets/img/pearlLogo.svg" alt="" />
+      </div>
+
     </div>
   </main>
 </div>

@@ -46,7 +46,7 @@
 
 /* Content Columns */
 .col-1-2, .col-6-12 {
-  width: 50%; }
+  width: 40%; }
 
 .col-1-3, .col-4-12 {
   width: 33.33%; }
@@ -201,14 +201,17 @@
     color: #E0E0E0;
     width: 100%; }
     #profilePage #profileHeader .pearlLogo {
+      display: inline-block;
       width: 5%;
       height: 5%;
+      padding-top: 2%;
       position: relative;
       left: 47%; }
     #profilePage #profileHeader #profileHeader-contain {
       width: 80%;
       position: relative; }
       #profilePage #profileHeader #profileHeader-contain .pearlLogo-text {
+        font-size: 3em;
         font-family: Fugaz One;
         width: 10%;
         display: block;
@@ -218,17 +221,20 @@
       #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
         position: relative;
         left: 5%;
+        font-size: 1.5em;
         padding-bottom: 3%; }
         #profilePage #profileHeader #profileHeader-contain .profileHeader-search input {
+          height: 1.5em;
           border-style: none;
           outline: none;
           margin-left: .65%;
-          width: 25%;
+          width: 40%;
           padding: .11%;
           border-radius: 1px; }
         #profilePage #profileHeader #profileHeader-contain .profileHeader-search button {
           margin-left: -3%;
-          border-radius: 2px, 0, 2px, 0;
+          height: 1.73em;
+          border-radius: 0 2px 2px 0;
           background-color: #F97B4A;
           color: #E0E0E0;
           border-style: none;
@@ -245,10 +251,16 @@
   #profilePage .businessInfo {
     position: relative;
     left: 35%;
-    color: #E0E0E0; }
+    color: #E0E0E0;
+    letter-spacing: 1.5%; }
+  #profilePage .businessPic {
+    border-radius: 2px;
+    width: 60%;
+    height: 60%;
+    border: solid 2% #E0E0E0; }
   #profilePage #qASectionContain {
     position: relative;
-    margin-top: 30%; }
+    margin-top: 40%; }
     #profilePage #qASectionContain #qASectionContent {
       padding: 5% 15%; }
 

@@ -1,4 +1,3 @@
-
 @import '../../bower_components/meyer-reset/meyer-reset';
 
 $font1: 'Galada', cursive;
@@ -14,6 +13,7 @@ $darkGrey: #9E9E9E;
 $white: #E0E0E0;
 
 
-@import "partials/profile";
+// @import "partials/profile";
 @import "partials/login";
+@import "partials/signup";
 @import "partials/dashboard";

@@ -11,7 +11,10 @@ app.config(function($routeProvider){
     controller: 'testController'
   })
   .when('/places', {
-    templateUrl: '../../profile.html'
+    templateUrl: 'views/profile.html'
+  })
+  .when('/business_edit',{
+    templateUrl: 'views/bus_edit_profile.html'
   })
   .otherwise({
     redirectTo: 'login'

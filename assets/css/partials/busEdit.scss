@@ -1,0 +1,70 @@
+body{
+  background-color: $yellow;
+}
+#businessEditPage{
+    width: 80%;
+    margin: auto;
+    font-family: Rubik, sans-serif;
+    color: $red;
+      #profileHeader{
+        width: 100%;
+        .pearlLogo{
+          display: inline-block;
+          width: 5%;
+          height: 5%;
+          padding-top: 2%;
+          position: relative;
+          left: 48%;
+        }
+      #profileHeader-contain{
+        width: 80%;
+        position: relative;
+        left: 45%;
+        .pearlLogo-text{
+          color: $red;
+          font-size: 3em;
+          font-family: Arvo;
+          width: 10%;
+          display: block;
+          position:relative;
+          left: 0%;
+          padding-bottom: 2%;
+        }
+        .profileHeader-search{
+          position: relative;
+          left: -20%;
+          font-size: 1.5em;
+          padding-bottom: 3%;
+          input{
+            height: 1.5em;
+            border-style: none;
+            outline: none;
+            margin-left: .65%;
+            width: 40%;
+            padding: .11%;
+            border-radius: 1px;
+            }
+          button{
+            margin-left: -3%;
+            height: 1.73em;
+            border-radius:0 2px 2px 0;
+            background-color: $blue;
+            color: $tan;
+            border-style: none;
+            outline: none;
+            }
+      }
+    }
+  }
+      .businessHours-day{
+        position: relative;
+        margin: 2%;
+        .businessHours-time{
+          margin: 2% 5%;
+        }
+      }
+      #businessEditContent-bio{
+        width: 25%;
+        height: 15em;
+      }
+}

@@ -12,6 +12,7 @@ app.controller('testController', ['$http', '$scope', function($http, $scope) {
         console.log(userList);
 
     });
+
 }]);
 // original code above
 // app.controller('testController', ['$http', '$scope', function($http, $scope) {

@@ -12,7 +12,7 @@ app.controller('loginController', ['$http', '$scope', '$location', function($htt
     method: 'POST',
     url: "https://9ac18a38.ngrok.io/sign_in",
     data: data,
-    headers: {'Authorization': 'a@a.com'}
+    headers: {'Authorization': 'firebaseToken'}
   }).then(function success(response){
     console.log(response);
     console.log(response.data.token); //LOGS THE TOKEN

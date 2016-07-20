@@ -2,16 +2,22 @@
   width: 80%;
   margin: 0 auto;
   font-family: $font2;
-
+  input{
+    &:focus{
+      outline: none;
+    }
+  }
   .loginWrap{
     border: 1px solid $blue;
     border-radius: 10px;
-    margin: 2em;
-    padding: 1em 1em 3em;
+    margin: 4%;
+    padding: 5% 1%;
     h2{
       font-family: $font1;
       color: $red;
       text-align: center;
+      font-size: 2em;
+      padding: 1%;
     }
     .new_user{
       .field{
@@ -46,6 +52,11 @@
     .help{
       margin: 30%;
       font-size: .75em;
+      color: $darkBlue;
+      line-height: 1.1em;
+      &:visited{
+        color: $medBlue;
+      }
     }
   }
 }

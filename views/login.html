@@ -3,26 +3,28 @@
   <div class="loginWrap">
 
     <h2>Pearl</h2>
-
-    <form class="new_user" id="new_user" action="#/dashboard" accept-charset="UTF-8">
+<!-- action="#/dashboard" -->
+    <form class="new_user" id="new_user"  accept-charset="UTF-8">
         <div class="field">
-            <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" placeholder="username"/>
+            <input autofocus="autofocus" type="text" id="user_email" ng-model="username" placeholder="Username"/>
         </div>
 
         <div class="field">
 
-            <input autocomplete="off" type="password" name="user[password]" id="user_password" placeholder="password"/>
+            <input autocomplete="off" type="password" id="user_password" ng-model="password" placeholder="Password"/>
         </div>
 
-        <div class="field">
-            <input name="user[remember_me]" type="hidden" value="0" />
+<!-- REMEMBER ME -->
+        <!-- <div class="field">
+            <input type="hidden" value="0" />
             <input class="rememberMe" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
             <label class="rememberMe" for="user_remember_me">Remember me</label>
-        </div>
+        </div> -->
 
-        <div class="actions"><a href="#/dashboard">
-            <input type="submit" name="commit" value="Log in" data-disable-with="Log in" />
-            </a>
+        <div class="actions">
+          <!-- <a href="#/dashboard"> -->
+            <input ng-click="login()" type="submit" name="commit" value="Log in" data-disable-with="Log in" />
+            <!-- </a> -->
         </div>
     </form>
 

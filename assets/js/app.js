@@ -1,10 +1,11 @@
 
-var app = angular.module("app", ['ngRoute']);
+var app = angular.module("app", ['ngRoute', "firebase"]);
 
 app.config(function($routeProvider){
   $routeProvider
   .when('/login',{
-    templateUrl: 'views/login.html'
+    templateUrl: 'views/login.html',
+    controller: 'loginController'
   })
   .when('/signup',{
     templateUrl: 'views/signup.html',

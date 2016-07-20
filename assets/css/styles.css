@@ -34,15 +34,19 @@ table {
   width: 80%;
   margin: 0 auto;
   font-family: "Arimo", sans-serif; }
+  #loginPage input:focus {
+    outline: none; }
   #loginPage .loginWrap {
     border: 1px solid #9DDCDC;
     border-radius: 10px;
-    margin: 2em;
-    padding: 1em 1em 3em; }
+    margin: 4%;
+    padding: 5% 1%; }
     #loginPage .loginWrap h2 {
       font-family: "Galada", cursive;
       color: #E67A7A;
-      text-align: center; }
+      text-align: center;
+      font-size: 2em;
+      padding: 1%; }
     #loginPage .loginWrap .new_user .field {
       width: 40%;
       margin: 0em auto;
@@ -65,10 +69,14 @@ table {
         font-size: 1em; }
     #loginPage .loginWrap .help {
       margin: 30%;
-      font-size: .75em; }
+      font-size: .75em;
+      color: #2a7777;
+      line-height: 1.1em; }
+      #loginPage .loginWrap .help:visited {
+        color: #3aa2a2; }
 
 #signUp .signUpWrap {
-  width: 30%;
+  width: 40%;
   margin: 5em auto;
   box-shadow: 5px 5px 35px 1px #9E9E9E;
   padding-bottom: .5%; }
@@ -90,6 +98,8 @@ table {
     border-bottom: 1px solid #9DDCDC;
     padding: 1%;
     margin: 4%; }
+    #signUp .signUpForm .signUpInput:focus {
+      outline: none; }
   #signUp .signUpForm .submit {
     background: #E67A7A;
     display: block;
@@ -100,7 +110,8 @@ table {
     padding: 2%;
     width: 90%;
     border: none;
-    margin: 1% auto; }
+    margin: 1% auto;
+    cursor: pointer; }
 
 #dashboard .logo {
   font-family: "Galada", cursive;

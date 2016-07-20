@@ -1,4 +1,4 @@
-  <div id = "profilePage">
+  <div id = "profilePage" ng-controller = "bizProfController">
       <div id = "profileHeader">
         <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
         <div id = "profileHeader-contain">
@@ -18,18 +18,24 @@
     <div class="grid grid-pad">
     <div class="col-1-2">
        <div class="content">
-         <h2 class = "businessName">Beyu Caffe</h2>
-            <img class = "businessPic" src = "assets/images/beyuCaffe2.jpg">
+         <ul>
+           <li>
+             <h2 class = "businessName">{{one.biz.name}}</h2>
+                <img class = "businessPic" src = "assets/images/beyuCaffe2.jpg">
+            </div>
+          </li>
+
+            <li>
+           <div class="content">
+            <p class = "businessInfo">Address: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Email: Suspendisse id magna molestie, lacinia sapien id, tristique lacus. Bio: Donec blandit libero sed interdum cursus. Nam pulvinar nibh sed ipsum egestas fringilla. Etiam ante arcu, cursus nec pharetra quis, ornare ac eros. Praesent fermentum tellus augue, quis porta est imperdiet vel. Nullam quis varius odio. Phasellus placerat maximus est, a varius ipsum ultricies luctus.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-1-2">
-       <div class="content">
-        <p class = "businessInfo">Address: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Email: Suspendisse id magna molestie, lacinia sapien id, tristique lacus. Bio: Donec blandit libero sed interdum cursus. Nam pulvinar nibh sed ipsum egestas fringilla. Etiam ante arcu, cursus nec pharetra quis, ornare ac eros. Praesent fermentum tellus augue, quis porta est imperdiet vel. Nullam quis varius odio. Phasellus placerat maximus est, a varius ipsum ultricies luctus.</p>
-      </div>
-    </div>
-
+      </li>
+    </ul>
+    
 <!--Q and A section for patrons-->
+
+  <div class="col-1-2">
   <div id = "qASectionContain">
     <h3 id = "qASectionHead"> Ask a Question </h3>
     <div id = "qASectionContent">
@@ -38,6 +44,8 @@
         <h3> A </h3> <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
     </div>
   </div>
+</div>
+
 
   </div>
 </div>

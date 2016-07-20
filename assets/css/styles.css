@@ -31,6 +31,7 @@ table {
   border-spacing: 0; }
 
 #loginPage {
+<<<<<<< HEAD
   width: 80%;
   margin: 0 auto;
   font-family: "Arimo", sans-serif; }
@@ -65,6 +66,107 @@ table {
     #loginPage .loginWrap .help {
       margin: 30%;
       font-size: .75em; }
+=======
+  width: 60%;
+  margin: 0 auto;
+  font-family: "Arimo", sans-serif; }
+  #loginPage input:focus {
+    outline: none; }
+  #loginPage .loginWrap {
+    border: 2px solid #9DDCDC;
+    border-radius: 10px;
+    margin: 4%;
+    padding: 5% 1%;
+    position: relative;
+    height: 20em;
+    box-shadow: 1px 1px 20px 1px rgba(42, 119, 119, 0.29); }
+    #loginPage .loginWrap .leftWrap {
+      width: 50%;
+      position: absolute; }
+      #loginPage .loginWrap .leftWrap h2 {
+        font-family: "Galada", cursive;
+        color: #E67A7A;
+        text-align: center;
+        font-size: 3em;
+        padding: 1%; }
+      #loginPage .loginWrap .leftWrap img {
+        width: 75%; }
+    #loginPage .loginWrap .rightWrap {
+      width: 60%;
+      position: absolute;
+      right: 0;
+      top: 20%; }
+      #loginPage .loginWrap .rightWrap .new_user .field {
+        width: 60%;
+        margin: 0em auto;
+        padding: 1%;
+        line-height: 3em; }
+        #loginPage .loginWrap .rightWrap .new_user .field #user_email, #loginPage .loginWrap .rightWrap .new_user .field #user_password {
+          font-size: 1.1em;
+          border: none;
+          border-bottom: 1px solid #9DDCDC;
+          padding: 1%;
+          width: 100%; }
+        #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
+          font-size: .75em; }
+      #loginPage .loginWrap .rightWrap .new_user .actions {
+        width: 60%;
+        margin: 0 auto; }
+        #loginPage .loginWrap .rightWrap .new_user .actions input {
+          background: #9DDCDC;
+          color: white;
+          border: none;
+          padding: 3% 30%;
+          margin: 5% auto;
+          font-size: 1em;
+          font-weight: 500;
+          border-radius: 1px; }
+      #loginPage .loginWrap .rightWrap .help {
+        margin: 20%;
+        font-size: .6em;
+        color: #2a7777;
+        line-height: 2em; }
+        #loginPage .loginWrap .rightWrap .help:visited {
+          color: #3aa2a2; }
+
+#signUp .signUpWrap {
+  width: 40%;
+  margin: 5em auto;
+  box-shadow: 5px 5px 35px 1px #9E9E9E;
+  padding-bottom: .5%; }
+#signUp h2 {
+  background: #E67A7A;
+  display: block;
+  font-family: "Arimo", sans-serif;
+  color: white;
+  text-align: left;
+  font-size: 2em;
+  padding: 5%; }
+#signUp .signUpForm {
+  display: block; }
+  #signUp .signUpForm .signUpInput {
+    width: 90%;
+    display: block;
+    font-size: 1.1em;
+    border: none;
+    border-bottom: 1px solid #9DDCDC;
+    padding: 1%;
+    margin: 4%; }
+    #signUp .signUpForm .signUpInput:focus {
+      outline: none; }
+  #signUp .signUpForm .submit {
+    background: #E67A7A;
+    display: block;
+    font-family: "Arimo", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 2%;
+    width: 90%;
+    border: none;
+    margin: 1% auto;
+    cursor: pointer; }
+>>>>>>> jlong
 
 #dashboard .logo {
   font-family: "Galada", cursive;
@@ -104,6 +206,7 @@ table {
     #dashboard .ngDashboard .biz #bizOwner {
       font-size: 1.2em; }
 
+<<<<<<< HEAD
 .container {
   border: 1px solid black;
   border-radius: 5px;
@@ -226,4 +329,6 @@ footer {
   background: #B2C9AB;
   color: red; }
 
+=======
+>>>>>>> jlong
 /*# sourceMappingURL=styles.css.map */

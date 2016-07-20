@@ -15,8 +15,9 @@
     <div ng-repeat="biz in businesses"  class="ngDashboard">
       <div class="biz">
         <div id="bizName"> {{biz.name}}</div>
-        <div id="bizOwner"> {{biz.owner}}</div>
-        <img src="../assets/img/pearlLogo.svg" alt="" />
+        <div id="bizOwner"> {{biz.owner}}Rating: {{biz.rating}}</div>
+        <div id="bizOwner"> {{biz.location.city}}</div>
+        <img ng-src="{{biz.image_url}}" alt="" />
       </div>
 
     </div>

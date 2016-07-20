@@ -13,22 +13,21 @@
     <div class='instructions2'>in a local business?</div>
 
     <div class='questions'>
-      <form action="demo_form.asp" method="get">
-        <input type="checkbox" name="hiring" value=""> Currently Hiring<br>
-        <input type="checkbox" name="envResp" value=""> Environmentally Responsible<br>
-        <input type="checkbox" name="glutFree" value=""> Gluten Free Options<br>
-        <input type="checkbox" name="musicians" value=""> Host Local Musicians<br>
-        <input type="checkbox" name="lgbtq" value=""> LGBTQ Friendly<br>
-        <input type="checkbox" name="localFood" value=""> Locally Sourced Food<br>
-        <input type="checkbox" name="pocOwned" value=""> Owned by People of Color<br>
-        <input type="checkbox" name="livWage" value=""> Pay a Living Wage<br>
-        <input type="checkbox" name="petFriend" value=""> Pet Friendly<br>
-        <input type="checkbox" name="artCrafts" value=""> Sell Local Art/Crafts<br>
-        <input type="checkbox" name="charNonprof" value=""> Support Local Charities/Non-Profits<br>
-        <input type="checkbox" name="suatain" value=""> Sustainable Practices<br>
-        <input type="checkbox" name="veganPeta" value=""> Vegan/PETA Friendly<br>
-        <!-- <input type="checkbox" name="" value="veganPeta" checked="unchecked"> Vegan/PETA friendly<br> -->
-      <input type="submit" value="Submit">
+      <form>
+        <input type="checkbox" name="hiring"  ng-model='hiring' ngFalseValue="false"> Currently Hiring<br>
+        <input type="checkbox" name="glutFree" ng-model='glutFree' ngFalseValue="false"> Gluten Free Options<br>
+        <input type="checkbox" name="musicians" ng-model='musicians' ngFalseValue="false"> Host Local Musicians<br>
+        <input type="checkbox" name="lgbt" ng-model='lgbt' ngFalseValue="false"> LGBT Friendly<br>
+        <input type="checkbox" name="localFood" ng-model='localFood' ngFalseValue="false"> Locally Sourced Food<br>
+        <input type="checkbox" name="pocOwned" ng-model='minorityOwned' > Minority Owned<br>
+        <input type="checkbox" name="livWage" ng-model='livWage' ngFalseValue="false"> Pay a Living Wage<br>
+        <input type="checkbox" name="petFriend" ng-model='petFriend' ngFalseValue="false"> Pet Friendly<br>
+        <input type="checkbox" name="artCrafts" ng-model=artCrafts ngFalseValue="false"> Sell Local Art/Crafts<br>
+        <input type="checkbox" name="charNonprof" ng-model='charNonprof' ngFalseValue="false"> Support Local Charities/Non-Profits<br>
+        <input type="checkbox" name="sustain" ng-model='sustain' ngFalseValue="false"> Sustainable Practices<br>
+        <input type="checkbox" name="veganPeta" ng-model='veganPeta' ngFalseValue='false'> Vegan/PETA Friendly<br>
+    <!-- clicked is a function -->
+      <input type="submit" ng-click="clicked1()"  value="Submit">
     </form>
   </div>
   <div class='stripe4'></div>

@@ -1,0 +1,47 @@
+#signUp{
+
+  .signUpWrap{
+    width: 40%;
+    margin: 5em auto;
+    box-shadow: 5px 5px 35px 1px $darkGrey;
+    padding-bottom: .5%;
+  }
+  h2{
+    background: $red;
+    display: block;
+    font-family: $font2;
+    color: white;
+    text-align: left;
+    font-size: 2em;
+    padding: 5%;
+  }
+  .signUpForm{
+    display: block;
+
+    .signUpInput{
+      width: 90%;
+      display: block;
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 1px solid $blue;
+      padding: 1%;
+      margin: 4%;
+      &:focus{
+        outline: none;
+      }
+    }
+    .submit{
+      background: $red;
+      display: block;
+      font-family: $font2;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<div id="loginPage">
+
+    <div class="loginWrap">
+
+        <div class="leftWrap">
+
+
+            <h2>Pearl</h2>
+            <img src="assets/img/pearlLogo.svg" alt="" />
+        </div>
+        <!-- action="#/dashboard" -->
+        <div class="rightWrap">
+
+
+            <form class="new_user" id="new_user" accept-charset="UTF-8">
+                <div class="field">
+                    <input autofocus="autofocus" type="text" id="user_email" ng-model="username" placeholder="Username" />
+                </div>
+
+                <div class="field">
+
+                    <input autocomplete="off" type="password" id="user_password" ng-model="password" placeholder="Password" />
+                </div>
+
+                <!-- REMEMBER ME -->
+                <!-- <div class="field">
+            <input type="hidden" value="0" />
+            <input class="rememberMe" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+            <label class="rememberMe" for="user_remember_me">Remember me</label>
+        </div> -->
+
+                <div class="actions">
+                    <!-- <a href="#/dashboard"> -->
+                        <input ng-click="login()" type="submit" name="commit" value="Log in" data-disable-with="Log in" />
+                    <!-- </a> -->
+                </div>
+            </form>
+
+            <a class="help" href="#/signup">Sign up</a>
+            <br />
+
+            <a class="help" href="/users/password/new">Forgot your password?</a>
+            <br />
+        </div>
+    </div>
+
+</div>

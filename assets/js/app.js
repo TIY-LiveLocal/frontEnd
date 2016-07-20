@@ -19,7 +19,6 @@ app.config(function($routeProvider){
     templateUrl: 'views/business_questionnaire.html',
     controller: 'bqController'
   })
-  // Why isn't http://localhost:3000/?#/consumer_questionnaire showing up?
   .when('/consumer_questionnaire',{
     templateUrl: 'views/consumer_questionnaire.html',
     controller: 'cqController'

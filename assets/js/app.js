@@ -13,6 +13,9 @@ app.config(function($routeProvider){
   .when('/places', {
     templateUrl: '../../profile.html'
   })
+  .when('/business_edit', {
+    templateUrl: 'views/bus_edit_profile.html'
+  })
   .otherwise({
     redirectTo: 'login'
   });

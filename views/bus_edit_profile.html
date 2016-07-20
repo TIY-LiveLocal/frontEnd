@@ -1,83 +1,69 @@
 <!--for unique page identification-->
-<div id = "businessEditPage">
+<div id="businessEditPage">
+  <div id = "businessEditPage-wrapper">
 
-<!--header-->
-  <div id = "profileHeader">
-    <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
-    <div id = "profileHeader-contain">
-    <span class = "pearlLogo-text"> Pearl </span>
-    <p class = "profileHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-      <span><button>
+    <!--header-->
+    <div id="profileHeader">
+        <img class="pearlLogo" src="assets/images/pearlLogo.svg">
+        <div id="profileHeader-contain">
+            <span class="pearlLogo-text"> Pearl </span>
+            <p class="profileHeader-search"> find me
+                <input type="text" placeholder="i.e. waffles"></input>
+                <span><button>
         search
       </button></span>
-    </p>
-  </div>
-  </div>
-
-<!--begin list of information-->
-  <div id = "businessEditWrapper">
-
-    <form id ="businessEditForm">
-      <ul id = "businessBasicInfo">
-          <li id="businessAddress">
-            <inputplaceholder="address"></input>
-          </li>
-          <li id = "businessPhone">
-            <input placeholder="phone number"></input>
-          </li>
-          <li id = "businessWebsite">
-            <input placeholder="website"></input>
-          <li>
-      </ul>
-  </div>
-
-<!--list of hours-->
-  <div id="businessHours">
-    Business Hours
-    <ul>
-        <li class = "businessHours-day">
-            Mon
-            <input class="businessHours-time" id="M">
-            </input>
-        </li>
-        <li class = "businessHours-day">
-            Tues
-            <input class="businessHours-time" id="T">
-            </input>
-        </li>
-        <li class = "businessHours-day">
-          Weds
-            <input class="businessHours-time" id="W">
-            </input>
-        </li>
-        <li class = "businessHours-day">
-            Thurs
-            <input class="businessHours-time" id="Th">
-            </input>
-        </li>
-        <li class = "businessHours-day">
-          Fri
-            <input class="businessHours-time" id="F">
-            </input>
-        </li>
-        <li class = "businessHours-day">
-            Sat
-            <input class="businessHours-time" id="Sa">
-            </input>
-        </li>
-        <li class = "businessHours-day">
-            Sun
-            <input class="businessHours-time" id="Su">
-            </input>
-        </li>
-      </ul>
+            </p>
+        </div>
     </div>
 
-<div class = "businessEditContent">
-  <textarea id = "businessEditContent-bio" placeholder "edit bio">
-  </textarea></a>
-</div>
-
-</form>
-
+    <div class="grid grid-pad">
+        <div class="col-1-3">
+           <div class="content">
+               <ul>
+                 <li class = "businessHours-day">
+                   Mon-Fri
+                 </li>
+                  <li class = "businessHours-day">
+                    Sat
+                  </li>
+                  <li class = "businessHours-day">
+                    Sun
+                  </li>
+                  <li class = "businessHours-day">
+                    <input placeholder = "specifiy other times"></input>
+                  </li>
+                </ul>
+           </div>
+        </div>
+        <div class="col-1-3">
+           <div class="content">
+               <li class = "businessHours-hours">
+                 <input placeholder = "time"></input>
+                 to
+                  <input placeholder = "time"></input>
+                </li>
+                <li class = "businessHours-hours">
+                   <input placeholder = "time"></input>
+                  to
+                 <input placeholder = "time"></input>
+                </li>
+                <li class = "businessHours-hours">
+                   <input placeholder = "time"></input>
+                  to
+                   <input placeholder = "time"></input>
+                </li>
+                <li class = "businessHours-hours">
+                   <input placeholder = "time"></input>
+                  to
+                   <input placeholder = "time"></input>
+                </li>
+           </div>
+        </div>
+        <div class="col-1-3">
+           <div class="content">
+               <textarea class = "businessBio" placeholder= "anything else you want to tell us about your business?"></textarea>
+           </div>
+        </div>
+    </div>
   </div>
+</div>

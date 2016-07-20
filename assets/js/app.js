@@ -10,6 +10,15 @@ app.config(function($routeProvider){
     templateUrl: 'views/dashboard.html',
     controller: 'testController'
   })
+  .when('/business_questionnaire',{
+    templateUrl: 'views/business_questionnaire.html',
+    controller: 'bqController'
+  })
+  // Why isn't http://localhost:3000/?#/consumer_questionnaire showing up?
+  .when('/consumer_questionnaire',{
+    templateUrl: 'views/consumer_questionnaire.html',
+    controller: 'cqController'
+  })
   .when('/places', {
     templateUrl: '../../profile.html'
   })

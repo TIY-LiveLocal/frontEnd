@@ -5,29 +5,69 @@
       <i class="fa fa-bars" aria-hidden="true"></i>
       <div class='pageTitle'>Keep It L<i class="fa fa-map-marker" aria-hidden="true"></i>cal</div>
     </header>
+<<<<<<< HEAD
+
+    <!-- <div id="profileHeader">
+    <img class="pearlLogo" src="assets/images/pearlLogo.svg">
+    <div id="profileHeader-contain">
+        <span class="pearlLogo-text"> Pearl </span>
+        <p class="profileHeader-search"> find me
+            <input ng-model='zipNumber' ng-click="clicked"  type="zipcode" placeholder="27701"></input>
+            <span><button>
+    search
+  </button></span>
+        </p> -->
+    </div>
+</div>
     <div class='stripe'></div>
     <div class='stripe2'></div>
     <div class='stripe3'></div>
-    <div class=''
+
+    <form class='new_business' id='new_business' action=''>
+      <div class='field'>Business Name
+        <input type="text" name='name' ng-model='name'value=''/>
+      </div>
+      <div class='field'>Street Address
+        <input type="text" name='address' ng-model='address'value=''/>
+      </div>
+      <div class='field'>City
+        <input type="text" name='city' ng-model='city' value=''/>
+      </div>
+      <div class='field'>Zipcode
+        <input type="zipcode" name='zipcode'ng-model='zipcode' value=''/>
+      </div>
+      <div class='field'>Business Phone Number
+        <input type="text" name='phone' ng-model='phone' value=''/>
+      </div>
+      <div class='field'>Business Website URL
+        <input type="text" name='website_url' ng-model='website_url' placeholder='Include http://' value=''/>
+      <div class='field'>Logo or Image to display in your listing
+        <input type="text" name='image_url' ng-model='image_url' website_url placeholder='Include http://' value=''/>
+      </div>
+      <div class='field'>Brief description of your business
+        <input type="text" name='biz_descrip' ng-model='biz_descrip' value=''/>
+      </div>
+    </form>
     <div class='instructions'>What sets you apart?</div>
     <div class='instructions2'>Your business will be listed on the dashboard pages of users who indicated that these features matter to them.</div>
 
     <div class='questions'>
-      <form action="demo_form.asp" method="get">
-        <input type="checkbox" name="" value="hiring"> Currently Hiring<br>
-        <input type="checkbox" name="" value="envResp"> Environmentally Responsible<br>
-        <input type="checkbox" name="" value="musicians"> Host Local Musicians<br>
-        <input type="checkbox" name="" value="lgbtq"> LGBTQ Friendly<br>
-        <input type="checkbox" name="" value="localFood"> Locally Sourced Food<br>
-        <input type="checkbox" name="" value="pocOwned"> Owned by People of Color<br>
-        <input type="checkbox" name="" value="livWage"> Pay a Living Wage<br>
-        <input type="checkbox" name="" value="petFriend"> Pet Friendly<br>
-        <input type="checkbox" name="" value="artCrafts"> Sell Local Art/Crafts<br>
-        <input type="checkbox" name="" value="charNonprof"> Support Local Charities/Non-Profits<br>
-        <input type="checkbox" name="" value="suatain"> Sustainable Practices<br>
-        <input type="checkbox" name="" value="veganPeta"> Vegan/PETA Friendly<br>
-        <!-- <input type="checkbox" name="" value="veganPeta" checked="unchecked"> Vegan/PETA friendly<br> -->
-      <input type="submit" value="Submit">
+      <form>
+        <input type="checkbox" name="hiring"  ng-model='hiring' ng-true-value='true'> Currently Hiring<br>
+        <input type="checkbox" name="glutFree" ng-model='glutFree' ngFalseValue="false"> Gluten Free Options<br>
+        <input type="checkbox" name="musicians" ng-model='musicians' ngFalseValue="false"> Host Local Musicians<br>
+        <input type="checkbox" name="lgbt" ng-model='lgbt' ngFalseValue="false"> LGBT Friendly<br>
+        <input type="checkbox" name="localFood" ng-model='localFood' ngFalseValue="false"> Locally Sourced Food<br>
+        <input type="checkbox" name="minorityOwned" ng-model='pocOwned' > Minority Owned<br>
+        <input type="checkbox" name="livWage" ng-model='livWage' ngFalseValue="false"> Pay a Living Wage<br>
+        <input type="checkbox" name="petFriend" ng-model='petFriend' ngFalseValue="false"> Pet Friendly<br>
+        <input type="checkbox" name="artCrafts" ng-model=artCrafts ngFalseValue="false"> Sell Local Art/Crafts<br>
+        <input type="checkbox" name="charNonprof" ng-model='charNonprof' ngFalseValue="false"> Support Local Charities/Non-Profits<br>
+        <input type="checkbox" name="sustain" ng-model='sustain' ngFalseValue="false"> Sustainable Practices<br>
+        <input type="checkbox" name="veganPeta" ng-model='veganPeta'
+        ngFalseValue='false'> Vegan/PETA Friendly<br>
+    <!-- clicked is a function -->
+      <input type="submit" ng-click="clicked()"  value="Submit">
     </form>
   </div>
   <div class='stripe4'></div>

@@ -1,4 +1,4 @@
-app.controller('signupController', ['$http', '$scope', function($http, $scope) {
+app.controller('signupController', ['$http', '$scope','$location', function($http, $scope, $location) {
 
   $scope.getStarted = function(){
     data = {
@@ -14,11 +14,16 @@ app.controller('signupController', ['$http', '$scope', function($http, $scope) {
 
   $http({
     method: 'POST',
-    url: "https://39348887.ngrok.io/test_ngrok",
-    data: data,
-    headers: {'Authorization':'application/json'}
+    url: "https://9ac18a38.ngrok.io/sign_up",
+    data: data
     }).then(function success(response){
+      localStorage.setItem('token',response.data.token);
+      $location.path('/login');
+
     console.log(response);
+  }, function errorCallback(error){
+    alert(error.data.message);
+    console.log(error);
   });
 
 };

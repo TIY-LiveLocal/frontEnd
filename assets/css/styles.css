@@ -187,112 +187,92 @@ table {
         margin: 1%;
         color: #E67A7A; }
 
-#consumerQuestionnaire .container {
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 667px;
-  width: 375px;
-  background: #B2C9AB; }
-#consumerQuestionnaire header {
-  display: block;
+#consumerQuestionnaire {
   width: 100%;
-  border: 1px solid #dfdfdf;
-  border-radius: 5px 5px 0 0;
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 55px;
-  padding-bottom: 5px;
-  padding-top: .5em;
-  color: black; }
-#consumerQuestionnaire .fa-bars {
-  padding: 5px;
-  font-size: 2em;
-  opacity: .5;
-  display: inline;
-  padding-left: .5em;
-  padding-top: .5em; }
-#consumerQuestionnaire .pageTitle {
-  font: Orbitron;
-  color: black;
-  font-size: 2.5em;
-  text-align: center;
-  opacity: .5;
-  display: inline;
-  padding-top: .5em;
-  padding-left: 1em; }
-#consumerQuestionnaire .stripe {
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  height: 7px;
-  width: 100%; }
-#consumerQuestionnaire .stripe2 {
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
-#consumerQuestionnaire .stripe3 {
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
-#consumerQuestionnaire .instructions {
-  color: black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-top: .5em; }
-#consumerQuestionnaire .instructions2 {
-  color: black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-bottom: 1em; }
-#consumerQuestionnaire .questions {
-  color: black;
-  font-size: 1.3em;
-  padding-left: .5em;
-  font-family: "Lato", Verdana, sans-serif; }
-#consumerQuestionnaire .stripe4 {
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 122px;
-  height: 7px;
-  width: 100%; }
-#consumerQuestionnaire .stripe5 {
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
-#consumerQuestionnaire .stripe6 {
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
-#consumerQuestionnaire footer {
-  display: block;
-  width: 100%;
-  border-radius: 0 0 5px 5px;
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 35px;
-  padding-top: .5em; }
-#consumerQuestionnaire .footerText {
-  color: black;
-  font-size: 1.3em;
-  padding-left: 1em;
-  opacity: .5; }
-#consumerQuestionnaire .container {
-  border-radius: 5px;
-  height: 667px;
-  width: 100%;
-  background: #B2C9AB;
-  color: red; }
+  height: 100%;
+  background-color: white;
+  font-family: Roboto, sans-serif;
+  color: #9DDCDC; }
+  #consumerQuestionnaire #consumerQuestionnaireHeader {
+    color: #9DDCDC;
+    width: 100%; }
+    #consumerQuestionnaire #consumerQuestionnaireHeader .pearlLogo {
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+      padding-top: 2%;
+      position: relative;
+      left: 47%; }
+    #consumerQuestionnaire #consumerQuestionnaireHeader #consumerQuestionnaireHeader-contain {
+      width: 80%;
+      position: relative; }
+      #consumerQuestionnaire #consumerQuestionnaireHeader #consumerQuestionnaireHeader-contain .pearlLogo-text {
+        font-size: 3em;
+        letter-spacing: 2px;
+        font-family: Arvo;
+        width: 10%;
+        display: block;
+        position: relative;
+        left: 54%;
+        padding-bottom: 2%; }
+      #consumerQuestionnaire #consumerQuestionnaireHeader #consumerQuestionnaireHeader-contain .consumerQuestionnaireHeader-search {
+        position: relative;
+        left: 33%;
+        font-size: 1.5em;
+        padding-bottom: 3%; }
+        #consumerQuestionnaire #consumerQuestionnaireHeader #consumerQuestionnaireHeader-contain .consumerQuestionnaireHeader-search input {
+          height: 1.5em;
+          border-style: none;
+          outline: none;
+          margin-left: .65%;
+          width: 40%;
+          padding: .11%;
+          border-radius: 1px;
+          background-color: #EEE; }
+        #consumerQuestionnaire #consumerQuestionnaireHeader #consumerQuestionnaireHeader-contain .consumerQuestionnaireHeader-search button {
+          margin-left: -3%;
+          height: 1.73em;
+          border-radius: 0 2px 2px 0;
+          background-color: #E67A7A;
+          color: #FFF4E1;
+          border-style: none;
+          outline: none; }
+  #consumerQuestionnaire #businessQuestionnaireWrapper {
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    width: 80%; }
+  #consumerQuestionnaire .pageTitle {
+    font-size: 1.5em;
+    height: 5em;
+    width: 10em; }
+  #consumerQuestionnaire .instructions {
+    color: #9E9E9E;
+    font-size: 1.5em;
+    text-align: left;
+    padding-left: 5em; }
+  #consumerQuestionnaire .instructions2 {
+    color: #9E9E9E;
+    font-size: 1.5em;
+    text-align: left; }
+  #consumerQuestionnaire .questions {
+    color: #9E9E9E;
+    font-size: 1em;
+    padding-left: 7em; }
+  #consumerQuestionnaire .checkboxItem {
+    color: #9E9E9E;
+    font-size: 1em; }
+  #consumerQuestionnaire .submitButton {
+    height: 1em;
+    width: 6em;
+    background-color: #E67A7A;
+    font-size: 1.5em;
+    color: #FFF4E1;
+    margin: 1em 0 3em 5%;
+    border-color: #E67A7A;
+    border-radius: 1px;
+    text-align: center;
+    display: block;
+    padding: 2%; }
 
 /*
   Simple Grid
@@ -342,7 +322,7 @@ table {
 
 /* Content Columns */
 .col-1-2, .col-6-12 {
-  width: 40%; }
+  width: 37%; }
 
 .col-1-3, .col-4-12 {
   width: 33.33%; }
@@ -493,6 +473,8 @@ table {
   background-color: white;
   font-family: Roboto, sans-serif;
   color: #9DDCDC; }
+  #profilePage li {
+    list-style: none; }
   #profilePage #profileHeader {
     color: #9DDCDC;
     width: 100%; }
@@ -512,11 +494,11 @@ table {
         width: 10%;
         display: block;
         position: relative;
-        left: 54%;
+        left: 58%;
         padding-bottom: 2%; }
       #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
         position: relative;
-        left: 33%;
+        left: 40%;
         font-size: 1.5em;
         padding-bottom: 3%; }
         #profilePage #profileHeader #profileHeader-contain .profileHeader-search input {
@@ -548,6 +530,8 @@ table {
     color: #9E9E9E;
     position: relative; }
   #profilePage .businessInfo {
+    margin: 15% 0;
+    position: relative;
     color: #9E9E9E;
     letter-spacing: 1.5px; }
   #profilePage .businessPic {
@@ -557,7 +541,22 @@ table {
     border: solid 2% #9E9E9E; }
   #profilePage #qASectionContain {
     position: relative;
+    left: 10%;
     color: #9E9E9E; }
+    #profilePage #qASectionContain #qASectionHead {
+      width: 40%;
+      padding: .3%;
+      background-color: #EEE;
+      outline: none;
+      border: none; }
+    #profilePage #qASectionContain button {
+      margin-left: -3%;
+      height: 1.73em;
+      border-radius: 0 2px 2px 0;
+      background-color: #E67A7A;
+      color: #FFF4E1;
+      border-style: none;
+      outline: none; }
     #profilePage #qASectionContain #qASectionContent {
       padding: 5% 15%; }
 

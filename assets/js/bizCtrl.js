@@ -3,6 +3,7 @@ app.controller('bizController', ['$http', '$scope', function($http, $scope) {
   var token = localStorage.getItem('Authorization');
   console.log(token);
 
+
   $http({
       method: 'GET',
       url: 'https://livelocalrails.herokuapp.com/find.json',
@@ -11,6 +12,7 @@ app.controller('bizController', ['$http', '$scope', function($http, $scope) {
 
   }).success(function call(data) {
       $scope.businesses = data;
+
 
       console.log(data);
 

@@ -24,8 +24,7 @@ app.config(function($routeProvider){
     controller: 'cqController'
   })
   .when('/places', {
-    templateUrl: 'views/profile.html',
-    controller: 'bizController'
+    templateUrl: '../../profile.html'
   })
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'

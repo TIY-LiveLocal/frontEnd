@@ -4,6 +4,8 @@
       <h1>Pearl</h1>
       <img src="assets/img/pearlLogo-1.svg" alt="" />
       <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+      <a href="#/consumer_questionnaire">User Survey</a>
+      <a href="#/business_questionnaire">Business Survey</a>
     </div>
   </header>
   <main>
@@ -14,7 +16,7 @@
     </div>
 
     <ul   class="ngDashboard">
-      <li ng-repeat="biz in businesses" class="biz">
+      <li ng-repeat="biz in businesses" class="biz" >
         <div id="bizName"> {{biz.name}}</div>
         <div id="bizOwner"> {{biz.owner}}</div>
         <div id="bizOwner"> {{biz.location.city}},{{biz.location.state_code}}</div>
@@ -25,8 +27,11 @@
           {{biz.location.address[0]}}
 
 
-          <a href="{{biz.url}}">
-          <i class="fa fa-yelp" aria-hidden="true"></i>
+          <a href="{{biz.url}}" id="yelp">
+            <i class="fa fa-yelp" aria-hidden="true"></i>
+          </a>
+          <a href="#/places" id="chevron">
+            <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
           </a>
         </div>
       </li>

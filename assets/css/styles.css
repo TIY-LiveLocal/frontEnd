@@ -150,6 +150,14 @@ table {
     float: right;
     color: #9DDCDC;
     margin: 1%; }
+  #dashboard .logo a {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    float: right;
+    margin: 1.5%; }
+    #dashboard .logo a:visited {
+      text-decoration: none;
+      color: #9DDCDC; }
 #dashboard .options {
   font-family: "Roboto", sans-serif;
   margin: 1% 20%; }
@@ -183,9 +191,13 @@ table {
       letter-spacing: 1.5px; }
     #dashboard .ngDashboard .biz #bizInfo {
       font-size: 1em; }
-      #dashboard .ngDashboard .biz #bizInfo a {
+      #dashboard .ngDashboard .biz #bizInfo #yelp {
         margin: 1%;
         color: #E67A7A; }
+      #dashboard .ngDashboard .biz #bizInfo #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
 
 #consumerQuestionnaire {
   width: 100%;

@@ -11,7 +11,7 @@
   <main>
     <div class="options">
       <h3 id="discover">Discover</h3>
-      <h3>NAME</h3>
+      <h3 >{{username}}</h3>
     </div>
 
     <ul class="ngDashboard">
@@ -21,15 +21,14 @@
         </a>
         <div id="bizName"> {{biz.name}}</div>
         <div id="bizOwner"> {{biz.owner}}</div>
-        <div id="bizOwner"> {{biz.location.city}},{{biz.location.state_code}}</div>
-        <!-- <img ng-src="{{biz.image_url}}" alt="" /> -->
+        <div id="bizOwner">{{biz.address}}, {{biz.city}}</div>
         <div id="bizInfo">
           {{biz.phone}}
           <br>
-          {{biz.location.address[0]}}
 
 
-          <a href="{{biz.url}}" id="yelp">
+
+          <a href="{{biz.website_url}}" id="yelp">
             <i class="fa fa-yelp" aria-hidden="true"></i>
           </a>
 

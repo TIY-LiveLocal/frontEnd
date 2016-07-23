@@ -1,20 +1,20 @@
-app.factory('yelpFactory', ['$http', function($http){
+app.factory('dbFactory', ['$http', function($http){
 
   var yelpUrl = 'https://livelocalrails.herokuapp.com/businesses';
-  var yelpFactory = {};
+  var dbFactory = {};
   var token = localStorage.getItem('token');
 
 
-  yelpFactory.getYelp = function(){
+  dbFactory.getYelp = function(){
     return $http({
         method: 'GET',
-        url: 'https://livelocalrails.herokuapp.com/businesses',
+        url: yelpUrl,
         headers: {'Authorization':token}
 
     });
   };
 
-  console.log(yelpFactory); //returns the function
-  return yelpFactory;
+  console.log(dbFactory);
+  return dbFactory;
 
 }]);

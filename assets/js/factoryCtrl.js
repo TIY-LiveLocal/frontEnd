@@ -1,4 +1,4 @@
-app.controller('factoryCtrl',['$scope', 'yelpFactory', function($scope, yelpFactory){
+app.controller('yelpCtrl',['$scope', 'yelpFactory', function($scope, yelpFactory){
 
   getYelp();
 
@@ -12,9 +12,9 @@ function getYelp(){
       $scope.sendID = function(){
         var data = $scope.listing;
         console.log(data);
-        console.log($scope.listing.id);
+        console.log(data[0].id);
       };
     });
-}
+  }
 
 }]);

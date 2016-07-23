@@ -8,8 +8,9 @@ app.controller('testController', ['$http', '$scope', function($http, $scope) {
         url: 'https://livelocalrails.herokuapp.com/businesses',
         headers: {'Authorization':token}
 
-    }).success(function call(userList) {
-        $scope.businesses = userList;
+    }).then(function call(userList) {
+        $scope.businesses = userList.data;
+        $scope.username = userList.config.headers.Authorization;
 
         console.log(userList);
     });

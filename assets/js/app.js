@@ -30,6 +30,10 @@ app.config(function($routeProvider){
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'
   })
+  .when('/factory',{
+    templateUrl: 'views/factoryTest.html',
+    controller: 'factoryCtrl'
+  })
   .otherwise({
     redirectTo: 'login'
   });

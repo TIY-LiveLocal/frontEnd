@@ -1,17 +1,19 @@
 /*
-Error: File to import not found or unreadable: ../../bower_components/meyer-reset/meyer-reset.
-        on line 2 of assets/css/styles.scss
+Error: File to import not found or unreadable: partials/busEdit.
+        on line 17 of assets/css/styles.scss
 
-1: 
-2: @import '../../bower_components/meyer-reset/meyer-reset';
-3: 
-4: $font1: 'Galada', cursive;
-5: $font2: 'Arimo', sans-serif;
-6: 
-7: $blue: #9DDCDC;
+12: $grey: #AEB9BD;
+13: $darkGrey: #9E9E9E;
+14: $white: #E0E0E0;
+15: 
+16: 
+17: @import "partials/busEdit";
+18: @import "partials/profile";
+19: @import "partials/login";
+20: @import "partials/dashboard";
 
 Backtrace:
-assets/css/styles.scss:2
+assets/css/styles.scss:17
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -54,4 +56,4 @@ assets/css/styles.scss:2
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../../bower_components/meyer-reset/meyer-reset.\A         on line 2 of assets/css/styles.scss\A \A 1: \A 2: @import '../../bower_components/meyer-reset/meyer-reset';\A 3: \A 4: $font1: 'Galada', cursive;\A 5: $font2: 'Arimo', sans-serif;\A 6: \A 7: $blue: #9DDCDC;"; }
+  content: "Error: File to import not found or unreadable: partials/busEdit.\A         on line 17 of assets/css/styles.scss\A \A 12: $grey: #AEB9BD;\A 13: $darkGrey: #9E9E9E;\A 14: $white: #E0E0E0;\A 15: \A 16: \A 17: @import \"partials/busEdit\";\A 18: @import \"partials/profile\";\A 19: @import \"partials/login\";\A 20: @import \"partials/dashboard\";"; }

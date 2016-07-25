@@ -29,13 +29,6 @@ $scope.clicked1 = function(){
   };
   console.log(data);
 
-// possible solution below doesn't seem to work http://stackoverflow.com/questions/33660712/angularjs-post-fails-response-for-preflight-has-invalid-http-status-code-404
-  // app.config(function ($httpProvider) {
-  //   $httpProvider.defaults.headers.common = {};
-  //   $httpProvider.defaults.headers.post = {};
-  //   $httpProvider.defaults.headers.put = {};
-  //   $httpProvider.defaults.headers.patch = {};
-  // });
 
   $http({
     method: 'POST',

@@ -13,7 +13,7 @@ app.config(function($routeProvider){
   })
   .when('/dashboard',{
     templateUrl: 'views/dashboard.html',
-    controller: 'dashboardCtrl'
+    controller: 'testController'
   })
   .when('/business_questionnaire',{
     templateUrl: 'views/business_questionnaire.html',
@@ -23,19 +23,12 @@ app.config(function($routeProvider){
     templateUrl: 'views/consumer_questionnaire.html',
     controller: 'cqController'
   })
-  .when('/business', {
-    templateUrl: 'views/profile.html'
+  .when('/places', {
+    templateUrl: 'views/profile.html',
+    controller: 'bizController'
   })
-
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'
-  })
-  .when('/factory',{
-    templateUrl: 'views/yelp.html',
-    controller: 'yelpCtrl'
-  })
-  .when('/business_search', {
-    templateUrl: 'views/biz_search.html'
   })
   .otherwise({
     redirectTo: 'login'

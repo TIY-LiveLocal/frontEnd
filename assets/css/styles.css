@@ -521,163 +521,482 @@ table {
     #profilePage #qASectionContain #qASectionContent {
       padding: 5% 15%; }
 
-#loginPage {
-  width: 60%;
-  margin: 0 auto;
-  font-family: "Arimo", sans-serif; }
-  #loginPage input:focus {
-    outline: none; }
-  #loginPage .loginWrap {
-    border: 2px solid #9DDCDC;
-    border-radius: 10px;
-    margin: 4%;
-    padding: 5% 1%;
-    position: relative;
-    height: 20em;
-    box-shadow: 1px 1px 20px 1px rgba(42, 119, 119, 0.29); }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: #2a7777;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s; }
+
+@media screen and (min-width: 1020px) {
+  #loginPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #loginPage input:focus {
+      outline: none; }
     #loginPage .loginWrap .leftWrap {
-      width: 50%;
-      position: absolute; }
+      width: 100%; }
       #loginPage .loginWrap .leftWrap h2 {
+        box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        padding: 2% 50% 2% 30%;
+        margin: 5% 0;
         font-family: "Arvo", serif;
         color: #E67A7A;
-        text-align: center;
-        font-size: 3em;
-        padding: 1%; }
+        font-size: 5em;
+        position: absolute; }
       #loginPage .loginWrap .leftWrap img {
-        width: 75%; }
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        margin: -20% 0; }
     #loginPage .loginWrap .rightWrap {
-      width: 60%;
-      position: absolute;
-      right: 0;
-      top: 20%; }
-      #loginPage .loginWrap .rightWrap .new_user .field {
-        width: 60%;
-        margin: 0em auto;
-        padding: 1%;
-        line-height: 3em; }
-        #loginPage .loginWrap .rightWrap .new_user .field #user_email, #loginPage .loginWrap .rightWrap .new_user .field #user_password {
-          font-size: 1.1em;
-          border: none;
-          border-bottom: 1px solid #9DDCDC;
-          padding: 1%;
-          width: 100%; }
-        #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
-          font-size: .75em; }
-      #loginPage .loginWrap .rightWrap .new_user .actions {
-        width: 60%;
-        margin: 0 auto; }
-        #loginPage .loginWrap .rightWrap .new_user .actions input {
-          background: #E67A7A;
-          color: white;
-          border: none;
-          padding: 3% 30%;
-          margin: 5% auto;
-          font-size: 1em;
-          font-weight: 500;
-          border-radius: 1px; }
+      width: 100%;
+      position: absolute; }
+      #loginPage .loginWrap .rightWrap .new_user {
+        margin: 20% 0 2%; }
+        #loginPage .loginWrap .rightWrap .new_user .field {
+          width: 30%;
+          margin: 1% 22%; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_email {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 2%;
+            width: 100%;
+            height: 2em;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_password {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 2%;
+            width: 100%;
+            height: 2em;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
+            font-size: .75em; }
+        #loginPage .loginWrap .rightWrap .new_user .actions {
+          margin: 3% 19%; }
+          #loginPage .loginWrap .rightWrap .new_user .actions input {
+            background: #E67A7A;
+            color: white;
+            border: none;
+            padding: 2% 25%;
+            margin: 0.5%;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 1px;
+            letter-spacing: 2px; }
       #loginPage .loginWrap .rightWrap .help {
-        margin: 20%;
+        margin: 1% 22%;
+        display: block;
         font-size: .6em;
         color: #2a7777;
-        line-height: 2em; }
+        line-height: 2em;
+        letter-spacing: 2px; }
         #loginPage .loginWrap .rightWrap .help:visited {
-          color: #3aa2a2; }
-
-#signUp .signUpWrap {
-  width: 40%;
-  margin: 5em auto;
-  box-shadow: 5px 5px 35px 1px #9E9E9E;
-  padding-bottom: .5%; }
-#signUp h2 {
-  background: #E67A7A;
-  display: block;
-  font-family: "Roboto", sans-serif;
-  color: white;
-  text-align: left;
-  font-size: 2em;
-  padding: 5%; }
-#signUp .signUpForm {
-  display: block; }
-  #signUp .signUpForm .signUpInput {
-    width: 90%;
-    display: block;
-    font-size: 1.1em;
-    border: none;
-    border-bottom: 1px solid #9DDCDC;
-    padding: 1%;
-    margin: 4%; }
-    #signUp .signUpForm .signUpInput:focus {
+          color: #3aa2a2; } }
+@media screen and (max-width: 1020px) {
+  #loginPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #loginPage input:focus {
       outline: none; }
-  #signUp .signUpForm .submit {
-    background: #E67A7A;
+    #loginPage .loginWrap {
+      position: relative;
+      margin: 5%; }
+      #loginPage .loginWrap .leftWrap {
+        width: 100%;
+        position: absolute; }
+        #loginPage .loginWrap .leftWrap h2 {
+          font-family: "Arvo", serif;
+          color: #E67A7A;
+          text-align: center;
+          font-size: 3em;
+          padding: 5% 0;
+          box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          letter-spacing: 2px; }
+        #loginPage .loginWrap .leftWrap img {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          margin: -48% 0%;
+          z-index: -1; }
+      #loginPage .loginWrap .rightWrap {
+        width: 100%;
+        position: absolute;
+        margin: 50% 0 0; }
+        #loginPage .loginWrap .rightWrap .new_user .field {
+          width: 80%;
+          margin: 0em auto;
+          padding: 1%;
+          line-height: 3em; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_email {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 3% 2%;
+            width: 100%;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_password {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 3% 2%;
+            width: 100%;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
+            font-size: .75em; }
+        #loginPage .loginWrap .rightWrap .new_user .actions {
+          margin: 5% 10% 5%; }
+          #loginPage .loginWrap .rightWrap .new_user .actions input {
+            width: 100%;
+            background: #E67A7A;
+            color: white;
+            border: none;
+            padding: 5% 30%;
+            margin: 5% auto;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px; }
+        #loginPage .loginWrap .rightWrap .help {
+          margin: 2% 10%;
+          font-size: .8em;
+          color: #2a7777;
+          line-height: 2em;
+          text-decoration: none;
+          border-bottom: 1px solid #9DDCDC;
+          padding: .5%;
+          display: inline-block;
+          letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .help:visited {
+            color: #3aa2a2;
+            text-decoration: none; } }
+@media screen and (min-width: 1020px) {
+  #signUp .headerWrap {
     display: block;
-    font-family: "Roboto", sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 1.5em;
-    padding: 2%;
-    width: 90%;
-    border: none;
-    margin: 1% auto;
-    cursor: pointer;
-    letter-spacing: 1.5px; }
-
-#dashboard .logo {
-  display: block;
-  box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
-  margin: 1% 1% 0% 0%;
-  padding: 1%; }
-  #dashboard .logo h1 {
-    font-size: 3em;
-    display: inline-block;
-    padding: 1%;
-    color: #9DDCDC;
-    letter-spacing: 2px;
-    font-family: "Arvo", serif; }
-  #dashboard .logo img {
-    width: 3%; }
-  #dashboard .logo i {
-    float: right;
-    color: #9DDCDC;
-    margin: 1%; }
-#dashboard .options {
-  font-family: "Roboto", sans-serif;
-  margin: 1% 20%; }
-  #dashboard .options h3 {
-    margin: 0% 1%;
-    display: inline-block;
-    padding: 1% 2.6% 0.3% 0.5%;
-    color: #9E9E9E;
-    font-size: 2em;
-    text-align: left;
-    border-bottom: 2px solid #E67A7A; }
-  #dashboard .options #discover {
-    border-bottom: 6px solid #E67A7A; }
-#dashboard .ngDashboard {
-  font-family: "Roboto", sans-serif; }
-  #dashboard .ngDashboard .biz {
-    border: 4px solid #E67A7A;
-    border-radius: 2px;
-    padding: 5%;
-    margin: 5% 20%;
-    display: block;
-    box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
-    #dashboard .ngDashboard .biz img {
-      width: 10%; }
-    #dashboard .ngDashboard .biz #bizName {
-      font-size: 2em;
+    position: relative; }
+    #signUp .headerWrap h2 {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 2% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -65% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    width: 40%;
+    margin: 3% auto;
+    padding-bottom: 1%;
+    background-color: white; }
+    #signUp .signUpWrap h2 {
+      background: #E67A7A;
+      display: block;
       font-family: "Roboto", sans-serif;
-      letter-spacing: 1.5px; }
-    #dashboard .ngDashboard .biz #bizOwner {
-      font-size: 1.2em;
-      letter-spacing: 1.5px; }
-    #dashboard .ngDashboard .biz #bizInfo {
-      font-size: 1em; }
-      #dashboard .ngDashboard .biz #bizInfo a {
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      padding: 5%;
+      letter-spacing: 2px; }
+  #signUp .signUpForm {
+    display: block; }
+    #signUp .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      margin: 4%;
+      letter-spacing: 1px; }
+      #signUp .signUpForm .signUpInput:focus {
+        outline: none; }
+    #signUp .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+@media screen and (max-width: 1000px) {
+  #signUp .headerWrap {
+    width: 98%;
+    display: block;
+    position: relative;
+    margin: 0 2%; }
+    #signUp .headerWrap h2 {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 2% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -65% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
+    padding-bottom: 3%;
+    margin: 12% 1%;
+    border-radius: 5%; }
+    #signUp .signUpWrap h2 {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      padding: 3%; }
+  #signUp .signUpForm {
+    display: block; }
+    #signUp .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.5em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      line-height: 1.5em;
+      margin: 4%; }
+      #signUp .signUpForm .signUpInput:focus {
+        outline: none; }
+    #signUp .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+@media screen and (min-width: 1000px) {
+  #dashboard .logo {
+    display: block;
+    margin: 1% 0% 0% 0%; }
+    #dashboard .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #dashboard .logo img {
+      width: 35%;
+      margin: -15% -20%;
+      position: relative;
+      z-index: -1; }
+    #dashboard .logo #rightLogo {
+      display: inline; }
+      #dashboard .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 2%;
+        font-size: 1.5em; }
+        #dashboard .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 2% 1.5%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #dashboard .logo #rightLogo #userSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #dashboard .logo #rightLogo #bizSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 30%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #dashboard .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #dashboard .options h3 {
+      margin: 0% 2%;
+      display: inline-block;
+      color: #9E9E9E;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #dashboard .options #discover {
+      border-bottom: 1px dotted #E67A7A; }
+      #dashboard .options #discover:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #dashboard .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #dashboard .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #dashboard .ngDashboard .biz #chevron {
         margin: 1%;
-        color: #E67A7A; }
-
+        color: #E67A7A;
+        float: right; }
+      #dashboard .ngDashboard .biz img {
+        width: 10%; }
+      #dashboard .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #dashboard .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; } }
+@media screen and (max-width: 1000px) {
+  #dashboard .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 1% 0% 0% 0%;
+    padding: 1%; }
+    #dashboard .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #dashboard .logo img {
+      width: 11%; }
+    #dashboard .logo #rightLogo {
+      display: inline; }
+      #dashboard .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 5%;
+        font-size: 1.5em; }
+        #dashboard .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 6%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #dashboard .logo #rightLogo #userSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 11%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #dashboard .logo #rightLogo #bizSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 14%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #dashboard .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #dashboard .options h3 {
+      margin: 0% 2%;
+      display: inline-block;
+      color: #9E9E9E;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #dashboard .options #discover {
+      border-bottom: 1px dotted #E67A7A; }
+      #dashboard .options #discover:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #dashboard .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #dashboard .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #dashboard .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #dashboard .ngDashboard .biz img {
+        width: 10%; }
+      #dashboard .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #dashboard .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; } }
 #consumerQuestionnaire {
   width: 100%;
   height: 100%;

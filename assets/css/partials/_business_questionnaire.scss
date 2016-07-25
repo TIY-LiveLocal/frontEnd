@@ -34,7 +34,7 @@
           font-size: 4em;
             color: $blue;
           // font-family: Arvo;
-          font-family: Roboto, sans-serif;
+          // font-family: Roboto, sans-serif;
           // width: 10%;
           display: block;
           position:relative;
@@ -53,6 +53,7 @@
     .pageTitle{
       font-size: 1.5em;
       height:2em;
+      padding-bottom: 10px;
     }
 
     .field{
@@ -69,7 +70,7 @@
       color:$darkGrey;
       font-size: 1.5em;
       text-align: left;
-      padding-top: 25px;
+      // padding-top: 25px;
       letter-spacing:1.5px;
     }
 

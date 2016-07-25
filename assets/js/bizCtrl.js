@@ -6,7 +6,7 @@ app.controller('bizController', ['$http', '$scope', function($http, $scope) {
   $http({
       method: 'GET',
       url: 'https://livelocalrails.herokuapp.com/find.json',
-      data: {zip_code:27701},
+      data: {location:27701},
       headers: {'Authorization': 'asdf'}
 
   }).success(function call(data) {

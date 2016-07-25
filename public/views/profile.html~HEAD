@@ -1,0 +1,51 @@
+  <div id = "profilePage" ng-controller = "bizProfController">
+      <div id = "profileHeader">
+        <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
+        <div id = "profileHeader-contain">
+        <span class = "pearlLogo-text"> Pearl </span>
+        <p class = "profileHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
+          <span><button>
+            search
+          </button></span>
+        </p>
+      </div>
+      </div>
+
+<!--begin actual content-->
+      <div id = "profileWrapper">
+
+<!--grid for infomration from business-->
+    <div class="grid grid-pad">
+    <div class="col-1-2">
+       <div class="content">
+         <ul>
+           <li>
+             <h2 class = "businessName">{{one.biz.name}}</h2>
+                <img class = "businessPic" src = "assets/images/beyuCaffe2.jpg">
+            </div>
+          </li>
+
+            <li>
+           <div class="content">
+            <p class = "businessInfo">Address: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Email: Suspendisse id magna molestie, lacinia sapien id, tristique lacus. Bio: Donec blandit libero sed interdum cursus. Nam pulvinar nibh sed ipsum egestas fringilla. Etiam ante arcu, cursus nec pharetra quis, ornare ac eros. Praesent fermentum tellus augue, quis porta est imperdiet vel. Nullam quis varius odio. Phasellus placerat maximus est, a varius ipsum ultricies luctus.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    
+<!--Q and A section for patrons-->
+
+  <div class="col-1-2">
+  <div id = "qASectionContain">
+    <h3 id = "qASectionHead"> Ask a Question </h3>
+    <div id = "qASectionContent">
+        <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
+        <br>
+        <h3> A </h3> <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>

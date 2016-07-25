@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <ellipse id="Pearl" cx="250" cy="250" rx="187.228" ry="187.047" style="fill:rgb(208,236,235);"/>
+    <g id="Shine-round">
+        <ellipse cx="308.787" cy="136.882" rx="40.548" ry="40.815" style="fill:rgb(255,251,243);"/>
+        <ellipse cx="349.335" cy="203.124" rx="20.805" ry="20.578" style="fill:rgb(255,251,243);"/>
+    </g>
+</svg>

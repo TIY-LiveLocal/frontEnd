@@ -5,6 +5,7 @@ app.controller('bizController', ['$http', '$scope', '$window' function($http, $s
 
   $scope.bizProfile = function pullData(){
 
+
   $http({
       method: 'GET',
       url: 'https://livelocalrails.herokuapp.com/find.json',
@@ -13,6 +14,7 @@ app.controller('bizController', ['$http', '$scope', '$window' function($http, $s
 
   }).success(function call(data) {
       $scope.businesses = data;
+
 
       console.log(data);
 

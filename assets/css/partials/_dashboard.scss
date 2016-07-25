@@ -38,6 +38,21 @@
       #discover{
         border-bottom: 6px solid $red;
       }
+      }
+      a{
+        color: $red;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        margin: 0 .5%;
+        position: relative;
+        display: inline-block;
+        left: 80%;
+      }
+      #headerSiteNav-dashboard{
+        border-right: solid $red 1px;
+        padding: 0 1%;
+      }
     }
     .ngDashboard{
       font-family: $font4;
@@ -71,4 +86,3 @@
       }
     }
   }
-}

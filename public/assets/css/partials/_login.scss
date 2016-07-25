@@ -1,0 +1,83 @@
+#loginPage{
+  width: 60%;
+  margin: 0 auto;
+  font-family: $font2;
+  input{
+    &:focus{
+      outline: none;
+    }
+  }
+  .loginWrap{
+    border: 2px solid $blue;
+    border-radius: 10px;
+    margin: 4%;
+    padding: 5% 1%;
+    position: relative;
+    height: 20em;
+    box-shadow: 1px 1px 20px 1px rgba(42, 119, 119, 0.29);
+    .leftWrap{
+      width: 50%;
+      position: absolute;
+      h2{
+        font-family: $font5;
+        color: $red;
+        text-align: center;
+        font-size: 3em;
+        padding: 1%;
+      }
+      img{
+        width: 75%;
+      }
+    }
+    .rightWrap{
+      width: 60%;
+      position: absolute;
+      right: 0;
+      top: 20%;
+      .new_user{
+        .field{
+          width: 60%;
+          margin: 0em auto;
+          padding: 1%;
+          line-height: 3em;
+          #user_email{
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid $blue;
+            padding: 1%;
+            width: 100%;
+          }
+          #user_password{
+            @extend #user_email;
+          }
+          .rememberMe{
+            font-size: .75em;
+          }
+        }
+        .actions{
+          width: 60%;
+          margin: 0 auto;
+          input{
+            background: $red;
+            color: white;
+            border: none;
+            padding: 3% 30%;
+            margin: 5% auto;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 1px;
+          }
+        }
+      }
+      .help{
+        margin: 20%;
+        font-size: .6em;
+        color: $darkBlue;
+        line-height: 2em;
+        &:visited{
+          color: $medBlue;
+        }
+      }
+    }
+  }
+}

@@ -30,305 +30,1510 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-#loginPage {
-<<<<<<< HEAD
+/*
+  Simple Grid
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - http://dallasbass.com
+*/
+.grid:after,
+[class*='col-'],
+[class*='grid'],
+[class*='mobile-'] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding-right: 20px;
+  /* column-space */ }
+
+[class*='col-'] [class*='col-']:last-child {
+  padding-right: 0; }
+
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 748px;
+  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+  margin: 0 auto;
+  overflow: hidden; }
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.grid-pad {
+  padding-top: 20px;
+  padding-left: 20px;
+  /* grid-space to left */
+  padding-right: 0;
+  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
+
+.push-right {
+  float: right; }
+
+/* Content Columns */
+.col-1-2,
+.col-6-12 {
+  width: 40%; }
+
+.col-1-3,
+.col-4-12 {
+  width: 33.33%;
+  position: relative;
+  margin: auto; }
+
+.col-1-4,
+.col-3-12 {
+  width: 25%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-1-6,
+.col-2-12 {
+  width: 16.667%; }
+
+.col-1-7 {
+  width: 14.28%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+.col-1-9 {
+  width: 11.1%; }
+
+.col-1-10 {
+  width: 10%; }
+
+.col-1-11 {
+  width: 9.09%; }
+
+.col-1-12 {
+  width: 8.33%; }
+
+/* Layout Columns */
+.col-11-12 {
+  width: 91.66%; }
+
+.col-10-12 {
+  width: 83.333%; }
+
+.col-9-12 {
+  width: 75%; }
+
+.col-5-12 {
+  width: 41.66%; }
+
+.col-7-12 {
+  width: 58.33%; }
+
+/* Pushing blocks */
+.push-2-3,
+.push-8-12 {
+  margin-left: 66.66%; }
+
+.push-1-2,
+.push-6-12 {
+  margin-left: 50%; }
+
+.push-1-3,
+.push-4-12 {
+  margin-left: 33.33%; }
+
+.push-1-4,
+.push-3-12 {
+  margin-left: 25%; }
+
+.push-1-5 {
+  margin-left: 20%; }
+
+.push-1-6,
+.push-2-12 {
+  margin-left: 16.667%; }
+
+.push-1-7 {
+  margin-left: 14.28%; }
+
+.push-1-8 {
+  margin-left: 12.5%; }
+
+.push-1-9 {
+  margin-left: 11.1%; }
+
+.push-1-10 {
+  margin-left: 10%; }
+
+.push-1-11 {
+  margin-left: 9.09%; }
+
+.push-1-12 {
+  margin-left: 8.33%; }
+
+/*end grid styling*/
+#businessEditPage body {
+  background-color: #FFEBB7; }
+#businessEditPage #businessEditPage-wrapper {
   width: 80%;
-  margin: 0 auto;
-  font-family: "Arimo", sans-serif; }
-  #loginPage .loginWrap {
-    border: 1px solid #9DDCDC;
-    border-radius: 10px;
-    margin: 2em;
-    padding: 1em 1em 3em; }
-    #loginPage .loginWrap h2 {
-      font-family: "Galada", cursive;
-      color: #E67A7A;
-      text-align: center; }
-    #loginPage .loginWrap .new_user .field {
-      width: 40%;
-      margin: 0em auto;
-      padding: 1%; }
-      #loginPage .loginWrap .new_user .field #user_email, #loginPage .loginWrap .new_user .field #user_password {
-        font-size: 1.1em;
-        border: none;
-        border-bottom: 1px solid #9DDCDC;
-        padding: 1%; }
-      #loginPage .loginWrap .new_user .field .rememberMe {
-        font-size: .75em; }
-    #loginPage .loginWrap .new_user .actions {
-      width: 40%;
-      margin: 0 auto; }
-      #loginPage .loginWrap .new_user .actions input {
-        background: #9DDCDC;
-        color: #9DDCDC;
-        border: none;
-        padding: 2%; }
-    #loginPage .loginWrap .help {
-      margin: 30%;
-      font-size: .75em; }
-=======
-  width: 60%;
-  margin: 0 auto;
-  font-family: "Arimo", sans-serif; }
-  #loginPage input:focus {
-    outline: none; }
-  #loginPage .loginWrap {
-    border: 2px solid #9DDCDC;
-    border-radius: 10px;
-    margin: 4%;
-    padding: 5% 1%;
+  margin: auto;
+  font-family: Rubik, sans-serif;
+  color: #E67A7A; }
+  #businessEditPage #businessEditPage-wrapper #profileHeader {
+    width: 100%; }
+    #businessEditPage #businessEditPage-wrapper #profileHeader .pearlLogo {
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+      padding-top: 2%;
+      position: relative;
+      left: 48%; }
+  #businessEditPage #businessEditPage-wrapper #profileHeader-contain {
+    width: 80%;
     position: relative;
-    height: 20em;
-    box-shadow: 1px 1px 20px 1px rgba(42, 119, 119, 0.29); }
-    #loginPage .loginWrap .leftWrap {
-      width: 50%;
-      position: absolute; }
-      #loginPage .loginWrap .leftWrap h2 {
-        font-family: "Galada", cursive;
-        color: #E67A7A;
-        text-align: center;
+    left: 45%; }
+    #businessEditPage #businessEditPage-wrapper #profileHeader-contain .pearlLogo-text {
+      left: 45%;
+      color: #E67A7A;
+      font-size: 3em;
+      font-family: Arvo;
+      width: 10%;
+      display: block;
+      position: relative;
+      left: 0;
+      padding-bottom: 2%; }
+    #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search {
+      position: relative;
+      left: -15%;
+      font-size: 1.5em;
+      padding-bottom: 3%; }
+      #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search input {
+        height: 1.5em;
+        border-style: none;
+        outline: none;
+        margin-left: 0.65%;
+        width: 40%;
+        padding: 0.11%;
+        border-radius: 1px; }
+      #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search button {
+        margin-left: -3%;
+        height: 1.73em;
+        border-radius: 0 2px 2px 0;
+        background-color: #9DDCDC;
+        color: #FFF4E1;
+        border-style: none;
+        outline: none; }
+#businessEditPage li {
+  list-style: none; }
+#businessEditPage .businessHours-hours {
+  position: relative;
+  left: -15%; }
+#businessEditPage .businessBio {
+  width: 80%;
+  height: 15em; }
+
+/*
+  Simple Grid
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - http://dallasbass.com
+*/
+[class*='grid'],
+[class*='col-'],
+[class*='mobile-'],
+.grid:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding-right: 20px;
+  /* column-space */ }
+
+[class*='col-'] [class*='col-']:last-child {
+  padding-right: 0; }
+
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 748px;
+  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+  margin: 0 auto;
+  overflow: hidden; }
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.grid-pad {
+  padding-top: 20px;
+  padding-left: 20px;
+  /* grid-space to left */
+  padding-right: 0;
+  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
+
+.push-right {
+  float: right; }
+
+/* Content Columns */
+.col-1-2, .col-6-12 {
+  width: 37%; }
+
+.col-1-3, .col-4-12 {
+  width: 33.33%; }
+
+.col-1-4, .col-3-12 {
+  width: 25%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-1-6, .col-2-12 {
+  width: 16.667%; }
+
+.col-1-7 {
+  width: 14.28%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+.col-1-9 {
+  width: 11.1%; }
+
+.col-1-10 {
+  width: 10%; }
+
+.col-1-11 {
+  width: 9.09%; }
+
+.col-1-12 {
+  width: 8.33%; }
+
+/* Layout Columns */
+.col-11-12 {
+  width: 91.66%; }
+
+.col-10-12 {
+  width: 83.333%; }
+
+.col-9-12 {
+  width: 75%; }
+
+.col-5-12 {
+  width: 41.66%; }
+
+.col-7-12 {
+  width: 58.33%; }
+
+/* Pushing blocks */
+.push-2-3, .push-8-12 {
+  margin-left: 66.66%; }
+
+.push-1-2, .push-6-12 {
+  margin-left: 50%; }
+
+.push-1-3, .push-4-12 {
+  margin-left: 33.33%; }
+
+.push-1-4, .push-3-12 {
+  margin-left: 25%; }
+
+.push-1-5 {
+  margin-left: 20%; }
+
+.push-1-6, .push-2-12 {
+  margin-left: 16.667%; }
+
+.push-1-7 {
+  margin-left: 14.28%; }
+
+.push-1-8 {
+  margin-left: 12.5%; }
+
+.push-1-9 {
+  margin-left: 11.1%; }
+
+.push-1-10 {
+  margin-left: 10%; }
+
+.push-1-11 {
+  margin-left: 9.09%; }
+
+.push-1-12 {
+  margin-left: 8.33%; }
+
+@media handheld, only screen and (max-width: 767px) {
+  .grid {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    /* grid-space to left */
+    padding-right: 10px;
+    /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */ }
+
+  [class*='col-'] {
+    width: auto;
+    float: none;
+    margin: 10px 0;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */ }
+
+  [class*='col-'] [class*='col-'] {
+    padding-right: 0; }
+
+  /* Mobile Layout */
+  [class*='mobile-col-'] {
+    float: left;
+    margin: 0 0 10px;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */
+    padding-bottom: 0; }
+
+  .mobile-col-1-1 {
+    width: 100%; }
+
+  .mobile-col-2-3, .mobile-col-8-12 {
+    width: 66.66%; }
+
+  .mobile-col-1-2 {
+    width: 40%; }
+
+  /* Layout Columns */
+  .mobile-col-11-12 {
+    width: 91.66%; }
+
+  .mobile-col-10-12 {
+    width: 83.333%; }
+
+  .mobile-col-9-12 {
+    width: 75%; }
+
+  .mobile-col-5-12 {
+    width: 41.66%; }
+
+  .mobile-col-7-12 {
+    width: 58.33%; }
+
+  .hide-on-mobile {
+    display: none !important;
+    width: 0;
+    height: 0; } }
+#profilePage {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  font-family: Roboto, sans-serif;
+  color: #9DDCDC; }
+  #profilePage li {
+    list-style: none; }
+  #profilePage #profileHeader {
+    color: #9DDCDC;
+    width: 100%; }
+    #profilePage #profileHeader .pearlLogo {
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+      padding-top: 2%;
+      position: relative;
+      left: 47%; }
+    #profilePage #profileHeader #profileHeader-contain {
+      width: 80%;
+      position: relative; }
+      #profilePage #profileHeader #profileHeader-contain .pearlLogo-text {
         font-size: 3em;
-        padding: 1%; }
+        font-family: Arvo;
+        width: 10%;
+        display: block;
+        position: relative;
+        left: 58%;
+        padding-bottom: 2%; }
+      #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
+        position: relative;
+        left: 40%;
+        font-size: 1.5em;
+        padding-bottom: 3%; }
+        #profilePage #profileHeader #profileHeader-contain .profileHeader-search input {
+          height: 1.5em;
+          border-style: none;
+          outline: none;
+          margin-left: .65%;
+          width: 40%;
+          padding: .11%;
+          border-radius: 1px;
+          background-color: #EEE; }
+        #profilePage #profileHeader #profileHeader-contain .profileHeader-search button {
+          margin-left: -3%;
+          height: 1.73em;
+          border-radius: 0 2px 2px 0;
+          background-color: #E67A7A;
+          color: #FFF4E1;
+          border-style: none;
+          outline: none; }
+  #profilePage #profileWrapper {
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    width: 80%; }
+  #profilePage .businessName {
+    font-family: Roboto, sans-serif;
+    letter-spacing: 2px;
+    font-size: 2em;
+    padding: 3% 0 5% 0;
+    color: #9E9E9E;
+    position: relative; }
+  #profilePage .businessInfo {
+    margin: 15% 0;
+    position: relative;
+    color: #9E9E9E;
+    letter-spacing: 1.5px; }
+  #profilePage .businessPic {
+    border-radius: 2px;
+    width: 60%;
+    height: 60%;
+    border: solid 2% #9E9E9E; }
+  #profilePage #qASectionContain {
+    position: relative;
+    left: 10%;
+    color: #9E9E9E; }
+    #profilePage #qASectionContain #qASectionHead {
+      width: 40%;
+      padding: .3%;
+      background-color: #EEE;
+      outline: none;
+      border: none; }
+    #profilePage #qASectionContain button {
+      margin-left: -3%;
+      height: 1.73em;
+      border-radius: 0 2px 2px 0;
+      background-color: #E67A7A;
+      color: #FFF4E1;
+      border-style: none;
+      outline: none; }
+    #profilePage #qASectionContain #qASectionContent {
+      padding: 5% 15%; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: #2a7777;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s; }
+
+@media screen and (min-width: 1020px) {
+  #loginPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #loginPage input:focus {
+      outline: none; }
+    #loginPage .loginWrap .leftWrap {
+      width: 100%; }
+      #loginPage .loginWrap .leftWrap h2 {
+        box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        padding: 2% 50% 2% 30%;
+        margin: 5% 0;
+        font-family: "Arvo", serif;
+        color: #E67A7A;
+        font-size: 5em;
+        position: absolute; }
       #loginPage .loginWrap .leftWrap img {
-        width: 75%; }
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        margin: -20% 0; }
     #loginPage .loginWrap .rightWrap {
-      width: 60%;
-      position: absolute;
-      right: 0;
-      top: 20%; }
-      #loginPage .loginWrap .rightWrap .new_user .field {
-        width: 60%;
-        margin: 0em auto;
-        padding: 1%;
-        line-height: 3em; }
-        #loginPage .loginWrap .rightWrap .new_user .field #user_email, #loginPage .loginWrap .rightWrap .new_user .field #user_password {
-          font-size: 1.1em;
-          border: none;
-          border-bottom: 1px solid #9DDCDC;
-          padding: 1%;
-          width: 100%; }
-        #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
-          font-size: .75em; }
-      #loginPage .loginWrap .rightWrap .new_user .actions {
-        width: 60%;
-        margin: 0 auto; }
-        #loginPage .loginWrap .rightWrap .new_user .actions input {
-          background: #9DDCDC;
-          color: white;
-          border: none;
-          padding: 3% 30%;
-          margin: 5% auto;
-          font-size: 1em;
-          font-weight: 500;
-          border-radius: 1px; }
+      width: 100%;
+      position: absolute; }
+      #loginPage .loginWrap .rightWrap .new_user {
+        margin: 20% 0 2%; }
+        #loginPage .loginWrap .rightWrap .new_user .field {
+          width: 30%;
+          margin: 1% 22%; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_email {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 2%;
+            width: 100%;
+            height: 2em;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_password {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 2%;
+            width: 100%;
+            height: 2em;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
+            font-size: .75em; }
+        #loginPage .loginWrap .rightWrap .new_user .actions {
+          margin: 3% 19%; }
+          #loginPage .loginWrap .rightWrap .new_user .actions input {
+            background: #E67A7A;
+            color: white;
+            border: none;
+            padding: 2% 25%;
+            margin: 0.5%;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 1px;
+            letter-spacing: 2px; }
       #loginPage .loginWrap .rightWrap .help {
-        margin: 20%;
+        margin: 1% 22%;
+        display: block;
         font-size: .6em;
         color: #2a7777;
-        line-height: 2em; }
+        line-height: 2em;
+        letter-spacing: 2px; }
         #loginPage .loginWrap .rightWrap .help:visited {
-          color: #3aa2a2; }
-
-#signUp .signUpWrap {
-  width: 40%;
-  margin: 5em auto;
-  box-shadow: 5px 5px 35px 1px #9E9E9E;
-  padding-bottom: .5%; }
-#signUp h2 {
-  background: #E67A7A;
-  display: block;
-  font-family: "Arimo", sans-serif;
-  color: white;
-  text-align: left;
-  font-size: 2em;
-  padding: 5%; }
-#signUp .signUpForm {
-  display: block; }
-  #signUp .signUpForm .signUpInput {
-    width: 90%;
-    display: block;
-    font-size: 1.1em;
-    border: none;
-    border-bottom: 1px solid #9DDCDC;
-    padding: 1%;
-    margin: 4%; }
-    #signUp .signUpForm .signUpInput:focus {
+          color: #3aa2a2; } }
+@media screen and (max-width: 1020px) {
+  #loginPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #loginPage input:focus {
       outline: none; }
-  #signUp .signUpForm .submit {
-    background: #E67A7A;
+    #loginPage .loginWrap {
+      position: relative;
+      margin: 5%; }
+      #loginPage .loginWrap .leftWrap {
+        width: 100%;
+        position: absolute; }
+        #loginPage .loginWrap .leftWrap h2 {
+          font-family: "Arvo", serif;
+          color: #E67A7A;
+          text-align: center;
+          font-size: 3em;
+          padding: 5% 0;
+          box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          letter-spacing: 2px; }
+        #loginPage .loginWrap .leftWrap img {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          margin: -48% 0%;
+          z-index: -1; }
+      #loginPage .loginWrap .rightWrap {
+        width: 100%;
+        position: absolute;
+        margin: 50% 0 0; }
+        #loginPage .loginWrap .rightWrap .new_user .field {
+          width: 80%;
+          margin: 0em auto;
+          padding: 1%;
+          line-height: 3em; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_email {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 3% 2%;
+            width: 100%;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field #user_password {
+            font-size: 1.1em;
+            border: none;
+            border-bottom: 1px solid #9DDCDC;
+            padding: 3% 2%;
+            width: 100%;
+            letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
+            font-size: .75em; }
+        #loginPage .loginWrap .rightWrap .new_user .actions {
+          margin: 5% 10% 5%; }
+          #loginPage .loginWrap .rightWrap .new_user .actions input {
+            width: 100%;
+            background: #E67A7A;
+            color: white;
+            border: none;
+            padding: 5% 30%;
+            margin: 5% auto;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px; }
+        #loginPage .loginWrap .rightWrap .help {
+          margin: 2% 10%;
+          font-size: .8em;
+          color: #2a7777;
+          line-height: 2em;
+          text-decoration: none;
+          border-bottom: 1px solid #9DDCDC;
+          padding: .5%;
+          display: inline-block;
+          letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .help:visited {
+            color: #3aa2a2;
+            text-decoration: none; } }
+@media screen and (min-width: 1020px) {
+  #signUp .headerWrap {
     display: block;
-    font-family: "Arimo", sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 1.5em;
-    padding: 2%;
-    width: 90%;
-    border: none;
-    margin: 1% auto;
-    cursor: pointer; }
->>>>>>> jlong
-
-#dashboard .logo {
-  font-family: "Galada", cursive;
-  display: block;
-  background: #9DDCDC;
-  box-shadow: 1px 1px 1px grey; }
-  #dashboard .logo h1 {
-    font-size: 3em;
-    display: inline-block;
-    background: #9DDCDC;
-    padding: 1%;
-    color: #FFF4E1; }
-  #dashboard .logo img {
-    width: 2.5%; }
-#dashboard .options {
-  font-family: "Arimo", sans-serif; }
-  #dashboard .options h3 {
-    display: inline-block;
-    padding: .5%;
-    width: 20%;
-    background: #E67A7A;
-    color: rgba(10, 10, 10, 0.5);
-    font-size: 2em;
-    text-align: center;
-    box-shadow: 1px 1px 1px grey; }
-#dashboard .ngDashboard {
-  font-family: "Arimo", sans-serif; }
-  #dashboard .ngDashboard .biz {
-    border: 1px solid #E67A7A;
-    width: 50%;
-    padding: 5%;
-    margin: 1%; }
-    #dashboard .ngDashboard .biz img {
-      width: 50%; }
-    #dashboard .ngDashboard .biz #bizName {
-      font-size: 2em; }
-    #dashboard .ngDashboard .biz #bizOwner {
-      font-size: 1.2em; }
-
-<<<<<<< HEAD
-.container {
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 667px;
-  width: 375px;
-  background: #B2C9AB; }
-
-header {
-  display: block;
+    position: relative; }
+    #signUp .headerWrap h2 {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 2% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -65% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    width: 40%;
+    margin: 3% auto;
+    padding-bottom: 1%;
+    background-color: white; }
+    #signUp .signUpWrap h2 {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      padding: 5%;
+      letter-spacing: 2px; }
+  #signUp .signUpForm {
+    display: block; }
+    #signUp .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      margin: 4%;
+      letter-spacing: 1px; }
+      #signUp .signUpForm .signUpInput:focus {
+        outline: none; }
+    #signUp .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+@media screen and (max-width: 1000px) {
+  #signUp .headerWrap {
+    width: 98%;
+    display: block;
+    position: relative;
+    margin: 0 2%; }
+    #signUp .headerWrap h2 {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 2% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -65% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
+    padding-bottom: 3%;
+    margin: 12% 1%;
+    border-radius: 5%; }
+    #signUp .signUpWrap h2 {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      padding: 3%; }
+  #signUp .signUpForm {
+    display: block; }
+    #signUp .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.5em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      line-height: 1.5em;
+      margin: 4%; }
+      #signUp .signUpForm .signUpInput:focus {
+        outline: none; }
+    #signUp .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+@media screen and (min-width: 1000px) {
+  #dashboard .logo {
+    display: block;
+    margin: 1% 0% 0% 0%; }
+    #dashboard .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #dashboard .logo img {
+      width: 35%;
+      margin: -15% -20%;
+      position: relative;
+      z-index: -1; }
+    #dashboard .logo #rightLogo {
+      display: inline; }
+      #dashboard .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 2%;
+        font-size: 1.5em; }
+        #dashboard .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 2% 1.5%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #dashboard .logo #rightLogo #userSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #dashboard .logo #rightLogo #bizSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 30%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #dashboard .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #dashboard .options h3 {
+      margin: 0% 2%;
+      display: inline-block;
+      color: #9E9E9E;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #dashboard .options #discover {
+      border-bottom: 1px dotted #E67A7A; }
+      #dashboard .options #discover:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #dashboard .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #dashboard .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #dashboard .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #dashboard .ngDashboard .biz img {
+        width: 10%; }
+      #dashboard .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #dashboard .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; } }
+@media screen and (max-width: 1000px) {
+  #dashboard .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 1% 0% 0% 0%;
+    padding: 1%; }
+    #dashboard .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #dashboard .logo img {
+      width: 11%; }
+    #dashboard .logo #rightLogo {
+      display: inline; }
+      #dashboard .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 5%;
+        font-size: 1.5em; }
+        #dashboard .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 6%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #dashboard .logo #rightLogo #userSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 11%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #dashboard .logo #rightLogo #bizSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 14%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #dashboard .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #dashboard .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #dashboard .options h3 {
+      margin: 0% 2%;
+      display: inline-block;
+      color: #9E9E9E;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #dashboard .options #discover {
+      border-bottom: 1px dotted #E67A7A; }
+      #dashboard .options #discover:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #dashboard .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #dashboard .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #dashboard .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #dashboard .ngDashboard .biz img {
+        width: 10%; }
+      #dashboard .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #dashboard .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #dashboard .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; } }
+#consumerQuestionnaire {
   width: 100%;
-  border: 1px solid #dfdfdf;
-  border-radius: 5px 5px 0 0;
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 55px;
-  padding-bottom: 5px;
-  padding-top: .5em;
-  color: black; }
+  height: 100%;
+  background-color: white;
+  font-family: Roboto, sans-serif;
+  color: #9DDCDC; }
+  #consumerQuestionnaire #consumerQuestionnaireHeader {
+    color: #9DDCDC;
+    width: 100%; }
+    #consumerQuestionnaire #consumerQuestionnaireHeader .pearlLogo {
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+      padding-top: 2%;
+      position: relative;
+      left: 47%; }
+    #consumerQuestionnaire #consumerQuestionnaireHeader .pearlLogo-text {
+      letter-spacing: 2px;
+      font-size: 4em;
+      color: #9DDCDC;
+      font-family: Arvo;
+      display: block;
+      position: relative;
+      left: 42%;
+      padding-bottom: 2%; }
+    #consumerQuestionnaire #consumerQuestionnaireHeader #consumerQuestionnaireHeader-contain {
+      width: 80%;
+      position: relative; }
+      #consumerQuestionnaire #consumerQuestionnaireHeader #consumerQuestionnaireHeader-contain .pearlLogo-text {
+        letter-spacing: 2px;
+        font-size: 4em;
+        color: #9DDCDC;
+        display: block;
+        position: relative;
+        left: 42%;
+        padding-bottom: 2%; }
 
-.fa-bars {
-  padding: 5px;
-  font-size: 2em;
-  opacity: .5;
-  display: inline;
-  padding-left: .5em;
-  padding-top: .5em; }
+#consumerQuestionnaireWrapper {
+  font-family: Roboto, sans-serif;
+  margin: auto;
+  width: 80%; }
 
 .pageTitle {
-  font: Orbitron;
-  color: black;
-  font-size: 2.5em;
-  text-align: center;
-  opacity: .5;
-  display: inline;
-  padding-top: .5em;
-  padding-left: 1em; }
+  font-size: 1.5em;
+  height: 2em; }
 
-.stripe {
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  height: 7px;
-  width: 100%; }
+.field {
+  padding: .25em; }
 
-.stripe2 {
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
-
-.stripe3 {
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
+.new_business {
+  color: #9E9E9E;
+  font-size: 1em;
+  letter-spacing: 1.5px; }
 
 .instructions {
-  color: black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-top: .5em; }
+  color: #9E9E9E;
+  font-size: 1.5em;
+  text-align: left;
+  letter-spacing: 1.5px; }
 
 .instructions2 {
-  color: black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-bottom: 1em; }
+  color: #9E9E9E;
+  font-size: 1em;
+  text-align: left;
+  height: 2em;
+  letter-spacing: 1.5px; }
 
 .questions {
-  color: black;
-  font-size: 1.3em;
-  padding-left: .5em;
-  font-family: "Lato", Verdana, sans-serif; }
+  color: #9E9E9E;
+  font-size: 1em;
+  letter-spacing: 1.5px; }
 
-.stripe4 {
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 122px;
-  height: 7px;
-  width: 100%; }
+input[type='checkbox'] {
+  cursor: pointer;
+  cursor: hand; }
 
-.stripe5 {
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
+label {
+  cursor: pointer;
+  cursor: hand; }
 
-.stripe6 {
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width: 100%; }
+.nameTextbox {
+  width: 300px; }
 
-footer {
+.streetTextbox {
+  width: 225px; }
+
+.bizUrl {
+  width: 225px; }
+
+.imgUrl {
+  width: 225px; }
+
+.bizTextbox {
+  width: 300px;
+  height: 60px;
+  padding: 1px; }
+
+.checkboxItem {
+  color: #9E9E9E;
+  font-size: 1em; }
+
+.submitButton {
+  height: 1em;
+  width: 6em;
+  background-color: #E67A7A;
+  font-size: 1.5em;
+  color: #FFF4E1;
+  margin: 1em 0 3em 5%;
+  border-color: #E67A7A;
+  border-radius: 1px;
+  text-align: center;
   display: block;
+  padding: 2%;
+  cursor: pointer;
+  cursor: hand; }
+
+@media handheld, only screen and (max-width: 767px) {
+  #consumerQuestionnaire {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    color: #9DDCDC; }
+    #consumerQuestionnaire #consumerQuestionnaireHeader {
+      color: #9DDCDC;
+      width: 100%;
+      display: inline-block;
+      padding: 15px; }
+      #consumerQuestionnaire #consumerQuestionnaireHeader .pearlLogo {
+        width: 80px;
+        left: 10%;
+        margin-top: -15px; }
+      #consumerQuestionnaire #consumerQuestionnaireHeader .pearlLogo-text {
+        font-size: 4em;
+        font-family: Arvo;
+        width: 20%;
+        margin-top: -50px; }
+      #consumerQuestionnaire #consumerQuestionnaireHeader .submitButton {
+        height: 1em;
+        width: 6em;
+        background-color: #E67A7A;
+        font-size: 1.5em;
+        color: #FFF4E1;
+        margin: 1em 0 3em 10%;
+        border-color: #E67A7A;
+        border-radius: 1px;
+        text-align: center;
+        display: block;
+        padding: 2%;
+        cursor: pointer;
+        cursor: hand; } }
+@media screen and (min-width: 1020px) {
+  #businessQuestionnaire .signUpWrap {
+    width: 40%;
+    margin: 5em auto;
+    box-shadow: 5px 5px 35px 1px #9E9E9E;
+    padding-bottom: .5%; }
+  #businessQuestionnaire h2 {
+    background: #E67A7A;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 2em;
+    padding: 5%; }
+  #businessQuestionnaire .signUpForm {
+    display: block; }
+    #businessQuestionnaire .signUpForm .checkboxItems {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.1em; }
+    #businessQuestionnaire .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      margin: 4%; }
+      #businessQuestionnaire .signUpForm .signUpInput:focus {
+        outline: none; }
+    #businessQuestionnaire .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+@media screen and (max-width: 1000px) {
+  #signUp .headerWrap {
+    width: 98%;
+    display: block;
+    position: relative;
+    margin: 0 2%; }
+    #signUp .headerWrap h2 {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 2% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -65% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
+    padding-bottom: 3%;
+    margin: 12% 1%;
+    border-radius: 5%; }
+    #signUp .signUpWrap h2 {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      padding: 3%; }
+  #signUp .signUpForm {
+    display: block; }
+    #signUp .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.5em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      line-height: 1.5em;
+      margin: 4%; }
+      #signUp .signUpForm .signUpInput:focus {
+        outline: none; }
+    #signUp .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+/*
+  Simple Grid
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - http://dallasbass.com
+*/
+[class*='grid'],
+[class*='col-'],
+[class*='mobile-'],
+.grid:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding-right: 20px;
+  /* column-space */ }
+
+[class*='col-'] [class*='col-']:last-child {
+  padding-right: 0; }
+
+.grid {
   width: 100%;
-  border-radius: 0 0 5px 5px;
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 35px;
-  padding-top: .5em; }
+  max-width: 1140px;
+  min-width: 748px;
+  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+  margin: 0 auto;
+  overflow: hidden; }
 
-.footerText {
-  color: black;
-  font-size: 1.3em;
-  padding-left: 1em;
-  opacity: .5; }
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
 
-.container {
-  border-radius: 5px;
-  height: 667px;
+.grid-pad {
+  padding-top: 20px;
+  padding-left: 20px;
+  /* grid-space to left */
+  padding-right: 0;
+  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
+
+.push-right {
+  float: right; }
+
+/* Content Columns */
+.col-1-2, .col-6-12 {
+  width: 37%; }
+
+.col-1-3, .col-4-12 {
+  width: 33.33%; }
+
+.col-1-4, .col-3-12 {
+  width: 25%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-1-6, .col-2-12 {
+  width: 16.667%; }
+
+.col-1-7 {
+  width: 14.28%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+.col-1-9 {
+  width: 11.1%; }
+
+.col-1-10 {
+  width: 10%; }
+
+.col-1-11 {
+  width: 9.09%; }
+
+.col-1-12 {
+  width: 8.33%; }
+
+/* Layout Columns */
+.col-11-12 {
+  width: 91.66%; }
+
+.col-10-12 {
+  width: 83.333%; }
+
+.col-9-12 {
+  width: 75%; }
+
+.col-5-12 {
+  width: 41.66%; }
+
+.col-7-12 {
+  width: 58.33%; }
+
+/* Pushing blocks */
+.push-2-3, .push-8-12 {
+  margin-left: 66.66%; }
+
+.push-1-2, .push-6-12 {
+  margin-left: 50%; }
+
+.push-1-3, .push-4-12 {
+  margin-left: 33.33%; }
+
+.push-1-4, .push-3-12 {
+  margin-left: 25%; }
+
+.push-1-5 {
+  margin-left: 20%; }
+
+.push-1-6, .push-2-12 {
+  margin-left: 16.667%; }
+
+.push-1-7 {
+  margin-left: 14.28%; }
+
+.push-1-8 {
+  margin-left: 12.5%; }
+
+.push-1-9 {
+  margin-left: 11.1%; }
+
+.push-1-10 {
+  margin-left: 10%; }
+
+.push-1-11 {
+  margin-left: 9.09%; }
+
+.push-1-12 {
+  margin-left: 8.33%; }
+
+@media handheld, only screen and (max-width: 767px) {
+  .grid {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    /* grid-space to left */
+    padding-right: 10px;
+    /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */ }
+
+  [class*='col-'] {
+    width: auto;
+    float: none;
+    margin: 10px 0;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */ }
+
+  [class*='col-'] [class*='col-'] {
+    padding-right: 0; }
+
+  /* Mobile Layout */
+  [class*='mobile-col-'] {
+    float: left;
+    margin: 0 0 10px;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */
+    padding-bottom: 0; }
+
+  .mobile-col-1-1 {
+    width: 100%; }
+
+  .mobile-col-2-3, .mobile-col-8-12 {
+    width: 66.66%; }
+
+  .mobile-col-1-2 {
+    width: 40%; }
+
+  /* Layout Columns */
+  .mobile-col-11-12 {
+    width: 91.66%; }
+
+  .mobile-col-10-12 {
+    width: 83.333%; }
+
+  .mobile-col-9-12 {
+    width: 75%; }
+
+  .mobile-col-5-12 {
+    width: 41.66%; }
+
+  .mobile-col-7-12 {
+    width: 58.33%; }
+
+  .hide-on-mobile {
+    display: none !important;
+    width: 0;
+    height: 0; } }
+#profilePage {
   width: 100%;
-  background: #B2C9AB;
-  color: red; }
+  height: 100%;
+  background-color: white;
+  font-family: Roboto, sans-serif;
+  color: #9DDCDC; }
+  #profilePage li {
+    list-style: none; }
+  #profilePage #profileHeader {
+    color: #9DDCDC;
+    width: 100%; }
+    #profilePage #profileHeader .pearlLogo {
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+      padding-top: 2%;
+      position: relative;
+      left: 47%; }
+    #profilePage #profileHeader #profileHeader-contain {
+      width: 80%;
+      position: relative; }
+      #profilePage #profileHeader #profileHeader-contain .pearlLogo-text {
+        font-size: 3em;
+        font-family: Arvo;
+        width: 10%;
+        display: block;
+        position: relative;
+        left: 58%;
+        padding-bottom: 2%; }
+      #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
+        position: relative;
+        left: 40%;
+        font-size: 1.5em;
+        padding-bottom: 3%; }
+        #profilePage #profileHeader #profileHeader-contain .profileHeader-search input {
+          height: 1.5em;
+          border-style: none;
+          outline: none;
+          margin-left: .65%;
+          width: 40%;
+          padding: .11%;
+          border-radius: 1px;
+          background-color: #EEE; }
+        #profilePage #profileHeader #profileHeader-contain .profileHeader-search button {
+          margin-left: -3%;
+          height: 1.73em;
+          border-radius: 0 2px 2px 0;
+          background-color: #E67A7A;
+          color: #FFF4E1;
+          border-style: none;
+          outline: none; }
+  #profilePage #profileWrapper {
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    width: 80%; }
+  #profilePage .businessName {
+    font-family: Roboto, sans-serif;
+    letter-spacing: 2px;
+    font-size: 2em;
+    padding: 3% 0 5% 0;
+    color: #9E9E9E;
+    position: relative; }
+  #profilePage .businessInfo {
+    margin: 15% 0;
+    position: relative;
+    color: #9E9E9E;
+    letter-spacing: 1.5px; }
+  #profilePage .businessPic {
+    border-radius: 2px;
+    width: 60%;
+    height: 60%;
+    border: solid 2% #9E9E9E; }
+  #profilePage #qASectionContain {
+    position: relative;
+    left: 10%;
+    color: #9E9E9E; }
+    #profilePage #qASectionContain #qASectionHead {
+      width: 40%;
+      padding: .3%;
+      background-color: #EEE;
+      outline: none;
+      border: none; }
+    #profilePage #qASectionContain button {
+      margin-left: -3%;
+      height: 1.73em;
+      border-radius: 0 2px 2px 0;
+      background-color: #E67A7A;
+      color: #FFF4E1;
+      border-style: none;
+      outline: none; }
+    #profilePage #qASectionContain #qASectionContent {
+      padding: 5% 15%; }
 
-=======
->>>>>>> jlong
 /*# sourceMappingURL=styles.css.map */

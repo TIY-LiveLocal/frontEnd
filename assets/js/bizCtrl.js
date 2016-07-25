@@ -8,7 +8,17 @@ app.controller('bizController', function() {
       phone : localStorage.getItem('phone')
     };
 
-    console.log(this.data.name);
 
+  $http({
+      method: 'GET',
+      url: 'https://livelocalrails.herokuapp.com/find.json',
+      data: {location:27701},
+      headers: {'Authorization': 'asdf'}
+
+  }).success(function call(data) {
+      $scope.businesses = data;
+
+
+      console.log(data);
 
   });

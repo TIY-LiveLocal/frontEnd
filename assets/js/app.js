@@ -26,12 +26,16 @@ app.config(function($routeProvider){
   .when('/business', {
     templateUrl: 'views/profile.html'
   })
+
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'
   })
   .when('/factory',{
     templateUrl: 'views/yelp.html',
     controller: 'yelpCtrl'
+  })
+  .when('/business_search', {
+    templateUrl: 'views/biz_search.html'
   })
   .otherwise({
     redirectTo: 'login'

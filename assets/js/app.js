@@ -23,9 +23,8 @@ app.config(function($routeProvider){
     templateUrl: 'views/consumer_questionnaire.html',
     controller: 'cqController'
   })
-  .when('/places', {
-    templateUrl: 'views/profile.html',
-    controller: 'bizController'
+  .when('/business', {
+    templateUrl: 'views/profile.html'
   })
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'
@@ -33,10 +32,6 @@ app.config(function($routeProvider){
   .when('/factory',{
     templateUrl: 'views/yelp.html',
     controller: 'yelpCtrl'
-  })
-  .when('/bizdash',{
-    templateUrl: 'views/bizDash.html',
-    controller: 'dashboardCtrl'
   })
   .otherwise({
     redirectTo: 'login'

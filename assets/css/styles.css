@@ -352,7 +352,6 @@ select:-webkit-autofill:focus {
     #dashboard .options h3 {
       margin: 0% 2%;
       display: inline-block;
-      padding: 1%;
       color: #9E9E9E;
       font-size: 1.5em;
       text-align: left;
@@ -450,7 +449,6 @@ select:-webkit-autofill:focus {
     #dashboard .options h3 {
       margin: 0% 2%;
       display: inline-block;
-      padding: 1%;
       color: #9E9E9E;
       font-size: 1.5em;
       text-align: left;

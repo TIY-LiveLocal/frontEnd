@@ -10,11 +10,9 @@ app.factory('dbFactory', ['$http', function($http){
         method: 'GET',
         url: yelpUrl,
         headers: {'Authorization':token}
-
     });
   };
 
   console.log(dbFactory);
   return dbFactory;
-
 }]);

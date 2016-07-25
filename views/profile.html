@@ -1,55 +1,58 @@
-  <div id = "profilePage">
-      <div id = "profileHeader">
-        <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
-        <div id = "profileHeader-contain">
-        <span class = "pearlLogo-text"> Pearl </span>
-        <p class = "profileHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-          <span><button>
+<div id="profilePage" ng-controller="bizController as biz">
+    <div id="profileHeader">
+        <img class="pearlLogo" src="assets/images/pearlLogo.svg">
+        <div id="profileHeader-contain">
+            <span class="pearlLogo-text"> Pearl </span>
+            <p class="profileHeader-search"> find me
+                <input type="text" placeholder="i.e. waffles"></input>
+                <span><button>
             search
           </button></span>
-        </p>
-      </div>
-      </div>
-
-<!--begin actual content-->
-      <div id = "profileWrapper">
-
-<!--grid for infomration from business-->
-    <div class="grid grid-pad">
-    <ul>
-      <li>
-    <div class="col-1-2" id = "leftColumn">
-       <div class="content">
-         <h2 class = "businessName">{{businesses[0].name}}</h2>
-            <img class = "businessPic" ng-src = "{{businesses[0].image_url}}">
+            </p>
         </div>
-      </li>
+    </div>
 
-      <li>
-       <!-- <div class="content"> -->
-         <div id = "qASectionContain">
-           <input id = "qASectionHead" placeholder= "ask this business a question"></input>
-           <span><button>
+    <!--begin actual content-->
+    <div id="profileWrapper">
+
+        <!--grid for infomration from business-->
+        <div class="grid grid-pad">
+            <ul>
+                <li>
+                    <div class="col-1-2" id="leftColumn">
+                        <div class="content">
+                            <h2 class="businessName">{{biz.data.name}}</h2>
+                            <img class="businessPic" ng-src="{{businesses[0].image_url}}">
+                        </div>
+                </li>
+
+                <li>
+                    <!-- <div class="content"> -->
+                    <div id="qASectionContain">
+                        <input id="qASectionHead" placeholder="ask this business a question"></input>
+                        <span><button>
              ask
            </button></span>
-           <div id = "qASectionContent">
-               <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
-               <br>
-               <h3> A </h3> <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
+                        <div id="qASectionContent">
+                            <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
+                            <br>
+                            <h3> A </h3>
+                            <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
 
-  </li>
-</div>
+                </li>
+                </div>
 
-<!--info about place-->
+                <!--info about place-->
 
-  <div class="col-1-2" id = "rightColumn" >
-    <li class = "businessInfo">Business Owner: {{businesses[0].owner}}</li>
-    <li class = "businessInfo">Location:  {{businesses[0].location.city}}, {{businesses[1].location.state_code}}</li>
-    <li class = "businessInfo">Rating: {{businesses[0].rating}} stars</li>
-    <li class = "businessInfo">Phone Number: {{businesses[0].display_phone}}</li>
+                <div class="col-1-2" id="rightColumn">
+                    <li class="businessInfo">Business Owner: </li>
+                    <li class="businessInfo">Location: {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}</li>
+                    <li class="businessInfo">Rating: stars</li>
+                    <li class="businessInfo">Phone Number: {{biz.data.phone}}</li>
+                </div>
+                </div>
+                </div>
+
+        </div>
     </div>
-  </div>
-</div>
-
-  </div>
 </div>

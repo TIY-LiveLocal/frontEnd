@@ -9,41 +9,30 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
         $scope.businesses = response.data;
         $scope.username = response.config.headers.Authorization;
 
-//determine typeof response.data
-  console.log('type of $scope.businesses = ' + typeof $scope.businesses);
 
-//get length of array = $scope.businesses
-  console.log($scope.businesses.length);
+        //click & get index of clicked dataThang
+          $scope.logID = function(){
+            var vm = this.biz;
 
-//click & get index of clicked dataThang
+            myDataThing = $scope.businesses;
+        //an object
+          console.log(typeof myDataThing);
 
+            clicked = $(this).myDataThing;
 
-  $scope.logID = function(){
-    var vm = this.biz;
+        //logs the object information that has been clicked
+          console.log(vm, vm.name);
 
-    myDataThing = $scope.businesses;
-//an object
-  console.log(typeof myDataThing);
+          localStorage.setItem('name',vm.name);
+          localStorage.setItem('address',vm.address);
+          localStorage.setItem('city',vm.city);
+          localStorage.setItem('zip',vm.zip_code);
+          localStorage.setItem('phone',vm.phone);
 
-    clicked = $(this).myDataThing;
-
-//logs the object information that has been clicked
-  console.log(vm, vm.name);
-
-//redirect user to business profile dashboard page
-    $location.path('/bizdash');
-    return vm;
-  };
-
-
-
-
-        // angular.forEach($scope.businesses, function(value, obj){
-        //   console.log(obj + ': ' + value);
-        // });
+        //redirect user to business profile dashboard page
+            $location.path('/business');
+            return vm;
+          };
       });
   }
-
-
-
 }]);

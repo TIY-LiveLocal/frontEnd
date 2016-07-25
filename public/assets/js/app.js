@@ -24,16 +24,10 @@ app.config(function($routeProvider){
     controller: 'cqController'
   })
   .when('/places', {
-
-    templateUrl: 'views/profile.html'
+    templateUrl: '../../profile.html'
   })
-
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'
-  })
-
-  .when('/business_search', {
-    templateUrl: 'views/biz_search.html'
   })
   .otherwise({
     redirectTo: 'login'

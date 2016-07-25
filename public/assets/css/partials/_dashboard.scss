@@ -1,0 +1,50 @@
+#dashboard{
+  .logo{
+    font-family: $font1;
+    display: block;
+    background: $blue;
+    box-shadow: 1px 1px 1px grey;
+
+    h1{
+      font-size: 3em;
+      display: inline-block;
+      background: $blue;
+      padding: 1%;
+      color: $tan;
+    }
+    img{
+      width: 2.5%;
+    }
+    }
+    .options{
+      font-family: $font2;
+      h3{
+        display: inline-block;
+        padding: .5%;
+        width: 20%;
+        background: $red;
+        color: rgba(10,10,10,.5);
+        font-size: 2em;
+        text-align: center;
+        box-shadow: 1px 1px 1px grey;
+      }
+    }
+    .ngDashboard{
+      font-family: $font2;
+      .biz{
+        border: 1px solid $red;
+        width: 50%;
+        padding: 5%;
+        margin: 1%;
+        img{
+          width: 50%;
+        }
+      #bizName{
+        font-size: 2em;
+      }
+      #bizOwner{
+        font-size: 1.2em;
+      }
+    }
+  }
+}

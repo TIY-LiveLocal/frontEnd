@@ -1,9 +1,10 @@
-app.controller('bizController', ['$http', '$scope', '$window' function($http, $scope, $window) {
+app.controller('bizController', ['$http', '$scope', function($http, $scope) {
 
   var token = localStorage.getItem('Authorization');
   console.log(token);
 
-  $scope.bizProfile = function pullData(){
+  // $scope.bizProfile = function pullData(){
+
 
   $http({
       method: 'GET',
@@ -14,10 +15,9 @@ app.controller('bizController', ['$http', '$scope', '$window' function($http, $s
   }).success(function call(data) {
       $scope.businesses = data;
 
+
       console.log(data);
 
   });
 
 }]);
-
-}

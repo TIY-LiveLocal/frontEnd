@@ -1,0 +1,411 @@
+
+#businessQuestionnaire{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    color: $blue;
+  #businessQuestionnaireHeader{
+    color: $blue;
+    width: 100%;
+    .pearlLogo{
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+      padding-top: 2%;
+      position: relative;
+      left: 47%;
+      }
+      #businessQuestionnaireHeader-contain{
+        width: 80%;
+        position: relative;
+        .pearlLogo-text{
+          font-size: 3em;
+          font-family: Arvo;
+          width: 10%;
+          display: block;
+          position:relative;
+          left: 54%;
+          padding-bottom: 2%;
+        }
+        .businessQuestionnaireHeader-search{
+          position: relative;
+          left: 33%;
+          font-size: 1.5em;
+          padding-bottom: 3%;
+          input{
+            height: 1.5em;
+            border-style: none;
+            outline: none;
+            margin-left: .65%;
+            width: 40%;
+            padding: .11%;
+            border-radius: 1px;
+						background-color: #EEE;
+          }
+          button{
+            margin-left: -3%;
+            height: 1.73em;
+            border-radius:0 2px 2px 0;
+            background-color: $red;
+            color: $tan;
+            border-style: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  #businessQuestionnaireWrapper{
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    width: 80%;
+    }
+
+    .pageTitle{
+      font-size: 1.5em;
+      height:2em;
+    }
+    .field{
+      padding: .25em;
+    }
+
+    .new_business{
+      color:$darkGrey;
+      font-size: 1em;
+    }
+
+    .instructions{
+      color:$darkGrey;
+      font-size: 1.5em;
+      text-align: left;
+    }
+
+    .instructions2{
+      color:$darkGrey;
+      font-size: 1em;
+      text-align: left;
+      height:2em;
+    }
+
+    .questions{
+      color:$darkGrey;
+      font-size: 1em;
+    }
+
+    input[type="text"], textarea {
+      background-color : $white;
+    }
+
+    input[type="zipcode"], textarea {
+      background-color : $white;
+    }
+
+    .nameTextbox{
+      width:300px;
+    }
+
+    .streetTextbox{
+      width:225px;
+    }
+
+    .bizUrl{
+      width:225px;
+    }
+
+    .imgUrl{
+      width:225px;
+    }
+
+    .bizTextbox{
+      width: 400px;
+      height: 60px;
+      padding: 1px;
+    }
+
+    .checkboxItem{
+      color:$darkGrey;
+      font-size: 1em;
+    }
+
+    .submitButton{
+      height:1em;
+      width:6em;
+      background-color: $red;
+      font-size: 1.5em;
+      color:$tan;
+      margin: 1em 0 3em 5%;
+      // margin: auto;
+      border-color: $red;
+      border-radius: 1px;
+      text-align: center;
+      display:block;
+      padding: 2%;
+
+    }
+
+
+    .pearlLogo-text{
+      font-family: Roboto, sans-serif;
+			letter-spacing: 2px;
+			font-size: 2em;
+      // padding: 3% 0 5% 0;
+      color: $blue;
+      position: relative;
+    }
+    .businessInfo{
+      // position: relative;
+      // left: 35%;
+      color: $darkGrey;
+      letter-spacing:1.5px;
+      }
+
+    #qASectionContain{
+      position: relative;
+      // margin-top: 40%;
+			color: $darkGrey;
+      #qASectionContent{
+        padding: 5% 15%;
+      }
+    }
+}
+// May not need this grid below.
+/*
+  Simple Grid
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - http://dallasbass.com
+*/
+
+// [class*='grid'],
+// [class*='col-'],
+// [class*='mobile-'],
+// .grid:after {
+// 	-webkit-box-sizing: border-box;
+// 	-moz-box-sizing: border-box;
+// 	box-sizing: border-box;
+// }
+//
+// [class*='col-'] {
+// 	float: left;
+//   	min-height: 1px;
+// 	padding-right: 20px; /* column-space */
+// }
+//
+// [class*='col-'] [class*='col-']:last-child {
+// 	padding-right: 0;
+// }
+//
+// .grid {
+// 	width: 100%;
+// 	max-width: 1140px;
+// 	min-width: 748px; /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+// 	margin: 0 auto;
+// 	overflow: hidden;
+// }
+//
+// .grid:after {
+// 	content: "";
+// 	display: table;
+// 	clear: both;
+// }
+//
+// .grid-pad {
+// 	padding-top: 20px;
+// 	padding-left: 20px; /* grid-space to left */
+// 	padding-right: 0; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */
+// }
+//
+// .push-right {
+// 	float: right;
+// }
+//
+// /* Content Columns */
+//
+// .col-1-2, .col-6-12 {
+// 	width: 40%;
+// }
+//
+// .col-1-3, .col-4-12 {
+// 	width: 33.33%;
+// }
+//
+// .col-1-4, .col-3-12 {
+// 	width: 25%;
+// }
+//
+// .col-1-5 {
+// 	width: 20%;
+// }
+//
+// .col-1-6, .col-2-12 {
+// 	width: 16.667%;
+// }
+//
+// .col-1-7 {
+// 	width: 14.28%;
+// }
+//
+// .col-1-8 {
+// 	width: 12.5%;
+// }
+//
+// .col-1-9 {
+// 	width: 11.1%;
+// }
+//
+// .col-1-10 {
+// 	width: 10%;
+// }
+//
+// .col-1-11 {
+// 	width: 9.09%;
+// }
+//
+// .col-1-12 {
+// 	width: 8.33%
+// }
+//
+// /* Layout Columns */
+//
+// .col-11-12 {
+// 	width: 91.66%
+// }
+//
+// .col-10-12 {
+// 	width: 83.333%;
+// }
+//
+// .col-9-12 {
+// 	width: 75%;
+// }
+//
+// .col-5-12 {
+// 	width: 41.66%;
+// }
+//
+// .col-7-12 {
+// 	width: 58.33%
+// }
+//
+// /* Pushing blocks */
+//
+// .push-2-3, .push-8-12 {
+// 	margin-left: 66.66%;
+// }
+//
+// .push-1-2, .push-6-12 {
+// 	margin-left: 50%;
+// }
+//
+// .push-1-3, .push-4-12 {
+// 	margin-left: 33.33%;
+// }
+//
+// .push-1-4, .push-3-12 {
+// 	margin-left: 25%;
+// }
+//
+// .push-1-5 {
+// 	margin-left: 20%;
+// }
+//
+// .push-1-6, .push-2-12 {
+// 	margin-left: 16.667%;
+// }
+//
+// .push-1-7 {
+// 	margin-left: 14.28%;
+// }
+//
+// .push-1-8 {
+// 	margin-left: 12.5%;
+// }
+//
+// .push-1-9 {
+// 	margin-left: 11.1%;
+// }
+//
+// .push-1-10 {
+// 	margin-left: 10%;
+// }
+//
+// .push-1-11 {
+// 	margin-left: 9.09%;
+// }
+//
+// .push-1-12 {
+// 	margin-left: 8.33%
+// }
+//
+// @media handheld, only screen and (max-width: 767px) {
+// 	.grid {
+// 		width: 100%;
+// 		min-width: 0;
+// 		margin-left: 0;
+// 		margin-right: 0;
+// 		padding-left: 20px; /* grid-space to left */
+// 		padding-right: 10px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+// 	}
+//
+// 	[class*='col-'] {
+// 		width: auto;
+// 		float: none;
+// 		margin: 10px 0;
+// 		padding-left: 0;
+// 		padding-right: 10px; /* column-space */
+// 	}
+//
+// 	[class*='col-'] [class*='col-'] {
+// 		padding-right: 0;
+// 	}
+//
+// 	/* Mobile Layout */
+//
+// 	[class*='mobile-col-'] {
+// 		float: left;
+// 		margin: 0 0 10px;
+// 		padding-left: 0;
+// 		padding-right: 10px; /* column-space */
+// 		padding-bottom: 0;
+// 	}
+//
+// 	.mobile-col-1-1 {
+// 		width: 100%;
+// 	}
+// 	.mobile-col-2-3, .mobile-col-8-12 {
+// 		width: 66.66%;
+// 	}
+//
+// 	.mobile-col-1-2{
+// 		width: 40%;
+// 	}
+//
+//
+// 	/* Layout Columns */
+//
+// 	.mobile-col-11-12 {
+// 		width: 91.66%
+// 	}
+//
+// 	.mobile-col-10-12 {
+// 		width: 83.333%;
+// 	}
+//
+// 	.mobile-col-9-12 {
+// 		width: 75%;
+// 	}
+//
+// 	.mobile-col-5-12 {
+// 		width: 41.66%;
+// 	}
+//
+// 	.mobile-col-7-12 {
+// 		width: 58.33%
+// 	}
+//
+// 	.hide-on-mobile {
+// 		display: none !important;
+// 		width: 0;
+// 		height: 0;
+// 	}
+// }

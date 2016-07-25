@@ -88,11 +88,21 @@
     }
 
     input[type="text"], textarea {
-      background-color : $white;
+      // background-color : $white;
+
     }
 
     input[type="zipcode"], textarea {
-      background-color : $white;
+      // background-color : $white;
+    }
+
+    input[type='checkbox']{
+      cursor: pointer;
+      cursor: hand;
+    }
+    label{
+      cursor: pointer;
+      cursor: hand;
     }
 
     .nameTextbox{

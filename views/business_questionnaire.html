@@ -1,60 +1,50 @@
-
-<div id='businessQuestionnaire'>
-    <div id = "businessQuestionnaireHeader">
-
-      <div id = "businessQuestionnaireHeader-contain">
-      <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
-      <span class = "pearlLogo-text"> Pearl </span>
-      <!-- <p class = "businessQuestionnaireHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-        <span><button>
-          search
-        </button></span>
-      </p> -->
-    </div>
-    </div>
-<div id='businessQuestionnaireWrapper'>
-    <form class='new_business' action=''>
-      <div class='pageTitle'>Let's get your business listed!</div>
-           <div class='field'>Business Name <input type="text" class='nameTextbox' name='name' ng-model='name'value=''/>
-        </div>
-        <div class='field'>Street Address <input type="text" class='streetTextbox' name='address' ng-model='address'value=''/>
-        </div>
-        <div class='field'>City <input type="text" name='city' ng-model='city' value=''/>
-        </div>
-        <div class='field'>Zipcode <input type="zipcode" name='zipcode'ng-model='zipcode' value=''/>
-        </div>
-        <div class='field'>Business Phone Number <input type="text" name='phone' ng-model='phone' value=''/>
-        </div>
-        <div class='field'>Business Website URL
-        <input type="text" class='bizUrl'name='website_url' ng-model='website_url' placeholder='Include http://' value=''/>
-        </div>
-       <div class='field'>Logo or Image to display in your listing
-         <input type="text" name='image_url' class='imgUrl' ng-model='image_url' website_url placeholder='Include http://' value=''/>
-        </div>
-        <div class='field'>Brief description of your business <input type="text" class='bizTextbox'name='biz_descrip' ng-model='biz_descrip' value=''/>
-        </div>
-      </form>
-
-    <div class=''></div>
-    <div class='instructions'>What sets you apart?</div><br>
-    <div class='instructions2'>Stand out to users who care about these features.</div>
-
-    <div>
-      <form class='questions' action=''>
-        <input type="checkbox" name="hiring"  ng-model='hiring' > Currently Hiring<br>
-        <input type="checkbox" name="glutFree" ng-model='glutFree' > Gluten Free Options<br>
-        <input type="checkbox" name="musicians" ng-model='musicians' > Host Local Musicians<br>
-        <input type="checkbox" name="lgbt" ng-model='lgbt' > LGBT Friendly<br>
-        <input type="checkbox" name="localFood" ng-model='localFood' > Locally Sourced Food<br>
-        <input type="checkbox" name="minorityOwned" ng-model='pocOwned' > Minority Owned<br>
-        <input type="checkbox" name="livWage" ng-model='livWage' > Pay a Living Wage<br>
-        <input type="checkbox" name="petFriend" ng-model='petFriend' > Pet Friendly<br>
-        <input type="checkbox" name="artsCrafts" ng-model=artsCrafts > Sell Local Art/Crafts<br>
-        <input type="checkbox" name="charNonprof" ng-model='charNonprof' > Support Local Charities/Non-Profits<br>
-        <input type="checkbox" name="sustain" ng-model='sustain' > Sustainable Practices<br>
-        <input type="checkbox" name="veganPeta" ng-model='veganPeta'> Vegan/PETA Friendly<br>
-        <!-- clicked is a function -->
-      <div class=submitButton input type="submit" ng-click="clicked()"  value="Submit">Get Listed</div>
-      </form>
-    </div>
+<div id="businessQuestionnaire">
+  <div id='businessQuestionnaireWrapper'>
+    <div id="signUp">
+<div class="headerWrap">
+    <h2>Pearl</h2>
+    <img src="assets/img/pearlLogo-1.svg" alt="" />
+</div>
+<div class="signUpWrap">
+<h2>What sets you apart?</h2>
+  <div>
+  <form class="signUpForm">
+    <div class='checkboxItems'>
+      <label class='checkboxItems'><input type="checkbox" name="hiring"  ng-model='hiring' > Currently Hiring</label><br>
+      <label><input type="checkbox" name="glutFree" ng-model='glutFree' > Gluten Free Options</label><br>
+      <label><input type="checkbox" name="musicians" ng-model='musicians' > Host Local Musicians</label><br>
+      <label><input type="checkbox" name="lgbt" ng-model='lgbt' > LGBT Friendly</label><br>
+      <label><input type="checkbox" name="localFood" ng-model='localFood' > Locally Sourced Food</label><br>
+      <label><input type="checkbox" name="minorityOwned" ng-model='pocOwned' > Minority Owned</label><br>
+      <label><input type="checkbox" name="livWage" ng-model='livWage' > Pay a Living Wage</label><br>
+      <label><input type="checkbox" name="petFriend" ng-model='petFriend' > Pet Friendly</label><br>
+      <label><input type="checkbox" name="artsCrafts" ng-model=artsCrafts > Sell Local Art/Crafts</label><br>
+      <label><input type="checkbox" name="charNonprof" ng-model='charNonprof' > Support Local Charities/Non-Profits</label><br>
+      <label><label><input type="checkbox" name="sustain" ng-model='sustain' > Sustainable Practices</label><br>
+      <label><input type="checkbox" name="veganPeta" ng-model='veganPeta'> Vegan/PETA Friendly</label><br>
+</div>
+  <h2>Add Your Business</h2>
+  <!-- <form class="signUpForm"> -->
+    <input class="signUpInput" type="text" name='name' ng-model="name" placeholder="Business Name">
+    <input class="signUpInput" type="text" name='address' ng-model="address" placeholder="Street Address">
+    <input class="signUpInput" type="text" name='city' ng-model="city" placeholder="City">
+    <input class="signUpInput" type="zipcode" name='zipcode' ng-model="zipcode" placeholder="Zipcode">
+    <input class="signUpInput" type="text" name="phone" ng-model="phone" placeholder="Phone">
+    <input class="signUpInput" type="text" name='website_url' ng-model="website_url" placeholder="Website URL (include http://)">
+    <input class="signUpInput" type="text" name='image_url' ng-model="image_url" placeholder="Image URL (include http://)">
+    <input class="signUpInput" type="text" name='biz_descrip' ng-model="biz_descrip" placeholder="Business Description">
+    <input class="submit" type="submit" ng-click="clicked()" value="Get Listed">
+  </form>
+  <ul>
+    <li>{{first_nameErr}}</li>
+    <li>{{last_nameErr}}</li>
+    <li>{{usernameErr}}</li>
+    <li>{{emailErr}}</li>
+    <li>{{passwordErr}}</li>
+    <li>{{confirm_passwordErr}}</li>
+    <li>{{zip_codeErr}}</li>
+  </ul>
+</div>
+</div>
+  </div>
 </div>

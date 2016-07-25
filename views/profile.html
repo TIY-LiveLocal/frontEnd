@@ -12,7 +12,7 @@
       </div>
 
 <!--begin actual content-->
-      <div id = "profileWrapper">
+      <div id = "profileWrapper" ng-model = "bizProfile">
 
 <!--grid for infomration from business-->
     <div class="grid grid-pad">
@@ -21,7 +21,7 @@
     <div class="col-1-2" id = "leftColumn">
        <div class="content">
          <h2 class = "businessName">{{businesses[1].name}}</h2>
-            <img class = "businessPic" ng-src = "{{businesses[1].image_url}}">
+            <img class = "businessPic" ng-src = "{{businesses[i].image_url}}">
         </div>
       </li>
 
@@ -43,10 +43,10 @@
 <!--info about place-->
 
   <div class="col-1-2" id = "rightColumn" >
-    <li class = "businessInfo">Business Owner: {{businesses[1].owner}}</li>
-    <li class = "businessInfo">Location:  {{businesses[1].location.city}}, {{businesses[1].location.state_code}}</li>
+    <li class = "businessInfo">Business Owner: {{businesses[i].owner}}</li>
+    <li class = "businessInfo">Location:  {{businesses[i].location.city}}, {{businesses[i].location.state_code}}</li>
     <li class = "businessInfo">Rating: {{businesses[1].rating}} stars</li>
-    <li class = "businessInfo">Phone Number: {{businesses[1].display_phone}}</li>
+    <li class = "businessInfo">Phone Number: {{businesses[i].display_phone}}</li>
     </div>
   </div>
 </div>

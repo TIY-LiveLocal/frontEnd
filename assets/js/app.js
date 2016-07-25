@@ -1,19 +1,39 @@
 
-var app = angular.module("app", ['ngRoute']);
+var app = angular.module("app", ['ngRoute', "firebase"]);
 
 app.config(function($routeProvider){
   $routeProvider
   .when('/login',{
-    templateUrl: 'views/login.html'
+    templateUrl: 'views/login.html',
+    controller: 'loginController'
+  })
+  .when('/signup',{
+    templateUrl: 'views/signup.html',
+    controller: 'signupController'
   })
   .when('/dashboard',{
     templateUrl: 'views/dashboard.html',
     controller: 'testController'
   })
+  .when('/business_questionnaire',{
+    templateUrl: 'views/business_questionnaire.html',
+    controller: 'bqController'
+  })
+  // Why isn't http://localhost:3000/?#/consumer_questionnaire showing up?
+  .when('/consumer_questionnaire',{
+    templateUrl: 'views/consumer_questionnaire.html',
+    controller: 'cqController'
+  })
   .when('/places', {
+
     templateUrl: 'views/profile.html'
   })
-  .when('/business_edit',{
+  // .when('/business_edit',{
+  //
+  //   templateUrl: 'views/profile.html',
+  //   controller: 'bizController'
+  // })
+  .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'
   })
   .otherwise({

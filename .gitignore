@@ -1,4 +1,8 @@
-#Ignore these files
-
 .DS_Store
 assets/.DS_Store
+bower_components
+.sass-cache
+.firebaserc
+assets/css/styles.css.map
+public/
+firebase.json

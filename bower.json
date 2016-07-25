@@ -20,6 +20,7 @@
     "font-awesome": "FortAwesome/Font-Awesome#^4.6.3",
     "angular-route": "^1.5.7",
     "angular": "^1.5.7",
-    "meyer-reset": "bower-meyer-reset#*"
+    "meyer-reset": "bower-meyer-reset#*",
+    "angularfire": "^2.0.1"
   }
 }

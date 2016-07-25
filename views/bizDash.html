@@ -11,13 +11,8 @@
     </div>
   </header>
   <main>
-    <div class="options">
-      <h3 id="discover">Discover</h3>
-      <h3 >{{username}}</h3>
-    </div>
-
     <ul class="ngDashboard">
-      <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
+      <li class="biz" id={{biz.id}} ng-click="logID()">
         <a href="#/places" id="chevron">
           <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
         </a>

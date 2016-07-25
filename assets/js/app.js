@@ -34,6 +34,10 @@ app.config(function($routeProvider){
     templateUrl: 'views/yelp.html',
     controller: 'yelpCtrl'
   })
+  .when('/bizdash',{
+    templateUrl: 'views/bizDash.html',
+    controller: 'dashboardCtrl'
+  })
   .otherwise({
     redirectTo: 'login'
   });

@@ -1,9 +1,8 @@
 app.controller('bizController', ['$http', '$scope', function($http, $scope) {
 
+
   var token = localStorage.getItem('Authorization');
   console.log(token);
-
-  // $scope.bizProfile = function pullData(){
 
 
   $http({

@@ -1,6 +1,5 @@
-//make a POST request so users can submit questions to the business's Page
 //make it show up dynamically with ng-show
-//will have to pass the business_id and
+//will have to pass the business_id and token via local storage
 
 
 app.controller('bizQPost', ['$http', '$scope', function($http, $scope){
@@ -18,12 +17,15 @@ var questionText = $('input[id="qASectionHead"]').val();
   console.log('The user has typed: ' + questionText);
 
       $http({
-        url: 'https://livelocalrails.herokuapp.com/questions.json',
+        url: 'https://75cc3e1e.ngrok.io/questions',
+        // url: 'https://livelocalrails.herokuapp.com/questions.json',
         method: 'POST',
-        data: {question_text: questionText},
-        headers: {'token': 'df'},
+        data: {question_text: questionText,
+                business_id: 254},
+        headers: {'Authorization': 'sean.harber'},
       }).success(function(data){
-
+        
+        console.log(data);
   });
 
 });

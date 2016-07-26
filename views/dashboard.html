@@ -3,14 +3,21 @@
     <div class="logo">
       <h1>Pearl</h1>
       <img src="assets/img/pearlLogo-1.svg" alt="" />
-      <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+      <!-- <i class="fa fa-cog fa-2x" aria-hidden="true"></i> -->
       <div id = "headerSiteNav">
       <span><a id = "headerSiteNav-dashboard" href = "#/dashboard">dashboard</a>
-      <a id = "headerSiteNav-profile" href= "#/places">profile</a></span>
+      <a id = "headerSiteNav-profile" href= "#/places">profile</a><a id = "headerSiteNav-settings" href= "#/business_edit">settings</a></span>
     </div>
+    <a href = "#/business_search"><button id = "claimBusinessNow">Claim a business</button></a>
     </div>
   </header>
   <main>
+    <p class="profileHeader-search"> find me
+        <input id = "searchNearMe" type="text" placeholder="i.e. waffles"></input>
+        <span><button id = "searchNearMeBtn">
+          search
+        </button></span>
+    </p>
     <div class="options">
       <h3 id="discover">Discover</h3>
       <h3>NAME</h3>

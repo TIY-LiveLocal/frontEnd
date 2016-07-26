@@ -45,13 +45,13 @@
         letter-spacing: 1.5px;
         text-decoration: none;
         margin: 0 .5%;
+        padding: 0 1%;
         position: relative;
         display: inline-block;
-        left: 80%;
+        left: 70%;
       }
-      #headerSiteNav-dashboard{
+      #headerSiteNav-dashboard, #headerSiteNav-profile {
         border-right: solid $red 1px;
-        padding: 0 1%;
       }
     }
     .ngDashboard{

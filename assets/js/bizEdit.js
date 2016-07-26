@@ -1,28 +1,29 @@
 //be able to edit changes to existing content via PATCH request to and endpoint
 console.log('business edit ability is connected');
 
-// var token = localStorage.getItem(response.data.token);
-//
-// console.log('user token is: ' + token);
+var token = localStorage.getItem('token');
+console.log(token);
 
-var specialDates = $('input[id="customDay"]').val();
-console.log('user typed: ' + specialDates + 'for special dates');
+console.log('user token is: ' + token);
 
-var timeEdits = $('input[class="businessHours-hours"]').val();
-console.log('user typed: ' + timeEdits + 'as a time edit');
-
+var dateEdits = $('input[id="customDay"]').val();
+var timeEdits = $('input[class="inputEdits"]').val();
 var bioEdits = $('input[class="businessBio"]').val();
-console.log ('user typed: ' + bioEdits + 'as a bio edit');
 
-$('.editSubmitButton').on('click', function(e){
+
+$(document).on('click', '.editSubmitButton', function(e){
   e.preventDefault();
+  console.log('submit button has been pressed');
+  console.log ('user typed: ' + bioEdits + 'as a bio edit');
+  console.log('user typed: ' + timeEdits + 'as a time edit');
+  console.log('user typed: ' + dateEdits + 'for special dates');
 
 $.ajax({
   url: 'url',
   dataType: 'json',
   method: 'PATCH',
-  data: {},
-  headers: {},
+  data: {question_text: questionText, business_id: 254}, //be able to pass business id from local storage
+  headers: {'Authorization': 'token'}, //be able to pass token for Auth from local storage
 }).done(function(data){
 
 })

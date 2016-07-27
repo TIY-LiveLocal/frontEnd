@@ -272,6 +272,15 @@
           left: 58%;
           padding-bottom: 2%;
         }
+				#hamburgerNav{
+					position: relative;
+					left: 25%;
+				}
+				.dropdownMenu-list--item{
+					position: relative;
+					left: 25%;
+					display: none;
+				}
         .profileHeader-search{
           position: relative;
           left: 40%;

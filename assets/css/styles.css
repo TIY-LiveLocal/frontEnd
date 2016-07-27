@@ -457,6 +457,13 @@ table {
         position: relative;
         left: 58%;
         padding-bottom: 2%; }
+      #profilePage #profileHeader #profileHeader-contain #hamburgerNav {
+        position: relative;
+        left: 25%; }
+      #profilePage #profileHeader #profileHeader-contain .dropdownMenu-list--item {
+        position: relative;
+        left: 25%;
+        display: none; }
       #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
         position: relative;
         left: 40%;
@@ -899,7 +906,19 @@ select:-webkit-autofill:focus {
         font-size: 1em; }
         #dashboard .ngDashboard .biz #bizInfo #yelp {
           margin: 1%;
-          color: #E67A7A; } }
+          color: #E67A7A; }
+  #dashboard a {
+    color: #E67A7A;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin: 0 .5%;
+    padding: 0 1%;
+    position: relative;
+    display: inline-block;
+    left: 60%; }
+  #dashboard #headerSiteNav-dashboard, #dashboard #headerSiteNav-profile, #dashboard #headerSiteNav-settings {
+    border-right: solid #E67A7A 1px; } }
 @media screen and (max-width: 1000px) {
   #dashboard .logo {
     display: block;
@@ -1459,6 +1478,13 @@ select:-webkit-autofill:focus {
         position: relative;
         left: 58%;
         padding-bottom: 2%; }
+      #profilePage #profileHeader #profileHeader-contain #hamburgerNav {
+        position: relative;
+        left: 25%; }
+      #profilePage #profileHeader #profileHeader-contain .dropdownMenu-list--item {
+        position: relative;
+        left: 25%;
+        display: none; }
       #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
         position: relative;
         left: 40%;

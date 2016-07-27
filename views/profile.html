@@ -1,59 +1,65 @@
-<div id="profilePage" ng-controller="bizController as biz">
+<!--pull in Jordan's version of this (with mobile view) with this copy-->
+
+<div id="profilePage">
     <div id="profileHeader">
         <img class="pearlLogo" src="assets/images/pearlLogo.svg">
         <div id="profileHeader-contain">
             <span class="pearlLogo-text"> Pearl </span>
-            <p class="profileHeader-search"> find me
-                <input type="text" placeholder="i.e. waffles"></input>
-                <span><button>
-            search
-          </button></span>
-            </p>
+            <div class="dropdownMenu">
+                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+                <ul class="dropdownMenu-list">
+                    <li class="dropdownMenu-list--item"><a href="#/dashboard">
+              dashboard</a>
+                    </li>
+                    <li class="dropdownMenu-list--item"><a href="#/business_search">
+              search</a>
+                    </li>
+                    <li class="dropdownMenu-list--item"><a href="#/business_edit">
+              settings</a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
-    </div>
 
-    <!--begin actual content-->
-    <div id="profileWrapper">
+        <!--begin actual content-->
+        <div id="profileWrapper" ng-model="bizProfile">
 
-        <!--grid for infomration from business-->
-        <div class="grid grid-pad">
-            <ul>
-                <li>
-                    <div class="col-1-2" id="leftColumn">
-                        <div class="content">
-                            <h2 class="businessName">{{biz.data.name}}</h2>
-                            <img class="businessPic" ng-src="{{businesses[0].image_url}}">
+            <!--grid for infomration from business-->
+            <div class="grid grid-pad">
+                <ul>
+                    <li>
+                        <div class="col-1-2" id="leftColumn">
+                            <div class="content">
+                                <h2 class="businessName">{{biz.data.name}}</h2>
+                                <img class="businessPic" ng-src="{{businesses[i].image_url}}">
+                            </div>
                         </div>
-                </li>
-
-
-                <li>
-                    <!-- <div class="content"> -->
-                    <div id="qASectionContain">
-                        <input id="qASectionHead" placeholder="ask this business a question"></input>
-                        <span><button>
+                        <!-- <div class="content"> -->
+                        <div id="qASectionContain" ng-controller="bizQPost">
+                            <input id="qASectionHead" ng-model="questionText" placeholder="ask this business a question"></input>
+                            <span><button id = "askButton">
              ask
            </button></span>
-                        <div id="qASectionContent">
-                            <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
-                            <br>
-                            <h3> A </h3>
-                            <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
+                            <div id="qASectionContent">
+                                <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
+                                <br>
+                                <h3> A </h3>
+                                <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
 
-                </li>
-                </div>
+                    </li>
+                    </div>
 
-                <!--info about place-->
+                    <!--info about place-->
 
-                <div class="col-1-2" id="rightColumn">
-                    <li class="businessInfo">Business Owner: </li>
-                    <li class="businessInfo">Location: {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}</li>
-                    <li class="businessInfo">Rating: stars</li>
-                    <li class="businessInfo">Phone Number: {{biz.data.phone}}</li>
-                </div>
-                </div>
-                </div>
-
+                    <div class="col-1-2" id="rightColumn">
+                        <li class="businessInfo">Business Owner: {{biz.data.owner}}</li>
+                        <li class="businessInfo">Location: {{biz.data.location.city}}, {{biz.data.location.state_code}}</li>
+                        <li class="businessInfo">Rating: {{biz.data.rating}} stars</li>
+                        <li class="businessInfo">Phone Number: {{biz.data.display_phone}}</li>
+                    </div>
+                    </div>
+            </div>
         </div>
     </div>
 </div>

@@ -116,9 +116,23 @@
           }
         }
       }
+      }
+      a{
+        color: $red;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        margin: 0 .5%;
+        padding: 0 1%;
+        position: relative;
+        display: inline-block;
+        left: 60%;
+      }
+      #headerSiteNav-dashboard, #headerSiteNav-profile, #headerSiteNav-settings {
+        border-right: solid $red 1px;
+      }
     }
   }
-}
 @media screen and (max-width: 1000px) {
   #dashboard{
     .logo{

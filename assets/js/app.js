@@ -35,7 +35,8 @@ app.config(function($routeProvider){
     controller: 'yelpCtrl'
   })
   .when('/business_search', {
-    templateUrl: 'views/biz_search.html'
+    templateUrl: 'views/biz_search.html',
+    controller: 'bizSearchController'
   })
   .otherwise({
     redirectTo: 'login'

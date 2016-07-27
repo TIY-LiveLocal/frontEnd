@@ -22,3 +22,4 @@ app.controller('bizController', function() {
       console.log(data);
 
   });
+});

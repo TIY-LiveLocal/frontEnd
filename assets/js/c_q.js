@@ -14,6 +14,24 @@ app.controller('cqController', ['$http', '$scope','$location', function($http, $
   $scope.claimBusiness = false;
 
 $scope.clicked = function(){
+// //////////////////////
+  $('.checkBox').click(function() {
+      $(this).toggleClass('signUpFormClicked');
+      $(this).toggleClass('signUpForm');
+  });
+  // //////////////////////
+
+    if ($scope.claimBusiness == false){
+      $location.path('/login');
+    } else{
+      $location.path("/business_search");
+    }
+
+  console.log($scope.claimBusiness);
+
+
+
+
   data = {
     hiring : $scope.hiring,
     glutFree : $scope.glutFree,
@@ -26,32 +44,21 @@ $scope.clicked = function(){
     artCrafts : $scope.artCrafts,
     charNonprof : $scope.charNonprof,
     sustain : $scope.sustain,
-    veganPeta : $scope.veganPeta,
+    veganPeta : $scope.veganPeta
   };
-
 
   console.log(data);
 
   $http({
     method: 'POST',
-    url: " https://livelocalrails.herokuapp.com/surveys",
+    url: " https://6b6decab.ngrok.io/surveys",
     data:data,
-    headers:{'Authorization':'chaz'}
+    headers:{'Authorization':'blah'}
   }).then(function success(response){
     console.log(response);
   });
 
-};
+}
 
-$scope.claimBiz = function(){
 
-  if ($scope.claimBusiness == false){
-    $location.path('/login');
-  } else{
-    $location.path("/business_search");
-  }
-
-console.log($scope.claimBusiness);
-
-};
 }]);

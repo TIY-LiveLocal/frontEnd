@@ -1,13 +1,24 @@
+<!--pull in Jordan's version of this (with mobile view) with this copy-->
+
   <div id = "profilePage">
       <div id = "profileHeader">
         <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
         <div id = "profileHeader-contain">
         <span class = "pearlLogo-text"> Pearl </span>
-        <p class = "profileHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-          <span><button>
-            search
-          </button></span>
-        </p>
+        <div class = "dropdownMenu">
+        <i class="fa fa-bars" id = "hamburgerNav" aria-hidden="true"></i>
+          <ul class = "dropdownMenu-list">
+            <li class = "dropdownMenu-list--item"><a href = "#/dashboard">
+              dashboard</a>
+            </li>
+            <li class = "dropdownMenu-list--item"><a href = "#/business_search">
+              search</a>
+            </li>
+            <li class = "dropdownMenu-list--item"><a href = "#/business_edit">
+              settings</a>
+            </li>
+          </ul>
+
       </div>
       </div>
 
@@ -20,16 +31,16 @@
       <li>
     <div class="col-1-2" id = "leftColumn">
        <div class="content">
-         <h2 class = "businessName">{{businesses[1].name}}</h2>
+         <h2 class = "businessName">{{biz.data.name}}</h2>
             <img class = "businessPic" ng-src = "{{businesses[i].image_url}}">
         </div>
       </li>
 
       <li>
        <!-- <div class="content"> -->
-         <div id = "qASectionContain">
-           <input id = "qASectionHead" placeholder= "ask this business a question"></input>
-           <span><button>
+         <div id = "qASectionContain" ng-controller = "bizQPost">
+           <input id = "qASectionHead" ng-model = "questionText" placeholder= "ask this business a question"></input>
+           <span><button id = "askButton">
              ask
            </button></span>
            <div id = "qASectionContent">
@@ -43,10 +54,10 @@
 <!--info about place-->
 
   <div class="col-1-2" id = "rightColumn" >
-    <li class = "businessInfo">Business Owner: {{businesses[i].owner}}</li>
-    <li class = "businessInfo">Location:  {{businesses[i].location.city}}, {{businesses[i].location.state_code}}</li>
-    <li class = "businessInfo">Rating: {{businesses[1].rating}} stars</li>
-    <li class = "businessInfo">Phone Number: {{businesses[i].display_phone}}</li>
+    <li class = "businessInfo">Business Owner: {{biz.data.owner}}</li>
+    <li class = "businessInfo">Location:  {{biz.data.location.city}}, {{biz.data.location.state_code}}</li>
+    <li class = "businessInfo">Rating: {{biz.data.rating}} stars</li>
+    <li class = "businessInfo">Phone Number: {{biz.data.display_phone}}</li>
     </div>
   </div>
 </div>

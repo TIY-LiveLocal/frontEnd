@@ -2,6 +2,7 @@ app.factory('mapFactory', function($q, $rootScope){
 
   var locate = function(){
     var deferred = $q.defer();
+    console.log(deferred);
     navigator.geolocation.getCurrentPosition(success,error);
     function success(position){
       $rootScope.$apply(function () {deferred.resolve(position.coords);});
@@ -13,6 +14,8 @@ app.factory('mapFactory', function($q, $rootScope){
   };
   return {locate : locate};
 });
+
+//REFERENCE http://embed.plnkr.co/onrmfu/
 
   // return{
   //   getCoords: function() {

@@ -1,148 +1,108 @@
-// @media (max-width: 375px) {
-//   #consumer_questionnaire{
-.container{
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 667px;
-  width: 375px;
-  background: #B2C9AB;
-}
+#consumerQuestionnaire{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    color: $blue;
+  #consumerQuestionnaireHeader{
+    color: $blue;
+    width: 100%;
+    .pearlLogo{
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+      padding-top: 2%;
+      position: relative;
+      left: 47%;
+      }
+      #consumerQuestionnaireHeader-contain{
+        width: 80%;
+        position: relative;
+        .pearlLogo-text{
+          font-size: 3em;
+          letter-spacing: 2px;
+          font-family: Arvo;
+          width: 10%;
+          display: block;
+          position:relative;
+          left: 54%;
+          padding-bottom: 2%;
+        }
+        .consumerQuestionnaireHeader-search{
+          position: relative;
+          left: 33%;
+          font-size: 1.5em;
+          padding-bottom: 3%;
+          input{
+            height: 1.5em;
+            border-style: none;
+            outline: none;
+            margin-left: .65%;
+            width: 40%;
+            padding: .11%;
+            border-radius: 1px;
+						background-color: #EEE;
+          }
+          button{
+            margin-left: -3%;
+            height: 1.73em;
+            border-radius:0 2px 2px 0;
+            background-color: $red;
+            color: $tan;
+            border-style: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  #businessQuestionnaireWrapper{
+    font-family: Roboto, sans-serif;
+    margin: auto;
+    width: 80%;
+    }
 
-header {
-  display: block;
-  width: 100%;
-  border: 1px solid #dfdfdf;
-  border-radius: 5px 5px 0 0;;
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 55px;
-  padding-bottom: 5px;
-  padding-top: .5em;
-  color: black;
-}
+    .pageTitle{
+      font-size: 1.5em;
+      height:5em;
+      width:10em;
+    }
 
-.fa-bars{
-  padding:5px;
-  font-size: 2em;
-  opacity:.5;
-  display: inline;
-  padding-left: .5em;
-  padding-top: .5em;
-}
-.pageTitle{
-  font:Orbitron;
-  color:black;
-  font-size: 2.5em;
-  text-align: center;
-  opacity:.5;
-  display: inline;
-  padding-top: .5em;
-  padding-left:1em;
-  // padding-left: 20%;
+    .instructions{
+      color:$darkGrey;
+      font-size: 1.5em;
+      text-align: left;
+      padding-left: 5em;
+    }
 
-}
-.stripe{
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  height: 7px;
-  width:100%;
-}
-.stripe2{
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-}
-.stripe3{
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-  // padding-bottom: 10px;
-}
+    .instructions2{
+      color:$darkGrey;
+      font-size: 1.5em;
+      text-align: left;
+    }
 
-.instructions{
-  color:black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-top: .5em;
-}
-.instructions2{
-  color:black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-bottom: 1em;
-}
 
 .questions{
-  color:black;
-  font-size: 1.3em;
-  padding-left: .5em;
-  font-family: "Lato", Verdana, sans-serif;
+  color:$darkGrey;
+  font-size: 1em;
+  padding-left: 7em;
 }
+  .checkboxItem{
+      color:$darkGrey;
+      font-size: 1em;
+    }
 
-.stripe4{
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 122px;
-  height: 7px;
-  width:100%;
+    .submitButton{
+      height:1em;
+      width:6em;
+      background-color: $red;
+      font-size: 1.5em;
+      color:$tan;
+      margin: 1em 0 3em 5%;
+      // margin: auto;
+      border-color: $red;
+      border-radius: 1px;
+      text-align: center;
+      display:block;
+      padding: 2%;
+    }
 }
-.stripe5{
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-}
-.stripe6{
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-  // padding-bottom: 10px;
-}
-footer{
-  display: block;
-  width: 100%;
-  border-radius: 0 0 5px 5px;
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 35px;
-  padding-top: .5em;
-
-}
-
-.footerText{
-    color: black;
-    font-size: 1.3em;
-    padding-left: 1em;
-    opacity:.5;
-}
-//below closes #consumer_questionnaire wrapper for mobile view
-// }
-// below closes @media mobile view
-// }
-
-// if the display is larger than mobile-width, use the following CSS
-// @media (min-width: 376px){
-//   #consumer_questionnaire{
-  .container{
-    // border: 1px solid black;
-    border-radius: 5px;
-    height: 667px;
-    width: 100%;
-    background: #B2C9AB;
-    color: red;
-  }
-  //below closes #consumer_questionnaire wrapper for mobile view
-// }
-//below closes @media for desktop view
-// }

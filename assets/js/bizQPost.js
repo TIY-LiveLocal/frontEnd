@@ -32,7 +32,7 @@ $(document).on('load', function(e){
     e.preventDefault();
 
         $http({
-          url: 'https://75cc3e1e.ngrok.io/questions',
+          url: 'https://livelocalrails.herokuapp.com/questions',
           // url: 'https://livelocalrails.herokuapp.com/questions.json',
           method: 'GET',
           data: {business_id: 254},

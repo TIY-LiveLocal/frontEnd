@@ -51,7 +51,7 @@ $scope.clicked = function(){
 
   $http({
     method: 'POST',
-    url: " https://6b6decab.ngrok.io/surveys",
+    url: "https://livelocalrails.herokuapp.com/surveys",
     data:data,
     headers:{'Authorization':'blah'}
   }).then(function success(response){

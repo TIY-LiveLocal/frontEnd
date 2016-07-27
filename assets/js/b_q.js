@@ -19,7 +19,7 @@ $scope.clicked =  function(){
 
 $http({
   method:'POST',
-  url:"https://6b6decab.ngrok.io/surveys",
+  url:"https://livelocalrails.herokuapp.com/surveys",
   data: stringData,
   headers: {'Authorization':'blah'}
 }).then(function successCallback(response){

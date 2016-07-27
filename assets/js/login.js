@@ -10,9 +10,9 @@ app.controller('loginController', ['$http', '$scope', '$location', function($htt
 
   $http({
     method: 'POST',
-    url: "https://livelocalrails.herokuapp.com/surveys",
+    url: "https://livelocalrails.herokuapp.com/sign_in",
     data: data,
-    headers: {'Authorization': 'chadcat'}
+    headers: {'Authorization': 'firebaseToken'}
   }).then(function success(response){
     console.log(response);
     console.log(response.data.token); //LOGS THE TOKEN

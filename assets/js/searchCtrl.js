@@ -13,7 +13,7 @@ console.log('user searching for ' + searchNearMe);
 
   $.ajax({
     // url: 'https://e74a3659.ngrok.io/find_business', //change endpoint
-    url: 'https://a8b16154.ngrok.io/businesses',
+    url: 'https://livelocalrails.herokuapp.com/businesses',
     dataType:"json",
     method: "GET",
     data: {term:searchNearMe},

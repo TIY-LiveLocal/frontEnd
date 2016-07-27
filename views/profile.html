@@ -1,59 +1,54 @@
-<div id="profilePage" ng-controller="bizController as biz">
+<div id="businessInfoWrap" ng-controller="bizController as biz">
     <div id="profileHeader">
-        <img class="pearlLogo" src="assets/images/pearlLogo.svg">
-        <div id="profileHeader-contain">
-            <span class="pearlLogo-text"> Pearl </span>
-            <p class="profileHeader-search"> find me
-                <input type="text" placeholder="i.e. waffles"></input>
-                <span><button>
-            search
-          </button></span>
-            </p>
-        </div>
+        <span class="pearlLogo-text"> Pearl
+          <img class="pearlLogo" src="assets/images/pearlLogo.svg">
+        </span>
     </div>
 
     <!--begin actual content-->
     <div id="profileWrapper">
+        <div class="content">
+            <h2 class="businessName">{{biz.data.name}}</h2>
+        </div>
+        <div id="businessInfo">
+            <li class="businessInfo">Location:
+              <div class="uniqueInfo">
+                {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}
+              </div>
+            </li>
+            <li class="businessInfo">Phone Number:
+              <div class="uniqueInfo">
+                {{biz.data.phone}}
+              </div>
+            </li>
+        </div>
 
         <!--grid for infomration from business-->
-        <div class="grid grid-pad">
-            <ul>
-                <li>
-                    <div class="col-1-2" id="leftColumn">
-                        <div class="content">
-                            <h2 class="businessName">{{biz.data.name}}</h2>
-                            <img class="businessPic" ng-src="{{businesses[0].image_url}}">
-                        </div>
-                </li>
+        <div class="qaWrap">
+          <ul>
+            <li>
+            <!-- <div class="content"> -->
+              <div id="qASectionContain" ng-controller="mapCtrl">
+                  <input id="qASectionHead" placeholder="ask this business a question">
+                    <button>
+                     ask
+                    </button>
 
+                  <div id="qASectionContent">
+                    <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
+                    <br>
+                    <h3> A </h3>
+                    <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
+                  </div>
+                  <p><button ng-click="getCoords()">Show my location</button></p>
+                  <div id="out"></div>
+                  <div class="ctrl" >
+                    <!-- <p ng-model="coords">
 
-                <li>
-                    <!-- <div class="content"> -->
-                    <div id="qASectionContain">
-                        <input id="qASectionHead" placeholder="ask this business a question"></input>
-                        <span><button>
-             ask
-           </button></span>
-                        <div id="qASectionContent">
-                            <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
-                            <br>
-                            <h3> A </h3>
-                            <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
-
-                </li>
-                </div>
-
-                <!--info about place-->
-
-                <div class="col-1-2" id="rightColumn">
-                    <li class="businessInfo">Business Owner: </li>
-                    <li class="businessInfo">Location: {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}</li>
-                    <li class="businessInfo">Rating: stars</li>
-                    <li class="businessInfo">Phone Number: {{biz.data.phone}}</li>
-                </div>
-                </div>
-                </div>
-
+                    </p> -->
+                  </div>
+              </div>
+            </li>
         </div>
     </div>
 </div>

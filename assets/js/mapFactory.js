@@ -2,7 +2,6 @@ app.factory('mapFactory', function($q, $rootScope){
 
   var locate = function(){
     var deferred = $q.defer();
-    console.log(deferred);
     navigator.geolocation.getCurrentPosition(success,error);
     function success(position){
       $rootScope.$apply(function () {deferred.resolve(position.coords);});
@@ -17,29 +16,29 @@ app.factory('mapFactory', function($q, $rootScope){
 
 //REFERENCE http://embed.plnkr.co/onrmfu/
 
-  // return{
-  //   getCoords: function() {
-  //     var printGeo;
-  //     navigator.geolocation.getCurrentPosition(success, error);
-  //
-  //     // if (!navigator.geolocation){
-  //     //   console.log('Not supported');
-  //     //   // return;
-  //     // }
-  //     function success(position){
-  //       var userLatitude = position.coords.latitude;
-  //       var userLongitude = position.coords.longitude;
-  //
-  //       printGeo = [userLatitude, userLongitude];
-  //       console.log(printGeo);
-  //     }
-  //
-  //     function error() {
-  //       console.log("Unable to retrieve your location");
-  //     }
-  //   return position;
-  //   }
-  // };
+//   return{
+//     getCoords: function() {
+//       var printGeo;
+//       navigator.geolocation.getCurrentPosition(success, error);
+//
+//       // if (!navigator.geolocation){
+//       //   console.log('Not supported');
+//       //   // return;
+//       // }
+//       function success(position){
+//         var userLatitude = position.coords.latitude;
+//         var userLongitude = position.coords.longitude;
+//
+//         printGeo = [userLatitude, userLongitude];
+//         console.log(printGeo);
+//       }
+//
+//       function error() {
+//         console.log("Unable to retrieve your location");
+//       }
+//     return 42;
+//     }
+//   };
 // });
 
 

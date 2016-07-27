@@ -82,6 +82,12 @@
 	      #qASectionContent{
 	        padding: 5% 10%;
 	      }
+        #map{
+          margin: 2% 10%;
+          .angular-google-map-container {
+            height: 400px;
+          }
+        }
 	    }
 		}
 	}

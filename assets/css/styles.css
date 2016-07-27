@@ -304,6 +304,10 @@ table {
         padding: 1%; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
         padding: 5% 10%; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
+        margin: 2% 10%; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
+          height: 400px; }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

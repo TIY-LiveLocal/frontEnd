@@ -40,9 +40,10 @@
                     <h3> A </h3>
                     <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
                   </div>
-                  <p><button ng-click="getCoords()">Show my location</button></p>
+                  <p><button ng-click="getDirections()">Show my location</button></p>
                   <div id="out"></div>
-                  <div class="ctrl" >
+                  <div id="map">
+                    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
                     <!-- <p ng-model="coords">
 
                     </p> -->

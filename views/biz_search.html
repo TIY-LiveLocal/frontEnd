@@ -1,22 +1,21 @@
 <div id = "searchPageWrapper">
 <form id = "searchPage-inputs">
-  <input class = "searchPage-inputs--name" placeholder="Name of business"></input>
-  <input class = "searchPage-inputs--address" placeholder="Business address"></input>
-  <button id = "bizSetupSearch"> search </button>
+  <input class = "searchPage-inputs--name" type = "text" ng-model= "bizName" placeholder="Name of business"></input>
+  <input class = "searchPage-inputs--address" type = "text" ng-model = "bizAddress" placeholder="Business address"></input>
+  <button id = "bizSetupSearch" ng-click = "searchToClaim()"> search </button>
 
 <!--business listings modal-->
 
-<div class = "businessInfo">
-  <ul class="ngDashboard">
+<div class = "businessInfo" ng-controller = "bizSearchLoadCtrl">
+  <ul>
     <li ng-repeat="biz in businesses" class="biz">
-      <div id="bizName"> {{biz.name}}</div>
-      <div id="bizOwner"> {{biz.owner}}</div>
-      <div id="bizOwner"> {{biz.location.city}},{{biz.location.state_code}}</div>
+      <div id="bizName"> {{data.name}}</div>
+      <div id="bizOwner"> {{data.city}},{{data.location.state_code}}</div>
       <!-- <img ng-src="{{biz.image_url}}" alt="" /> -->
       <div id="bizInfo">
-        {{biz.phone}}
+        {{data.phone}}
         <br>
-        {{biz.location.address[0]}}
+        {{data.location.address}}
 
 
         <a href="{{biz.url}}">

@@ -9,15 +9,15 @@ $(document).on('click', '#searchNearMeBtn', function(e){
 
 var searchNearMe = $('input[class="searchNearMe"]').val();
 
-
-console.log('Business name is ' + bizName + ' and address is ' + bizAddress);
+console.log('user searching for ' + searchNearMe);
 
   $.ajax({
-    url: 'https://e74a3659.ngrok.io/find_business', //change endpoint
+    // url: 'https://e74a3659.ngrok.io/find_business', //change endpoint
+    url: 'https://a8b16154.ngrok.io/businesses',
     dataType:"json",
     method: "GET",
-    data: {term:bizName,  },
-    headers: {'Authorization': 'asdf'},
+    data: {term:searchNearMe},
+    headers: {'Authorization': 'bob'},
   }).done(function(data) {
   })
 

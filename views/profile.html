@@ -1,13 +1,24 @@
+<!--pull in Jordan's version of this (with mobile view) with this copy-->
+
   <div id = "profilePage">
       <div id = "profileHeader">
         <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
         <div id = "profileHeader-contain">
         <span class = "pearlLogo-text"> Pearl </span>
-        <p class = "profileHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-          <span><button>
-            search
-          </button></span>
-        </p>
+        <div class = "dropdownMenu">
+        <i class="fa fa-bars" id = "hamburgerNav" aria-hidden="true"></i>
+          <ul class = "dropdownMenu-list">
+            <li class = "dropdownMenu-list--item"><a href = "#/dashboard">
+              dashboard</a>
+            </li>
+            <li class = "dropdownMenu-list--item"><a href = "#/business_search">
+              search</a>
+            </li>
+            <li class = "dropdownMenu-list--item"><a href = "#/business_edit">
+              settings</a>
+            </li>
+          </ul>
+
       </div>
       </div>
 

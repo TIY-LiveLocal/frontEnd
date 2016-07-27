@@ -8,26 +8,40 @@ app.controller('bizQPost', ['$http', '$scope', function($http, $scope){
 
 // var businessIdNo = how do we go about pulling this information out?
 
-$(document).on('click', '#askButton', function (e){
-  e.preventDefault();
-  console.log('ask has been clicked');
+// $(document).on('click', '#askButton', function (e){
+//   e.preventDefault();
+//   console.log('ask has been clicked');
+//
+// var questionText = $('input[id="qASectionHead"]').val();
+//
+//   console.log('The user has typed: ' + questionText);
 
-var questionText = $('input[id="qASectionHead"]').val();
+      // $http({
+      //   url: 'https://75cc3e1e.ngrok.io/questions',
+      //   // url: 'https://livelocalrails.herokuapp.com/questions.json',
+      //   method: 'POST',
+      //   data: {question_text: questionText,
+      //           business_id: 254},
+      //   headers: {'Authorization': 'sean.harber'},
+      // }).success(function(data){
+      //
+      //   console.log(data);
+console.log('test GET request');
 
-  console.log('The user has typed: ' + questionText);
+$(document).on('load', function(e){
+    e.preventDefault();
 
-      $http({
-        url: 'https://75cc3e1e.ngrok.io/questions',
-        // url: 'https://livelocalrails.herokuapp.com/questions.json',
-        method: 'POST',
-        data: {question_text: questionText,
-                business_id: 254},
-        headers: {'Authorization': 'sean.harber'},
-      }).success(function(data){
-        
-        console.log(data);
-  });
+        $http({
+          url: 'https://75cc3e1e.ngrok.io/questions',
+          // url: 'https://livelocalrails.herokuapp.com/questions.json',
+          method: 'GET',
+          data: {business_id: 254},
+          headers: {'Authorization': 'sean.harber'},
+        }).success(function(data){
 
+          console.log('GET sent');
+        });
+      // });
 });
 
 }]);

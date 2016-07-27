@@ -67,7 +67,7 @@
         font-family: $font4;
         margin: 3% 5%;
         h3{
-          margin: 0% 2%;
+          margin: 1% 2%;
           display: inline-block;
           color: #9E9E9E;
           font-size: 1.5em;
@@ -76,6 +76,7 @@
           letter-spacing: 2px;
         }
         #discover{
+          margin-right: 5%;
           border-bottom: 1px dotted $red;
           &:hover{
             border-bottom: 1px solid $red;
@@ -130,7 +131,7 @@
       h1{
         font-size: 3em;
         display: inline-block;
-        padding: 1%;
+        padding: 1% 1% 1% 4%;
         color: $red;
         letter-spacing: 2px;
         font-family: $font5;

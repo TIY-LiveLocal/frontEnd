@@ -1,19 +1,24 @@
-app.controller('searchController', ['$http', '$scope', function($http, $scope) {
+//still in process of creating endpoint and search terms 07/26
 
-var searchWords = $('input[class = "profileHeader-search"]').val();
-  console.log("User typed " + searchWords)
+console.log('can find businesses in the area');
 
-// var searchNow = [];
-//   "profileHeader-search".push(searchWords);
+$(document).on('click', '#searchNearMeBtn', function(e){
+  e.preventDefault();
+  console.log('user clicked search for local');
+  $('.businessInfo').css('display', 'block');
 
-$http({
-    method: 'GET',
-    url: 'https://livelocalrails.herokuapp.com/businesses/find?zipcode='+ searchWords +'.json'
-}).success(function call(userList) {
+var searchNearMe = $('input[class="searchNearMe"]').val();
 
-    $scope.businesses = userList;
+console.log('user searching for ' + searchNearMe);
 
-  console.log("Get call to the zip code specific stuff works");
+  $.ajax({
+    // url: 'https://e74a3659.ngrok.io/find_business', //change endpoint
+    url: 'https://livelocalrails.herokuapp.com/businesses',
+    dataType:"json",
+    method: "GET",
+    data: {term:searchNearMe},
+    headers: {'Authorization': 'bob'},
+  }).done(function(data) {
+  })
 
 });
-}]);

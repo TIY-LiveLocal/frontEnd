@@ -1,4 +1,4 @@
-app.controller('cqController', ['$http', '$scope', function($http, $scope) {
+app.controller('cqController', ['$http', '$scope','$location', function($http, $scope,$location) {
   $scope.hiring = false;
   $scope.glutFree = false;
   $scope.musicians = false;
@@ -11,11 +11,29 @@ app.controller('cqController', ['$http', '$scope', function($http, $scope) {
   $scope.charNonprof = false;
   $scope.sustain = false;
   $scope.veganPeta = false;
+  $scope.claimBusiness = false;
 
-$scope.clicked1 = function(){
+$scope.clicked = function(){
+// //////////////////////
+  $('.checkBox').click(function() {
+      $(this).toggleClass('signUpFormClicked');
+      $(this).toggleClass('signUpForm');
+  });
+  // //////////////////////
+
+    if ($scope.claimBusiness == false){
+      $location.path('/login');
+    } else{
+      $location.path("/business_search");
+    }
+
+  console.log($scope.claimBusiness);
+
+
+
+
   data = {
     hiring : $scope.hiring,
-    envResp : $scope.envResp,
     glutFree : $scope.glutFree,
     musicians : $scope.musicians,
     lgbt : $scope.lgbt,
@@ -25,17 +43,22 @@ $scope.clicked1 = function(){
     petFriend : $scope.petFriend,
     artCrafts : $scope.artCrafts,
     charNonprof : $scope.charNonprof,
-    veganPeta : $scope.veganPeta,
+    sustain : $scope.sustain,
+    veganPeta : $scope.veganPeta
   };
-  console.log(data);
 
+  console.log(data);
 
   $http({
     method: 'POST',
-    url: "https://livelocalrails.herokuapp.com/businesses",
+    url: "https://livelocalrails.herokuapp.com/surveys",
     data:data,
+    headers:{'Authorization':'blah'}
   }).then(function success(response){
     console.log(response);
   });
-};
+
+}
+
+
 }]);

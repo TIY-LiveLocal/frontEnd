@@ -1,8 +1,13 @@
 <div id = "searchPageWrapper">
 <form id = "searchPage-inputs">
-  <input class = "searchPage-inputs--name" placeholder="Name of business"></input>
-  <input class = "searchPage-inputs--address" placeholder="Business address"></input>
-  <button id = "bizSetupSearch"> search </button>
+
+
+  <input class = "searchPage-inputs--name" type='text' name= 'term' ng-model='term' placeholder="Business Name or Search Term">
+
+  <input class = "searchPage-inputs--address"
+  type='text' name= 'location' ng-model='location' placeholder="Zipcode or City">
+
+  <input class="submit" type="submit" ng-click="searchToClaim()" value=" Search">
 
 <!--business listings modal-->
 

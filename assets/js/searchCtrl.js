@@ -13,7 +13,7 @@ $scope.searchThing = function(){
   $http({
     method: 'POST',
     url: 'https://e74a3659.ngrok.io/find_business',
-    data: thingat,
+    data: thingData,
     headers: {'Authorization': 'token'}
   }).then(function success (response){
   console.log(response);

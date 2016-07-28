@@ -1,56 +1,53 @@
 <div id="dashboard">
-    <!--header-->
-    <header>
-        <div class="logo">
-            <h1>Pearl</h1>
-            <img src="assets/img/pearlLogo-1.svg" alt="" />
-            <!--nav bar-->
-            <div id="headerSiteNav">
-                <ul>
-                    <li>
-                        <a href="#/business_search">
-                            <button id="claimBusinessNow">Claim a business</button>
-                        </a>
-                    </li>
-                    </li>
-                    <span><a id = "headerSiteNav-dashboard" href = "#/dashboard">dashboard</a>
-                        <a id = "headerSiteNav-profile" href= "#/places">profile</a><a id = "headerSiteNav-settings" href= "#/business_edit">settings</a><a id = "headerSiteNav-logout" href= "#/login">logout</a></span>
-                    </li>
-            </div>
-            <!--search bar-->
-        </div ng-controller = "bizSearchCtrl">
-        <div class="profileHeader-search" ng-controller="searchCtrl"> find me
-            <input id="searchNearMe" type="text" placeholder="i.e. waffles"></input>
-            <button ng-click="searchToClaimData()" id="searchNearMeBtn">
-                search
-            </button>
+  <header>
+    <div class="logo">
+      <h1>Pearl</h1>
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
+      <!-- <i class="fa fa-cog fa-2x" aria-hidden="true"></i> -->
+      <div id = "headerSiteNav">
+        <ul>
+          <li>
+        <a href = "#/business_search"><button id = "claimBusinessNow">Claim a business</button></a>
+      </li>
+    </li>
+      <span><a id = "headerSiteNav-dashboard" href = "#/dashboard">dashboard</a>
+      <a id = "headerSiteNav-profile" href= "#/places">profile</a><a id = "headerSiteNav-settings" href= "#/business_edit">settings</a><a id = "headerSiteNav-logout" href= "#/login">logout</a></span>
+    </li>
+    </div>
+    </div>
+  </header>
+  <main>
+    <p class="profileHeader-search"> find me
+        <input id = "searchNearMe" type="text" placeholder="i.e. waffles"></input>
+        <span><button id = "searchNearMeBtn">
+          search
+        </button></span>
+    </p>
+    <div class="options">
+      <h3 id="discover">Discover</h3>
+      <h3 >{{username}}</h3>
+    </div>
+
+    <ul class="ngDashboard">
+      <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
+        <a href="#/places" id="chevron">
+          <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+        </a>
+        <div id="bizName"> {{biz.name}}</div>
+        <div id="bizOwner"> {{biz.owner}}</div>
+        <div id="bizOwner">{{biz.address}}, {{biz.city}}</div>
+        <div id="bizInfo">
+          {{biz.phone}}
+          <br>
+
+
+
+          <a href="{{biz.website_url}}" id="yelp">
+            <i class="fa fa-yelp" aria-hidden="true"></i>
+          </a>
+
         </div>
-    </header>
-    <main>
-      <!--tabs-->
-        <div class="options">
-            <h3 id="discover">Discover</h3>
-            <h3>NAME</h3>
-            <h3>Around</h3>
-        </div>
-
-        <ul class="ngDashboard">
-            <li ng-repeat="biz in businesses" class="biz">
-                <div id="bizName"> {{biz.name}}</div>
-                <div id="bizOwner"> {{biz.owner}}</div>
-                <div id="bizOwner"> {{biz.location.city}},{{biz.location.state_code}}</div>
-                <!-- <img ng-src="{{biz.image_url}}" alt="" /> -->
-                <div id="bizInfo">
-                    {{biz.phone}}
-                    <br> {{biz.location.address[0]}}
-
-
-                    <a href="{{biz.url}}">
-                        <i class="fa fa-yelp" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </li>
-
+      </li>
         </ul>
     </main>
 </div>

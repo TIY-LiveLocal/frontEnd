@@ -16,8 +16,7 @@ $('#askButton').on('click', function(e){
     console.log('ask has been clicked');
 
         $http({
-          url: 'https://6b6decab.ngrok.io/questions',
-          // url: 'https://livelocalrails.herokuapp.com/questions.json',
+          url: 'https://livelocalrails.herokuapp.com/questions',
           method: 'POST',
           data: {questionDataInput},
           headers: {'Authorization': 'sean.harber'},

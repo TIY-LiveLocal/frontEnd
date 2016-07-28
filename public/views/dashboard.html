@@ -2,24 +2,40 @@
   <header>
     <div class="logo">
       <h1>Pearl</h1>
-      <img src="assets/img/pearlLogo.svg" alt="" />
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
+      <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+      <a href="#/consumer_questionnaire">User Survey</a>
+      <a href="#/business_questionnaire">Business Survey</a>
     </div>
   </header>
   <main>
     <div class="options">
-      <h3>Discover</h3>
+      <h3 id="discover">Discover</h3>
       <h3>NAME</h3>
       <h3>Around</h3>
     </div>
 
-    <div ng-repeat="biz in businesses"  class="ngDashboard">
-      <div class="biz">
+    <ul   class="ngDashboard">
+      <li ng-repeat="biz in businesses" class="biz" >
         <div id="bizName"> {{biz.name}}</div>
-        <div id="bizOwner"> {{biz.owner}}Rating: {{biz.rating}}</div>
-        <div id="bizOwner"> {{biz.location.city}}</div>
-        <img ng-src="{{biz.image_url}}" alt="" />
-      </div>
+        <div id="bizOwner"> {{biz.owner}}</div>
+        <div id="bizOwner"> {{biz.location.city}},{{biz.location.state_code}}</div>
+        <!-- <img ng-src="{{biz.image_url}}" alt="" /> -->
+        <div id="bizInfo">
+          {{biz.phone}}
+          <br>
+          {{biz.location.address[0]}}
 
-    </div>
+
+          <a href="{{biz.url}}" id="yelp">
+            <i class="fa fa-yelp" aria-hidden="true"></i>
+          </a>
+          <a href="#/places" id="chevron">
+            <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+          </a>
+        </div>
+      </li>
+
+    </ul>
   </main>
 </div>

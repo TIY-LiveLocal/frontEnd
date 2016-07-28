@@ -14,7 +14,8 @@ app.controller('signupController', ['$http', '$scope','$location', function($htt
 
   $http({
     method: 'POST',
-    url: "https://livelocalrails.herokuapp.com/sign_up",
+    // url: "https://livelocalrails.herokuapp.com/sign_up",
+    url: "https://45c46d61.ngrok.io/sign_up",
     data: data
     }).then(function success(response){
       localStorage.setItem('token',response.data.token);
@@ -22,8 +23,19 @@ app.controller('signupController', ['$http', '$scope','$location', function($htt
 
     console.log(response);
   }, function errorCallback(error){
-    alert(error.data.message);
-    console.log(error);
+    $scope.first_nameErr =  error.data.message.first_name;
+    $scope.last_nameErr =  error.data.message.last_name;
+    $scope.usernameErr =  error.data.message.username;
+    $scope.emailErr =  error.data.message.email;
+    $scope.passwordErr =  error.data.message.password;
+    $scope.confirm_passwordErr =  error.data.message.confirm_password;
+    $scope.zip_codeErr =  error.data.message.zip_code;
+    // alert(error.data.message.email);
+    // $scope.validate = {
+    //   email: error.data.message.email
+    // };
+
+    console.log(error.data.message);
   });
 
 };

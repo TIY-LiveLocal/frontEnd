@@ -10,6 +10,7 @@ $scope.searchThing = function(){
 
   console.log('user clicked search for local');
 
+
   $http({
     method: 'POST',
     url: 'https://e74a3659.ngrok.io/find_business',

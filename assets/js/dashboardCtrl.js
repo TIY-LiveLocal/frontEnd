@@ -21,13 +21,15 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
             clicked = $(this).myDataThing;
 
         //logs the object information that has been clicked
-          console.log(vm, vm.name);
+          console.log(vm, vm.location[0]);
 
           localStorage.setItem('name',vm.name);
           localStorage.setItem('address',vm.address);
           localStorage.setItem('city',vm.city);
           localStorage.setItem('zip',vm.zip_code);
           localStorage.setItem('phone',vm.phone);
+          localStorage.setItem('longitude',vm.location[1]);
+          localStorage.setItem('latitude',vm.location[0]);
 
         //redirect user to business profile dashboard page
             $location.path('/business');

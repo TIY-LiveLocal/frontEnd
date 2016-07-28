@@ -235,241 +235,47 @@ table {
   width: 80%;
   height: 15em; }
 
-/*
-  Simple Grid
-  Project Page - http://thisisdallas.github.com/Simple-Grid/
-  Author - Dallas Bass
-  Site - http://dallasbass.com
-*/
-[class*='grid'],
-[class*='col-'],
-[class*='mobile-'],
-.grid:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  padding-right: 20px;
-  /* column-space */ }
-
-[class*='col-'] [class*='col-']:last-child {
-  padding-right: 0; }
-
-.grid {
-  width: 100%;
-  max-width: 1140px;
-  min-width: 748px;
-  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
-  margin: 0 auto;
-  overflow: hidden; }
-
-.grid:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.grid-pad {
-  padding-top: 20px;
-  padding-left: 20px;
-  /* grid-space to left */
-  padding-right: 0;
-  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
-
-.push-right {
-  float: right; }
-
-/* Content Columns */
-.col-1-2, .col-6-12 {
-  width: 37%; }
-
-.col-1-3, .col-4-12 {
-  width: 33.33%; }
-
-.col-1-4, .col-3-12 {
-  width: 25%; }
-
-.col-1-5 {
-  width: 20%; }
-
-.col-1-6, .col-2-12 {
-  width: 16.667%; }
-
-.col-1-7 {
-  width: 14.28%; }
-
-.col-1-8 {
-  width: 12.5%; }
-
-.col-1-9 {
-  width: 11.1%; }
-
-.col-1-10 {
-  width: 10%; }
-
-.col-1-11 {
-  width: 9.09%; }
-
-.col-1-12 {
-  width: 8.33%; }
-
-/* Layout Columns */
-.col-11-12 {
-  width: 91.66%; }
-
-.col-10-12 {
-  width: 83.333%; }
-
-.col-9-12 {
-  width: 75%; }
-
-.col-5-12 {
-  width: 41.66%; }
-
-.col-7-12 {
-  width: 58.33%; }
-
-/* Pushing blocks */
-.push-2-3, .push-8-12 {
-  margin-left: 66.66%; }
-
-.push-1-2, .push-6-12 {
-  margin-left: 50%; }
-
-.push-1-3, .push-4-12 {
-  margin-left: 33.33%; }
-
-.push-1-4, .push-3-12 {
-  margin-left: 25%; }
-
-.push-1-5 {
-  margin-left: 20%; }
-
-.push-1-6, .push-2-12 {
-  margin-left: 16.667%; }
-
-.push-1-7 {
-  margin-left: 14.28%; }
-
-.push-1-8 {
-  margin-left: 12.5%; }
-
-.push-1-9 {
-  margin-left: 11.1%; }
-
-.push-1-10 {
-  margin-left: 10%; }
-
-.push-1-11 {
-  margin-left: 9.09%; }
-
-.push-1-12 {
-  margin-left: 8.33%; }
-
-@media handheld, only screen and (max-width: 767px) {
-  .grid {
-    width: 100%;
-    min-width: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 20px;
-    /* grid-space to left */
-    padding-right: 10px;
-    /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */ }
-
-  [class*='col-'] {
-    width: auto;
-    float: none;
-    margin: 10px 0;
-    padding-left: 0;
-    padding-right: 10px;
-    /* column-space */ }
-
-  [class*='col-'] [class*='col-'] {
-    padding-right: 0; }
-
-  /* Mobile Layout */
-  [class*='mobile-col-'] {
-    float: left;
-    margin: 0 0 10px;
-    padding-left: 0;
-    padding-right: 10px;
-    /* column-space */
-    padding-bottom: 0; }
-
-  .mobile-col-1-1 {
-    width: 100%; }
-
-  .mobile-col-2-3, .mobile-col-8-12 {
-    width: 66.66%; }
-
-  .mobile-col-1-2 {
-    width: 40%; }
-
-  /* Layout Columns */
-  .mobile-col-11-12 {
-    width: 91.66%; }
-
-  .mobile-col-10-12 {
-    width: 83.333%; }
-
-  .mobile-col-9-12 {
-    width: 75%; }
-
-  .mobile-col-5-12 {
-    width: 41.66%; }
-
-  .mobile-col-7-12 {
-    width: 58.33%; }
-
-  .hide-on-mobile {
-    display: none !important;
-    width: 0;
-    height: 0; } }
-#profilePage {
+#businessInfoWrap {
   width: 100%;
   height: 100%;
   background-color: white;
   font-family: Roboto, sans-serif;
   color: #9DDCDC; }
-  #profilePage li {
+  #businessInfoWrap li {
     list-style: none; }
-  #profilePage #profileHeader {
+  #businessInfoWrap #profileHeader {
     color: #9DDCDC;
     width: 100%; }
-    #profilePage #profileHeader .pearlLogo {
+    #businessInfoWrap #profileHeader .pearlLogo {
       display: inline-block;
-      width: 5%;
-      height: 5%;
-      padding-top: 2%;
       position: relative;
-      left: 47%; }
-    #profilePage #profileHeader #profileHeader-contain {
-      width: 80%;
-      position: relative; }
-      #profilePage #profileHeader #profileHeader-contain .pearlLogo-text {
+      width: 15%; }
+    #businessInfoWrap #profileHeader #profileHeader-contain {
+      position: relative;
+      margin: 1% 5%; }
+      #businessInfoWrap #profileHeader #profileHeader-contain .pearlLogo-text {
         font-size: 3em;
-        font-family: Arvo;
-        width: 10%;
-        display: block;
+        font-family: "Arvo", serif;
+        display: inline-block;
         position: relative;
-        left: 58%;
         padding-bottom: 2%; }
-      #profilePage #profileHeader #profileHeader-contain #hamburgerNav {
-        position: relative;
-        left: 25%; }
-      #profilePage #profileHeader #profileHeader-contain .dropdownMenu-list--item {
+      #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu {
+        display: inline-block;
+        float: right;
+        margin: 5%; }
+        #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu #hamburgerNav {
+          position: relative;
+          font-size: 3em; }
+      #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu-list--item {
         position: relative;
         left: 25%;
         display: none; }
-      #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
+      #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search {
         position: relative;
         left: 40%;
         font-size: 1.5em;
         padding-bottom: 3%; }
-        #profilePage #profileHeader #profileHeader-contain .profileHeader-search input {
+        #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search input {
           height: 1.5em;
           border-style: none;
           outline: none;
@@ -478,7 +284,7 @@ table {
           padding: .11%;
           border-radius: 1px;
           background-color: #EEE; }
-        #profilePage #profileHeader #profileHeader-contain .profileHeader-search button {
+        #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search button {
           margin-left: -3%;
           height: 1.73em;
           border-radius: 0 2px 2px 0;
@@ -486,47 +292,81 @@ table {
           color: #FFF4E1;
           border-style: none;
           outline: none; }
-  #profilePage #profileWrapper {
+  #businessInfoWrap #profileWrapper {
     font-family: Roboto, sans-serif;
     margin: auto;
-    width: 80%; }
-  #profilePage .businessName {
-    font-family: Roboto, sans-serif;
-    letter-spacing: 2px;
-    font-size: 2em;
-    padding: 3% 0 5% 0;
-    color: #9E9E9E;
-    position: relative; }
-  #profilePage .businessInfo {
-    margin: 15% 0;
-    position: relative;
-    color: #9E9E9E;
-    letter-spacing: 1.5px; }
-  #profilePage .businessPic {
-    border-radius: 2px;
-    width: 60%;
-    height: 60%;
-    border: solid 2% #9E9E9E; }
-  #profilePage #qASectionContain {
-    position: relative;
-    left: 10%;
-    color: #9E9E9E; }
-    #profilePage #qASectionContain #qASectionHead {
-      width: 40%;
-      padding: .3%;
-      background-color: #EEE;
-      outline: none;
-      border: none; }
-    #profilePage #qASectionContain button {
-      margin-left: -3%;
-      height: 1.73em;
-      border-radius: 0 2px 2px 0;
-      background-color: #E67A7A;
-      color: #FFF4E1;
-      border-style: none;
-      outline: none; }
-    #profilePage #qASectionContain #qASectionContent {
-      padding: 5% 15%; }
+    width: 100%; }
+    #businessInfoWrap #profileWrapper .content .businessName {
+      font-family: Roboto, sans-serif;
+      letter-spacing: 2px;
+      font-size: 30px;
+      padding: 1%;
+      margin: 6%;
+      color: #9E9E9E;
+      position: relative; }
+    #businessInfoWrap #profileWrapper #businessInfo .businessInfo {
+      margin: 7.5%;
+      position: relative;
+      color: #9E9E9E;
+      letter-spacing: 1.5px;
+      font-size: 16px; }
+      #businessInfoWrap #profileWrapper #businessInfo .businessInfo .uniqueInfo {
+        font-size: 12px;
+        margin: 3% 0; }
+    #businessInfoWrap #profileWrapper .qaWrap #qASectionContain {
+      position: relative;
+      color: #9E9E9E;
+      display: block;
+      margin: 0 auto; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionHead {
+        display: block;
+        width: 80%;
+        background-color: #EEE;
+        outline: none;
+        border: none;
+        margin: 0 auto;
+        font-size: 1.25em;
+        padding: 3%; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain button {
+        display: block;
+        border-radius: 2px;
+        background-color: #E67A7A;
+        color: #FFF4E1;
+        border-style: none;
+        outline: none;
+        margin: 0 auto;
+        width: 86%;
+        font-size: 1em;
+        padding: 1%; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
+        padding: 5% 10%; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
+        margin: 2% 10%; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
+          height: 300px;
+          margin: 0 0 5% 0; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
+          margin: 2%;
+          width: 100%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group input {
+            border: none;
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;
+            color: #E67A7A;
+            margin: 1%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group .col-sm-8 {
+            float: none;
+            display: inline-block;
+            width: 100%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapOD {
+            float: none;
+            display: inline-block;
+            font-size: 20px; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group button {
+            display: inline-block;
+            width: 95%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
+            padding: 0; }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -869,7 +709,7 @@ select:-webkit-autofill:focus {
     font-family: "Roboto", sans-serif;
     margin: 3% 5%; }
     #dashboard .options h3 {
-      margin: 0% 2%;
+      margin: 1% 2%;
       display: inline-block;
       color: #9E9E9E;
       font-size: 1.5em;
@@ -877,6 +717,7 @@ select:-webkit-autofill:focus {
       border-bottom: 1px dotted #E67A7A;
       letter-spacing: 2px; }
     #dashboard .options #discover {
+      margin-right: 5%;
       border-bottom: 1px dotted #E67A7A; }
       #dashboard .options #discover:hover {
         border-bottom: 1px solid #E67A7A; }
@@ -920,15 +761,43 @@ select:-webkit-autofill:focus {
   #dashboard #headerSiteNav-dashboard, #dashboard #headerSiteNav-profile, #dashboard #headerSiteNav-settings {
     border-right: solid #E67A7A 1px; } }
 @media screen and (max-width: 1000px) {
+  #dashboard main p {
+    margin: 5%;
+    font-family: "Arvo", serif;
+    color: #E67A7A; }
+    #dashboard main p input {
+      padding: 1%;
+      width: 40%; }
   #dashboard .logo {
     display: block;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
     margin: 1% 0% 0% 0%;
     padding: 1%; }
+    #dashboard .logo #headerSiteNav ul {
+      display: inline-block;
+      float: right;
+      position: absolute;
+      top: 1%;
+      right: 1%; }
+      #dashboard .logo #headerSiteNav ul li button {
+        border: none;
+        background-color: #E67A7A;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        margin: 15%;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-radius: 2px; }
+      #dashboard .logo #headerSiteNav ul li span a {
+        color: #E67A7A;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        display: block; }
     #dashboard .logo h1 {
       font-size: 3em;
       display: inline-block;
-      padding: 1%;
+      padding: 1% 1% 1% 4%;
       color: #E67A7A;
       letter-spacing: 2px;
       font-family: "Arvo", serif; }
@@ -1106,6 +975,8 @@ select:-webkit-autofill:focus {
     font-family: "Roboto", sans-serif;
     font-size: 1.3em;
     color: #9E9E9E; }
+  #signUp ul {
+    margin: 2%; }
   #signUp .signUpFormClicked {
     display: block;
     font-family: "Roboto", sans-serif;
@@ -1133,9 +1004,11 @@ select:-webkit-autofill:focus {
     cursor: pointer;
     cursor: hand; }
   #signUp input {
-    margin: 5% 1%; }
+    margin: 1%; }
   #signUp .claimBus {
-    color: #E67A7A; }
+    color: #E67A7A;
+    margin: 5% 2% 0%;
+    display: block; }
   #signUp .submit {
     background: #E67A7A;
     display: block;
@@ -1256,297 +1129,5 @@ select:-webkit-autofill:focus {
       margin: 1% auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
-/*
-  Simple Grid
-  Project Page - http://thisisdallas.github.com/Simple-Grid/
-  Author - Dallas Bass
-  Site - http://dallasbass.com
-*/
-[class*='grid'],
-[class*='col-'],
-[class*='mobile-'],
-.grid:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  padding-right: 20px;
-  /* column-space */ }
-
-[class*='col-'] [class*='col-']:last-child {
-  padding-right: 0; }
-
-.grid {
-  width: 100%;
-  max-width: 1140px;
-  min-width: 748px;
-  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
-  margin: 0 auto;
-  overflow: hidden; }
-
-.grid:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.grid-pad {
-  padding-top: 20px;
-  padding-left: 20px;
-  /* grid-space to left */
-  padding-right: 0;
-  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
-
-.push-right {
-  float: right; }
-
-/* Content Columns */
-.col-1-2, .col-6-12 {
-  width: 37%; }
-
-.col-1-3, .col-4-12 {
-  width: 33.33%; }
-
-.col-1-4, .col-3-12 {
-  width: 25%; }
-
-.col-1-5 {
-  width: 20%; }
-
-.col-1-6, .col-2-12 {
-  width: 16.667%; }
-
-.col-1-7 {
-  width: 14.28%; }
-
-.col-1-8 {
-  width: 12.5%; }
-
-.col-1-9 {
-  width: 11.1%; }
-
-.col-1-10 {
-  width: 10%; }
-
-.col-1-11 {
-  width: 9.09%; }
-
-.col-1-12 {
-  width: 8.33%; }
-
-/* Layout Columns */
-.col-11-12 {
-  width: 91.66%; }
-
-.col-10-12 {
-  width: 83.333%; }
-
-.col-9-12 {
-  width: 75%; }
-
-.col-5-12 {
-  width: 41.66%; }
-
-.col-7-12 {
-  width: 58.33%; }
-
-/* Pushing blocks */
-.push-2-3, .push-8-12 {
-  margin-left: 66.66%; }
-
-.push-1-2, .push-6-12 {
-  margin-left: 50%; }
-
-.push-1-3, .push-4-12 {
-  margin-left: 33.33%; }
-
-.push-1-4, .push-3-12 {
-  margin-left: 25%; }
-
-.push-1-5 {
-  margin-left: 20%; }
-
-.push-1-6, .push-2-12 {
-  margin-left: 16.667%; }
-
-.push-1-7 {
-  margin-left: 14.28%; }
-
-.push-1-8 {
-  margin-left: 12.5%; }
-
-.push-1-9 {
-  margin-left: 11.1%; }
-
-.push-1-10 {
-  margin-left: 10%; }
-
-.push-1-11 {
-  margin-left: 9.09%; }
-
-.push-1-12 {
-  margin-left: 8.33%; }
-
-@media handheld, only screen and (max-width: 767px) {
-  .grid {
-    width: 100%;
-    min-width: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 20px;
-    /* grid-space to left */
-    padding-right: 10px;
-    /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */ }
-
-  [class*='col-'] {
-    width: auto;
-    float: none;
-    margin: 10px 0;
-    padding-left: 0;
-    padding-right: 10px;
-    /* column-space */ }
-
-  [class*='col-'] [class*='col-'] {
-    padding-right: 0; }
-
-  /* Mobile Layout */
-  [class*='mobile-col-'] {
-    float: left;
-    margin: 0 0 10px;
-    padding-left: 0;
-    padding-right: 10px;
-    /* column-space */
-    padding-bottom: 0; }
-
-  .mobile-col-1-1 {
-    width: 100%; }
-
-  .mobile-col-2-3, .mobile-col-8-12 {
-    width: 66.66%; }
-
-  .mobile-col-1-2 {
-    width: 40%; }
-
-  /* Layout Columns */
-  .mobile-col-11-12 {
-    width: 91.66%; }
-
-  .mobile-col-10-12 {
-    width: 83.333%; }
-
-  .mobile-col-9-12 {
-    width: 75%; }
-
-  .mobile-col-5-12 {
-    width: 41.66%; }
-
-  .mobile-col-7-12 {
-    width: 58.33%; }
-
-  .hide-on-mobile {
-    display: none !important;
-    width: 0;
-    height: 0; } }
-#profilePage {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  font-family: Roboto, sans-serif;
-  color: #9DDCDC; }
-  #profilePage li {
-    list-style: none; }
-  #profilePage #profileHeader {
-    color: #9DDCDC;
-    width: 100%; }
-    #profilePage #profileHeader .pearlLogo {
-      display: inline-block;
-      width: 5%;
-      height: 5%;
-      padding-top: 2%;
-      position: relative;
-      left: 47%; }
-    #profilePage #profileHeader #profileHeader-contain {
-      width: 80%;
-      position: relative; }
-      #profilePage #profileHeader #profileHeader-contain .pearlLogo-text {
-        font-size: 3em;
-        font-family: Arvo;
-        width: 10%;
-        display: block;
-        position: relative;
-        left: 58%;
-        padding-bottom: 2%; }
-      #profilePage #profileHeader #profileHeader-contain #hamburgerNav {
-        position: relative;
-        left: 25%; }
-      #profilePage #profileHeader #profileHeader-contain .dropdownMenu-list--item {
-        position: relative;
-        left: 25%;
-        display: none; }
-      #profilePage #profileHeader #profileHeader-contain .profileHeader-search {
-        position: relative;
-        left: 40%;
-        font-size: 1.5em;
-        padding-bottom: 3%; }
-        #profilePage #profileHeader #profileHeader-contain .profileHeader-search input {
-          height: 1.5em;
-          border-style: none;
-          outline: none;
-          margin-left: .65%;
-          width: 40%;
-          padding: .11%;
-          border-radius: 1px;
-          background-color: #EEE; }
-        #profilePage #profileHeader #profileHeader-contain .profileHeader-search button {
-          margin-left: -3%;
-          height: 1.73em;
-          border-radius: 0 2px 2px 0;
-          background-color: #E67A7A;
-          color: #FFF4E1;
-          border-style: none;
-          outline: none; }
-  #profilePage #profileWrapper {
-    font-family: Roboto, sans-serif;
-    margin: auto;
-    width: 80%; }
-  #profilePage .businessName {
-    font-family: Roboto, sans-serif;
-    letter-spacing: 2px;
-    font-size: 2em;
-    padding: 3% 0 5% 0;
-    color: #9E9E9E;
-    position: relative; }
-  #profilePage .businessInfo {
-    margin: 15% 0;
-    position: relative;
-    color: #9E9E9E;
-    letter-spacing: 1.5px; }
-  #profilePage .businessPic {
-    border-radius: 2px;
-    width: 60%;
-    height: 60%;
-    border: solid 2% #9E9E9E; }
-  #profilePage #qASectionContain {
-    position: relative;
-    left: 10%;
-    color: #9E9E9E; }
-    #profilePage #qASectionContain #qASectionHead {
-      width: 40%;
-      padding: .3%;
-      background-color: #EEE;
-      outline: none;
-      border: none; }
-    #profilePage #qASectionContain button {
-      margin-left: -3%;
-      height: 1.73em;
-      border-radius: 0 2px 2px 0;
-      background-color: #E67A7A;
-      color: #FFF4E1;
-      border-style: none;
-      outline: none; }
-    #profilePage #qASectionContain #qASectionContent {
-      padding: 5% 15%; }
 
 /*# sourceMappingURL=styles.css.map */

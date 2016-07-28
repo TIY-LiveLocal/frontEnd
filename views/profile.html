@@ -18,7 +18,7 @@
             </li>
             <li class="businessInfo">Phone Number:
               <div class="uniqueInfo">
-                {{biz.data.phone}}
+                <a href=”tel:+{{biz.data.phone}}″>1 (412) 357-2016</a>
               </div>
             </li>
         </div>
@@ -40,7 +40,7 @@
                     <h3> A </h3>
                     <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
                   </div>
-                  <p><button ng-click="getDirections()">Show my location</button></p>
+                  <p><button ng-click="getDirections()">Locate</button></p>
                   <div id="out"></div>
                   <div id="map">
                     <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>

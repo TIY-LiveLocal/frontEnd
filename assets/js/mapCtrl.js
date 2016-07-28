@@ -1,6 +1,11 @@
 app.controller('mapCtrl', function($scope, mapFactory) {
 
-  $scope.map = {center: {latitude: 35.99277, longitude: -78.9045719}, zoom: 15};
+//Google Maps HTML / inject $scope coordinates with format
+
+  var lat = localStorage.getItem('latitude');
+  var lng = localStorage.getItem('longitude');
+
+  $scope.map = {center: {latitude: lat, longitude: lng}, zoom: 15};
 
   console.log(mapFactory.locate());
 

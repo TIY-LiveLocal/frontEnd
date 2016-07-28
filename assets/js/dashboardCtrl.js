@@ -28,8 +28,8 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
           localStorage.setItem('city',vm.city);
           localStorage.setItem('zip',vm.zip_code);
           localStorage.setItem('phone',vm.phone);
-          localStorage.setItem('longitude',vm.location[0]);
-          localStorage.setItem('latitude',vm.location[1]);
+          localStorage.setItem('longitude',vm.location[1]);
+          localStorage.setItem('latitude',vm.location[0]);
 
         //redirect user to business profile dashboard page
             $location.path('/business');

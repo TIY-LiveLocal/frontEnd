@@ -293,7 +293,7 @@ table {
         padding: 3%; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain button {
         display: block;
-        border-radius: 0 2px 2px 0;
+        border-radius: 2px;
         background-color: #E67A7A;
         color: #FFF4E1;
         border-style: none;
@@ -307,7 +307,30 @@ table {
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
         margin: 2% 10%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
-          height: 400px; }
+          height: 300px;
+          margin: 0 0 5% 0; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
+          margin: 2%;
+          width: 100%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group input {
+            border: none;
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;
+            color: #E67A7A;
+            margin: 1%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group .col-sm-8 {
+            float: none;
+            display: inline-block;
+            width: 100%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapOD {
+            float: none;
+            display: inline-block;
+            font-size: 20px; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group button {
+            display: inline-block;
+            width: 95%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
+            padding: 0; }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

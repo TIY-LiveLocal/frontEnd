@@ -69,7 +69,7 @@
 				}
 				button{
 					display: block;
-			    border-radius: 0 2px 2px 0;
+			    border-radius: 2px;
 			    background-color: #E67A7A;
 			    color: #FFF4E1;
 			    border-style: none;
@@ -85,7 +85,39 @@
         #map{
           margin: 2% 10%;
           .angular-google-map-container {
-            height: 400px;
+            height: 300px;
+            margin: 0 0 5% 0;
+          }
+          .form-horizontal{
+            .form-group{
+              margin: 2%;
+              width: 100%;
+              input{
+                border: none;
+                font-size: 16px;
+                font-family: $font4;
+                color: $red;
+                margin: 1%;
+              }
+              .col-sm-8{
+                float: none;
+                display: inline-block;
+                width: 100%;
+
+              }
+              #mapOD{
+                float: none;
+                display: inline-block;
+                font-size: 20px;
+              }
+              button{
+                display: inline-block;
+                width: 95%;
+              }
+              #mapBtn{
+                padding: 0;
+              }
+            }
           }
         }
 	    }

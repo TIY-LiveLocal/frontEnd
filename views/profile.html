@@ -40,13 +40,35 @@
                     <h3> A </h3>
                     <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
                   </div>
-                  <p><button ng-click="getDirections()">Locate</button></p>
+                  <!-- <p><button ng-click="getDirections()">Locate</button></p> -->
                   <div id="out"></div>
                   <div id="map">
-                    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-                    <!-- <p ng-model="coords">
-
-                    </p> -->
+                    <!-- <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map> -->
+                    <!-- <p ng-model="coords">-->
+                    <ui-gmap-google-map control="map.control" center="map.center" zoom="map.zoom">
+                              <marker coords="marker.center"></marker>
+                            </ui-gmap-google-map>
+                            <form class="form-horizontal" role="form">
+                              <div class="form-group">
+                                <label id="mapOD" for="origin" class="col-sm-2 control-label">Origin</label>
+                                <div class="col-sm-8">
+                                  <input type="text" id="origin" class="form-control" ng-model="directions.origin" />
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label id="mapOD" for="destination" class="col-sm-2 control-label">Destination</label>
+                                <div class="col-sm-8">
+                                  <input type="text" id="destination" class="form-control" ng-model="directions.destination" />
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
+                                  <button class="btn btn-primary" ng-click="getGMap()">Get Directions</button>
+                                </div>
+                              </div>
+                            </form>
+                            <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
+                  <!--  </p> -->
                   </div>
               </div>
             </li>

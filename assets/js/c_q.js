@@ -15,22 +15,23 @@ app.controller('cqController', ['$http', '$scope','$location', function($http, $
 
 $scope.clicked = function(){
 // //////////////////////
-  $('.checkBox').click(function() {
-      $(this).toggleClass('signUpFormClicked');
-      $(this).toggleClass('signUpForm');
-  });
+  // $('.checkBox').click(function() {
+  //     $(this).toggleClass('signUpFormClicked');
+  //     $(this).toggleClass('signUpForm');
+  // });
   // //////////////////////
 
-    if ($scope.claimBusiness === false){
+    // if ($scope.claimBusiness === false){
+    //   $location.path('/dashboard');
+    // } else{
+    //   $location.path("/business_search");
+    // }
+
+
       $location.path('/dashboard');
-    } else{
-      $location.path("/business_search");
-    }
+  
 
   console.log($scope.claimBusiness);
-
-
-
 
   data = {
     hiring : $scope.hiring,

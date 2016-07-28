@@ -21,8 +21,8 @@ $scope.clicked = function(){
   });
   // //////////////////////
 
-    if ($scope.claimBusiness == false){
-      $location.path('/login');
+    if ($scope.claimBusiness === false){
+      $location.path('/dashboard');
     } else{
       $location.path("/business_search");
     }
@@ -49,16 +49,18 @@ $scope.clicked = function(){
 
   console.log(data);
 
+  var token = localStorage.getItem('token');
+
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/surveys",
     data:data,
-    headers:{'Authorization':'blah'}
+    headers:{'Authorization': token}
   }).then(function success(response){
     console.log(response);
   });
 
-}
+};
 
 
 }]);

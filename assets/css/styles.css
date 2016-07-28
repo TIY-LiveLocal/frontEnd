@@ -761,11 +761,39 @@ select:-webkit-autofill:focus {
   #dashboard #headerSiteNav-dashboard, #dashboard #headerSiteNav-profile, #dashboard #headerSiteNav-settings {
     border-right: solid #E67A7A 1px; } }
 @media screen and (max-width: 1000px) {
+  #dashboard main p {
+    margin: 5%;
+    font-family: "Arvo", serif;
+    color: #E67A7A; }
+    #dashboard main p input {
+      padding: 1%;
+      width: 40%; }
   #dashboard .logo {
     display: block;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
     margin: 1% 0% 0% 0%;
     padding: 1%; }
+    #dashboard .logo #headerSiteNav ul {
+      display: inline-block;
+      float: right;
+      position: absolute;
+      top: 1%;
+      right: 1%; }
+      #dashboard .logo #headerSiteNav ul li button {
+        border: none;
+        background-color: #E67A7A;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        margin: 15%;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-radius: 2px; }
+      #dashboard .logo #headerSiteNav ul li span a {
+        color: #E67A7A;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        display: block; }
     #dashboard .logo h1 {
       font-size: 3em;
       display: inline-block;
@@ -947,6 +975,8 @@ select:-webkit-autofill:focus {
     font-family: "Roboto", sans-serif;
     font-size: 1.3em;
     color: #9E9E9E; }
+  #signUp ul {
+    margin: 2%; }
   #signUp .signUpFormClicked {
     display: block;
     font-family: "Roboto", sans-serif;
@@ -974,9 +1004,11 @@ select:-webkit-autofill:focus {
     cursor: pointer;
     cursor: hand; }
   #signUp input {
-    margin: 5% 1%; }
+    margin: 1%; }
   #signUp .claimBus {
-    color: #E67A7A; }
+    color: #E67A7A;
+    margin: 5% 2% 0%;
+    display: block; }
   #signUp .submit {
     background: #E67A7A;
     display: block;

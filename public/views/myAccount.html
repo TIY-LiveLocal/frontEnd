@@ -1,10 +1,5 @@
 <div id="signUp">
-  <div class="headerWrap">
-      <h2>Pearl</h2>
-      <img src="assets/img/pearlLogo-1.svg" alt="" />
-  </div>
   <div class="signUpWrap">
-
     <h2>Sign Up</h2>
     <form class="signUpForm">
       <input class="signUpInput" type="text" ng-model="first_name" placeholder="First Name">
@@ -16,14 +11,5 @@
       <input class="signUpInput" type="text" ng-model="zip_code" placeholder="Zipcode">
       <input class="submit" type="submit" ng-click="getStarted()" value="Get Started">
     </form>
-    <ul>
-      <li>{{first_nameErr}}</li>
-      <li>{{last_nameErr}}</li>
-      <li>{{usernameErr}}</li>
-      <li>{{emailErr}}</li>
-      <li>{{passwordErr}}</li>
-      <li>{{confirm_passwordErr}}</li>
-      <li>{{zip_codeErr}}</li>
-    </ul>
   </div>
 </div>

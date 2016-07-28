@@ -122,6 +122,9 @@
       font-size: 1.3em;
       color:$darkGrey;
     }
+    ul{
+      margin: 2%;
+    }
     .signUpFormClicked{
       display: block;
       font-family: $font4;
@@ -154,11 +157,13 @@ border: 1px solid #bbb;
       }
 
       input{
-        margin: 5% 1%;
+        margin: 1%;
       }
 
       .claimBus{
         color:$red;
+        margin: 5% 2% 0%;
+        display: block;
       }
 
       .submit{
@@ -178,198 +183,3 @@ border: 1px solid #bbb;
 
   }
 }
-
-// PREVIOUS STYLING
-// #consumerQuestionnaire{
-//     width: 100%;
-//     height: 100%;
-//     background-color: white;
-//     font-family: Roboto, sans-serif;
-//     color: $blue;
-//   #consumerQuestionnaireHeader{
-//     color: $blue;
-//     width: 100%;
-//     .pearlLogo{
-//       display: inline-block;
-//       width: 5%;
-//       height: 5%;
-//       padding-top: 2%;
-//       position: relative;
-//       left: 47%;
-//       }
-//       .pearlLogo-text{
-//         letter-spacing: 2px;
-//         font-size: 4em;
-//           color: $blue;
-//         font-family: Arvo;
-//         // width: 10%;
-//         display: block;
-//         position:relative;
-//         left: 42%;
-//         padding-bottom: 2%;
-//       }
-//       #consumerQuestionnaireHeader-contain{
-//         width: 80%;
-//         position: relative;
-//         .pearlLogo-text{
-//           letter-spacing: 2px;
-//           font-size: 4em;
-//             color: $blue;
-//           // font-family: Arvo;
-//           // font-family: Roboto, sans-serif;
-//           // width: 10%;
-//           display: block;
-//           position:relative;
-//           left: 42%;
-//           padding-bottom: 2%;
-//         }
-//         }
-//       }
-//     }
-//   #consumerQuestionnaireWrapper{
-//     font-family: Roboto, sans-serif;
-//     margin: auto;
-//     width: 80%;
-//     }
-//
-//     .pageTitle{
-//       font-size: 1.5em;
-//       height:2em;
-//     }
-//
-//     .field{
-//       padding: .25em;
-//     }
-//
-//     .new_business{
-//       color:$darkGrey;
-//       font-size: 1em;
-//       letter-spacing:1.5px;
-//     }
-//
-//     .instructions{
-//       color:$darkGrey;
-//       font-size: 1.5em;
-//       text-align: left;
-//       // padding-top: 3px;
-//       letter-spacing:1.5px;
-//     }
-//
-//     .instructions2{
-//       color:$darkGrey;
-//       font-size: 1em;
-//       text-align: left;
-//       height:2em;
-//       letter-spacing:1.5px;
-//     }
-//
-//     .questions{
-//       color:$darkGrey;
-//       font-size: 1em;
-//       letter-spacing:1.5px;
-//     }
-//
-//     input[type="text"], textarea {
-//       // background-color : $white;
-//
-//     }
-//
-//     input[type="zipcode"], textarea {
-//       // background-color : $white;
-//     }
-//
-//     input[type='checkbox']{
-//       cursor: pointer;
-//       cursor: hand;
-//     }
-//     label{
-//       cursor: pointer;
-//       cursor: hand;
-//     }
-//
-//     .nameTextbox{
-//       width:300px;
-//     }
-//
-//     .streetTextbox{
-//       width:225px;
-//     }
-//
-//     .bizUrl{
-//       width:225px;
-//     }
-//
-//     .imgUrl{
-//       width:225px;
-//     }
-//
-//     .bizTextbox{
-//       width: 300px;
-//       height: 60px;
-//       padding: 1px;
-//     }
-//
-//     .checkboxItem{
-//       color:$darkGrey;
-//       font-size: 1em;
-//     }
-//
-//     .submitButton{
-//       height:1em;
-//       width:6em;
-//       background-color: $red;
-//       font-size: 1.5em;
-//       color:$tan;
-//       margin: 1em 0 3em 5%;
-//       border-color: $red;
-//       border-radius: 1px;
-//       text-align: center;
-//       display:block;
-//       padding: 2%;
-//       cursor: pointer;
-//       cursor: hand;
-//     }
-//
-//
-// @media handheld, only screen and (max-width: 767px) {
-//   #consumerQuestionnaire{
-//       width: 100%;
-//       height: 100%;
-//       background-color: white;
-//       font-family: Roboto, sans-serif;
-//       color: $blue;
-//     #consumerQuestionnaireHeader{
-//       color: $blue;
-//       width: 100%;
-//       display:inline-block;
-//       padding: 15px;
-//       .pearlLogo{
-//         width: 80px;
-//         left: 10%;
-//         margin-top: -15px;
-//         }
-//         .pearlLogo-text{
-//             // border:1px solid black;
-//             font-size: 4em;
-//             font-family: Arvo;
-//             width: 20%;
-//             margin-top: -50px;
-//           }
-//           .submitButton{
-//             height:1em;
-//             width:6em;
-//             background-color: $red;
-//             font-size: 1.5em;
-//             color:$tan;
-//             margin: 1em 0 3em 10%;
-//             border-color: $red;
-//             border-radius: 1px;
-//             text-align: center;
-//             display:block;
-//             padding: 2%;
-//             cursor: pointer;
-//             cursor: hand;
-//           }
-//     }
-// }
-//

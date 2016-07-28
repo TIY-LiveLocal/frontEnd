@@ -67,7 +67,7 @@
         font-family: $font4;
         margin: 3% 5%;
         h3{
-          margin: 0% 2%;
+          margin: 1% 2%;
           display: inline-block;
           color: #9E9E9E;
           font-size: 1.5em;
@@ -76,6 +76,7 @@
           letter-spacing: 2px;
         }
         #discover{
+          margin-right: 5%;
           border-bottom: 1px dotted $red;
           &:hover{
             border-bottom: 1px solid $red;
@@ -116,21 +117,75 @@
           }
         }
       }
+      }
+      a{
+        color: $red;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        margin: 0 .5%;
+        padding: 0 1%;
+        position: relative;
+        display: inline-block;
+        left: 60%;
+      }
+      #headerSiteNav-dashboard, #headerSiteNav-profile, #headerSiteNav-settings {
+        border-right: solid $red 1px;
+      }
     }
   }
-}
 @media screen and (max-width: 1000px) {
   #dashboard{
+    main{
+      p{
+        margin: 5%;
+        font-family: $font5;
+        color: $red;
+        input{
+          padding: 1%;
+          width: 40%;
+        }
+      }
+    }
     .logo{
       display: block;
       box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
       margin: 1% 0% 0% 0%;
       padding: 1%;
-
+      #headerSiteNav{
+        ul{
+          display: inline-block;
+          float: right;
+          position: absolute;
+          top: 1%;
+          right: 1%;
+          li{
+            button{
+              border: none;
+              background-color: $red;
+              color: white;
+              font-family: $font4;
+              margin: 15%;
+              font-size: 14px;
+              letter-spacing: 1px;
+              border-radius: 2px;
+            }
+            span{
+              a{
+                color: $red;
+                font-family: Roboto, sans-serif;
+                letter-spacing: 1.5px;
+                text-decoration: none;
+                display: block;
+              }
+            }
+          }
+        }
+      }
       h1{
         font-size: 3em;
         display: inline-block;
-        padding: 1%;
+        padding: 1% 1% 1% 4%;
         color: $red;
         letter-spacing: 2px;
         font-family: $font5;

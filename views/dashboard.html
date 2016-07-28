@@ -3,17 +3,36 @@
     <div class="logo">
       <h1>Pearl</h1>
       <img src="assets/img/pearlLogo-1.svg" alt="" />
-      <div id="rightLogo">
-        <i class="fa fa-cog fa-2x" aria-hidden="true"><span>{{username}}</span></i>
-        <a id="userSurvey" href="#/consumer_questionnaire">User Survey</a>
-        <a id="bizSurvey" href="#/business_questionnaire">Business Survey</a>
+
+      <!-- <i class="fa fa-cog fa-2x" aria-hidden="true"></i> -->
+      <div id = "headerSiteNav">
+        <ul>
+          <li>
+            <span>
+              <a id = "headerSiteNav-dashboard" href = "#/dashboard">dashboard</a>
+              <a id = "headerSiteNav-profile" href= "#/places">profile</a>
+              <a id = "headerSiteNav-settings" href= "#/business_edit">settings</a>
+              <a id = "headerSiteNav-logout" href= "#/login">logout</a>
+            </span>
+          </li>
+          <li>
+            <a href = "#/business_search">
+              <button id = "claimBusinessNow">Claim a business</button>
+            </a>
+          </li>
       </div>
     </div>
   </header>
   <main>
+    <p class="profileHeader-search"> find me
+        <input id = "searchNearMe" type="text" placeholder="i.e. waffles"></input>
+        <span><button id = "searchNearMeBtn">
+          search
+        </button></span>
+    </p>
     <div class="options">
       <h3 id="discover">Discover</h3>
-      <h3 >{{username}}</h3>
+      <!-- <h3 >{{username}}</h3> -->
     </div>
 
     <ul class="ngDashboard">
@@ -33,7 +52,6 @@
           <a href="{{biz.website_url}}" id="yelp">
             <i class="fa fa-yelp" aria-hidden="true"></i>
           </a>
-
         </div>
       </li>
 

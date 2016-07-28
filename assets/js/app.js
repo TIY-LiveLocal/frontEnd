@@ -1,5 +1,5 @@
 
-var app = angular.module("app", ['ngRoute', "firebase"]);
+var app = angular.module("app", ['ngRoute', "firebase" , "uiGmapgoogle-maps"]);
 
 app.config(function($routeProvider){
   $routeProvider

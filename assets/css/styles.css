@@ -588,7 +588,7 @@ select:-webkit-autofill:focus {
       padding: 2%;
       width: 90%;
       border: none;
-      margin: 1% auto;
+      margin: 0 auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
 @media screen and (max-width: 1000px) {
@@ -625,6 +625,18 @@ select:-webkit-autofill:focus {
       text-align: left;
       font-size: 2em;
       padding: 3%; }
+    #signUp .signUpWrap #signupMSG {
+      font-size: 20px;
+      color: #2a7777;
+      margin: 0 auto;
+      background: #FFF4E1;
+      width: 85%;
+      text-align: center;
+      padding: 1% 2%;
+      border: 1px solid #9DDCDC;
+      border-radius: 2px;
+      font-family: "Roboto", sans-serif;
+      display: none; }
   #signUp .signUpForm {
     display: block; }
     #signUp .signUpForm .signUpInput {
@@ -648,7 +660,7 @@ select:-webkit-autofill:focus {
       padding: 2%;
       width: 90%;
       border: none;
-      margin: 1% auto;
+      margin: 0 auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
 @media screen and (min-width: 1000px) {
@@ -846,18 +858,21 @@ select:-webkit-autofill:focus {
   #dashboard .options {
     font-family: "Roboto", sans-serif;
     margin: 3% 5%; }
-    #dashboard .options h3 {
+    #dashboard .options #discover li {
       margin: 0% 2%;
       display: inline-block;
-      color: #9E9E9E;
-      font-size: 1.5em;
-      text-align: left;
-      border-bottom: 1px dotted #E67A7A;
-      letter-spacing: 2px; }
-    #dashboard .options #discover {
       border-bottom: 1px dotted #E67A7A; }
-      #dashboard .options #discover:hover {
-        border-bottom: 1px solid #E67A7A; }
+      #dashboard .options #discover li a {
+        color: #9E9E9E;
+        font-size: 1.5em;
+        text-align: left;
+        letter-spacing: 2px;
+        text-decoration: none; }
+    #dashboard .options #loading {
+      color: #9DDCDC;
+      margin: 5% 5% 0;
+      display: inline-block;
+      letter-spacing: 1.5px; }
   #dashboard .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #dashboard .ngDashboard .biz {
@@ -1062,7 +1077,7 @@ select:-webkit-autofill:focus {
       padding: 2%;
       width: 90%;
       border: none;
-      margin: 1% auto;
+      margin: 0% auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
 @media screen and (max-width: 1020px) {
@@ -1126,7 +1141,7 @@ select:-webkit-autofill:focus {
       padding: 2%;
       width: 90%;
       border: none;
-      margin: 1% auto;
+      margin: 0% auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
 

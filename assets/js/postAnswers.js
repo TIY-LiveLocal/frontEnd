@@ -1,22 +1,29 @@
-console.log ('can POST for answers');
+app.controller('answerCtrl', ['$http', '$scope', function($http, $scope) {
 
-var businessIdNo = localStorage.getItem('vm.id');
-console.log(businessIdNo);
+    console.log('can POST for answers');
 
-$('#askButton').on('click', '#askButton', function (e){
-  e.preventDefault();
-  console.log('ask has been clicked');
+    var answerText = $scope.answerText().val
+    var token = localStorage.getItem('token');
+    console.log(token);
+    console.log(answerText);
 
-var questionText = $('input[id="qASectionHead"]').val();
+    $scope.answerData = {{answerText}};
 
-  console.log('The user has typed: ' + questionText);
+    $scope.answerButton = function() {
 
-      $http({
-        url: 'https://livelocalrails.herokuapp.com/questions.json',
-        method: 'POST',
-        data: {question_text: questionText,
-                business_id: 254},
-        headers: {'Authorization': 'sean.harber'},
-      }).success(function(data){
+        $http({
+            url: 'https://livelocalrails.herokuapp.com/questions.json',
+            method: 'POST',
+            data: {
+                question_text: answerText,
+                user_id: token
+            },
+            headers: {
+                'Authorization': token
+            },
+        }).success(function(data) {
 
-        console.log(data);
+            console.log(data);
+        });
+    };
+}]);

@@ -43,23 +43,24 @@
           <ul>
             <li>
             <!-- <div class="content"> -->
-              <div id="qASectionContain" ng-controller="mapCtrl">
-                  <input id="qASectionHead" placeholder="ask this business a question">
-                    <button>
-                     ask
-                    </button>
 
-                  <div id="qASectionContent">
-                    <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
+              <div id="qASectionContain" ng-controller="questionCtrl">
+                <input id="qASectionHead" placeholder="ask this business a question">
+                  <button ng-click="askButton()">
+                   ask
+                  </button>
+                  <div id="qSectionContent" ng-repeat="quesionCtrl" ng-model="questionData">
+                    <h3> Q </h3> {{questionText}}</p>
                     <br>
+                    <div id="aSectionContent" ng-repeat="answerCtrl" ng-model="answerData">
                     <h3> A </h3>
-                    <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
+                    <p>{{answerText}}</p>
                   </div>
                   <!-- <p><button ng-click="getDirections()">Locate</button></p> -->
                   <div id="out"></div>
-                  <div id="map">
-                    <!-- <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map> -->
-                    <!-- <p ng-model="coords">-->
+                  <div id="map" ng-controller="mapCtrl">
+                    <!-- <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+                    <p ng-model="coords"> -->
                     <ui-gmap-google-map control="map.control" center="map.center" zoom="map.zoom">
                               <marker coords="marker.center"></marker>
                             </ui-gmap-google-map>

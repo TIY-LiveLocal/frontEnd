@@ -15,6 +15,10 @@ app.config(function($routeProvider){
     templateUrl: 'views/dashboard.html',
     controller: 'dashboardCtrl'
   })
+  .when('/matches',{
+    templateUrl: 'views/matches.html',
+    controller: 'matchesCtrl'
+  })
   .when('/business_questionnaire',{
     templateUrl: 'views/business_questionnaire.html',
     controller: 'bqController'

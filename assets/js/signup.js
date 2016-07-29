@@ -1,4 +1,4 @@
-app.controller('signupController', ['$http', '$scope','$location', function($http, $scope, $location) {
+app.controller('signupController', ['$http', '$scope', '$timeout', '$location', function($http, $scope,$timeout, $location) {
 
   $scope.getStarted = function(){
 
@@ -19,7 +19,15 @@ app.controller('signupController', ['$http', '$scope','$location', function($htt
     data: data
     }).then(function success(response){
       localStorage.setItem('token',response.data.token);
-      $location.path('/consumer_questionnaire');
+
+      $timeout(function(){
+        $scope.signupMSG = response.data.message;
+      },200);
+
+      $timeout(function(){
+        $location.path('/consumer_questionnaire');
+      }, 2000);
+
 
     console.log(response);
   }, function errorCallback(error){

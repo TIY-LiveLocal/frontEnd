@@ -5,8 +5,6 @@ app.controller('loginController', ['$http', '$scope', '$location', function($htt
       username : $scope.username,
       password : $scope.password,
     };
-    console.log(data);
-
 
   $http({
     method: 'POST',
@@ -14,12 +12,9 @@ app.controller('loginController', ['$http', '$scope', '$location', function($htt
     data: data,
     headers: {'Authorization': 'firebaseToken'}
   }).then(function success(response){
-    console.log(response);
-    console.log(response.data.token); //LOGS THE TOKEN
     localStorage.setItem('token',response.data.token);  //SET LOCALSTORAGE TOKEN TO RETURNED DATA
         $location.path('/dashboard');     //if call is successful, send user to dashboard page
   }, function errorCallback(response){
-      console.log(response);
       alert('not today junior');
   });
 

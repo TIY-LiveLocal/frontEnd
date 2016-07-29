@@ -15,15 +15,15 @@ $scope.clicked =  function(){
 
   console.log(stringData);
 // ..................
-// var token = localStorage.getItem('Authorization');
+var token = localStorage.getItem('token');
 
 $http({
   method:'POST',
   url:"https://livelocalrails.herokuapp.com/surveys",
   data: stringData,
-  headers: {'Authorization':'blah'}
+  headers: {'Authorization':token}
 }).then(function successCallback(response){
-    $location.path('/dashboard');
+    // $location.path('/dashboard');
   console.log(response);
 }, function errorCallback (response){
 

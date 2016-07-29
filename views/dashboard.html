@@ -31,8 +31,16 @@
         </button></span>
     </p>
     <div class="options">
-      <h3 id="discover">Discover</h3>
-      <!-- <h3 >{{username}}</h3> -->
+      <ul id="discover">
+        <li>
+          <a href="#/dashboard">Discover</a>
+        </li>
+        <li>
+          <a href="#/matches">Username</a>
+        </li>
+      </ul>
+      <h2 id="loading" ng-if="!businesses">Finding Treasures...</h2>
+
     </div>
 
     <ul class="ngDashboard">

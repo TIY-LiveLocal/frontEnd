@@ -1,4 +1,3 @@
-//kaitlin update Thurs 07/28
 
 app.controller('qCtrl', ['$http', '$scope',  function($http, $scope) {
 
@@ -20,11 +19,11 @@ app.controller('qCtrl', ['$http', '$scope',  function($http, $scope) {
                     console.log('user has typed ' + $("#qASectionHead").val());
 
                     $http({
-                        url: 'https://livelocalrails.herokuapp.com/questions',
+                        url: ' https://291a9b88.ngrok.io/questions',
                         method: 'POST',
                         data: {
                             question_text: questionText,
-                            business_id: businessIdNo,
+                            phone: businessIdNo,
                         },
                         headers: {'Authorization': token},
                     }).success(function(data) {

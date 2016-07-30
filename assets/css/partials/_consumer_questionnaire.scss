@@ -44,6 +44,7 @@
 
       input{
         margin: 5% 1%;
+        display:none;
       }
 
       .claimBus{
@@ -157,7 +158,10 @@ border: 1px solid #bbb;
       }
 
       input{
-        margin: 1%;
+        margin: 5% 1%;
+        display:none;
+        padding: 5%;
+      }
       }
 
       .claimBus{
@@ -182,4 +186,3 @@ border: 1px solid #bbb;
       }
 
   }
-}

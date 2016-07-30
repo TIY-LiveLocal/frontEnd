@@ -24,7 +24,8 @@ app.config(function($routeProvider){
     controller: 'cqController'
   })
   .when('/business', {
-    templateUrl: 'views/profile.html'
+    templateUrl: 'views/profile.html',
+    controller: 'qCtrl'
   })
 
   .when('/business_edit', {

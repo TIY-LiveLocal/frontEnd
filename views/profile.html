@@ -1,4 +1,4 @@
-<div id="businessInfoWrap" ng-controller="bizController as biz">
+<div id="businessInfoWrap">
     <div id="profileHeader">
         <div id="profileHeader-contain">
             <span class="pearlLogo-text"> Pearl </span>
@@ -22,6 +22,7 @@
     </div>
     <!--begin actual content-->
     <div id="profileWrapper">
+      <div id="actualBusinessProfile" ng-controller="bizController as biz">
         <div class="content">
             <h2 class="businessName">{{biz.data.name}}</h2>
         </div>
@@ -33,28 +34,29 @@
             </li>
             <li class="businessInfo">Phone Number:
               <div class="uniqueInfo">
-                <a href=”tel:+{{biz.data.phone}}″>1 (412) 357-2016</a>
+                tel: {{biz.data.phone}}
               </div>
             </li>
+          </div>
         </div>
 
         <!--grid for infomration from business-->
         <div class="qaWrap">
-          <ul>
-            <li>
             <!-- <div class="content"> -->
 
-              <div id="qASectionContain" ng-controller="questionCtrl">
+              <div id="qASectionContain" ng-controller="qCtrl">
                 <input id="qASectionHead" placeholder="ask this business a question">
-                  <button ng-click="askButton()">
+                  <button ng-click="askButton()" id = "askButton">
                    ask
                   </button>
-                  <div id="qSectionContent" ng-repeat="quesionCtrl" ng-model="questionData">
-                    <h3> Q </h3> {{questionText}}</p>
+                  <div id="qSectionContent" ng-repeat="q in qData">
+                    <h3> Q </h3> {{q.qText}}
                     <br>
-                    <div id="aSectionContent" ng-repeat="answerCtrl" ng-model="answerData">
+                  </div>
+                </div>
+                    <div id="aSectionContent" ng-repeat="a in answerData" ng-model="answerData">
                     <h3> A </h3>
-                    <p>{{answerText}}</p>
+                    <p>{{a.answerText}}</p>
                   </div>
                   <!-- <p><button ng-click="getDirections()">Locate</button></p> -->
                   <div id="out"></div>
@@ -87,8 +89,5 @@
                   <!--  </p> -->
                   </div>
               </div>
-            </li>
-
         </div>
     </div>
-</div>

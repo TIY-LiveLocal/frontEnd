@@ -1,8 +1,8 @@
-<div id="dashboard">
+<div id="bus_edit_profile">
   <header>
     <div class="logo">
       <h1>Pearl</h1>
-      <img src="assets/img/pearlLogo-1.svg" alt="" />
+      <img src="assets/img/pearlLogo-1.svg" alt="">
 
       <!-- <i class="fa fa-cog fa-2x" aria-hidden="true"></i> -->
       <div id = "headerSiteNav">
@@ -31,9 +31,10 @@
         </button></span>
     </p>
     <div class="options">
-      <h3 id="discover">Discover</h3>
+      <h3 id="edit">Edit your business listing</h3>
       <!-- <h3 >{{username}}</h3> -->
     </div>
+    <!-- BADGES TEMPORARILY DISPLAYED BELOW -->
 <img class ='svg' src="assets/img/currentlyhiring.svg" alt="currently hiring" height="30" width="30" >
 <img src="assets/img/glutenfree.svg" alt="currently hiring" height="30" width="30">
 <img src="assets/img/localmusic.svg" alt="currently hiring" height="30" width="30">
@@ -46,7 +47,19 @@
 <img src="assets/img/charitiesnonprofits.svg" alt="currently hiring" height="30" width="30">
 <img src="assets/img/sustainablepractices.svg" alt="currently hiring" height="30" width="30">
 <img src="assets/img/veganpeta.svg" alt="currently hiring" height="30" width="30">
-    <ul class="ngDashboard">
+<!-- BADGES TEMPORARILY DISPLAYED ABOVE -->
+<ul>
+  <li>  <input class="control" type="text" name='name' ng-model="name" placeholder="Business Name"></li>
+  <li class='control'>   <input class="control" type="text" name='address' ng-model="address" placeholder="Street Address"></li>
+  <li>  <input class="control" type="text" name='city' ng-model="city" placeholder="City"></li>
+  <li>  <input class="control" type="zipcode" name='zipcode' ng-model="zipcode" placeholder="Zipcode"></li>
+    <li><input class="control" type="text" name="phone" ng-model="phone" placeholder="Phone"></li>
+  <li>  <input class="control" type="text" name='website_url' ng-model="website_url" placeholder="Website URL (include http://)"></li>
+    <li><input class="control" type="text" name='image_url' ng-model="image_url" placeholder="Image URL (include http://)"></li>
+  <li>  <input class="control" type="text" name='biz_descrip' ng-model="biz_descrip" placeholder="Business Description"></li>
+  <li>  <input class="submit" type="submit" ng-click="clicked()" value="Edit My Listing">
+  <!-- </form> -->
+    <!-- <ul class="ngDashboard">
       <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
         <a href="#/places" id="chevron">
           <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
@@ -66,6 +79,8 @@
         </div>
       </li>
 
-    </ul>
+    </ul> -->
+
+  </div>
   </main>
-</div>
+<!-- </div> -->

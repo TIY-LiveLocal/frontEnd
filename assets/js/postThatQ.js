@@ -40,4 +40,43 @@ app.controller('qCtrl', ['$http', '$scope', function($http, $scope) {
             console.log(data);
         });
     }
+
+    console.log('able to ANSWER questions');
+
+    var answerText = $('input[id="answerInput"]').val();
+    var businessIdNo = localStorage.getItem('phone');
+    var token = localStorage.getItem('token');
+    var username = localStorage.getItem('username');
+
+      $scope.answers = []
+
+    $scope.answerButton = function() {
+      console.log('answer has been hit');
+          aData = {
+              aText: $("#answerInput").val()
+          }
+
+          $scope.answers.push({
+              'content': $scope.newAnswer, //push what user types so it's reflected on the page
+          })
+          $scope.newAnswer= ''
+
+          console.log('user has typed ' + $("#answerInput").val());
+
+        $http({
+            url: 'https://livelocalrails.herokuapp.com/questions',
+            method: 'POST',
+            data: {
+                question_text: answerText,
+                user_id: token
+            },
+            headers: {
+                'Authorization': token
+            },
+        }).success(function(data) {
+
+            console.log(data);
+        });
+      }
+
 }]);

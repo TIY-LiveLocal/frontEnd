@@ -1,4 +1,6 @@
-app.controller('matchesCtrl', ['$scope','$http', function($scope,$http){
+app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$http,$location){
+
+  var token = localStorage.getItem('token');
 
 
   $http({
@@ -8,20 +10,34 @@ app.controller('matchesCtrl', ['$scope','$http', function($scope,$http){
   }).then(function success(response){
 
     $scope.pets = response.data.petFriend;
-    $scope.hiring = response.data.hiring;
+    $scope.artsCrafts = response.data.artsCrafts;
+    // $scope.hiring = response.data.hiring;
 
-    console.log(response.data);
+    // console.log(response.data);
+    console.log(response);
   });
+
+
   $http({
     method: 'GET',
     url: "https://livelocalrails.herokuapp.com/surveys/matches",
     headers: {'Authorization': token}
   }).then(function success(response){
 
-    $scope.biz = response.data;
+    $scope.matches = response.data;
 
+    console.log(response);
     console.log(response.data);
-    console.log(response.data[0].survey);
+
+
+    $scope.viewBiz = function(){
+
+      var vm = this.match;
+      console.log(vm);
+
+      // $location.path('/business');
+    };
+
   });
 
 //  if response.data[0].survey results contain petFriend,

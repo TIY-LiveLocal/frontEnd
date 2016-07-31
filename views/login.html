@@ -23,7 +23,8 @@
                 </div>
 
                 <div class="actions">
-                    <input ng-click="login()" type="submit" name="commit" value="LOG IN" data-disable-with="LOG IN" />
+                  <h1 ng-style="myStyle">{{errorMsg}}</h1>
+                    <input ng-click="login(); myStyle={'display':'block'}" type="submit" name="commit" value="LOG IN" data-disable-with="LOG IN" />
                 </div>
             </form>
 

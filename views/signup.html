@@ -1,14 +1,17 @@
 <div id="signUp">
   <div class="headerWrap">
-      <h2>Pearl</h2>
-      <img src="assets/img/pearlLogo-1.svg" alt="" />
+      <h2 id="Pearl">Pearl</h2>
+      <img id="ll-pearl" src="assets/img/pearlLogo-1.svg" alt="" />
   </div>
   <div class="signUpWrap">
 
-    <h2>Sign Up</h2>
-    <form class="signUpForm">
-      <input class="signUpInput" type="text" ng-model="first_name" placeholder="First Name">
-      <input class="signUpInput" type="text" ng-model="last_name" placeholder="Last Name">
+    <h2 id="signup">Sign Up</h2>
+    <form class="signUpForm" name="suForm" required>
+        <input class="signUpInput" type="text" name="firstname" ng-model="first_name" placeholder="First Name" >
+      <div class="signUpInput">
+        <input ng-style="myStyle" type="text" ng-model="last_name" placeholder="Last Name">
+        {{last_nameErr}}
+      </div>
       <input class="signUpInput" type="text" ng-model="username" placeholder="Username">
       <input class="signUpInput" type="email" ng-model="email" placeholder="Email">
       <input class="signUpInput" type="password" ng-model="password" placeholder="Password">
@@ -19,7 +22,7 @@
       <div id="signupMSG" ng-style="myStyle">
         {{signupMSG}}
         <ul>
-          <li>{{first_nameErr}}</li>
+          <li ng-show="userForm.name.$invalid && !userForm.name.$pristine">{{first_nameErr}}</li>
           <li>{{last_nameErr}}</li>
           <li>{{usernameErr}}</li>
           <li>{{emailErr}}</li>

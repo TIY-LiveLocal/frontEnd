@@ -1,9 +1,9 @@
-//issues getting the .css assignment change to show.
-//haven't found anything specific about it online yet.
+app.controller('navCtrl', ['$http', '$scope', function($http, $scope){
 
-console.log('hamburger nav connected');
-$('#hamburgerNav').click(function(e){
+$scope.navBtn = function dropNav(){
   console.log('hamburger nav clicked');
-  e.preventDefault();
-  $('dropdownMenu-list--item').css('display', 'block');
-});
+$('.dropdownMenu-list--item').css('display', 'none');{
+   $('.dropdownMenu-list--item').css('display', 'block');
+
+};
+}]);

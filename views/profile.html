@@ -4,7 +4,9 @@
             <span class="pearlLogo-text"> Pearl </span>
             <img class="pearlLogo" src="assets/images/pearlLogo.svg">
             <div class="dropdownMenu">
-                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+                <div id="hamburgerNav" ng-controller="navCtrl">
+                <i class="fa fa-bars" aria-hidden="true" ng-click="navBtn()"></i>
+              </div>
                 <ul class="dropdownMenu-list">
                     <li class="dropdownMenu-list--item"><a href="#/dashboard">
               dashboard</a>
@@ -54,8 +56,17 @@
                     <br>
                   </div>
                 </div>
-                    <div id="aSectionContent" ng-repeat="a in answerData" ng-model="answerData">
-                    <h3> A </h3>
+                <div id = "previouslyPostedQA" ng-controller="loadQACtrl">
+                  <div id = "allEntries">
+                  <ul>
+                    <li>this</li>
+                    </ul>
+                    <div id="aSectionContent" ng-repeat="a in answerData" ng-model="answerData" ng-controller = "answerCtrl">
+                    <h3> A </h3><input id="answerInput">
+                  </input>
+                    <button ng-click="answerButton()" id = "answerButton">
+                     reply
+                    </button>
                     <p>{{a.answerText}}</p>
                   </div>
                   <!-- <p><button ng-click="getDirections()">Locate</button></p> -->

@@ -7,12 +7,15 @@ app.controller('answerCtrl', ['$http', '$scope', function($http, $scope) {
     console.log(token);
     console.log(answerText);
 
-    $scope.answerData = {{answerText}};
-
     $scope.answerButton = function() {
+      console.log('answer has been clicked');
+
+          aData = {
+              aText: $("#answerInput").val()
+          }
 
         $http({
-            url: 'https://livelocalrails.herokuapp.com/questions.json',
+            url: 'https://livelocalrails.herokuapp.com/questions',
             method: 'POST',
             data: {
                 question_text: answerText,

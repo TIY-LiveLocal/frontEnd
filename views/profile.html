@@ -47,10 +47,18 @@
             <!-- <div class="content"> -->
 
               <div id="qASectionContain" ng-controller="qCtrl">
-                <input id="qASectionHead" placeholder="ask this business a question">
+                <input id="qASectionHead" ng-model="newPost" placeholder="ask this business a question">
+              </input>
                   <button ng-click="askButton()" id = "askButton">
                    ask
                   </button>
+                  <li class="newPost-post" ng-repeat="post in posts">
+                      <!-- <input class="toDo-thing-checkbox" type="checkbox" ng-model="checked" ng-click="checkThing"></input> -->
+                    {{post.content}}
+                      <span class="newPost-post-delete" ng-click="deleteThing($index)">delete
+                  </span>
+                  </li>
+                  </div>
                   <div id="qSectionContent" ng-repeat="q in qData">
                     <h3> Q </h3> {{q.qText}}
                     <br>

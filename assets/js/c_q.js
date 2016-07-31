@@ -1,4 +1,6 @@
-app.controller('cqController', ['$http', '$scope','$location', function($http, $scope,$location) {
+app.controller('cqController', ['$http', '$scope','$location',
+
+ function($http, $scope,$location) {
   $scope.hiring = false;
   $scope.glutFree = false;
   $scope.musicians = false;
@@ -12,6 +14,38 @@ app.controller('cqController', ['$http', '$scope','$location', function($http, $
   $scope.sustain = false;
   $scope.veganPeta = false;
   $scope.claimBusiness = false;
+
+  //nav bar toggle NOT YET WORKING
+    $scope.dropDown = false;
+
+  // $('li').click(function(){
+  //   $(this).css('color','black');
+  // });
+
+  $('li').click(function(){
+  $(this).addClass('black');
+});
+
+  // //////  below doesn't seem to work  //////////////
+  // $( "li" ).toggleClass(function() {
+  //   if ( $( this ).parent().is( ".signUpForm" ) ) {
+  //     return ".black";
+  //   } else {
+  //     return ".signUpForm";
+  //   }
+  // });
+  // ////////////////////
+  // function textColorToggle() {
+  //     var color = document.getElementById('signUpForm').style.color;
+  //     if (color == "#9E9E9E")
+  //         document.getElementById('signUpForm').style.color="black";
+  //     else
+  //         document.getElementById('signUpForm').style.color="#9E9E9E";
+  // }
+  // document.getElementById('signUpForm').onclick = function(e){
+  //     textColorToggle();// call the function
+  // };
+  // /////////////////
 
 $scope.clicked = function(){
 // //////////////////////
@@ -29,7 +63,7 @@ $scope.clicked = function(){
 
 
       $location.path('/dashboard');
-  
+
 
   console.log($scope.claimBusiness);
 

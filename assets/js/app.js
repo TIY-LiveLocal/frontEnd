@@ -30,7 +30,7 @@ app.config(function($routeProvider){
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profileNEW.html'
   })
-  
+
   .when('/factory',{
     templateUrl: 'views/yelp.html',
     controller: 'yelpCtrl'

@@ -57,33 +57,27 @@
                         {{post.content}}
                         <span class="newPost-post-delete" ng-click="deleteThing($index)">delete
                   </span>
-                        <ul>
-                                <input id="answerInput" type="text" ng-model="newAnswer"></input>
-                                <button ng-click="answerButton()" id="answerButton">
-                                    reply
-                                </button>
-                                <li class="newAnswer-answer" ng-repeat="answer in answers">
-                                {{answer.content}}
+                        <ul ng-controller="answerCtrl">
+                          <input id="answerInput" ng-model="newAnswer" placeholder="reply">
+                          </input>
+                            <button ng-click="answerButton()" id="answerButton">
+                                reply
+                            </button>
+                            <li class="newAnswer-answer" ng-repeat="answer in answers">
+                                {{answer.aContent}}
+                                <span class="newAnswer-answer-delete" ng-click="deleteThing($index)">delete
+                          </span>
                             </li>
-                          </ul>
-                        </li>
-                      </ul>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <div id="qSectionContent" ng-repeat="q in qData">
-                <h3> Q </h3> {{q.qText}}
-                <br>
-            </div>
-        </div>
         <div id="previouslyPostedQA" ng-controller="loadQACtrl">
-            <div id="allEntries">
-                <!-- <ul>
-                    <li>this</li>
-                    </ul>
-                    <div id="aSectionContent" ng-repeat="a in answerData" ng-model="answerData" ng-controller = "answerCtrl">
-                    <h3> A </h3><input id="answerInput">
-                  </input> -->
-
-                <p>{{a.answerText}}</p>
+            <div id="previouslyPostedQA-entries" ng-model="allPosts">
+                <ul ng-repeat="ent in entries">
+                  <li>
+                    {{ent.eContent}}
+                  </li>
             </div>
             <!-- <p><button ng-click="getDirections()">Locate</button></p> -->
             <div id="out"></div>
@@ -117,4 +111,5 @@
             </div>
         </div>
     </div>
+  </div>
 </div>

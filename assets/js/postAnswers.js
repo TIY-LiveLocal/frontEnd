@@ -2,31 +2,45 @@ app.controller('answerCtrl', ['$http', '$scope', function($http, $scope) {
 
     console.log('can POST for answers');
 
-    var answerText = $scope.answerText().val
+    var answerText = $('input[id="answerInput"]').val();
+    var businessIdNo = localStorage.getItem('phone');
     var token = localStorage.getItem('token');
-    console.log(token);
-    console.log(answerText);
 
-    $scope.answerButton = function() {
-      console.log('answer has been clicked');
+    //now to answer the questions
 
-          aData = {
-              aText: $("#answerInput").val()
+        $scope.answerButton = function() {
+          console.log('answer has been clicked');
+
+              $scope.answers.push({
+                  'aContent': $scope.newAnswer, //push what user types so it's reflected on the page
+              })
+              $scope.newAnswer= ''
+
+              $scope.deleteThing = function(index){
+                $scope.answers.splice(index, 1); //remove item from index
+                }
+
+              console.log('user has typed ' + $("#answerInput").val());
+
+            $http({
+                url: 'https://livelocalrails.herokuapp.com/questions',
+                method: 'POST',
+                data: {
+                    question_text: answerText,
+                    user_id: token,
+                    phone: businessIdNo
+                },
+                headers: {
+                    'Authorization': token
+                },
+            }).success(function(data) {
+
+                console.log(data);
+            });
           }
 
-        $http({
-            url: 'https://livelocalrails.herokuapp.com/questions',
-            method: 'POST',
-            data: {
-                question_text: answerText,
-                user_id: token
-            },
-            headers: {
-                'Authorization': token
-            },
-        }).success(function(data) {
+          $scope.deleteThing = function(index){
+            $scope.posts.splice(index, 1); //remove item from index
+            }
 
-            console.log(data);
-        });
-    };
-}]);
+    }]);

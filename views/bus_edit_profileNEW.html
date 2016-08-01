@@ -1,25 +1,19 @@
 <div id="bus_edit_profile">
-  <header>
+  <header id=headerNavBar>
     <div class="logo">
-      <h1>Pearl</h1>
-      <img src="assets/img/pearlLogo-1.svg" alt="">
+      <h1 id="pearlH1">Pearl</h1>
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
 
-      <!-- <i class="fa fa-cog fa-2x" aria-hidden="true"></i> -->
-      <div id = "headerSiteNav">
-        <ul>
-          <li>
-            <span>
-              <a id = "headerSiteNav-dashboard" href = "#/dashboard">dashboard</a>
-              <a id = "headerSiteNav-profile" href= "#/places">profile</a>
-              <a id = "headerSiteNav-settings" href= "#/business_edit">settings</a>
-              <a id = "headerSiteNav-logout" href= "#/login">logout</a>
-            </span>
-          </li>
-          <li>
-            <a href = "#/business_search">
-              <button id = "claimBusinessNow">Claim a business</button>
-            </a>
-          </li>
+      <div class="dropdownMenu">
+        <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+          <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+        </button>
+        <div class="dropdownMenu-list" ng-show="dropDown">
+            <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+            <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+            <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+        </div>
+
       </div>
     </div>
   </header>

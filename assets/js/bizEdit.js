@@ -1,3 +1,6 @@
+//nav bar toggle
+  $scope.dropDown = false;
+
 //be able to edit changes to existing content via PATCH request to and endpoint
 var token = localStorage.getItem('token');
 // var dateEdits = $('input[id="customDay"]').val();

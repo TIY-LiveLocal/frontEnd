@@ -886,7 +886,10 @@ select:-webkit-autofill:focus {
           margin: 1%;
           color: #E67A7A; } }
 @media screen and (min-width: 1020px) {
-  #consumerQuestionnaire .signUpWrap {
+  #consumerQuestionnaire li {
+    font-size: 1.5em;
+    color: #9E9E9E; }
+  #consumerQuestionnaire .checkBoxWrap {
     width: 40%;
     margin: 5em auto;
     box-shadow: 5px 5px 35px 1px #9E9E9E;
@@ -898,12 +901,10 @@ select:-webkit-autofill:focus {
     text-align: left;
     font-size: 2em;
     padding: 5%; }
-  #consumerQuestionnaire .signUpForm {
+  #consumerQuestionnaire .checkBoxForm {
     display: block;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.5em;
-    color: #9E9E9E; }
-    #consumerQuestionnaire .signUpForm .signUpInput {
+    font-family: "Roboto", sans-serif; }
+    #consumerQuestionnaire .checkBoxForm .signUpInput {
       width: 90%;
       display: block;
       font-size: 1.1em;
@@ -911,21 +912,21 @@ select:-webkit-autofill:focus {
       border-bottom: 1px solid #9DDCDC;
       padding: 1%;
       margin: 4%; }
-      #consumerQuestionnaire .signUpForm .signUpInput:focus {
+      #consumerQuestionnaire .checkBoxForm .signUpInput:focus {
         outline: none; }
-    #consumerQuestionnaire .signUpForm label, #consumerQuestionnaire .signUpForm input {
+    #consumerQuestionnaire .checkBoxForm label, #consumerQuestionnaire .checkBoxForm input {
       cursor: pointer;
       cursor: hand; }
-    #consumerQuestionnaire .signUpForm .black {
+    #consumerQuestionnaire .checkBoxForm .black {
       color: black; }
-    #consumerQuestionnaire .signUpForm input {
+    #consumerQuestionnaire .checkBoxForm input {
       margin: 5% 1%;
       display: none; }
-    #consumerQuestionnaire .signUpForm li.black {
+    #consumerQuestionnaire .checkBoxForm li.black {
       color: black; }
-    #consumerQuestionnaire .signUpForm .claimBus {
+    #consumerQuestionnaire .checkBoxForm .claimBus {
       color: #E67A7A; }
-    #consumerQuestionnaire .signUpForm .submit {
+    #consumerQuestionnaire .checkBoxForm .submit {
       background: #E67A7A;
       display: block;
       font-family: "Roboto", sans-serif;
@@ -1004,21 +1005,18 @@ select:-webkit-autofill:focus {
       box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       letter-spacing: 2px; }
-    #signUp .headerWrap .checkboxItems {
-      color: #9E9E9E;
-      font-size: 1em; }
     #signUp .headerWrap img {
       width: 100%;
       position: absolute;
       top: 0;
       margin: -65% 0%;
       z-index: -1; }
-  #signUp .signUpWrap {
+  #signUp .checkBoxWrap {
     box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
     padding-bottom: 3%;
     margin: 12% 1%;
     border-radius: 5%; }
-    #signUp .signUpWrap h2 {
+    #signUp .checkBoxWrap h2 {
       background: #E67A7A;
       display: block;
       font-family: "Roboto", sans-serif;
@@ -1026,25 +1024,13 @@ select:-webkit-autofill:focus {
       text-align: left;
       font-size: 2em;
       padding: 3%; }
-  #signUp .signUpForm {
+  #signUp .checkBoxForm {
     display: block;
     font-family: "Roboto", sans-serif;
     font-size: 1.3em;
     color: #9E9E9E; }
   #signUp ul {
     margin: 2%; }
-  #signUp .signUpFormClicked {
-    display: block;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.3em;
-    color: black; }
-  #signUp .circle {
-    width: 44px;
-    height: 44px;
-    -webkit-border-radius: 22px;
-    -moz-border-radius: 22px;
-    border-radius: 22px;
-    border: 1px solid #bbb; }
   #signUp .signUpInput {
     width: 90%;
     display: block;
@@ -1059,7 +1045,11 @@ select:-webkit-autofill:focus {
   #signUp label, #signUp input {
     cursor: pointer;
     cursor: hand; }
-  #signUp input {
+  #signUp .black {
+    color: black; }
+  #signUp li.black {
+    color: black; }
+  #signUp .inputCheckbox {
     margin: 5% 1%;
     display: none;
     padding: 5%; }
@@ -1123,6 +1113,57 @@ select:-webkit-autofill:focus {
       cursor: pointer;
       letter-spacing: 1.5px; } }
 @media screen and (max-width: 1020px) {
+  #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #headerNavBar .logo img {
+      width: 11%; }
+    #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+
   #signUp .headerWrap {
     width: 98%;
     display: block;
@@ -1333,6 +1374,56 @@ select:-webkit-autofill:focus {
   #bus_edit_profile #headerSiteNav-dashboard, #bus_edit_profile #headerSiteNav-profile, #bus_edit_profile #headerSiteNav-settings {
     border-right: solid #E67A7A 1px; } }
 @media screen and (max-width: 1000px) {
+  #bus_edit_profile #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #bus_edit_profile #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #bus_edit_profile #headerNavBar .logo img {
+      width: 11%; }
+    #bus_edit_profile #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
   #bus_edit_profile .control {
     width: 90%;
     display: block;

@@ -1587,5 +1587,683 @@ select:-webkit-autofill:focus {
             bottom: 5%;
             right: 5%;
             position: absolute; } }
+@media screen and (min-width: 1020px) {
+  #consumerQuestionnaire li {
+    font-size: 1.5em;
+    color: #9E9E9E; }
+  #consumerQuestionnaire .checkBoxWrap {
+    width: 40%;
+    margin: 5em auto;
+    padding-bottom: .5%; }
+  #consumerQuestionnaire h2 {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: #E67A7A;
+    text-align: left;
+    font-size: 2em;
+    padding: 5%; }
+  #consumerQuestionnaire .checkBoxForm {
+    display: block;
+    font-family: "Roboto", sans-serif; }
+    #consumerQuestionnaire .checkBoxForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      margin: 4%; }
+      #consumerQuestionnaire .checkBoxForm .signUpInput:focus {
+        outline: none; }
+    #consumerQuestionnaire .checkBoxForm label, #consumerQuestionnaire .checkBoxForm input {
+      cursor: pointer;
+      cursor: hand; }
+    #consumerQuestionnaire .checkBoxForm .black {
+      color: black; }
+    #consumerQuestionnaire .checkBoxForm input {
+      margin: 5% 1%;
+      display: none; }
+    #consumerQuestionnaire .checkBoxForm li.black {
+      color: black; }
+    #consumerQuestionnaire .checkBoxForm .claimBus {
+      color: #E67A7A; }
+    #consumerQuestionnaire .checkBoxForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 1% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+@media screen and (max-width: 1020px) {
+  #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #headerNavBar .logo img {
+      width: 11%; }
+    #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+
+  #signUp .headerWrap {
+    width: 100%;
+    display: block;
+    position: relative; }
+    #signUp .headerWrap h2 {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 2% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -65% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    margin: 5% 0 0; }
+    #signUp .signUpWrap .checkBoxWrap {
+      padding-bottom: 3%;
+      margin: 12% 1%;
+      border-radius: 5%; }
+      #signUp .signUpWrap .checkBoxWrap h2 {
+        background: #E67A7A;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        padding: 5%; }
+    #signUp .signUpWrap .checkBoxForm {
+      display: block;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.3em;
+      color: #9E9E9E; }
+    #signUp .signUpWrap ul {
+      margin: 2%; }
+    #signUp .signUpWrap .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.5em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      line-height: 1.5em;
+      margin: 4%; }
+      #signUp .signUpWrap .signUpInput:focus {
+        outline: none; }
+    #signUp .signUpWrap label, #signUp .signUpWrap input {
+      cursor: pointer;
+      cursor: hand; }
+    #signUp .signUpWrap .black {
+      color: black; }
+    #signUp .signUpWrap li.black {
+      color: black; }
+    #signUp .signUpWrap .inputCheckbox {
+      margin: 5% 1%;
+      display: none;
+      padding: 5%; }
+  #signUp .claimBus {
+    color: #E67A7A;
+    margin: 5% 2% 0%;
+    display: block; }
+  #signUp .submit {
+    background: #E67A7A;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 5%;
+    width: 100%;
+    border: none;
+    margin: 1% auto;
+    cursor: pointer;
+    letter-spacing: 1.5px; } }
+@media screen and (min-width: 1020px) {
+  #businessQuestionnaire .signUpWrap {
+    width: 40%;
+    margin: 5em auto;
+    padding-bottom: .5%; }
+  #businessQuestionnaire h2 {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: #E67A7A;
+    text-align: left;
+    font-size: 2em;
+    padding: 5%; }
+  #businessQuestionnaire .signUpForm {
+    display: block; }
+    #businessQuestionnaire .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1.5em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      margin: 4%; }
+      #businessQuestionnaire .signUpForm .signUpInput:focus {
+        outline: none; }
+    #businessQuestionnaire .signUpForm input {
+      margin: 5% 1%; }
+    #businessQuestionnaire .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 2%;
+      width: 90%;
+      border: none;
+      margin: 0% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px; } }
+@media screen and (max-width: 1020px) {
+  #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #headerNavBar .logo img {
+      width: 11%; }
+    #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+
+  #signUp .headerWrap {
+    width: 100%;
+    display: block;
+    position: relative; }
+    #signUp .headerWrap h2 {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 2% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -65% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    margin: 5% 0 0;
+    border-radius: 5%; }
+    #signUp .signUpWrap h2 {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: left;
+      font-size: 30px;
+      padding: 5%; }
+  #signUp .signUpForm {
+    display: block; }
+    #signUp .signUpForm .checkboxItems {
+      font-family: "Roboto", sans-serif;
+      font-size: .9em;
+      color: #9E9E9E; }
+    #signUp .signUpForm .signUpInput {
+      width: 90%;
+      display: block;
+      font-size: 1em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      line-height: 1.5em;
+      margin: 5% 4%; }
+      #signUp .signUpForm .signUpInput:focus {
+        outline: none; }
+    #signUp .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 5%;
+      width: 100%;
+      border: none;
+      margin: 0% auto;
+      cursor: pointer;
+      letter-spacing: 1.5px;
+      position: absolute;
+      bottom: 0; } }
+@media screen and (min-width: 1000px) {
+  #bus_edit_profile .control {
+    width: 90%;
+    display: block;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid #9DDCDC;
+    padding: 1%;
+    margin: 4%; }
+    #bus_edit_profile .control:focus {
+      outline: none; }
+  #bus_edit_profile .logo {
+    display: block;
+    margin: 1% 0% 0% 0%; }
+    #bus_edit_profile .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #bus_edit_profile .logo img {
+      width: 35%;
+      margin: -15% -20%;
+      position: relative;
+      z-index: -1; }
+    #bus_edit_profile .logo #rightLogo {
+      display: inline; }
+      #bus_edit_profile .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 2%;
+        font-size: 1.5em; }
+        #bus_edit_profile .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 2% 1.5%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #bus_edit_profile .logo #rightLogo .signUpForm {
+        display: block; }
+        #bus_edit_profile .logo #rightLogo .signUpForm .editInput {
+          width: 90%;
+          display: block;
+          font-size: 1.5em;
+          border: none;
+          border-bottom: 1px solid #9DDCDC;
+          padding: 1%;
+          margin: 4%; }
+          #bus_edit_profile .logo #rightLogo .signUpForm .editInput:focus {
+            outline: none; }
+        #bus_edit_profile .logo #rightLogo .signUpForm input {
+          margin: 5% 1%; }
+        #bus_edit_profile .logo #rightLogo .signUpForm .submit {
+          background: #E67A7A;
+          display: block;
+          font-family: "Roboto", sans-serif;
+          color: white;
+          text-align: center;
+          font-size: 1.5em;
+          padding: 2%;
+          width: 90%;
+          border: none;
+          margin: 1% auto;
+          cursor: pointer;
+          letter-spacing: 1.5px; }
+      #bus_edit_profile .logo #rightLogo #userSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #bus_edit_profile .logo #rightLogo #bizSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 30%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #bus_edit_profile .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #bus_edit_profile .options h3 {
+      margin: 1% 2%;
+      display: inline-block;
+      color: #3aa2a2;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #bus_edit_profile .options #discover {
+      margin-right: 5%;
+      border-bottom: 1px dotted #E67A7A; }
+      #bus_edit_profile .options #discover:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #bus_edit_profile .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #bus_edit_profile .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #bus_edit_profile .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #bus_edit_profile .ngDashboard .biz img {
+        width: 10%; }
+      #bus_edit_profile .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #bus_edit_profile .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; }
+  #bus_edit_profile a {
+    color: #E67A7A;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin: 0 .5%;
+    padding: 0 1%;
+    position: relative;
+    display: inline-block;
+    left: 60%; }
+  #bus_edit_profile #headerSiteNav-dashboard, #bus_edit_profile #headerSiteNav-profile, #bus_edit_profile #headerSiteNav-settings {
+    border-right: solid #E67A7A 1px; } }
+@media screen and (max-width: 1000px) {
+  #bus_edit_profile #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #bus_edit_profile #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #bus_edit_profile #headerNavBar .logo img {
+      width: 11%; }
+    #bus_edit_profile #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+  #bus_edit_profile .control {
+    width: 90%;
+    display: block;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid #9DDCDC;
+    padding: 1%;
+    margin: 4%; }
+    #bus_edit_profile .control:focus {
+      outline: none; }
+  #bus_edit_profile main p {
+    margin: 5%;
+    font-family: "Arvo", serif;
+    color: #E67A7A; }
+    #bus_edit_profile main p input {
+      padding: 1%;
+      width: 40%; }
+  #bus_edit_profile .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 1% 0% 0% 0%;
+    padding: 1%; }
+    #bus_edit_profile .logo #headerSiteNav ul {
+      display: inline-block;
+      float: right;
+      position: absolute;
+      top: 1%;
+      right: 1%; }
+      #bus_edit_profile .logo #headerSiteNav ul li button {
+        border: none;
+        background-color: #E67A7A;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        margin: 15%;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-radius: 2px; }
+      #bus_edit_profile .logo #headerSiteNav ul li span a {
+        color: #E67A7A;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        display: block; }
+    #bus_edit_profile .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #bus_edit_profile .logo img {
+      width: 11%; }
+    #bus_edit_profile .logo #rightLogo {
+      display: inline; }
+      #bus_edit_profile .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 5%;
+        font-size: 1.5em; }
+        #bus_edit_profile .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 6%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #bus_edit_profile .logo #rightLogo .editInput {
+        width: 90%;
+        display: block;
+        font-size: 1.5em;
+        border: none;
+        border-bottom: 1px solid #9DDCDC;
+        padding: 1%;
+        margin: 4%; }
+        #bus_edit_profile .logo #rightLogo .editInput:focus {
+          outline: none; }
+      #bus_edit_profile .logo #rightLogo #userSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 11%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #bus_edit_profile .logo #rightLogo #bizSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 14%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #bus_edit_profile .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #bus_edit_profile .options h3 {
+      margin: 0% 2%;
+      display: inline-block;
+      color: #3aa2a2;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #bus_edit_profile .options #edit {
+      border-bottom: 1px dotted #E67A7A; }
+      #bus_edit_profile .options #edit:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #bus_edit_profile .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #bus_edit_profile .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #bus_edit_profile .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #bus_edit_profile .ngDashboard .biz img {
+        width: 10%; }
+      #bus_edit_profile .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #bus_edit_profile .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; } }
 
 /*# sourceMappingURL=styles.css.map */

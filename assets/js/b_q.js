@@ -1,5 +1,8 @@
 app.controller('bqController', ['$http','$scope', function($http, $scope) {
 
+  //nav bar toggle
+    $scope.dropDown = false;
+
 $scope.clicked =  function(){
 
   stringData= {

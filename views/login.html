@@ -22,26 +22,14 @@
                     <input autocomplete="off" type="password" id="user_password" ng-model="password" placeholder="Password" />
                 </div>
 
-                <!-- REMEMBER ME -->
-                <!-- <div class="field">
-            <input type="hidden" value="0" />
-            <input class="rememberMe" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
-            <label class="rememberMe" for="user_remember_me">Remember me</label>
-        </div> -->
-
                 <div class="actions">
-                    <!-- <a href="#/dashboard"> -->
-                        <input ng-click="login()" type="submit" name="commit" value="Log in" data-disable-with="Log in" />
-                    <!-- </a> -->
+                  <h1 ng-style="myStyle">{{errorMsg}}</h1>
+                    <input ng-click="login(); myStyle={'display':'block'}" type="submit" name="commit" value="LOG IN" data-disable-with="LOG IN" />
                 </div>
             </form>
 
-            <a class="help" href="#/signup">Sign up</a>
-            <br />
-
-            <a class="help" href="/users/password/new">Forgot your password?</a>
-            <br />
+            <a class="help" href="#/signup">SIGN UP</a>
+            <a class="help" href="/users/password/new">FORGOT YOUR PASSWORD?</a>
         </div>
     </div>
-
 </div>

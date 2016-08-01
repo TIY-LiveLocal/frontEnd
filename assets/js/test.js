@@ -5,15 +5,14 @@ app.controller('testController', ['$http', '$scope', function($http, $scope) {
 
     $http({
         method: 'GET',
-        // url: 'https://681ca077.ngrok.io/businesses/1.json'
-        url: 'https://livelocalrails.herokuapp.com/businesses.json',
-        headers: {'Authorization':'asdf'}
+        url: 'https://livelocalrails.herokuapp.com/businesses',
+        headers: {'Authorization':token}
 
-    }).success(function call(userList) {
-        $scope.businesses = userList.businesses;
+    }).then(function call(userList) {
+        $scope.businesses = userList.data;
+        $scope.username = userList.config.headers.Authorization;
 
         console.log(userList);
-
     });
 
 }]);

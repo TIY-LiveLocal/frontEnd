@@ -1,148 +1,185 @@
-// @media (max-width: 375px) {
-//   #consumer_questionnaire{
-.container{
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 667px;
-  width: 375px;
-  background: #B2C9AB;
-}
+// DESKTOP VIEW BELOW
+@media screen and (min-width: 1020px) {
+  #consumerQuestionnaire{
 
-header {
-  display: block;
-  width: 100%;
-  border: 1px solid #dfdfdf;
-  border-radius: 5px 5px 0 0;;
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 55px;
-  padding-bottom: 5px;
-  padding-top: .5em;
-  color: black;
-}
+    .signUpWrap{
+      width: 40%;
+      margin: 5em auto;
+      box-shadow: 5px 5px 35px 1px $darkGrey;
+      padding-bottom: .5%;
+    }
+    h2{
+      display: block;
+      font-family: $font4;
+      color: $red;
+      text-align: left;
+      font-size: 2em;
+      padding: 5%;
+    }
 
-.fa-bars{
-  padding:5px;
-  font-size: 2em;
-  opacity:.5;
-  display: inline;
-  padding-left: .5em;
-  padding-top: .5em;
-}
-.pageTitle{
-  font:Orbitron;
-  color:black;
-  font-size: 2.5em;
-  text-align: center;
-  opacity:.5;
-  display: inline;
-  padding-top: .5em;
-  padding-left:1em;
-  // padding-left: 20%;
+    .signUpForm{
+      display: block;
+      font-family: $font4;
+      font-size: 1.5em;
+      color:$darkGrey;
 
-}
-.stripe{
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  height: 7px;
-  width:100%;
-}
-.stripe2{
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-}
-.stripe3{
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-  // padding-bottom: 10px;
-}
 
-.instructions{
-  color:black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-top: .5em;
-}
-.instructions2{
-  color:black;
-  font-size: 1.75em;
-  text-align: center;
-  padding-bottom: 1em;
-}
+      .signUpInput{
+        width: 90%;
+        display: block;
+        font-size: 1.1em;
+        border: none;
+        border-bottom: 1px solid $blue;
+        padding: 1%;
+        margin: 4%;
+        &:focus{
+          outline: none;
+        }
+      }
 
-.questions{
-  color:black;
-  font-size: 1.3em;
-  padding-left: .5em;
-  font-family: "Lato", Verdana, sans-serif;
-}
+      label, input{
+        cursor: pointer;
+        cursor: hand;
+      }
 
-.stripe4{
-  background-color: #666A86;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 122px;
-  height: 7px;
-  width:100%;
-}
-.stripe5{
-  background-color: #E8DDB5;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-}
-.stripe6{
-  background-color: #92B6B1;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5px;
-  width:100%;
-  // padding-bottom: 10px;
-}
-footer{
-  display: block;
-  width: 100%;
-  border-radius: 0 0 5px 5px;
-  background-color: #788AA3;
-  margin-left: auto;
-  margin-right: auto;
-  height: 35px;
-  padding-top: .5em;
+      input{
+        margin: 5% 1%;
+      }
 
-}
+      .claimBus{
+        color:$red;
+      }
 
-.footerText{
-    color: black;
-    font-size: 1.3em;
-    padding-left: 1em;
-    opacity:.5;
-}
-//below closes #consumer_questionnaire wrapper for mobile view
-// }
-// below closes @media mobile view
-// }
-
-// if the display is larger than mobile-width, use the following CSS
-// @media (min-width: 376px){
-//   #consumer_questionnaire{
-  .container{
-    // border: 1px solid black;
-    border-radius: 5px;
-    height: 667px;
-    width: 100%;
-    background: #B2C9AB;
-    color: red;
+      .submit{
+        background: $red;
+        display: block;
+        font-family: $font4;
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        padding: 2%;
+        width: 90%;
+        border: none;
+        margin: 1% auto;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+      }
+    }
   }
-  //below closes #consumer_questionnaire wrapper for mobile view
-// }
-//below closes @media for desktop view
-// }
+}
+// MOBILE VIEW BELOW
+@media screen and (max-width: 1020px) {
+  #signUp{
+    .headerWrap{
+      width: 98%;
+      display: block;
+      position: relative;
+      margin: 0 2%;
+      h2{
+        font-family: $font5;
+        color: $red;
+        text-align: center;
+        font-size: 3em;
+        padding: 2% 0;
+        box-shadow: 0px 10px 100px 20px rgba(255,255,255,0.5);
+        border-radius: 50%;
+        letter-spacing: 2px;
+      }
+
+      .checkboxItems{
+        color:$darkGrey;
+        font-size: 1em;
+      }
+
+      img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        margin: -65% 0%;
+        z-index: -1;
+      }
+    }
+    .signUpWrap{
+      box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
+      padding-bottom: 3%;
+      margin: 12% 1%;
+      border-radius: 5%;
+
+    h2{
+      background: $red;
+      display: block;
+      font-family: $font4;
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      padding: 3%;
+    }
+    }
+    // ///////////////
+    .signUpForm{
+      display: block;
+      font-family: $font4;
+      font-size: 1.3em;
+      color:$darkGrey;
+    }
+    ul{
+      margin: 2%;
+    }
+    .signUpFormClicked{
+      display: block;
+      font-family: $font4;
+      font-size: 1.3em;
+      color:black;
+    }
+    .circle{
+      width: 44px; height: 44px;
+-webkit-border-radius: 22px; -moz-border-radius: 22px; border-radius: 22px;
+border: 1px solid #bbb;
+    }
+// //////////////////////
+      .signUpInput{
+        width: 90%;
+        display: block;
+        font-size: 1.5em;
+        border: none;
+        border-bottom: 1px solid #9DDCDC;
+        padding: 1%;
+        line-height: 1.5em;
+        margin: 4%;
+        &:focus{
+          outline: none;
+        }
+      }
+
+      label, input{
+        cursor: pointer;
+        cursor: hand;
+      }
+
+      input{
+        margin: 1%;
+      }
+
+      .claimBus{
+        color:$red;
+        margin: 5% 2% 0%;
+        display: block;
+      }
+
+      .submit{
+        background: $red;
+        display: block;
+        font-family: $font4;
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        padding: 2%;
+        width: 90%;
+        border: none;
+        margin: 1% auto;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+      }
+
+  }
+}

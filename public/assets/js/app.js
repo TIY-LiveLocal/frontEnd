@@ -1,5 +1,5 @@
 
-var app = angular.module("app", ['ngRoute', "firebase"]);
+var app = angular.module("app", ['ngRoute', "firebase" , "uiGmapgoogle-maps"]);
 
 app.config(function($routeProvider){
   $routeProvider
@@ -13,7 +13,7 @@ app.config(function($routeProvider){
   })
   .when('/dashboard',{
     templateUrl: 'views/dashboard.html',
-    controller: 'testController'
+    controller: 'dashboardCtrl'
   })
   .when('/business_questionnaire',{
     templateUrl: 'views/business_questionnaire.html',
@@ -23,11 +23,20 @@ app.config(function($routeProvider){
     templateUrl: 'views/consumer_questionnaire.html',
     controller: 'cqController'
   })
-  .when('/places', {
-    templateUrl: '../../profile.html'
+  .when('/business', {
+    templateUrl: 'views/profile.html'
   })
+
   .when('/business_edit', {
     templateUrl: 'views/bus_edit_profile.html'
+  })
+  .when('/factory',{
+    templateUrl: 'views/yelp.html',
+    controller: 'yelpCtrl'
+  })
+  .when('/business_search', {
+    templateUrl: 'views/biz_search.html',
+    controller: 'bizSearchController'
   })
   .otherwise({
     redirectTo: 'login'

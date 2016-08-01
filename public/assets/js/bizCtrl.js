@@ -1,15 +1,10 @@
-app.controller('bizProfController', ['$http', '$scope', function($http, $scope) {
+app.controller('bizController', function() {
 
-
-    $http({
-        method: 'GET',
-        url: 'https://livelocalrails.herokuapp.com/businesses.json'
-      }).success(function call(userList) {
-
-          $scope.businesses = userList;
-
-          console.log(userList);
-
-        });
-
-    }]);
+    this.data = {
+      name : localStorage.getItem('name'),
+      address : localStorage.getItem('address'),
+      city : localStorage.getItem('city'),
+      zip : localStorage.getItem('zip'),
+      phone : localStorage.getItem('phone')
+    };
+  });

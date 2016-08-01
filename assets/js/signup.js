@@ -1,6 +1,7 @@
-app.controller('signupController', ['$http', '$scope','$location', function($http, $scope, $location) {
+app.controller('signupController', ['$http', '$scope', '$timeout', '$location', function($http, $scope,$timeout, $location) {
 
   $scope.getStarted = function(){
+
     data = {
       first_name : $scope.first_name,
       last_name : $scope.last_name,
@@ -14,15 +15,25 @@ app.controller('signupController', ['$http', '$scope','$location', function($htt
 
   $http({
     method: 'POST',
-    // url: "https://livelocalrails.herokuapp.com/sign_up",
-    url: "https://45c46d61.ngrok.io/sign_up",
+    url: "https://livelocalrails.herokuapp.com/sign_up",
     data: data
     }).then(function success(response){
       localStorage.setItem('token',response.data.token);
-      $location.path('/login');
+
+      $timeout(function(){
+        $scope.signupMSG = response.data.message;
+      },200);
+
+      $timeout(function(){
+        $location.path('/consumer_questionnaire');
+      }, 2000);
+
 
     console.log(response);
   }, function errorCallback(error){
+    $scope.signupMSG = 'Something went wrong.';
+
+
     $scope.first_nameErr =  error.data.message.first_name;
     $scope.last_nameErr =  error.data.message.last_name;
     $scope.usernameErr =  error.data.message.username;

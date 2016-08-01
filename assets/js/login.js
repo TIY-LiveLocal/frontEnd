@@ -14,6 +14,7 @@ app.controller('loginController', ['$http', '$scope', '$location', function($htt
   }).then(function success(response){
     console.log(response);
     localStorage.setItem('token',response.data.token);  //SET LOCALSTORAGE TOKEN TO RETURNED DATA
+    $scope.firstname = localStorage.setItem('firstname',response.data.first_name);
         $location.path('/dashboard');     //if call is successful, send user to dashboard page
   }, function errorCallback(response){
       // alert('not today junior');

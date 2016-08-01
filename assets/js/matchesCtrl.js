@@ -1,6 +1,7 @@
 app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$http,$location){
 
   var token = localStorage.getItem('token');
+  $scope.firstname = localStorage.getItem('firstname');
 
 
   $http({

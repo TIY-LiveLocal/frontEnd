@@ -451,5 +451,20 @@
         }
       }
     }
+    #editPatch{
+      background: $red;
+      display: block;
+      font-family: $font4;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      padding: 5%;
+      width: 100%;
+      border: none;
+      margin: 0 auto;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
   }
 }

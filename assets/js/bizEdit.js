@@ -1,21 +1,18 @@
-//nav bar toggle
-  $scope.dropDown = false;
-
 //be able to edit changes to existing content via PATCH request to and endpoint
 var token = localStorage.getItem('token');
 // var dateEdits = $('input[id="customDay"]').val();
 // var timeEdits = $('input[class="inputEdits"]').val();
 // var bioEdits = $('input[class="businessBio"]').val();
-stringData= {
-  name : $scope.name,
-  address : $scope.address,
-  city : $scope.city,
-  zipcode : $scope.zipcode,
-  phone : $scope.phone,
-  website_url : $scope.website_url,
-  image_url : $scope.image_url,
-  biz_descrip : $scope.biz_descrip
-};
+// stringData= {
+//   name : $scope.name,
+//   address : $scope.address,
+//   city : $scope.city,
+//   zipcode : $scope.zipcode,
+//   phone : $scope.phone,
+//   website_url : $scope.website_url,
+//   image_url : $scope.image_url,
+//   biz_descrip : $scope.biz_descrip
+// };
 
 $(document).on('click', '.editSubmitButton', function(e) {
     e.preventDefault();

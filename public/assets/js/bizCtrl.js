@@ -1,20 +1,10 @@
-app.controller('bizController', ['$http', '$scope', function($http, $scope) {
+app.controller('bizController', function() {
 
-  var token = localStorage.getItem('Authorization');
-  console.log(token);
-
-
-  $http({
-      method: 'GET',
-      url: 'https://livelocalrails.herokuapp.com/find.json?location=27701',
-      headers: {'Authorization': 'asdf'}
-
-  }).success(function call(data) {
-      $scope.businesses = data;
-
-
-      console.log(data);
-
+    this.data = {
+      name : localStorage.getItem('name'),
+      address : localStorage.getItem('address'),
+      city : localStorage.getItem('city'),
+      zip : localStorage.getItem('zip'),
+      phone : localStorage.getItem('phone')
+    };
   });
-
-}]);

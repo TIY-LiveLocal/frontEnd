@@ -1,0 +1,117 @@
+<div id="matches" >
+  <header id=headerNavBar>
+    <div class="logo">
+      <h1 id="pearlH1">Pearl</h1>
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
+
+      <div class="dropdownMenu">
+        <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+          <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+        </button>
+        <div class="dropdownMenu-list" ng-show="dropDown">
+            <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+            <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+            <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <main id="mainDashboard">
+    <div class="profileHeader"><i class="fa fa-search"></i>
+        <input id = "searchNearMe" type="text" placeholder="..."></input>
+        <button id = "searchNearMeBtn">
+          search
+        </button>
+    </div>
+    <div class="options">
+      <ul id="discover">
+        <li id="liDiscover">
+          <a href="#/dashboard">Discover</a>
+        </li>
+        <li id="liName">
+          <a href="#/matches">Username</a>
+        </li>
+      </ul>
+    </div>
+
+<!-- MATCH TEST -->
+  <ul class="ngDashboard">
+    <li ng-repeat="match in matches" class="match" ng-click="viewBiz()">
+      <a href="#/places" id="chevron">
+        <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+      </a>
+      <div id="matchName"> {{match.name}}</div>
+      <div id="matchOwner"> {{match.owner}}</div>
+      <div id="matchOwner">{{match.address}}, {{match.city}}</div>
+      <div id="matchInfo">
+        <a href="tel:+{{match.phone}}" class="phone">{{match.phone}}</a>
+        <br>
+
+
+
+        <a href="{{match.website_url}}" id="yelp"><span>Yelp</span>
+          <i class="fa fa-yelp" aria-hidden="true"></i>
+        </a>
+
+        <i class="fa fa-photo" ng-if="match.artsCrafts===true"></i>
+        <i class="fa fa-file-text-o" ng-if="match.hiring===true"></i>
+        <i class="fa fa-tree" ng-if="match.glutFree===true"></i>
+        <i class="fa fa-music" ng-if="match.musicians===true"></i>
+        <i class="fa fa-genderless" ng-if="match.lgbt===true"></i>
+        <i class="fa fa-money" ng-if="match.livWage===true"></i>
+        <i class="fa fa-leaf" ng-if="match.localFood===true"></i>
+        <i class="fa fa-male" ng-if="match.minorityOwned===true"></i>
+        <i class="fa fa-paw" ng-if="match.petFriend===true"></i>
+        <i class="fa fa-square" ng-if="match.charNonprof===true"></i>
+        <i class="fa fa-globe" ng-if="match.sustain===true"></i>
+        <i class="fa fa-ship" ng-if="match.veganPeta===true"></i>
+        <i class="fa fa-hand" ng-if="match.claimBusiness===true"></i>
+    </div>
+    </li>
+  </ul>
+<!-- <div class="" ng-if="!pets">
+  Loading results...
+</div>
+<div class="" ng-show="pets">
+  <p>
+    <i class="fa fa-google"></i>
+  </p>
+</div>
+<div class="" ng-show="hiring">
+  <p>
+    <i class="fa fa-google"></i>
+  </p>
+</div>
+<div class="" ng-repeat="biz in biz">
+  {{biz.name}}
+  <br>
+  {{biz.address}}
+  <br>
+  {{biz.phone}}
+  <p ng-if="biz.hiring===true">
+    {{biz.zip_code}}
+    True
+  </p>
+  <p ng-if="biz.hiring===false">
+    {{biz.zip_code}}
+    False
+  </p>
+  <p ng-if="biz.survey[0]==='veganPeta'">
+    WE LIKE {{biz.survey[0]}}
+    <br>
+    WE LIKE {{biz.survey[1]}}
+  </p>
+</div>
+<div class="">
+  {{format}}
+</div> -->
+
+
+    </div>
+
+
+  </main>
+</div>

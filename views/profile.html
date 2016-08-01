@@ -1,28 +1,26 @@
 <div id="businessInfoWrap" ng-controller="bizController as biz">
-    <div id="profileHeader">
-        <div id="profileHeader-contain">
-            <span class="pearlLogo-text"> Pearl </span>
-            <img class="pearlLogo" src="assets/images/pearlLogo.svg">
-            <div class="dropdownMenu">
-                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
-                <ul class="dropdownMenu-list">
-                    <li class="dropdownMenu-list--item"><a href="#/dashboard">
-              dashboard</a>
-                    </li>
-                    <li class="dropdownMenu-list--item"><a href="#/business_search">
-              search</a>
-                    </li>
-                    <li class="dropdownMenu-list--item"><a href="#/business_edit">
-              settings</a>
-                    </li>
-                </ul>
+  <header id=headerNavBar>
+    <div class="logo">
+      <h1 id="pearlH1">Pearl</h1>
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
 
-            </div>
+      <div class="dropdownMenu">
+        <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+          <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+        </button>
+        <div class="dropdownMenu-list" ng-show="dropDown">
+            <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+            <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+            <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
         </div>
+
+      </div>
     </div>
+  </header>
 
     <!--begin actual content-->
     <div id="profileWrapper">
+
         <div class="content">
             <h2 class="businessName">{{biz.data.name}}</h2>
         </div>
@@ -34,15 +32,13 @@
             </li>
             <li class="businessInfo">Phone Number:
               <div class="uniqueInfo">
-                <a href=”tel:+{{biz.data.phone}}″>1 (412) 357-2016</a>
+                <a href=”tel:+{{biz.data.phone}}″>{{biz.data.phone}}</a>
               </div>
             </li>
         </div>
 
         <!--grid for infomration from business-->
         <div class="qaWrap">
-          <ul>
-            <li>
             <!-- <div class="content"> -->
               <div id="qASectionContain" ng-controller="mapCtrl">
                   <input id="qASectionHead" placeholder="ask this business a question">
@@ -79,7 +75,7 @@
                               </div>
                               <div class="form-group">
                                 <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
-                                  <button class="btn btn-primary" ng-click="getGMap()">Get Directions</button>
+                                  <button class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
                                 </div>
                               </div>
                             </form>

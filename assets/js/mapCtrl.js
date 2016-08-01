@@ -1,4 +1,4 @@
-app.controller('mapCtrl', function($scope, $document, mapFactory) {
+app.controller('mapCtrl', ['$scope','$document','mapFactory', function($scope, $document, mapFactory) {
 
 //Google Maps HTML / inject $scope coordinates with format
 
@@ -75,7 +75,7 @@ app.controller('mapCtrl', function($scope, $document, mapFactory) {
       }
     });
   }
-});
+}]);
 
 
 

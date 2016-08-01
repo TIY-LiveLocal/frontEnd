@@ -1,6 +1,9 @@
 app.controller('cqController', ['$http', '$scope','$location',
-
  function($http, $scope,$location) {
+
+   //nav bar toggle
+     $scope.dropDown = false;
+
   $scope.hiring = false;
   $scope.glutFree = false;
   $scope.musicians = false;
@@ -15,9 +18,6 @@ app.controller('cqController', ['$http', '$scope','$location',
   $scope.veganPeta = false;
   $scope.claimBusiness = false;
 
-  //nav bar toggle NOT YET WORKING
-    $scope.dropDown = false;
-
   // $('li').click(function(){
   //   $(this).css('color','black');
   // });
@@ -28,21 +28,21 @@ app.controller('cqController', ['$http', '$scope','$location',
 
   // //////  below doesn't seem to work  //////////////
   // $( "li" ).toggleClass(function() {
-  //   if ( $( this ).parent().is( ".signUpForm" ) ) {
-  //     return ".black";
+  //   if ( $(this) parent().is("signUpForm") ) {
+  //     return "black";
   //   } else {
-  //     return ".signUpForm";
+  //     return "signUpForm";
   //   }
   // });
   // ////////////////////
   // function textColorToggle() {
-  //     var color = document.getElementById('signUpForm').style.color;
+  //     var color = document.getElementById('li').style.color;
   //     if (color == "#9E9E9E")
-  //         document.getElementById('signUpForm').style.color="black";
+  //         document.getElementById('li').style.color="black";
   //     else
-  //         document.getElementById('signUpForm').style.color="#9E9E9E";
+  //         document.getElementById('li').style.color="#9E9E9E";
   // }
-  // document.getElementById('signUpForm').onclick = function(e){
+  // document.getElementById('li).onclick = function(e){
   //     textColorToggle();// call the function
   // };
   // /////////////////

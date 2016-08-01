@@ -28,8 +28,9 @@ app.config(function($routeProvider){
   })
 
   .when('/business_edit', {
-    templateUrl: 'views/bus_edit_profile.html'
+    templateUrl: 'views/bus_edit_profileNEW.html'
   })
+
   .when('/factory',{
     templateUrl: 'views/yelp.html',
     controller: 'yelpCtrl'
@@ -37,6 +38,10 @@ app.config(function($routeProvider){
   .when('/business_search', {
     templateUrl: 'views/biz_search.html',
     controller: 'bizSearchController'
+  })
+  .when('/survey_results', {
+    templateUrl: 'views/survey_results.html',
+    controller: 'surveyResultsController'
   })
   .otherwise({
     redirectTo: 'login'

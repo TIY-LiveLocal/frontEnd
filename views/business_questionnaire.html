@@ -1,10 +1,29 @@
+<header id=headerNavBar>
+    <div class="logo">
+      <h1 id="pearlH1">Pearl</h1>
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
+
+      <div class="dropdownMenu">
+        <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+          <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+        </button>
+        <div class="dropdownMenu-list" ng-show="dropDown">
+            <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+            <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+            <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
 <div id="businessQuestionnaire">
   <div id='businessQuestionnaireWrapper'>
     <div id="signUp">
-<div class="headerWrap">
+<!-- <div class="headerWrap">
     <h2>Pearl</h2>
     <img src="assets/img/pearlLogo-1.svg" alt="" />
-</div>
+</div> -->
 <div class="signUpWrap">
 <!-- <h2>What sets you apart?</h2>
   <div>
@@ -24,7 +43,7 @@
       <label><input type="checkbox" name="veganPeta" ng-model='veganPeta'> Vegan/PETA Friendly</label><br>
 </div> -->
   <h2>Add Your Business</h2>
-  <!-- <form class="signUpForm"> -->
+  <form class="signUpForm">
     <input class="signUpInput" type="text" name='name' ng-model="name" placeholder="Business Name">
     <input class="signUpInput" type="text" name='address' ng-model="address" placeholder="Street Address">
     <input class="signUpInput" type="text" name='city' ng-model="city" placeholder="City">

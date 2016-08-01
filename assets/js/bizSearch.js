@@ -13,7 +13,6 @@ app.controller('bizSearchController', ['$scope','$http', function($scope, $http)
     $http({
       method: 'GET',
       url: 'https://livelocalrails.herokuapp.com/find_business',
-      // https://livelocalrails.herokuapp.com/find_business
       params: searchToClaimData,
       headers: {'Authorization':'blah'}
 

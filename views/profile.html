@@ -42,43 +42,6 @@
             </div>
         </div>
 
-        <!--grid for infomration from business-->
-        <div class="qaWrap">
-            <!-- <div class="content"> -->
-
-            <div id="qASectionContain" ng-controller="qCtrl">
-                <input id="qASectionHead" ng-model="newPost" placeholder="ask this business a question">
-                </input>
-                <button ng-click="askButton()" id="askButton">
-                    ask
-                </button>
-                <ul>
-                    <li class="newPost-post" ng-repeat="post in posts">
-                        {{post.content}}
-                        <span class="newPost-post-delete" ng-click="deleteThing($index)">delete
-                  </span>
-                        <ul ng-controller="answerCtrl">
-                          <input id="answerInput" ng-model="newAnswer" placeholder="reply">
-                          </input>
-                            <button ng-click="answerButton()" id="answerButton">
-                                reply
-                            </button>
-                            <li class="newAnswer-answer" ng-repeat="answer in answers">
-                                {{answer.aContent}}
-                                <span class="newAnswer-answer-delete" ng-click="deleteThing($index)">delete
-                          </span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        <div id="previouslyPostedQA" ng-controller="loadQACtrl">
-            <div id="previouslyPostedQA-entries" ng-model="allPosts">
-                <ul ng-repeat="ent in entries">
-                  <li>
-                    {{ent.eContent}}
-                  </li>
-            </div>
             <!-- <p><button ng-click="getDirections()">Locate</button></p> -->
             <div id="out"></div>
             <div id="map" ng-controller="mapCtrl">
@@ -109,6 +72,49 @@
                 <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
                 <!--  </p> -->
             </div>
+
+            <div class="qaWrap">
+                <!-- <div class="content"> -->
+
+                <div id="qASectionContain" ng-controller="qCtrl">
+                    <input id="qASectionHead" ng-model="newPost" placeholder="ask this business a question">
+                    </input>
+                    <button ng-click="askButton()" id="askButton">
+                        ask
+                    </button>
+                    <ul>
+                      <div id="existingPostsContain">
+                        <li class="newPost-post" ng-repeat="post in posts">
+                            {{post.content}}
+                            <span class="newPost-post-delete" ng-click="deleteThing($index)">delete
+                            </span>
+                            <!--sub ul-->
+                            <ul ng-controller="answerCtrl">
+                              <input id="answerInput" ng-model="newAnswer" placeholder="reply">
+                              </input>
+                                <button ng-click="answerButton()" id="answerButton">
+                                    reply
+                                </button>
+
+                                <div id="existingAnswersContain">
+                                <li class="newAnswer-answer" ng-repeat="answer in answers">
+                                    {{answer.aContent}}
+                                    <span class="newAnswer-answer-delete" ng-click="deleteThing($index)">delete
+                              </span>
+                                </li>
+                              </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            <div id="previouslyPostedQA" ng-controller="loadQACtrl">
+                <div id="previouslyPostedQA-entries" ng-model="allPosts">
+                    <ul ng-repeat="ent in entries">
+                      <li>
+                        {{ent.eContent}}
+                      </li>
+                </div>
         </div>
     </div>
   </div>

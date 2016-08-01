@@ -37,7 +37,7 @@ app.config(function($routeProvider){
   })
   .when('/business_search', {
     templateUrl: 'views/biz_search.html',
-    controller: 'bizSearchController'
+    controller: 'bizSearchCtrl'
   })
   .otherwise({
     redirectTo: 'login'

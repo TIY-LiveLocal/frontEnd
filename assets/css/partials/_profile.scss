@@ -99,7 +99,7 @@
 	      position: relative;
 				color: $darkGrey;
 				display: block;
-				margin: 0 auto;
+				margin: 5% auto;
 				#qASectionHead{
 					display: block;
 					width: 80%;
@@ -110,7 +110,7 @@
 					font-size: 1.25em;
 					padding: 3%;
 				}
-				button{
+				#askButton{
 					display: block;
 			    border-radius: 2px;
 			    background-color: #E67A7A;
@@ -125,6 +125,54 @@
 	      #qASectionContent{
 	        padding: 5% 10%;
 	      }
+        #existingPostsContain{
+          position: relative;
+          display: block;
+          margin: auto;
+          margin-top: 8%;
+          background-color: #EEE;
+          width: 80%;
+          padding: 3%;
+          color: $darkGrey;
+          // border-bottom:$red solid 1px;
+          .newPost-post{
+            margin: auto;
+          }
+          .newPost-post-delete{
+            position: relative;
+            display: block;
+            float: right;
+          }
+          #answerButton{
+            position: relative;
+            display: block;
+            float: right;
+            outline: none;
+            border: none;
+            background-color: #EEE;
+            font-size: 1.05em;
+            color: $red;
+
+          }
+        }
+        #answerInput{
+          background-color: #E0E0E0;
+          width: 100%;
+          padding: -3%;
+          border: none;
+          outline: none;
+          font-size: 1.25em;
+
+        }
+        #existingAnswersContain{
+          background-color: #E0E0E0;
+          width: 100%;
+          padding: 0 -3%;
+
+        }
+        .newAnswer-answer{
+          // width: 80%;
+        }
         #map{
           margin: 2% 10%;
           .angular-google-map-container {

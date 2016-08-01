@@ -95,10 +95,10 @@ select:-webkit-autofill:focus {
   and (max-width: 1020px){
   #signUp{
     .headerWrap{
-      width: 98%;
+      width: 100%;
       display: block;
       position: relative;
-      margin: 0 2%;
+      margin: 0;
       h2{
         font-family: $font5;
         color: $red;
@@ -114,15 +114,13 @@ select:-webkit-autofill:focus {
         width: 100%;
         position: absolute;
         top: 0;
-        margin: -65% 0%;
+        margin: -60% 0%;
         z-index: -1;
       }
     }
     .signUpWrap{
-      box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
       padding-bottom: 3%;
       margin: 12% 1%;
-      border-radius: 5%;
 
     h2{
       background: $red;
@@ -153,7 +151,7 @@ select:-webkit-autofill:focus {
       .signUpInput{
         width: 90%;
         display: block;
-        font-size: 1.5em;
+        font-size: 1em;
         border: none;
         border-bottom: 1px solid #9DDCDC;
         padding: 1%;
@@ -161,6 +159,10 @@ select:-webkit-autofill:focus {
         margin: 2% 4%;
         &:focus{
           outline: none;
+        }
+        input{
+          font-size: 1.5em;
+          border: none;
         }
       }
       .submit{
@@ -229,7 +231,6 @@ select:-webkit-autofill:focus {
     #signupMSG{
       font-size: 20px;
       color: $darkBlue;
-      margin: 0 auto;
       background: $tan;
       width: 85%;
       text-align: center;
@@ -238,6 +239,9 @@ select:-webkit-autofill:focus {
       border-radius: 2px;
       font-family: $font4;
       display: none;
+      position: absolute;
+      top: 23%;
+      margin: 0 5%;
     }
     }
     .signUpForm{
@@ -248,15 +252,31 @@ select:-webkit-autofill:focus {
       background: white;
       .signUpInput{
         width: 90%;
-        display: block;
-        font-size: 1.5em;
+        display: inline-block;
+        font-size: 1em;
         border: none;
         border-bottom: 1px solid #9DDCDC;
         padding: 1%;
-        line-height: 2em;
+        line-height: 2.5em;
         margin: 2% 4%;
         &:focus{
           outline: none;
+        }
+        input{
+          font-size: 1.5em;
+          border: none;
+          display: inline-block;
+          &:focus{
+            outline: none;
+          }
+        }
+        span{
+          float: right;
+          background: $tan;
+          color: $darkBlue;
+          font-family: $font4;
+          border: 1px solid $blue;
+          border-radius: 2px;
         }
       }
       .submit{

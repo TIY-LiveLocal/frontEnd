@@ -23,8 +23,7 @@ app.controller('qCtrl', ['$http', '$scope', function($http, $scope) {
         console.log('user has typed ' + $("#qASectionHead").val());
 
         $http({
-            url: 'https://291a9b88.ngrok.io/questions',
-            // url: ' https://livelocalrails.herokuapp.com/questions', //post request to backend
+            url: ' https://livelocalrails.herokuapp.com/questions', //post request to backend
             method: 'POST',
             data: {
                 question_text: questionText,

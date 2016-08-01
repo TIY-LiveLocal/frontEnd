@@ -77,36 +77,9 @@
                 <div id="qASectionContain" ng-controller="qCtrl">
                     <input id="qASectionHead" ng-model="newPost" placeholder="ask this business a question">
                     </input>
-                    <button ng-click="askButton()" id="askButton">
-                        ask
+                    <button ng-click="askButton()" id="askButton">ask
+                      </button>
 
-    <!--begin actual content-->
-    <div id="profileWrapper">
-
-        <div class="content">
-            <h2 class="businessName">{{biz.data.name}}</h2>
-        </div>
-        <div id="businessInfo">
-            <li class="businessInfo">Location:
-              <div class="uniqueInfo">
-                {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}
-              </div>
-            </li>
-            <li class="businessInfo">Phone Number:
-              <div class="uniqueInfo">
-                <a href=”tel:+{{biz.data.phone}}″>{{biz.data.phone}}</a>
-              </div>
-            </li>
-        </div>
-
-        <!--grid for infomration from business-->
-        <div class="qaWrap">
-            <!-- <div class="content"> -->
-              <div id="qASectionContain" ng-controller="mapCtrl">
-                  <input id="qASectionHead" placeholder="ask this business a question">
-                    <button>
-                     ask
-                    </button>
                     <ul>
                       <div id="existingPostsContain">
                         <li class="newPost-post" ng-repeat="post in posts">
@@ -146,7 +119,7 @@
                             </form>
                             <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
                   <!  </p> -->
-                  </div> -->
+                  </div>
 
               </div>
             <div id="previouslyPostedQA" ng-controller="loadQACtrl">

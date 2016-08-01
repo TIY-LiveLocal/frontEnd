@@ -3,8 +3,9 @@ app.controller('answerCtrl', ['$http', '$scope', function($http, $scope) {
     console.log('can POST for answers');
 
     var answerText = $('input[id="answerInput"]').val();
-    var businessIdNo = localStorage.getItem('phone');
+    var businessIdNo = localStorage.getItem('business_id');
     var token = localStorage.getItem('token');
+    // var entryId = response.data.id;
 
     //now to answer the questions
 
@@ -23,16 +24,17 @@ app.controller('answerCtrl', ['$http', '$scope', function($http, $scope) {
               console.log('user has typed ' + $("#answerInput").val());
 
             $http({
-                url: 'https://livelocalrails.herokuapp.com/questions',
+                url: 'https://9bc2e4d3.ngrok.io/answers',
+                // url: ' https://livelocalrails.herokuapp.com/answers',
                 method: 'POST',
                 data: {
-                    question_text: answerText,
-                    user_id: token,
-                    phone: businessIdNo
+                    answer_text: answerText,
+                    question_id: 2
                 },
                 headers: {
                     'Authorization': token
-                },
+
+                }
             }).success(function(data) {
 
                 console.log(data);

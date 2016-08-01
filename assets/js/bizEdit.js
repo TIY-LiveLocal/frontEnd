@@ -5,7 +5,8 @@ var timeEdits = $('input[class="inputEdits"]').val();
 var bioEdits = $('input[class="businessBio"]').val();
 
 
-$(document).on('click', '.editSubmitButton', function(e) {
+$('.editSubmitButton').on('click', function(e) {
+  console.log('submit edits clicked');
     e.preventDefault();
 
     $.ajax({

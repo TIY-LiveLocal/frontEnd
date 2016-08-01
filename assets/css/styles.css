@@ -317,7 +317,7 @@ table {
       position: relative;
       color: #9E9E9E;
       display: block;
-      margin: 0 auto; }
+      margin: 5% auto; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionHead {
         display: block;
         width: 80%;
@@ -327,7 +327,7 @@ table {
         margin: 0 auto;
         font-size: 1.25em;
         padding: 3%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain button {
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #askButton {
         display: block;
         border-radius: 2px;
         background-color: #E67A7A;
@@ -340,6 +340,41 @@ table {
         padding: 1%; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
         padding: 5% 10%; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain {
+        position: relative;
+        display: block;
+        margin: auto;
+        margin-top: 8%;
+        background-color: #EEE;
+        width: 80%;
+        padding: 3%;
+        color: #9E9E9E; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain .newPost-post {
+          margin: auto; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain .newPost-post-delete {
+          position: relative;
+          display: block;
+          float: right; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain #answerButton {
+          position: relative;
+          display: block;
+          float: right;
+          outline: none;
+          border: none;
+          background-color: #EEE;
+          font-size: 1.05em;
+          color: #E67A7A; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #answerInput {
+        background-color: #E0E0E0;
+        width: 100%;
+        padding: -3%;
+        border: none;
+        outline: none;
+        font-size: 1.25em; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingAnswersContain {
+        background-color: #E0E0E0;
+        width: 100%;
+        padding: 0 -3%; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
         margin: 2% 10%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
@@ -724,7 +759,7 @@ select:-webkit-autofill:focus {
   #dashboard .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #dashboard .ngDashboard .biz {
-      border: 4px solid #E67A7A;
+      border: 2px solid #9DDCDC;
       border-radius: 2px;
       padding: 5%;
       margin: 5% 5%;
@@ -861,27 +896,30 @@ select:-webkit-autofill:focus {
   #dashboard .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #dashboard .ngDashboard .biz {
-      border: 4px solid #E67A7A;
-      border-radius: 2px;
+      border: 2px solid #9DDCDC;
+      border-radius: 3px;
       padding: 5%;
       margin: 5% 5%;
       display: block;
       box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
       #dashboard .ngDashboard .biz #chevron {
         margin: 1%;
-        color: #E67A7A;
+        color: #9E9E9E;
         float: right; }
       #dashboard .ngDashboard .biz img {
         width: 10%; }
       #dashboard .ngDashboard .biz #bizName {
         font-size: 2em;
         font-family: "Roboto", sans-serif;
-        letter-spacing: 1.5px; }
+        letter-spacing: 1.5px;
+        color: #9E9E9E; }
       #dashboard .ngDashboard .biz #bizOwner {
         font-size: 1.2em;
-        letter-spacing: 1.5px; }
+        letter-spacing: 1.5px;
+        color: #9E9E9E; }
       #dashboard .ngDashboard .biz #bizInfo {
-        font-size: 1em; }
+        font-size: 1em;
+        color: #9E9E9E; }
         #dashboard .ngDashboard .biz #bizInfo #yelp {
           margin: 1%;
           color: #E67A7A; } }

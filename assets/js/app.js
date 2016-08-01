@@ -24,7 +24,8 @@ app.config(function($routeProvider){
     controller: 'cqController'
   })
   .when('/business', {
-    templateUrl: 'views/profile.html'
+    templateUrl: 'views/profile.html',
+    controller: 'qCtrl'
   })
 
   .when('/business_edit', {
@@ -36,7 +37,7 @@ app.config(function($routeProvider){
   })
   .when('/business_search', {
     templateUrl: 'views/biz_search.html',
-    controller: 'bizSearchController'
+    controller: 'bizSearchCtrl'
   })
   .otherwise({
     redirectTo: 'login'

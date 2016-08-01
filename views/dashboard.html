@@ -24,9 +24,9 @@
     </div>
   </header>
   <main>
-    <p class="profileHeader-search"> find me
+    <p class="profileHeader-search" ng-controller="searchCtrl"> find me
         <input id = "searchNearMe" type="text" placeholder="i.e. waffles"></input>
-        <span><button id = "searchNearMeBtn">
+        <span><button id = "searchNearMeBtn" ng-submit = "searchThing()">
           search
         </button></span>
     </p>
@@ -54,7 +54,6 @@
           </a>
         </div>
       </li>
-
-    </ul>
-  </main>
+        </ul>
+    </main>
 </div>

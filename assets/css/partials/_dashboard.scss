@@ -86,7 +86,7 @@
       .ngDashboard{
         font-family: $font4;
         .biz{
-          border: 4px solid #E67A7A;
+          border: 2px solid $blue;
           border-radius: 2px;
           padding: 5%;
           margin: 5% 5%;
@@ -264,15 +264,15 @@
       .ngDashboard{
         font-family: $font4;
         .biz{
-          border: 4px solid #E67A7A;
-          border-radius: 2px;
+          border: 2px solid $blue;
+          border-radius: 3px;
           padding: 5%;
           margin: 5% 5%;
           display: block;
           box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27);
           #chevron{
             margin: 1%;
-            color: $red;
+            color: $darkGrey;
             float: right;
           }
           img{
@@ -282,13 +282,16 @@
           font-size: 2em;
           font-family: $font4;
           letter-spacing: 1.5px;
+          color: $darkGrey;
         }
         #bizOwner{
           font-size: 1.2em;
           letter-spacing: 1.5px;
+          color: $darkGrey;
         }
         #bizInfo{
           font-size: 1em;
+          color: $darkGrey;
           #yelp{
             margin: 1%;
             color: $red;

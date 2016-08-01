@@ -1,27 +1,25 @@
-<div id="businessInfoWrap">
-    <div id="profileHeader">
-        <div id="profileHeader-contain">
-            <span class="pearlLogo-text"> Pearl </span>
-            <img class="pearlLogo" src="assets/images/pearlLogo.svg">
-            <div class="dropdownMenu">
-                <div id="hamburgerNav" ng-controller="navCtrl">
-                    <i class="fa fa-bars" aria-hidden="true" ng-click="navBtn()"></i>
-                </div>
-                <ul class="dropdownMenu-list">
-                    <li class="dropdownMenu-list--item"><a href="#/dashboard">
-              dashboard</a>
-                    </li>
-                    <li class="dropdownMenu-list--item"><a href="#/business_search">
-              search</a>
-                    </li>
-                    <li class="dropdownMenu-list--item"><a href="#/business_edit">
-              settings</a>
-                    </li>
-                </ul>
 
-            </div>
+<div id="businessInfoWrap" ng-controller="bizController as biz">
+  <header id=headerNavBar>
+    <div class="logo">
+      <h1 id="pearlH1">Pearl</h1>
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
+
+
+      <div class="dropdownMenu">
+        <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+          <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+        </button>
+        <div class="dropdownMenu-list" ng-show="dropDown">
+            <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+            <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+            <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
         </div>
+
+      </div>
     </div>
+  </header>
+
     <!--begin actual content-->
     <div id="profileWrapper">
         <div id="actualBusinessProfile" ng-controller="bizController as biz">
@@ -81,6 +79,33 @@
                     </input>
                     <button ng-click="askButton()" id="askButton">
                         ask
+
+    <!--begin actual content-->
+    <div id="profileWrapper">
+
+        <div class="content">
+            <h2 class="businessName">{{biz.data.name}}</h2>
+        </div>
+        <div id="businessInfo">
+            <li class="businessInfo">Location:
+              <div class="uniqueInfo">
+                {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}
+              </div>
+            </li>
+            <li class="businessInfo">Phone Number:
+              <div class="uniqueInfo">
+                <a href=”tel:+{{biz.data.phone}}″>{{biz.data.phone}}</a>
+              </div>
+            </li>
+        </div>
+
+        <!--grid for infomration from business-->
+        <div class="qaWrap">
+            <!-- <div class="content"> -->
+              <div id="qASectionContain" ng-controller="mapCtrl">
+                  <input id="qASectionHead" placeholder="ask this business a question">
+                    <button>
+                     ask
                     </button>
                     <ul>
                       <div id="existingPostsContain">
@@ -107,6 +132,22 @@
                         </li>
                     </ul>
                 </div>
+                              <!-- <div class="form-group">
+                                <label id="mapOD" for="destination" class="col-sm-2 control-label">Destination</label>
+                                <div class="col-sm-8">
+                                  <input type="text" id="destination" class="form-control" ng-model="directions.destination" />
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
+                                  <button class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
+                                </div>
+                              </div>
+                            </form>
+                            <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
+                  <!  </p> -->
+                  </div> -->
+
               </div>
             <div id="previouslyPostedQA" ng-controller="loadQACtrl">
                 <div id="previouslyPostedQA-entries" ng-model="allPosts">

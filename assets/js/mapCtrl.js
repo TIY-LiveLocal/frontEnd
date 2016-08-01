@@ -55,7 +55,7 @@ app.controller('mapCtrl', function($scope, $document, mapFactory) {
   }
 
   // get directions using google maps api
-  $scope.getGMap = function () {
+  $scope.getDirections = function () {
     origin = $scope.marker.center.latitude + ", " + $scope.marker.center.longitude;
     destination = $scope.map.center.latitude + ", " + $scope.map.center.longitude;
     var request = {

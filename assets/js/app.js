@@ -28,7 +28,8 @@ app.config(function($routeProvider){
   })
 
   .when('/business_edit', {
-    templateUrl: 'views/bus_edit_profileNEW.html'
+    templateUrl: 'views/bus_edit_profileNEW.html',
+    controller: 'bizEditController'
   })
 
   .when('/factory',{

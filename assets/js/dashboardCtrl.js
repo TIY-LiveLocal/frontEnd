@@ -37,4 +37,7 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
           };
       });
   }
+
+//nav bar toggle
+  $scope.dropDown = false;
 }]);

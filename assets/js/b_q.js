@@ -10,7 +10,19 @@ $scope.clicked =  function(){
     phone : $scope.phone,
     website_url : $scope.website_url,
     image_url : $scope.image_url,
-    biz_descrip : $scope.biz_descrip
+    biz_descrip : $scope.biz_descrip,
+    hiring : $scope.hiring,
+    glutFree : $scope.glutFree,
+    musicians : $scope.musicians,
+    lgbt : $scope.lgbt,
+    livWage : $scope.livWage,
+    localFood : $scope.localFood,
+    minorityOwned : $scope.minorityOwned,
+    petFriend : $scope.petFriend,
+    artCrafts : $scope.artCrafts,
+    charNonprof : $scope.charNonprof,
+    sustain : $scope.sustain,
+    veganPeta : $scope.veganPeta
   };
 
   console.log(stringData);
@@ -19,7 +31,7 @@ var token = localStorage.getItem('token');
 
 $http({
   method:'POST',
-  url:"https://livelocalrails.herokuapp.com/surveys",
+  url:"https://62d39126.ngrok.io/surveys/business",
   data: stringData,
   headers: {'Authorization':token}
 }).then(function successCallback(response){

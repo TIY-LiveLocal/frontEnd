@@ -31,6 +31,9 @@ app.controller('signupController', ['$http', '$scope', '$timeout', '$location', 
 
     console.log(response);
   }, function errorCallback(error){
+    $scope.signupMSG = 'Something went wrong.';
+
+
     $scope.first_nameErr =  error.data.message.first_name;
     $scope.last_nameErr =  error.data.message.last_name;
     $scope.usernameErr =  error.data.message.username;

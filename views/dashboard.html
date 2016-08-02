@@ -34,18 +34,106 @@
       <h3 id="discover">Discover</h3>
       <!-- <h3 >{{username}}</h3> -->
     </div>
-<img class ='svg' src="assets/img/currentlyhiring.svg" alt="currently hiring" height="30" width="30" >
-<img src="assets/img/glutenfree.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/localmusic.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/lgbtfriendly.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/locallysourcedfood.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/minorityowned.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/livingwage.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/petfriendly.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/localartcrafts.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/charitiesnonprofits.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/sustainablepractices.svg" alt="currently hiring" height="30" width="30">
-<img src="assets/img/veganpeta.svg" alt="currently hiring" height="30" width="30">
+    <!-- ////////////  TOOLTIP ////////// -->
+
+<!-- <img src="assets/img/currentlyhiring.svg" alt="currently hiring"  height="30" width="30"> -->
+<!-- ///////////////////////////////////////// -->
+<div ng-init="tooltip1=false">
+        <br />
+        <br />
+      <img src="assets/img/currentlyhiring.svg" alt="currently hiring"  height="30" width="30" ng-mouseover="tooltip1=true" ng-mouseleave="tooltip1=false">
+        </img>
+        <div class="tooltip" ng-show="tooltip1">Currently Hiring</div>
+    </div>
+
+    <div ng-init="tooltip2=false">
+            <br />
+            <br />
+    <img src="assets/img/glutenfree.svg" alt="gluten free"  height="30" width="30" ng-mouseover="tooltip2=true" ng-mouseleave="tooltip2=false">
+      </img>
+      <div class="tooltip" ng-show="tooltip2">Gluten Free</div>
+  </div>
+
+  <div ng-init="tooltip2=false">
+          <br />
+          <br />
+  <img src="assets/img/localmusic.svg" alt="local music"  height="30" width="30" ng-mouseover="tooltip3=true" ng-mouseleave="tooltip3=false">
+    </img>
+    <div class="tooltip" ng-show="tooltip3">Local Music</div>
+</div>
+
+<div ng-init="tooltip4=false">
+        <br />
+        <br />
+<img src="assets/img/lgbtfriendly.svg" alt="LGBT Friendly"  height="30" width="30" ng-mouseover="tooltip4=true" ng-mouseleave="tooltip4=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip4">LGBT Friendly</div>
+</div>
+
+<div ng-init="tooltip5=false">
+        <br />
+        <br />
+<img src="assets/img/locallysourcedfood.svg" alt="Locally Sourced Food"  height="30" width="30" ng-mouseover="tooltip5=true" ng-mouseleave="tooltip5=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip5">Locally Sourced Food</div>
+</div>
+
+<div ng-init="tooltip6=false">
+        <br />
+        <br />
+<img src="assets/img/minorityowned.svg" alt="Minority Owned"  height="30" width="30" ng-mouseover="tooltip6=true" ng-mouseleave="tooltip6=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip6">Minority Owned</div>
+</div>
+
+<div ng-init="tooltip7=false">
+        <br />
+        <br />
+<img src="assets/img/livingwage.svg" alt="Pay a Living Wage"  height="30" width="30" ng-mouseover="tooltip7=true" ng-mouseleave="tooltip7=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip7">Pay a Living Wage</div>
+</div>
+
+<div ng-init="tooltip8=false">
+        <br />
+        <br />
+<img src="assets/img/petfriendly.svg" alt="Pet Friendly"  height="30" width="30" ng-mouseover="tooltip8=true" ng-mouseleave="tooltip8=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip8">Pet Friendly</div>
+</div>
+
+<div ng-init="tooltip9=false">
+        <br />
+        <br />
+<img src="assets/img/localartcrafts.svg" alt="Local Art & Crafts"  height="30" width="30" ng-mouseover="tooltip9=true" ng-mouseleave="tooltip9=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip9">Local Art & Crafts</div>
+</div>
+
+<div ng-init="tooltip10=false">
+        <br />
+        <br />
+<img src="assets/img/charitiesnonprofits.svg" alt="Support Local Charities/Non-Profits"  height="30" width="30" ng-mouseover="tooltip10=true" ng-mouseleave="tooltip10=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip10">Support Local Charities/Non-Profits</div>
+</div>
+
+<div ng-init="tooltip11=false">
+        <br />
+        <br />
+<img src="assets/img/sustainablepractices.svg" alt="Sustainable Practices"  height="30" width="30" ng-mouseover="tooltip11=true" ng-mouseleave="tooltip11=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip11">Sustainable Practices</div>
+</div>
+
+<div ng-init="tooltip11=false">
+        <br />
+        <br />
+<img src="assets/img/veganpeta.svg" alt="Vegan/PETA Friendly"  height="30" width="30" ng-mouseover="tooltip12=true" ng-mouseleave="tooltip12=false">
+  </img>
+  <div class="tooltip" ng-show="tooltip12">Vegan/PETA Friendly</div>
+</div>
+
     <ul class="ngDashboard">
       <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
         <a href="#/places" id="chevron">

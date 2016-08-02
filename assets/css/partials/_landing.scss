@@ -244,6 +244,7 @@ select:-webkit-autofill:focus {
     padding-left: 2em;
     padding-right: 2em;
     margin-left: 2em;
+    // margin-left:10%;
   }
 
 img{
@@ -264,5 +265,11 @@ img{
     // margin-left: 25%;
     padding-left:7%;
     width:90%;
+  }
+  .screenshotsBottom{
+    // margin-left: 25%;
+    padding-left:7%;
+    width:90%;
+    margin-bottom: 1em;
   }
 }

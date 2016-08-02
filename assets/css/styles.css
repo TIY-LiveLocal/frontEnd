@@ -321,6 +321,8 @@ table {
     font-weight: 700;
     color: #E67A7A;
     margin: 5% 5%; }
+  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .author {
+    font-size: 12px; }
   #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader {
     color: #2a7777;
     font-family: "Roboto", sans-serif;
@@ -1236,8 +1238,7 @@ select:-webkit-autofill:focus {
         color: #9DDCDC; }
 
   .options {
-    font-family: "Roboto", sans-serif;
-    margin: 3% 5%; }
+    font-family: "Roboto", sans-serif; }
     .options #discover #liDiscover {
       margin: 1% 2%;
       display: inline-block;
@@ -1353,7 +1354,19 @@ select:-webkit-autofill:focus {
           text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
   #matches #mainDashboard {
     position: absolute;
-    top: 10%; }
+    top: 10%;
+    width: 100%; }
+    #matches #mainDashboard #loading {
+      color: #9DDCDC;
+      margin: 5%;
+      display: block;
+      letter-spacing: 1.5px;
+      font-family: "Roboto", sans-serif;
+      background: #FFF4E1;
+      border: 1px solid #9DDCDC;
+      font-size: 1.25em;
+      border-radius: 2px;
+      padding: 2% 5%; }
     #matches #mainDashboard .profileHeader {
       font-family: "Arvo", serif;
       color: #E67A7A;
@@ -1384,6 +1397,55 @@ select:-webkit-autofill:focus {
         right: 5%;
         position: absolute;
         bottom: 3%; }
+    #matches #mainDashboard .btm_nav {
+      font-family: "Roboto", sans-serif;
+      position: fixed;
+      bottom: 0;
+      border: 1px solid black; }
+      #matches #mainDashboard .btm_nav #discover {
+        margin: 0 auto;
+        display: block;
+        position: relative; }
+        #matches #mainDashboard .btm_nav #discover #liNearby {
+          display: inline-block;
+          border: 2px solid #E67A7A;
+          padding: 2%; }
+          #matches #mainDashboard .btm_nav #discover #liNearby a {
+            color: #9E9E9E;
+            font-size: 2em;
+            text-align: left;
+            letter-spacing: 2px;
+            text-decoration: none; }
+        #matches #mainDashboard .btm_nav #discover #liHome {
+          display: inline-block;
+          border: 2px dotted #E67A7A;
+          padding: 2%; }
+          #matches #mainDashboard .btm_nav #discover #liHome a {
+            color: #9E9E9E;
+            font-size: 2em;
+            text-align: left;
+            letter-spacing: 2px;
+            text-decoration: none; }
+          #matches #mainDashboard .btm_nav #discover #liHome:hover {
+            border-bottom: 1px solid #E67A7A; }
+        #matches #mainDashboard .btm_nav #discover #liSearch {
+          display: inline-block;
+          border: 2px dotted #E67A7A;
+          padding: 2%; }
+          #matches #mainDashboard .btm_nav #discover #liSearch a {
+            color: #9E9E9E;
+            font-size: 2em;
+            text-align: left;
+            letter-spacing: 2px;
+            text-decoration: none; }
+          #matches #mainDashboard .btm_nav #discover #liSearch:hover {
+            border-bottom: 1px solid #E67A7A; }
+    #matches #mainDashboard .userResults h3 {
+      color: #3aa2a2;
+      font-family: "Galada", cursive;
+      margin: 2% 0;
+      font-size: 1.5em;
+      letter-spacing: .5px; }
   #matches .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #matches .ngDashboard .match {

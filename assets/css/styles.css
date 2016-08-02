@@ -75,9 +75,9 @@ table {
             height: 1.5em;
             border-style: none;
             outline: none;
-            margin-left: .65%;
+            margin-left: 0.65%;
             width: 40%;
-            padding: .11%;
+            padding: 0.11%;
             border-radius: 1px;
             background-color: #EEE; }
           #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search button {
@@ -140,7 +140,7 @@ table {
           margin: 2% 10%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
             height: 300px;
-            margin: 0 0 5% 0; }
+            margin: 0 0 5%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
             margin: 2%;
             width: 100%; }
@@ -162,12 +162,19 @@ table {
               display: inline-block;
               width: 95%; }
             #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
-              padding: 0; } }
+              padding: 0; }
+    #businessInfoWrap #qaSectionContainer #qaSectionWrap {
+      margin: 5% 10%;
+      display: inline-block; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
+        margin: 5%; } }
 @media only screen and (max-width: 480px) {
+  #businessInfoWrap li {
+    list-style: none; }
   #businessInfoWrap #headerNavBar .logo {
     display: block;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
-    margin: 0%;
+    margin: 0;
     padding: 1%; }
     #businessInfoWrap #headerNavBar .logo #pearlH1 {
       font-size: 3em;
@@ -198,10 +205,10 @@ table {
       #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
         position: absolute;
         background-color: #9DDCDC;
-        right: 0%;
+        right: 0;
         text-align: right;
         padding: 15% 30%;
-        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        box-shadow: 1px 5px 10px 0 rgba(42, 119, 119, 0.5);
         border-radius: 2px;
         z-index: 2; }
         #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
@@ -240,33 +247,11 @@ table {
       color: #9E9E9E;
       display: block;
       margin: 0 auto; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionHead {
-        display: block;
-        width: 80%;
-        background-color: #EEE;
-        outline: none;
-        border: none;
-        margin: 0 auto;
-        font-size: 1.25em;
-        padding: 5% 3%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain button {
-        display: block;
-        border-radius: 2px;
-        background-color: #E67A7A;
-        color: #FFF4E1;
-        border-style: none;
-        outline: none;
-        margin: 0 auto;
-        width: 86%;
-        font-size: 1em;
-        padding: 5%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
-        padding: 5% 10%; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
         margin: 2% 10%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
           height: 300px;
-          margin: 0 0 5% 0; }
+          margin: 0 0 5%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
           margin: 2%;
           width: 100%; }
@@ -288,7 +273,68 @@ table {
             display: inline-block;
             width: 95%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
-            padding: 0; } }
+            padding: 0; }
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn #get_directions {
+              display: block;
+              border-radius: 2px;
+              background-color: #E67A7A;
+              color: #FFF4E1;
+              border-style: none;
+              outline: none;
+              margin: 0 auto;
+              font-size: 1em;
+              padding: 5%; }
+  #businessInfoWrap #qaSectionContainer #qaSectionWrap {
+    margin: 15% 10%;
+    display: block; }
+    #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
+      margin: 5%; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_question {
+        display: block;
+        border-radius: 2px;
+        background-color: white;
+        color: #2a7777;
+        border-style: none;
+        border-bottom: 1px solid #9DDCDC;
+        outline: none;
+        margin: 0 auto;
+        font-size: 1em;
+        padding: 5%;
+        width: 90%; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_button {
+        display: block;
+        border-radius: 2px;
+        background-color: #E67A7A;
+        color: #FFF4E1;
+        border-style: none;
+        outline: none;
+        margin: 5% auto;
+        font-size: 1em;
+        padding: 5%;
+        float: right;
+        width: 50%; }
+  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .question_header {
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #E67A7A;
+    margin: 5% 5%; }
+  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader {
+    color: #2a7777;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 7.5% 10% 10% 15%;
+    padding: 2% 0% 0 10%;
+    text-align: right;
+    border-top: 1px dotted #E67A7A; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader .created_at {
+      position: absolute;
+      left: 0%;
+      width: 20%;
+      font-size: 10px;
+      line-height: 1.5;
+      letter-spacing: .1px; } }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus

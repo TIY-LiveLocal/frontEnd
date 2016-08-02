@@ -2,10 +2,10 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
 
 
 
-  getYelp();
+  callOne();
 
-  function getYelp(){
-    dbFactory.getYelp()
+  function callOne(){
+    dbFactory.callOne()
       .then(function(response){
         console.log(response);
         $scope.businesses = response.data;

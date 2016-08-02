@@ -37,26 +37,12 @@
             </li>
         </div>
 
-        <!--grid for infomration from business-->
+<!-- GOOGLE MAPS -->
         <div class="qaWrap">
-            <!-- <div class="content"> -->
               <div id="qASectionContain" ng-controller="mapCtrl">
-                  <input id="qASectionHead" placeholder="ask this business a question">
-                    <button>
-                     ask
-                    </button>
 
-                  <div id="qASectionContent">
-                    <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
-                    <br>
-                    <h3> A </h3>
-                    <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
-                  </div>
-                  <!-- <p><button ng-click="getDirections()">Locate</button></p> -->
-                  <div id="out"></div>
                   <div id="map">
-                    <!-- <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map> -->
-                    <!-- <p ng-model="coords">-->
+
                     <ui-gmap-google-map control="map.control" center="map.center" zoom="map.zoom">
                               <marker coords="marker.center"></marker>
                             </ui-gmap-google-map>
@@ -75,16 +61,48 @@
                               </div>
                               <div class="form-group">
                                 <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
-                                  <button class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
+                                  <button id="get_directions" class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
                                 </div>
                               </div>
                             </form>
                             <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
-                  <!--  </p> -->
                   </div>
               </div>
-            </li>
+        </div>
+    </div>
+<!-- QUESTION / ANSWER SECTION -->
+    <div id="qaSectionContainer" ng-controller="qaCtrl">
+      <div id="qaSectionWrap">
+        <form>
+          <input id="ask_question" type="text" name="userQuestion" value="Question" ng-model="userQuestion" placeholder="ask this business a question">
+          <input id="ask_button" type="submit" name="button" value="Ask" ng-click="askButton()">
+        </form>
+        <div class="questionPost">
+          {{userQuestion}}
 
         </div>
+        <div class="answerPost">
+          {{userAnswer}}
+        </div>
+      </div>
+      <div id="qaResponses">
+        <div class="GETquestions">
+          <!-- ng-repeat for GET /questions -->
+          <ul ng-repeat="q in questionGet">
+            <p class="question_header">
+              {{q.question.question_text}}
+            </p>
+            <li ng-repeat="answer in q.answers">
+              <p class="answer_subheader">
+
+                <span class="created_at">{{answer.created_at | date: 'medium'}}</span>
+                {{answer.answer_text}}
+              </p>
+            </li>
+          </ul>
+          <!-- ng-repeat for GET /answers -->
+
+        </div>
+      </div>
     </div>
 </div>

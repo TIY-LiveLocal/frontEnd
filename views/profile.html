@@ -91,12 +91,16 @@
           <ul ng-repeat="q in questionGet">
             <p class="question_header">
               {{q.question.question_text}}
+              <br>
+              <span class="author">{{q.question.author}}</span>
             </p>
             <li ng-repeat="answer in q.answers">
               <p class="answer_subheader">
 
                 <span class="created_at">{{answer.created_at | date: 'medium'}}</span>
                 {{answer.answer_text}}
+                <br>
+                <span class="author">{{answer.author}}</span>
               </p>
             </li>
           </ul>

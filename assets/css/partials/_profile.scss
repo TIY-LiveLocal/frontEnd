@@ -378,6 +378,9 @@
                   color: $red;
                   margin: 5% 5%;
                   }
+                  .author{
+                    font-size: 12px;
+                  }
                   li{
                     .answer_subheader{
                     color: $darkBlue;
@@ -388,6 +391,7 @@
                     padding: 2% 0% 0 10%;
                     text-align: right;
                     border-top: 1px dotted $red;
+
                     .created_at{
                       position: absolute;
                       left: 0%;

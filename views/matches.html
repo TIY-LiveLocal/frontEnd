@@ -20,19 +20,40 @@
 
 
   <main id="mainDashboard">
-    <div class="profileHeader"><i class="fa fa-search"></i>
+    <h2 id="loading" ng-if="!matches">Finding Treasures...</h2>
+
+    <!-- <div class="profileHeader" ng-if="matches"><i class="fa fa-search"></i>
         <input id = "searchNearMe" type="text" placeholder="..."></input>
         <button id = "searchNearMeBtn">
           search
         </button>
+    </div> -->
+    <div class="userResults">
+      <h3>Based on your survey results: </h3>
+      <img class ='badges' src="assets/img/localartcrafts.svg"  ng-if="userResults.artsCrafts===true" height="30" width="30">
+      <img class ='badges' src="assets/img/currentlyhiring.svg"  ng-if="userResults.hiring===true" height="30" width="30">
+      <img class ='badges' src="assets/img/glutenfree.svg"  ng-if="userResults.glutFree===true" height="30" width="30">
+      <img class ='badges' src="assets/img/localmusic.svg"  ng-if="userResults.musicians===true" height="30" width="30">
+      <img class ='badges' src="assets/img/lgbtfriendly.svg"  ng-if="userResults.lgbt===true" height="30" width="30">
+      <img class ='badges' src="assets/img/livingwage.svg"  ng-if="userResults.livWage===true" height="30" width="30">
+      <img class ='badges' src="assets/img/locallysourcedfood.svg"  ng-if="userResults.localFood===true" height="30" width="30">
+      <img class ='badges' src="assets/img/minorityowned.svg"  ng-if="userResults.minorityOwned===true" height="30" width="30">
+      <img class ='badges' src="assets/img/petfriendly.svg"  ng-if="userResults.petFriend===true" height="30" width="30">
+      <img class ='badges' src="assets/img/charitiesnonprofits.svg"  ng-if="userResults.charNonprof===true" height="30" width="30">
+      <img class ='badges' src="assets/img/sustainablepractices.svg"  ng-if="userResults.sustain===true" height="30" width="30">
+      <img class ='badges' src="assets/img/veganpeta.svg"  ng-if="userResults.veganPeta===true" height="30" width="30">
     </div>
-    <div class="options">
+
+    <div class="btm_nav">
       <ul id="discover">
-        <li id="liDiscover">
-          <a href="#/dashboard">Discover</a>
+        <li id="liNearby">
+          <a href="#/you"><i class="fa fa-map"></i></a>
         </li>
-        <li id="liName">
-          <a href="#/matches">{{firstname}}</a>
+        <li id="liHome">
+          <a href="#/discover"><i class="fa fa-home"></i></a>
+        </li>
+        <li id="liSearch">
+          <a href="#/search"><i class="fa fa-search"></i></a>
         </li>
       </ul>
     </div>

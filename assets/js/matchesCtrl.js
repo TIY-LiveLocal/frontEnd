@@ -7,14 +7,11 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
   $http({
     method: 'GET',
     url: "https://livelocalrails.herokuapp.com/surveys",
+    // url: "https://a40bd000.ngrok.io/surveys",
     headers: {'Authorization': token}
   }).then(function success(response){
 
-    $scope.pets = response.data.petFriend;
-    $scope.artsCrafts = response.data.artsCrafts;
-    // $scope.hiring = response.data.hiring;
-
-    // console.log(response.data);
+    $scope.userResults = response.data;
     console.log(response);
   });
 
@@ -22,6 +19,7 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
   $http({
     method: 'GET',
     url: "https://livelocalrails.herokuapp.com/surveys/matches",
+    // url: "https://a40bd000.ngrok.io/surveys/matches",
     headers: {'Authorization': token}
   }).then(function success(response){
 
@@ -30,11 +28,18 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
     console.log(response);
     console.log(response.data);
 
+    var arr = [];
+    console.log(arr);
 
     $scope.viewBiz = function(){
 
       var vm = this.match;
       console.log(vm);
+
+      arr.push(vm.id);
+
+      console.log(arr);
+
 
       // $location.path('/business');
     };

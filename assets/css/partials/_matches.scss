@@ -70,6 +70,19 @@
     #mainDashboard{
       position: absolute;
       top: 10%;
+      width: 100%;
+      #loading{
+        color: $blue;
+        margin: 5%;
+        display: block;
+        letter-spacing: 1.5px;
+        font-family: $font4;
+        background: $tan;
+        border: 1px solid $blue;
+        font-size: 1.25em;
+        border-radius: 2px;
+        padding: 2% 5%;
+      }
       .profileHeader{
         font-family: $font5;
         color: $red;
@@ -103,6 +116,70 @@
           right: 5%;
           position: absolute;
           bottom: 3%;
+        }
+      }
+      .btm_nav{
+        font-family: $font4;
+        position: fixed;
+        bottom: 0;
+        border: 1px solid black;
+
+        #discover{
+          margin: 0 auto;
+          display: block;
+          position: relative;
+          #liNearby{
+            display: inline-block;
+            border: 2px solid $red;
+            padding: 2%;
+
+            a{
+              color: #9E9E9E;
+              font-size: 2em;
+              text-align: left;
+              letter-spacing: 2px;
+              text-decoration: none;
+            }
+          }
+          #liHome{
+            display: inline-block;
+            border: 2px dotted $red;
+            padding: 2%;
+            a{
+              color: #9E9E9E;
+              font-size: 2em;
+              text-align: left;
+              letter-spacing: 2px;
+              text-decoration: none;
+            }
+            &:hover{
+              border-bottom: 1px solid $red;
+            }
+          }
+          #liSearch{
+            display: inline-block;
+            border: 2px dotted $red;
+            padding: 2%;
+            a{
+              color: #9E9E9E;
+              font-size: 2em;
+              text-align: left;
+              letter-spacing: 2px;
+              text-decoration: none;
+            }
+            &:hover{
+              border-bottom: 1px solid $red;
+            }
+          }
+        }
+      }
+      .userResults{
+        h3{
+          color: $medBlue;
+          font-family: $font1;
+          margin: 2% 0;
+          font-size: 1.5em;
+          letter-spacing: .5px;
         }
       }
     }

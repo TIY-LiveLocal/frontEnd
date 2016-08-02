@@ -39,12 +39,17 @@
     .findBusinesses{
       font-family:$font4;
       color: $darkGrey;
-      letter-spacing: 2px;
+      letter-spacing: 1.2px;
+      margin-bottom: 20%;
       li{
         border: solid $red 1px;
         border-radius: 7px;
         margin: 3%;
         padding: 3%;
+        #bizName{
+          font-size: 1.2em;
+          letter-spacing: 1.5px;
+        }
         div{
           margin: 2% 0;
         }

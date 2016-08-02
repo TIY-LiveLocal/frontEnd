@@ -8,7 +8,7 @@ app.controller('qaCtrl', ['$scope', '$http', function($scope, $http){
     url: 'https://livelocalrails.herokuapp.com/questions/all',
     method: 'GET',
     headers: {'Authorization':token},
-    params: {'business_id':532}
+    params: {'business_id':id}
   }).then(function(response){
     $scope.questionGet = response.data;
     // $scope.answerGet = response.data[4].answers;
@@ -37,5 +37,8 @@ app.controller('qaCtrl', ['$scope', '$http', function($scope, $http){
       console.log(response);
     });
   };
+
+//POST TO ANSWER_TEXT, PASS QUESTION ID, /ANSWERS
+
 
 }]);

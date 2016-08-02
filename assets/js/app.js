@@ -11,11 +11,11 @@ app.config(function($routeProvider){
     templateUrl: 'views/signup.html',
     controller: 'signupController'
   })
-  .when('/dashboard',{
+  .when('/discover',{
     templateUrl: 'views/dashboard.html',
     controller: 'dashboardCtrl'
   })
-  .when('/matches',{
+  .when('/you',{
     templateUrl: 'views/matches.html',
     controller: 'matchesCtrl'
   })

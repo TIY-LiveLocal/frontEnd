@@ -1,8 +1,8 @@
 app.controller('cqController', ['$http', '$scope','$location',
  function($http, $scope,$location) {
 
-   //nav bar toggle
-     $scope.dropDown = false;
+//nav bar toggle
+  $scope.dropDown = false;
 
   $scope.hiring = false;
   $scope.glutFree = false;
@@ -12,58 +12,17 @@ app.controller('cqController', ['$http', '$scope','$location',
   $scope.localFood = false;
   $scope.minorityOwned = false;
   $scope.petFriend = false;
-  $scope.artCrafts = false;
+  $scope.artsCrafts = false;
   $scope.charNonprof = false;
   $scope.sustain = false;
   $scope.veganPeta = false;
   $scope.claimBusiness = false;
 
-  // $('li').click(function(){
-  //   $(this).css('color','black');
-  // });
-
   $('li').click(function(){
   $(this).addClass('black');
 });
 
-  // //////  below doesn't seem to work  //////////////
-  // $( "li" ).toggleClass(function() {
-  //   if ( $(this) parent().is("signUpForm") ) {
-  //     return "black";
-  //   } else {
-  //     return "signUpForm";
-  //   }
-  // });
-  // ////////////////////
-  // function textColorToggle() {
-  //     var color = document.getElementById('li').style.color;
-  //     if (color == "#9E9E9E")
-  //         document.getElementById('li').style.color="black";
-  //     else
-  //         document.getElementById('li').style.color="#9E9E9E";
-  // }
-  // document.getElementById('li).onclick = function(e){
-  //     textColorToggle();// call the function
-  // };
-  // /////////////////
-
 $scope.clicked = function(){
-// //////////////////////
-  // $('.checkBox').click(function() {
-  //     $(this).toggleClass('signUpFormClicked');
-  //     $(this).toggleClass('signUpForm');
-  // });
-  // //////////////////////
-
-    // if ($scope.claimBusiness === false){
-    //   $location.path('/dashboard');
-    // } else{
-    //   $location.path("/business_search");
-    // }
-
-
-      $location.path('/dashboard');
-
 
   console.log($scope.claimBusiness);
 
@@ -76,7 +35,7 @@ $scope.clicked = function(){
     localFood : $scope.localFood,
     minorityOwned : $scope.minorityOwned,
     petFriend : $scope.petFriend,
-    artCrafts : $scope.artCrafts,
+    artsCrafts : $scope.artsCrafts,
     charNonprof : $scope.charNonprof,
     sustain : $scope.sustain,
     veganPeta : $scope.veganPeta
@@ -89,10 +48,13 @@ $scope.clicked = function(){
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/surveys",
-    // url: "https://62d39126.ngrok.io/surveys",
+    // url: "https://a40bd000.ngrok.io/surveys",
     data:data,
     headers:{'Authorization': token}
   }).then(function success(response){
+    console.log(response);
+    // $location.path('/you');
+  }, function error(response){
     console.log(response);
   });
 

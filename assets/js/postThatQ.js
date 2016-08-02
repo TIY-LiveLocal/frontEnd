@@ -24,19 +24,19 @@ app.controller('qCtrl', ['$http', '$scope', function($http, $scope) {
         console.log('user has typed ' + $("#qASectionHead").val());
 
         $http({
-            url: 'https://9bc2e4d3.ngrok.io/questions',
-            // url: ' https://livelocalrails.herokuapp.com/questions', //post request to backend
+            // url: 'https://9bc2e4d3.ngrok.io/questions',
+            url: ' https://livelocalrails.herokuapp.com/questions', //post request to backend
             method: 'POST',
             data: {
                 question_text: $('input[id="qASectionHead"]').val(),
-                business_id: businessIdNo,
+                business_id: 532
             },
             headers: {
                 'Authorization': token
             }
-        }).success(function(data) {
+        // }).success(function(data) {
 
-            console.log(data);
+            // console.log(data);
         });
     }
 

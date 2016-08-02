@@ -17,13 +17,14 @@ console.log(entryId);
 
 
     $http({
-        url: 'https://9bc2e4d3.ngrok.io/questions/all',
+        // url: 'https://9bc2e4d3.ngrok.io/questions/all',
+        url: 'https://livelocalrails.herokuapp.com/questions.all',
         method: 'GET',
         headers: {
           'Authorization': token,
         },
         params: {
-            'business_id' : businessIdNo
+            'business_id' : 21
           }
 
     }).then(function(data) {

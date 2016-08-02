@@ -28,6 +28,8 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
           localStorage.setItem('city',vm.city);
           localStorage.setItem('zip',vm.zip_code);
           localStorage.setItem('phone',vm.phone);
+          localStorage.setItem('business_id', vm.id);
+          localStorage.setItem('username', vm.user_id);
           localStorage.setItem('longitude',vm.location[1]);
           localStorage.setItem('latitude',vm.location[0]);
 

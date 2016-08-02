@@ -14,13 +14,19 @@
             <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
         </div>
 
+        <div>
+          <button id = "headerSiteNav-logout">
+            logout
+          </buton>
+        </div>
+
       </div>
     </div>
   </header>
-  <main id="mainDashboard">
-    <div class="profileHeader"><i class="fa fa-search"></i>
-        <input id = "searchNearMe" type="text" placeholder="..."></input>
-        <button id = "searchNearMeBtn">
+  <main id="mainDashboard" ng-controller="dashboardCtrl">
+    <div class="profileHeader" ng-controller="bizSearchCtrl"><i class="fa fa-search"></i>
+        <input id = "bizNameHere" type="text" placeholder="..."></input>
+        <button ng-submit="seekBusiness()" id = "searchNearMeBtn">
           search
         </button>
     </div>

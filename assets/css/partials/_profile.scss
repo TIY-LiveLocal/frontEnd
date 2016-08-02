@@ -236,6 +236,7 @@
       }
     }
   #profileWrapper{
+    list-decoration: none;
     font-family: Roboto, sans-serif;
     margin: auto;
     width: 100%;
@@ -306,11 +307,14 @@
           // border-bottom:$red solid 1px;
           .newPost-post{
             margin: auto;
+            font-size: 1.25em;
+            padding: 3% 0;
           }
           .newPost-post-delete{
             position: relative;
             display: block;
             float: right;
+            font-size: .7em;
           }
           #answerButton{
             position: relative;
@@ -330,7 +334,7 @@
           padding: -3%;
           border: none;
           outline: none;
-          font-size: 1.25em;
+          font-size: 1.1em;
 
         }
         #existingAnswersContain{

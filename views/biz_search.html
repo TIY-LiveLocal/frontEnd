@@ -1,29 +1,30 @@
-<div id = "searchPageWrapper">
-<div id = "searchPage-inputs" ng-controller="bizSearchCtrl">
-  <textarea id = "bizNameHere" ng-model="bizNameInput" type="text" placeholder="Name of business"></textarea>
-  <textarea id = "bizAddressHere" type="text" placeholder="Business address"></textarea>
+<div id = "searchPageWrapper" ng-controller="bizSearchCtrl">
+<div id = "searchPage-inputs">
+  <input id = "bizNameHere" ng-model="bizNameInput" type="text" placeholder="Name of business"></textarea>
+  <input id = "bizAddressHere" type="text" placeholder="Business address"></textarea>
   <button ng-click ="seekBusiness()" id = "bizSetupSearch"> search </button>
 </div>
 
 
-
 <!--business listings modal-->
 
-<div class = "businessInfo">
-  <ul>
-    <li ng-repeat="biz in businesses" class="biz">
-      <div id="bizName"> {{data.name}}</div>
-      <div id="bizOwner"> {{data.city}},{{data.location.state_code}}</div>
-      <div id="bizInfo">
-        {{data.phone}}
-        <br>
-        {{data.location.address}}
+<ul class="findBusinesses">
+  <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
+    <a href="#/places" id="chevron">
+      <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+    </a>
+    <div id="bizName"> {{biz.name}}</div>
+    <div id="bizOwner"> {{biz.owner}}</div>
+    <div id="bizOwner">{{biz.address}}, {{biz.city}}</div>
+    <div id="bizInfo">
+      {{biz.phone}}
+      <br>
 
 
-        <a href="{{biz.url}}">
+
+      <a href="{{biz.website_url}}" id="yelp">
         <i class="fa fa-yelp" aria-hidden="true"></i>
-        </a>
-      </div>
-    </li>
-
-  </ul>
+      </a>
+    </div>
+  </li>
+    </ul>

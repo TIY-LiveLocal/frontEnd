@@ -188,7 +188,7 @@ table {
       width: 11%; }
     #businessInfoWrap #headerNavBar .logo .dropdownMenu {
       position: absolute;
-      top: 1%;
+      top: .5%;
       right: 5%; }
       #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn {
         background-color: white;
@@ -282,8 +282,9 @@ table {
               border-style: none;
               outline: none;
               margin: 0 auto;
-              font-size: 1em;
-              padding: 5%; }
+              font-size: 2em;
+              padding: 5%;
+              font-weight: 700; }
   #businessInfoWrap #qaSectionContainer #qaSectionWrap {
     margin: 15% 10%;
     display: block; }
@@ -309,7 +310,8 @@ table {
         border-style: none;
         outline: none;
         margin: 5% auto;
-        font-size: 1em;
+        font-size: 2em;
+        font-weight: 700;
         padding: 5%;
         float: right;
         width: 50%; }

@@ -30,268 +30,197 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*
-  Simple Grid
-  Project Page - http://thisisdallas.github.com/Simple-Grid/
-  Author - Dallas Bass
-  Site - http://dallasbass.com
-*/
-.grid:after,
-[class*='col-'],
-[class*='grid'],
-[class*='mobile-'] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  padding-right: 20px;
-  /* column-space */ }
-
-[class*='col-'] [class*='col-']:last-child {
-  padding-right: 0; }
-
-.grid {
-  width: 100%;
-  max-width: 1140px;
-  min-width: 748px;
-  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
-  margin: 0 auto;
-  overflow: hidden; }
-
-.grid:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.grid-pad {
-  padding-top: 20px;
-  padding-left: 20px;
-  /* grid-space to left */
-  padding-right: 0;
-  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
-
-.push-right {
-  float: right; }
-
-/* Content Columns */
-.col-1-2,
-.col-6-12 {
-  width: 40%; }
-
-.col-1-3,
-.col-4-12 {
-  width: 33.33%;
-  position: relative;
-  margin: auto; }
-
-.col-1-4,
-.col-3-12 {
-  width: 25%; }
-
-.col-1-5 {
-  width: 20%; }
-
-.col-1-6,
-.col-2-12 {
-  width: 16.667%; }
-
-.col-1-7 {
-  width: 14.28%; }
-
-.col-1-8 {
-  width: 12.5%; }
-
-.col-1-9 {
-  width: 11.1%; }
-
-.col-1-10 {
-  width: 10%; }
-
-.col-1-11 {
-  width: 9.09%; }
-
-.col-1-12 {
-  width: 8.33%; }
-
-/* Layout Columns */
-.col-11-12 {
-  width: 91.66%; }
-
-.col-10-12 {
-  width: 83.333%; }
-
-.col-9-12 {
-  width: 75%; }
-
-.col-5-12 {
-  width: 41.66%; }
-
-.col-7-12 {
-  width: 58.33%; }
-
-/* Pushing blocks */
-.push-2-3,
-.push-8-12 {
-  margin-left: 66.66%; }
-
-.push-1-2,
-.push-6-12 {
-  margin-left: 50%; }
-
-.push-1-3,
-.push-4-12 {
-  margin-left: 33.33%; }
-
-.push-1-4,
-.push-3-12 {
-  margin-left: 25%; }
-
-.push-1-5 {
-  margin-left: 20%; }
-
-.push-1-6,
-.push-2-12 {
-  margin-left: 16.667%; }
-
-.push-1-7 {
-  margin-left: 14.28%; }
-
-.push-1-8 {
-  margin-left: 12.5%; }
-
-.push-1-9 {
-  margin-left: 11.1%; }
-
-.push-1-10 {
-  margin-left: 10%; }
-
-.push-1-11 {
-  margin-left: 9.09%; }
-
-.push-1-12 {
-  margin-left: 8.33%; }
-
-/*end grid styling*/
-#businessEditPage body {
-  background-color: #FFEBB7; }
-#businessEditPage #businessEditPage-wrapper {
-  width: 80%;
-  margin: auto;
-  font-family: Rubik, sans-serif;
-  color: #E67A7A; }
-  #businessEditPage #businessEditPage-wrapper #profileHeader {
-    width: 100%; }
-    #businessEditPage #businessEditPage-wrapper #profileHeader .pearlLogo {
-      display: inline-block;
-      width: 5%;
-      height: 5%;
-      padding-top: 2%;
-      position: relative;
-      left: 48%; }
-  #businessEditPage #businessEditPage-wrapper #profileHeader-contain {
-    width: 80%;
-    position: relative;
-    left: 45%; }
-    #businessEditPage #businessEditPage-wrapper #profileHeader-contain .pearlLogo-text {
-      left: 45%;
-      color: #E67A7A;
-      font-size: 3em;
-      font-family: Arvo;
-      width: 10%;
-      display: block;
-      position: relative;
-      left: 0;
-      padding-bottom: 2%; }
-    #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search {
-      position: relative;
-      left: -15%;
-      font-size: 1.5em;
-      padding-bottom: 3%; }
-      #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search input {
-        height: 1.5em;
-        border-style: none;
-        outline: none;
-        margin-left: 0.65%;
-        width: 40%;
-        padding: 0.11%;
-        border-radius: 1px; }
-      #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search button {
-        margin-left: -3%;
-        height: 1.73em;
-        border-radius: 0 2px 2px 0;
-        background-color: #9DDCDC;
-        color: #FFF4E1;
-        border-style: none;
-        outline: none; }
-#businessEditPage li {
-  list-style: none; }
-#businessEditPage .businessHours-hours {
-  position: relative;
-  left: -15%; }
-#businessEditPage .businessBio {
-  width: 80%;
-  height: 15em; }
-
-#businessInfoWrap {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  font-family: Roboto, sans-serif;
-  color: #9DDCDC; }
-  #businessInfoWrap li {
-    list-style: none; }
-  #businessInfoWrap #profileHeader {
-    color: #9DDCDC;
-    width: 100%; }
-    #businessInfoWrap #profileHeader .pearlLogo {
-      display: inline-block;
-      position: relative;
-      width: 15%; }
-    #businessInfoWrap #profileHeader #profileHeader-contain {
-      position: relative;
-      margin: 1% 5%; }
-      #businessInfoWrap #profileHeader #profileHeader-contain .pearlLogo-text {
-        font-size: 3em;
-        font-family: "Arvo", serif;
+@media only screen and (min-width: 480px) and (max-width: 1020px) {
+  #businessInfoWrap {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    color: #9DDCDC; }
+    #businessInfoWrap li {
+      list-style: none; }
+    #businessInfoWrap #profileHeader {
+      color: #9DDCDC;
+      width: 100%; }
+      #businessInfoWrap #profileHeader .pearlLogo {
         display: inline-block;
         position: relative;
-        padding-bottom: 2%; }
-      #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu {
-        display: inline-block;
-        float: right;
-        margin: 5%; }
-        #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu #hamburgerNav {
+        width: 15%; }
+      #businessInfoWrap #profileHeader #profileHeader-contain {
+        position: relative;
+        margin: 1% 5%; }
+        #businessInfoWrap #profileHeader #profileHeader-contain .pearlLogo-text {
+          font-size: 3em;
+          font-family: "Arvo", serif;
+          display: inline-block;
           position: relative;
-          font-size: 3em; }
-      #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu-list--item {
+          padding-bottom: 2%; }
+        #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu {
+          display: inline-block;
+          float: right;
+          margin: 5%; }
+          #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu #hamburgerNav {
+            position: relative;
+            font-size: 3em; }
+        #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu-list--item {
+          position: relative;
+          left: 25%;
+          display: none; }
+        #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search {
+          position: relative;
+          left: 40%;
+          font-size: 1.5em;
+          padding-bottom: 3%; }
+          #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search input {
+            height: 1.5em;
+            border-style: none;
+            outline: none;
+            margin-left: 0.65%;
+            width: 40%;
+            padding: 0.11%;
+            border-radius: 1px;
+            background-color: #EEE; }
+          #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search button {
+            margin-left: -3%;
+            height: 1.73em;
+            border-radius: 0 2px 2px 0;
+            background-color: #E67A7A;
+            color: #FFF4E1;
+            border-style: none;
+            outline: none; }
+    #businessInfoWrap #profileWrapper {
+      font-family: Roboto, sans-serif;
+      margin: auto;
+      width: 100%; }
+      #businessInfoWrap #profileWrapper .content .businessName {
+        font-family: Roboto, sans-serif;
+        letter-spacing: 2px;
+        font-size: 30px;
+        padding: 1%;
+        margin: 6%;
+        color: #9E9E9E;
+        position: relative; }
+      #businessInfoWrap #profileWrapper #businessInfo .businessInfo {
+        margin: 7.5%;
         position: relative;
-        left: 25%;
-        display: none; }
-      #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search {
+        color: #9E9E9E;
+        letter-spacing: 1.5px;
+        font-size: 16px; }
+        #businessInfoWrap #profileWrapper #businessInfo .businessInfo .uniqueInfo {
+          font-size: 12px;
+          margin: 3% 0; }
+      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain {
         position: relative;
-        left: 40%;
-        font-size: 1.5em;
-        padding-bottom: 3%; }
-        #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search input {
-          height: 1.5em;
-          border-style: none;
+        color: #9E9E9E;
+        display: block;
+        margin: 0 auto; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionHead {
+          display: block;
+          width: 80%;
+          background-color: #EEE;
           outline: none;
-          margin-left: .65%;
-          width: 40%;
-          padding: .11%;
-          border-radius: 1px;
-          background-color: #EEE; }
-        #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search button {
-          margin-left: -3%;
-          height: 1.73em;
-          border-radius: 0 2px 2px 0;
+          border: none;
+          margin: 0 auto;
+          font-size: 1.25em;
+          padding: 5% 3%; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain button {
+          display: block;
+          border-radius: 2px;
           background-color: #E67A7A;
           color: #FFF4E1;
           border-style: none;
+          outline: none;
+          margin: 0 auto;
+          width: 86%;
+          font-size: 1em;
+          padding: 5%; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
+          padding: 5% 10%; }
+        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
+          margin: 2% 10%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
+            height: 300px;
+            margin: 0 0 5%; }
+          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
+            margin: 2%;
+            width: 100%; }
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group input {
+              border: none;
+              font-size: 16px;
+              font-family: "Roboto", sans-serif;
+              color: #E67A7A;
+              margin: 1%; }
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group .col-sm-8 {
+              float: none;
+              display: inline-block;
+              width: 100%; }
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapOD {
+              float: none;
+              display: inline-block;
+              font-size: 20px; }
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group button {
+              display: inline-block;
+              width: 95%; }
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
+              padding: 0; }
+    #businessInfoWrap #qaSectionContainer #qaSectionWrap {
+      margin: 5% 10%;
+      display: inline-block; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
+        margin: 5%; } }
+@media only screen and (max-width: 480px) {
+  #businessInfoWrap li {
+    list-style: none; }
+  #businessInfoWrap #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0;
+    padding: 1%; }
+    #businessInfoWrap #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #businessInfoWrap #headerNavBar .logo img {
+      width: 11%; }
+    #businessInfoWrap #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: .5%;
+      right: 5%; }
+      #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
           outline: none; }
+        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0 rgba(42, 119, 119, 0.5);
+        border-radius: 2px;
+        z-index: 2; }
+        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
   #businessInfoWrap #profileWrapper {
     font-family: Roboto, sans-serif;
     margin: auto;
@@ -318,33 +247,11 @@ table {
       color: #9E9E9E;
       display: block;
       margin: 0 auto; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionHead {
-        display: block;
-        width: 80%;
-        background-color: #EEE;
-        outline: none;
-        border: none;
-        margin: 0 auto;
-        font-size: 1.25em;
-        padding: 3%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain button {
-        display: block;
-        border-radius: 2px;
-        background-color: #E67A7A;
-        color: #FFF4E1;
-        border-style: none;
-        outline: none;
-        margin: 0 auto;
-        width: 86%;
-        font-size: 1em;
-        padding: 1%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
-        padding: 5% 10%; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
         margin: 2% 10%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
           height: 300px;
-          margin: 0 0 5% 0; }
+          margin: 0 0 5%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
           margin: 2%;
           width: 100%; }
@@ -367,7 +274,71 @@ table {
             width: 95%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
             padding: 0; }
-
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn #get_directions {
+              display: block;
+              border-radius: 2px;
+              background-color: #E67A7A;
+              color: #FFF4E1;
+              border-style: none;
+              outline: none;
+              margin: 0 auto;
+              font-size: 2em;
+              padding: 5%;
+              font-weight: 700; }
+  #businessInfoWrap #qaSectionContainer #qaSectionWrap {
+    margin: 15% 10%;
+    display: block; }
+    #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
+      margin: 5%; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_question {
+        display: block;
+        border-radius: 2px;
+        background-color: white;
+        color: #2a7777;
+        border-style: none;
+        border-bottom: 1px solid #9DDCDC;
+        outline: none;
+        margin: 0 auto;
+        font-size: 1em;
+        padding: 5%;
+        width: 90%; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_button {
+        display: block;
+        border-radius: 2px;
+        background-color: #E67A7A;
+        color: #FFF4E1;
+        border-style: none;
+        outline: none;
+        margin: 5% auto;
+        font-size: 2em;
+        font-weight: 700;
+        padding: 5%;
+        float: right;
+        width: 50%; }
+  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .question_header {
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #E67A7A;
+    margin: 5% 5%; }
+  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .author {
+    font-size: 12px; }
+  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader {
+    color: #2a7777;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 7.5% 10% 10% 15%;
+    padding: 2% 0% 0 10%;
+    text-align: right;
+    border-top: 1px dotted #E67A7A; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader .created_at {
+      position: absolute;
+      left: 0%;
+      width: 20%;
+      font-size: 10px;
+      line-height: 1.5;
+      letter-spacing: .1px; } }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
@@ -383,7 +354,7 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   transition: background-color 5000s ease-in-out 0s; }
 
-@media screen and (min-width: 1020px) {
+@media only screen and (min-width: 1020px) {
   #loginPage {
     width: 100%;
     margin: 0 auto;
@@ -453,7 +424,7 @@ select:-webkit-autofill:focus {
         letter-spacing: 2px; }
         #loginPage .loginWrap .rightWrap .help:visited {
           color: #3aa2a2; } }
-@media screen and (max-width: 1020px) {
+@media only screen and (min-width: 480px) and (max-width: 1020px) {
   #loginPage {
     width: 100%;
     margin: 0 auto;
@@ -532,7 +503,111 @@ select:-webkit-autofill:focus {
           #loginPage .loginWrap .rightWrap .help:visited {
             color: #3aa2a2;
             text-decoration: none; } }
-@media screen and (min-width: 1020px) {
+@media only screen and (max-width: 480px) {
+  #loginPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #loginPage input:focus {
+      outline: none; }
+    #loginPage .loginWrap .leftWrap {
+      width: 100%;
+      position: absolute; }
+      #loginPage .loginWrap .leftWrap h2 {
+        font-family: "Arvo", serif;
+        color: #E67A7A;
+        text-align: center;
+        font-size: 3em;
+        padding: 5% 0;
+        box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        letter-spacing: 2px; }
+      #loginPage .loginWrap .leftWrap img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        margin: -48% 0%;
+        z-index: -1; }
+    #loginPage .loginWrap .rightWrap {
+      width: 95%;
+      position: absolute;
+      margin: 50% 3% 0; }
+      #loginPage .loginWrap .rightWrap .new_user .field {
+        width: 90%;
+        margin: 0em auto;
+        padding: 5% 0;
+        line-height: 3em; }
+        #loginPage .loginWrap .rightWrap .new_user .field #user_email {
+          font-size: 1.1em;
+          border: none;
+          border-bottom: 1px solid #9DDCDC;
+          padding: 5% 0%;
+          width: 100%;
+          letter-spacing: 2px; }
+        #loginPage .loginWrap .rightWrap .new_user .field #user_password {
+          font-size: 1.1em;
+          border: none;
+          border-bottom: 1px solid #9DDCDC;
+          padding: 5% 0%;
+          width: 100%;
+          letter-spacing: 2px; }
+        #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
+          font-size: .75em; }
+      #loginPage .loginWrap .rightWrap .new_user .actions {
+        margin: 5%; }
+        #loginPage .loginWrap .rightWrap .new_user .actions h1 {
+          font-size: 20px;
+          color: #2a7777;
+          margin: 0 auto;
+          background: #FFF4E1;
+          width: 85%;
+          text-align: center;
+          padding: 1% 2%;
+          border: 1px solid #9DDCDC;
+          border-radius: 2px;
+          font-family: "Roboto", sans-serif;
+          display: none;
+          padding: 2%; }
+        #loginPage .loginWrap .rightWrap .new_user .actions input {
+          width: 100%;
+          background: #E67A7A;
+          color: white;
+          border: none;
+          padding: 5% 0;
+          margin: 5% auto;
+          font-size: 2em;
+          font-weight: 500;
+          border-radius: 2px;
+          letter-spacing: 1px; }
+      #loginPage .loginWrap .rightWrap .help {
+        margin: 2% 5%;
+        font-size: .8em;
+        color: #2a7777;
+        line-height: 2em;
+        text-decoration: none;
+        border-bottom: 1px solid #9DDCDC;
+        padding: .5%;
+        display: inline-block;
+        letter-spacing: 2px; }
+        #loginPage .loginWrap .rightWrap .help:visited {
+          color: #3aa2a2;
+          text-decoration: none; } }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: #2a7777;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s; }
+
+@media only screen and (min-width: 1020px) {
   #signUp .headerWrap {
     display: block;
     position: relative; }
@@ -588,15 +663,15 @@ select:-webkit-autofill:focus {
       padding: 2%;
       width: 90%;
       border: none;
-      margin: 1% auto;
+      margin: 0 auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
-@media screen and (max-width: 1000px) {
+@media only screen and (min-width: 480px) and (max-width: 1020px) {
   #signUp .headerWrap {
-    width: 98%;
+    width: 100%;
     display: block;
     position: relative;
-    margin: 0 2%; }
+    margin: 0; }
     #signUp .headerWrap h2 {
       font-family: "Arvo", serif;
       color: #E67A7A;
@@ -610,13 +685,11 @@ select:-webkit-autofill:focus {
       width: 100%;
       position: absolute;
       top: 0;
-      margin: -65% 0%;
+      margin: -60% 0%;
       z-index: -1; }
   #signUp .signUpWrap {
-    box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
     padding-bottom: 3%;
-    margin: 12% 1%;
-    border-radius: 5%; }
+    margin: 12% 1%; }
     #signUp .signUpWrap h2 {
       background: #E67A7A;
       display: block;
@@ -625,19 +698,34 @@ select:-webkit-autofill:focus {
       text-align: left;
       font-size: 2em;
       padding: 3%; }
+    #signUp .signUpWrap #signupMSG {
+      font-size: 20px;
+      color: #2a7777;
+      margin: 0 auto;
+      background: #FFF4E1;
+      width: 85%;
+      text-align: center;
+      padding: 1% 2%;
+      border: 1px solid #9DDCDC;
+      border-radius: 2px;
+      font-family: "Roboto", sans-serif;
+      display: none; }
   #signUp .signUpForm {
     display: block; }
     #signUp .signUpForm .signUpInput {
       width: 90%;
       display: block;
-      font-size: 1.5em;
+      font-size: 1em;
       border: none;
       border-bottom: 1px solid #9DDCDC;
       padding: 1%;
-      line-height: 1.5em;
-      margin: 4%; }
+      line-height: 2em;
+      margin: 2% 4%; }
       #signUp .signUpForm .signUpInput:focus {
         outline: none; }
+      #signUp .signUpForm .signUpInput input {
+        font-size: 1.5em;
+        border: none; }
     #signUp .signUpForm .submit {
       background: #E67A7A;
       display: block;
@@ -648,13 +736,127 @@ select:-webkit-autofill:focus {
       padding: 2%;
       width: 90%;
       border: none;
-      margin: 1% auto;
+      margin: 0 auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
-@media screen and (min-width: 1000px) {
+@media only screen and (max-width: 480px) {
+  #signUp .headerWrap {
+    width: 75%;
+    display: block;
+    position: relative; }
+    #signUp .headerWrap #Pearl {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 3em;
+      padding: 5% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px; }
+    #signUp .headerWrap #ll-pearl {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      margin: -40% 0%;
+      z-index: -1; }
+  #signUp .signUpWrap {
+    margin: 0;
+    border-radius: 5%; }
+    #signUp .signUpWrap #signup {
+      padding: 5%;
+      position: absolute;
+      top: 12%;
+      right: 0;
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      border-radius: 3px;
+      letter-spacing: 2px;
+      font-weight: 700; }
+    #signUp .signUpWrap #signupMSG {
+      font-size: 20px;
+      color: #2a7777;
+      background: #FFF4E1;
+      width: 85%;
+      text-align: center;
+      padding: 1% 2%;
+      border: 1px solid #9DDCDC;
+      border-radius: 2px;
+      font-family: "Roboto", sans-serif;
+      display: none;
+      position: absolute;
+      top: 23%;
+      margin: 0 5%; }
+  #signUp .signUpForm {
+    display: block;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    background: white; }
+    #signUp .signUpForm .signUpInput {
+      width: 90%;
+      display: inline-block;
+      font-size: 1em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
+      padding: 1%;
+      line-height: 2.5em;
+      margin: 2% 4%; }
+      #signUp .signUpForm .signUpInput:focus {
+        outline: none; }
+      #signUp .signUpForm .signUpInput input {
+        font-size: 1.5em;
+        border: none;
+        display: inline-block; }
+        #signUp .signUpForm .signUpInput input:focus {
+          outline: none; }
+      #signUp .signUpForm .signUpInput span {
+        float: right;
+        background: #FFF4E1;
+        color: #2a7777;
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #9DDCDC;
+        border-radius: 2px; }
+    #signUp .signUpForm #signUpZipcode {
+      margin-bottom: 20%; }
+    #signUp .signUpForm .submit {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      padding: 5%;
+      width: 100%;
+      border: none;
+      margin: 0 auto;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-weight: 700; }
+  #signUp .signUpForm.ng-invalid {
+    border: 1px solid red; } }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: #2a7777;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s; }
+
+@media only screen and (min-width: 1020px) {
   #dashboard .logo {
     display: block;
-    margin: 1% 0% 0% 0%; }
+    margin: 0%; }
     #dashboard .logo h1 {
       font-size: 3em;
       display: inline-block;
@@ -760,18 +962,22 @@ select:-webkit-autofill:focus {
     left: 60%; }
   #dashboard #headerSiteNav-dashboard, #dashboard #headerSiteNav-profile, #dashboard #headerSiteNav-settings {
     border-right: solid #E67A7A 1px; } }
-@media screen and (max-width: 1000px) {
+@media only screen and (min-width: 480px) and (max-width: 1020px) {
   #dashboard main p {
     margin: 5%;
     font-family: "Arvo", serif;
     color: #E67A7A; }
-    #dashboard main p input {
+    #dashboard main p #searchNearMe {
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 1px solid #9DDCDC;
       padding: 1%;
-      width: 40%; }
+      margin: 4%;
+      letter-spacing: 1px; }
   #dashboard .logo {
     display: block;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
-    margin: 1% 0% 0% 0%;
+    margin: 0%;
     padding: 1%; }
     #dashboard .logo #headerSiteNav ul {
       display: inline-block;
@@ -846,18 +1052,21 @@ select:-webkit-autofill:focus {
   #dashboard .options {
     font-family: "Roboto", sans-serif;
     margin: 3% 5%; }
-    #dashboard .options h3 {
+    #dashboard .options #discover li {
       margin: 0% 2%;
       display: inline-block;
-      color: #9E9E9E;
-      font-size: 1.5em;
-      text-align: left;
-      border-bottom: 1px dotted #E67A7A;
-      letter-spacing: 2px; }
-    #dashboard .options #discover {
       border-bottom: 1px dotted #E67A7A; }
-      #dashboard .options #discover:hover {
-        border-bottom: 1px solid #E67A7A; }
+      #dashboard .options #discover li a {
+        color: #9E9E9E;
+        font-size: 1.5em;
+        text-align: left;
+        letter-spacing: 2px;
+        text-decoration: none; }
+    #dashboard .options #loading {
+      color: #9DDCDC;
+      margin: 5% 5% 0;
+      display: inline-block;
+      letter-spacing: 1.5px; }
   #dashboard .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #dashboard .ngDashboard .biz {
@@ -885,11 +1094,434 @@ select:-webkit-autofill:focus {
         #dashboard .ngDashboard .biz #bizInfo #yelp {
           margin: 1%;
           color: #E67A7A; } }
+@media only screen and (max-width: 480px) {
+  #dashboard #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #dashboard #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #dashboard #headerNavBar .logo img {
+      width: 11%; }
+    #dashboard #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #dashboard #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #dashboard #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #dashboard #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #dashboard #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #dashboard #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+  #dashboard #mainDashboard #bottomWrapper {
+    height: 3.5em;
+    position: fixed;
+    bottom: 0;
+    background-color: #eee;
+    padding: 2% 2% 3% 0%;
+    margin-top: 10%;
+    width: 100%; }
+    #dashboard #mainDashboard #bottomWrapper a {
+      text-decoration: none; }
+      #dashboard #mainDashboard #bottomWrapper a .fa {
+        display: inline-block;
+        font-size: 2.6em;
+        padding: 2% 12% 5% 12%;
+        color: #3aa2a2; }
+      #dashboard #mainDashboard #bottomWrapper a:active {
+        text-decoration: none; }
+      #dashboard #mainDashboard #bottomWrapper a:visited {
+        text-decoration: none; }
+  #dashboard #mainDashboard .userResults {
+    margin: 0 5%; }
+    #dashboard #mainDashboard .userResults h3 {
+      color: #9DDCDC;
+      font-family: "Arvo", serif;
+      margin: 6% 0;
+      font-size: 1.5em;
+      letter-spacing: .5px; }
+      #dashboard #mainDashboard .userResults h3 #dash_zip {
+        font-size: 1.2em;
+        color: #E67A7A;
+        letter-spacing: 2px; }
+  #dashboard #mainDashboard .profileHeader {
+    font-family: "Arvo", serif;
+    color: #E67A7A;
+    display: block;
+    width: 100%;
+    margin: 3% auto;
+    position: relative; }
+    #dashboard #mainDashboard .profileHeader .fa-search {
+      color: #E67A7A;
+      font-size: 2em;
+      margin: 2% 2% 0% 5%;
+      position: absolute;
+      top: 0; }
+    #dashboard #mainDashboard .profileHeader #searchNearMe {
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 2px solid #9DDCDC;
+      padding: 1%;
+      margin: 1% 16%;
+      letter-spacing: 1px; }
+    #dashboard #mainDashboard .profileHeader #searchNearMeBtn {
+      border-radius: 2px;
+      font-size: 20px;
+      padding: 1% 2%;
+      background-color: #E67A7A;
+      color: white;
+      border: none;
+      right: 5%;
+      position: absolute;
+      bottom: 3%; }
+
+  #headerSiteNav ul {
+    display: inline-block;
+    float: right;
+    position: absolute;
+    top: 1%;
+    right: 1%; }
+    #headerSiteNav ul li button {
+      border: none;
+      background-color: #E67A7A;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      margin: 15%;
+      font-size: 14px;
+      letter-spacing: 1px;
+      border-radius: 2px; }
+    #headerSiteNav ul li span a {
+      color: #E67A7A;
+      font-family: Roboto, sans-serif;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      display: block; }
+
+  #rightLogo {
+    display: inline; }
+    #rightLogo i {
+      float: right;
+      color: #AEB9BD;
+      margin: 0 5%;
+      font-size: 1.5em; }
+      #rightLogo i span {
+        font-family: "Roboto", sans-serif;
+        padding: 6%;
+        font-size: 1em;
+        position: absolute;
+        right: 0;
+        color: #E67A7A; }
+    #rightLogo #userSurvey {
+      display: none;
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      margin: 1.5%;
+      position: absolute;
+      top: 11%;
+      right: 0;
+      text-decoration: none;
+      color: #9DDCDC; }
+      #rightLogo #userSurvey:visited {
+        text-decoration: none;
+        color: #9DDCDC; }
+    #rightLogo #bizSurvey {
+      display: none;
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      margin: 1.5%;
+      position: absolute;
+      top: 14%;
+      right: 0;
+      text-decoration: none;
+      color: #9DDCDC; }
+      #rightLogo #bizSurvey:visited {
+        text-decoration: none;
+        color: #9DDCDC; }
+
+  .options {
+    font-family: "Roboto", sans-serif; }
+    .options #discover #liDiscover {
+      margin: 1% 2%;
+      display: inline-block;
+      border-bottom: 2px solid #E67A7A;
+      padding: 1%; }
+      .options #discover #liDiscover a {
+        color: #9E9E9E;
+        font-size: 1.5em;
+        text-align: left;
+        letter-spacing: 2px;
+        text-decoration: none; }
+    .options #discover #liName {
+      margin: 0% 2%;
+      display: inline-block;
+      border-bottom: 1px dotted #E67A7A;
+      padding: 1%; }
+      .options #discover #liName a {
+        color: #9E9E9E;
+        font-size: 1.5em;
+        text-align: left;
+        letter-spacing: 2px;
+        text-decoration: none; }
+      .options #discover #liName:hover {
+        border-bottom: 1px solid #E67A7A; }
+    .options #loading {
+      color: #9DDCDC;
+      margin: 5% 5% 0;
+      display: inline-block;
+      letter-spacing: 1.5px; }
+
+  .ngDashboard {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20%; }
+    .ngDashboard .biz {
+      border: 1px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5% 2% 5% 5%;
+      margin: 4%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      .ngDashboard .biz img {
+        width: 10%; }
+      .ngDashboard .biz #bizName {
+        font-size: 1.5em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 2px;
+        color: #9E9E9E; }
+      .ngDashboard .biz #bizOwner {
+        font-size: 1em;
+        letter-spacing: 1.5px;
+        color: #9E9E9E;
+        margin: 3% 0; }
+      .ngDashboard .biz #bizInfo {
+        font-size: 1em;
+        color: #9E9E9E;
+        margin: 3%; }
+        .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A;
+          float: right; } }
+@media only screen and (max-width: 480px) {
+  #matches #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%;
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    z-index: 2; }
+    #matches #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #matches #headerNavBar .logo img {
+      width: 11%; }
+    #matches #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #matches #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #matches #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #matches #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #matches #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #matches #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+  #matches #mainDashboard {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    margin-bottom: 20%; }
+    #matches #mainDashboard #loading {
+      color: #9DDCDC;
+      margin: 5%;
+      display: block;
+      letter-spacing: 1.5px;
+      font-family: "Roboto", sans-serif;
+      background: #FFF4E1;
+      border: 1px solid #9DDCDC;
+      font-size: 1.25em;
+      border-radius: 2px;
+      padding: 2% 5%; }
+    #matches #mainDashboard .profileHeader {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      display: block;
+      width: 100%;
+      margin: 3% auto;
+      position: relative; }
+      #matches #mainDashboard .profileHeader .fa-search {
+        color: #E67A7A;
+        font-size: 2em;
+        margin: 2% 2% 0% 5%;
+        position: absolute;
+        top: 0; }
+      #matches #mainDashboard .profileHeader #searchNearMe {
+        font-size: 1.1em;
+        border: none;
+        border-bottom: 2px solid #9DDCDC;
+        padding: 1%;
+        margin: 1% 16%;
+        letter-spacing: 1px; }
+      #matches #mainDashboard .profileHeader #searchNearMeBtn {
+        border-radius: 2px;
+        font-size: 20px;
+        padding: 1% 2%;
+        background-color: #E67A7A;
+        color: white;
+        border: none;
+        right: 5%;
+        position: absolute;
+        bottom: 3%; }
+    #matches #mainDashboard #bottomWrapper {
+      height: 3em;
+      position: fixed;
+      bottom: 0;
+      background-color: #eee;
+      padding: 2% 2% 3% 0%;
+      margin-top: 10%;
+      width: 100%;
+      z-index: 5; }
+      #matches #mainDashboard #bottomWrapper a {
+        text-decoration: none; }
+        #matches #mainDashboard #bottomWrapper a .fa {
+          display: inline-block;
+          font-size: 2.6em;
+          padding: 2% 12% 5% 12%;
+          color: #3aa2a2; }
+        #matches #mainDashboard #bottomWrapper a:active {
+          text-decoration: none; }
+        #matches #mainDashboard #bottomWrapper a:visited {
+          text-decoration: none; }
+    #matches #mainDashboard .userResults {
+      margin: 0 5%; }
+      #matches #mainDashboard .userResults h3 {
+        color: #9DDCDC;
+        font-family: "Arvo", serif;
+        margin: 2% 0;
+        font-size: 1.5em;
+        letter-spacing: .5px; }
+  #matches .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #matches .ngDashboard .match {
+      border: 1px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5% 2% 5% 5%;
+      margin: 4%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27);
+      position: relative; }
+      #matches .ngDashboard .match #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #matches .ngDashboard .match #matchName {
+        font-size: 1.5em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 2px;
+        color: #9E9E9E; }
+      #matches .ngDashboard .match #matchOwner {
+        font-size: 1em;
+        letter-spacing: 1.5px;
+        color: #9E9E9E;
+        margin: 3% 0; }
+      #matches .ngDashboard .match #matchInfo {
+        font-size: 1em; }
+        #matches .ngDashboard .match #matchInfo .phone {
+          text-decoration: none;
+          color: #2a7777; }
+        #matches .ngDashboard .match #matchInfo .badges {
+          color: #9DDCDC;
+          font-size: 2em; }
+        #matches .ngDashboard .match #matchInfo #yelp {
+          margin: 1%;
+          color: #E67A7A;
+          text-decoration: none; }
+          #matches .ngDashboard .match #matchInfo #yelp span {
+            bottom: 10%;
+            position: absolute;
+            right: 15%;
+            letter-spacing: 1px;
+            font-family: "Fugaz One", cursive; }
+          #matches .ngDashboard .match #matchInfo #yelp .fa {
+            margin: 1%;
+            color: #E67A7A;
+            float: right;
+            bottom: 5%;
+            right: 5%;
+            position: absolute; } }
 @media screen and (min-width: 1020px) {
-  #consumerQuestionnaire .signUpWrap {
+  #consumerQuestionnaire li {
+    font-size: 1.5em;
+    color: #9E9E9E; }
+  #consumerQuestionnaire .checkBoxWrap {
     width: 40%;
     margin: 5em auto;
-    box-shadow: 5px 5px 35px 1px #9E9E9E;
     padding-bottom: .5%; }
   #consumerQuestionnaire h2 {
     display: block;
@@ -898,12 +1530,10 @@ select:-webkit-autofill:focus {
     text-align: left;
     font-size: 2em;
     padding: 5%; }
-  #consumerQuestionnaire .signUpForm {
+  #consumerQuestionnaire .checkBoxForm {
     display: block;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.5em;
-    color: #9E9E9E; }
-    #consumerQuestionnaire .signUpForm .signUpInput {
+    font-family: "Roboto", sans-serif; }
+    #consumerQuestionnaire .checkBoxForm .signUpInput {
       width: 90%;
       display: block;
       font-size: 1.1em;
@@ -911,16 +1541,21 @@ select:-webkit-autofill:focus {
       border-bottom: 1px solid #9DDCDC;
       padding: 1%;
       margin: 4%; }
-      #consumerQuestionnaire .signUpForm .signUpInput:focus {
+      #consumerQuestionnaire .checkBoxForm .signUpInput:focus {
         outline: none; }
-    #consumerQuestionnaire .signUpForm label, #consumerQuestionnaire .signUpForm input {
+    #consumerQuestionnaire .checkBoxForm label, #consumerQuestionnaire .checkBoxForm input {
       cursor: pointer;
       cursor: hand; }
-    #consumerQuestionnaire .signUpForm input {
-      margin: 5% 1%; }
-    #consumerQuestionnaire .signUpForm .claimBus {
+    #consumerQuestionnaire .checkBoxForm .black {
+      color: black; }
+    #consumerQuestionnaire .checkBoxForm input {
+      margin: 5% 1%;
+      display: none; }
+    #consumerQuestionnaire .checkBoxForm li.black {
+      color: black; }
+    #consumerQuestionnaire .checkBoxForm .claimBus {
       color: #E67A7A; }
-    #consumerQuestionnaire .signUpForm .submit {
+    #consumerQuestionnaire .checkBoxForm .submit {
       background: #E67A7A;
       display: block;
       font-family: "Roboto", sans-serif;
@@ -933,12 +1568,65 @@ select:-webkit-autofill:focus {
       margin: 1% auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
-@media screen and (max-width: 1020px) {
-  #signUp .headerWrap {
-    width: 98%;
+@media screen and (max-width: 480px) {
+  input[type="checkbox"] {
+    display: none; }
+
+  #headerNavBar .logo {
     display: block;
-    position: relative;
-    margin: 0 2%; }
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #headerNavBar .logo img {
+      width: 11%; }
+    #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+
+  #signUp .headerWrap {
+    width: 100%;
+    display: block;
+    position: relative; }
     #signUp .headerWrap h2 {
       font-family: "Arvo", serif;
       color: #E67A7A;
@@ -948,47 +1636,33 @@ select:-webkit-autofill:focus {
       box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       letter-spacing: 2px; }
-    #signUp .headerWrap .checkboxItems {
-      color: #9E9E9E;
-      font-size: 1em; }
     #signUp .headerWrap img {
       width: 100%;
       position: absolute;
       top: 0;
       margin: -65% 0%;
       z-index: -1; }
-  #signUp .signUpWrap {
-    box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
-    padding-bottom: 3%;
-    margin: 12% 1%;
+  #signUp .checkBoxWrap {
+    margin: 1%;
     border-radius: 5%; }
-    #signUp .signUpWrap h2 {
+    #signUp .checkBoxWrap #matters_toyou {
       background: #E67A7A;
       display: block;
       font-family: "Roboto", sans-serif;
       color: white;
       text-align: left;
       font-size: 2em;
-      padding: 3%; }
-  #signUp .signUpForm {
+      padding: 5%; }
+  #signUp .checkBoxForm {
     display: block;
     font-family: "Roboto", sans-serif;
     font-size: 1.3em;
     color: #9E9E9E; }
   #signUp ul {
     margin: 2%; }
-  #signUp .signUpFormClicked {
-    display: block;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.3em;
-    color: black; }
-  #signUp .circle {
-    width: 44px;
-    height: 44px;
-    -webkit-border-radius: 22px;
-    -moz-border-radius: 22px;
-    border-radius: 22px;
-    border: 1px solid #bbb; }
+    #signUp ul li {
+      padding: 2%;
+      border-radius: 5px; }
   #signUp .signUpInput {
     width: 90%;
     display: block;
@@ -1003,8 +1677,14 @@ select:-webkit-autofill:focus {
   #signUp label, #signUp input {
     cursor: pointer;
     cursor: hand; }
-  #signUp input {
-    margin: 1%; }
+  #signUp .black {
+    color: black; }
+  #signUp li.black {
+    color: black; }
+  #signUp .inputCheckbox {
+    margin: 5% 1%;
+    display: none;
+    padding: 5%; }
   #signUp .claimBus {
     color: #E67A7A;
     margin: 5% 2% 0%;
@@ -1016,8 +1696,8 @@ select:-webkit-autofill:focus {
     color: white;
     text-align: center;
     font-size: 1.5em;
-    padding: 2%;
-    width: 90%;
+    padding: 5%;
+    width: 100%;
     border: none;
     margin: 1% auto;
     cursor: pointer;
@@ -1026,7 +1706,6 @@ select:-webkit-autofill:focus {
   #businessQuestionnaire .signUpWrap {
     width: 40%;
     margin: 5em auto;
-    box-shadow: 5px 5px 35px 1px #9E9E9E;
     padding-bottom: .5%; }
   #businessQuestionnaire h2 {
     display: block;
@@ -1047,9 +1726,6 @@ select:-webkit-autofill:focus {
       margin: 4%; }
       #businessQuestionnaire .signUpForm .signUpInput:focus {
         outline: none; }
-    #businessQuestionnaire .signUpForm label, #businessQuestionnaire .signUpForm input {
-      cursor: pointer;
-      cursor: hand; }
     #businessQuestionnaire .signUpForm input {
       margin: 5% 1%; }
     #businessQuestionnaire .signUpForm .submit {
@@ -1062,15 +1738,65 @@ select:-webkit-autofill:focus {
       padding: 2%;
       width: 90%;
       border: none;
-      margin: 1% auto;
+      margin: 0% auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
 @media screen and (max-width: 1020px) {
-  #signUp .headerWrap {
-    width: 98%;
+  #headerNavBar .logo {
     display: block;
-    position: relative;
-    margin: 0 2%; }
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #headerNavBar .logo img {
+      width: 11%; }
+    #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+
+  #signUp .headerWrap {
+    width: 100%;
+    display: block;
+    position: relative; }
     #signUp .headerWrap h2 {
       font-family: "Arvo", serif;
       color: #E67A7A;
@@ -1087,9 +1813,7 @@ select:-webkit-autofill:focus {
       margin: -65% 0%;
       z-index: -1; }
   #signUp .signUpWrap {
-    box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
-    padding-bottom: 3%;
-    margin: 12% 1%;
+    margin: 5% 0 0;
     border-radius: 5%; }
     #signUp .signUpWrap h2 {
       background: #E67A7A;
@@ -1098,7 +1822,7 @@ select:-webkit-autofill:focus {
       color: white;
       text-align: left;
       font-size: 30px;
-      padding: 3%; }
+      padding: 5%; }
   #signUp .signUpForm {
     display: block; }
     #signUp .signUpForm .checkboxItems {
@@ -1113,7 +1837,7 @@ select:-webkit-autofill:focus {
       border-bottom: 1px solid #9DDCDC;
       padding: 1%;
       line-height: 1.5em;
-      margin: 4%; }
+      margin: 5% 4%; }
       #signUp .signUpForm .signUpInput:focus {
         outline: none; }
     #signUp .signUpForm .submit {
@@ -1123,11 +1847,531 @@ select:-webkit-autofill:focus {
       color: white;
       text-align: center;
       font-size: 1.5em;
-      padding: 2%;
-      width: 90%;
+      padding: 5%;
+      width: 100%;
       border: none;
-      margin: 1% auto;
+      margin: 0% auto;
       cursor: pointer;
-      letter-spacing: 1.5px; } }
+      letter-spacing: 1.5px;
+      position: absolute;
+      bottom: 0; } }
+@media screen and (min-width: 1000px) {
+  #bus_edit_profile .control {
+    width: 90%;
+    display: block;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid #9DDCDC;
+    padding: 1%;
+    margin: 4%; }
+    #bus_edit_profile .control:focus {
+      outline: none; }
+  #bus_edit_profile .logo {
+    display: block;
+    margin: 1% 0% 0% 0%; }
+    #bus_edit_profile .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #bus_edit_profile .logo img {
+      width: 35%;
+      margin: -15% -20%;
+      position: relative;
+      z-index: -1; }
+    #bus_edit_profile .logo #rightLogo {
+      display: inline; }
+      #bus_edit_profile .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 2%;
+        font-size: 1.5em; }
+        #bus_edit_profile .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 2% 1.5%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #bus_edit_profile .logo #rightLogo .signUpForm {
+        display: block; }
+        #bus_edit_profile .logo #rightLogo .signUpForm .editInput {
+          width: 90%;
+          display: block;
+          font-size: 1.5em;
+          border: none;
+          border-bottom: 1px solid #9DDCDC;
+          padding: 1%;
+          margin: 4%; }
+          #bus_edit_profile .logo #rightLogo .signUpForm .editInput:focus {
+            outline: none; }
+        #bus_edit_profile .logo #rightLogo .signUpForm input {
+          margin: 5% 1%; }
+        #bus_edit_profile .logo #rightLogo .signUpForm .submit {
+          background: #E67A7A;
+          display: block;
+          font-family: "Roboto", sans-serif;
+          color: white;
+          text-align: center;
+          font-size: 1.5em;
+          padding: 2%;
+          width: 90%;
+          border: none;
+          margin: 1% auto;
+          cursor: pointer;
+          letter-spacing: 1.5px; }
+      #bus_edit_profile .logo #rightLogo #userSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #bus_edit_profile .logo #rightLogo #bizSurvey {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 30%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #bus_edit_profile .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #bus_edit_profile .options h3 {
+      margin: 1% 2%;
+      display: inline-block;
+      color: #3aa2a2;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #bus_edit_profile .options #discover {
+      margin-right: 5%;
+      border-bottom: 1px dotted #E67A7A; }
+      #bus_edit_profile .options #discover:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #bus_edit_profile .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #bus_edit_profile .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #bus_edit_profile .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #bus_edit_profile .ngDashboard .biz img {
+        width: 10%; }
+      #bus_edit_profile .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #bus_edit_profile .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; }
+  #bus_edit_profile a {
+    color: #E67A7A;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin: 0 .5%;
+    padding: 0 1%;
+    position: relative;
+    display: inline-block;
+    left: 60%; }
+  #bus_edit_profile #headerSiteNav-dashboard, #bus_edit_profile #headerSiteNav-profile, #bus_edit_profile #headerSiteNav-settings {
+    border-right: solid #E67A7A 1px; } }
+@media screen and (max-width: 1000px) {
+  #bus_edit_profile #headerNavBar .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 0%;
+    padding: 1%; }
+    #bus_edit_profile #headerNavBar .logo #pearlH1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif;
+      cursor: pointer; }
+    #bus_edit_profile #headerNavBar .logo img {
+      width: 11%; }
+    #bus_edit_profile #headerNavBar .logo .dropdownMenu {
+      position: absolute;
+      top: 1%;
+      right: 5%;
+      z-index: 2; }
+      #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 2%; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+          outline: none; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+          position: relative;
+          font-size: 3em;
+          color: #E67A7A; }
+      #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+        position: absolute;
+        background-color: #9DDCDC;
+        right: 0%;
+        text-align: right;
+        padding: 15% 30%;
+        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        border-radius: 2px; }
+        #bus_edit_profile #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+          font-family: "Arimo", sans-serif;
+          font-size: 2em;
+          display: block;
+          text-decoration: none;
+          color: #E67A7A;
+          border-bottom: 1px dotted #E67A7A;
+          line-height: 1.7;
+          margin-bottom: 10%;
+          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+  #bus_edit_profile .control {
+    width: 90%;
+    display: block;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid #9DDCDC;
+    padding: 1%;
+    margin: 4%; }
+    #bus_edit_profile .control:focus {
+      outline: none; }
+  #bus_edit_profile main p {
+    margin: 5%;
+    font-family: "Arvo", serif;
+    color: #E67A7A; }
+    #bus_edit_profile main p input {
+      padding: 1%;
+      width: 40%; }
+  #bus_edit_profile .logo {
+    display: block;
+    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+    margin: 1% 0% 0% 0%;
+    padding: 1%; }
+    #bus_edit_profile .logo #headerSiteNav ul {
+      display: inline-block;
+      float: right;
+      position: absolute;
+      top: 1%;
+      right: 1%; }
+      #bus_edit_profile .logo #headerSiteNav ul li button {
+        border: none;
+        background-color: #E67A7A;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        margin: 15%;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-radius: 2px; }
+      #bus_edit_profile .logo #headerSiteNav ul li span a {
+        color: #E67A7A;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        display: block; }
+    #bus_edit_profile .logo h1 {
+      font-size: 3em;
+      display: inline-block;
+      padding: 1% 1% 1% 4%;
+      color: #E67A7A;
+      letter-spacing: 2px;
+      font-family: "Arvo", serif; }
+    #bus_edit_profile .logo img {
+      width: 11%; }
+    #bus_edit_profile .logo #rightLogo {
+      display: inline; }
+      #bus_edit_profile .logo #rightLogo i {
+        float: right;
+        color: #AEB9BD;
+        margin: 0 5%;
+        font-size: 1.5em; }
+        #bus_edit_profile .logo #rightLogo i span {
+          font-family: "Roboto", sans-serif;
+          padding: 6%;
+          font-size: 1em;
+          position: absolute;
+          right: 0;
+          color: #E67A7A; }
+      #bus_edit_profile .logo #rightLogo .editInput {
+        width: 90%;
+        display: block;
+        font-size: 1.5em;
+        border: none;
+        border-bottom: 1px solid #9DDCDC;
+        padding: 1%;
+        margin: 4%; }
+        #bus_edit_profile .logo #rightLogo .editInput:focus {
+          outline: none; }
+      #bus_edit_profile .logo #rightLogo #userSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 11%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #userSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+      #bus_edit_profile .logo #rightLogo #bizSurvey {
+        display: none;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        margin: 1.5%;
+        position: absolute;
+        top: 14%;
+        right: 0;
+        text-decoration: none;
+        color: #9DDCDC; }
+        #bus_edit_profile .logo #rightLogo #bizSurvey:visited {
+          text-decoration: none;
+          color: #9DDCDC; }
+  #bus_edit_profile .options {
+    font-family: "Roboto", sans-serif;
+    margin: 3% 5%; }
+    #bus_edit_profile .options h3 {
+      margin: 0% 2%;
+      display: inline-block;
+      color: #3aa2a2;
+      font-size: 1.5em;
+      text-align: left;
+      border-bottom: 1px dotted #E67A7A;
+      letter-spacing: 2px; }
+    #bus_edit_profile .options #edit {
+      border-bottom: 1px dotted #E67A7A; }
+      #bus_edit_profile .options #edit:hover {
+        border-bottom: 1px solid #E67A7A; }
+  #bus_edit_profile .ngDashboard {
+    font-family: "Roboto", sans-serif; }
+    #bus_edit_profile .ngDashboard .biz {
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5%;
+      margin: 5% 5%;
+      display: block;
+      box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
+      #bus_edit_profile .ngDashboard .biz #chevron {
+        margin: 1%;
+        color: #E67A7A;
+        float: right; }
+      #bus_edit_profile .ngDashboard .biz img {
+        width: 10%; }
+      #bus_edit_profile .ngDashboard .biz #bizName {
+        font-size: 2em;
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizOwner {
+        font-size: 1.2em;
+        letter-spacing: 1.5px; }
+      #bus_edit_profile .ngDashboard .biz #bizInfo {
+        font-size: 1em; }
+        #bus_edit_profile .ngDashboard .biz #bizInfo #yelp {
+          margin: 1%;
+          color: #E67A7A; }
+  #bus_edit_profile #editPatch {
+    background: #E67A7A;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding: 5%;
+    width: 100%;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 700; } }
+@media only screen and (max-width: 480px) {
+  #landingPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #landingPage .landingWrap {
+      position: relative; }
+      #landingPage .landingWrap #existing_user {
+        position: absolute;
+        width: 100%; }
+        #landingPage .landingWrap #existing_user .get_started {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          z-index: 5;
+          background: white; }
+          #landingPage .landingWrap #existing_user .get_started #login {
+            background: #E67A7A;
+            color: white;
+            border: none;
+            padding: 5% 20%;
+            font-size: 1.5em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            display: block;
+            text-decoration: none; }
+          #landingPage .landingWrap #existing_user .get_started #signup {
+            color: #9E9E9E;
+            border: none;
+            padding: 5% 20%;
+            font-size: 1.5em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            display: block;
+            text-decoration: none; }
+        #landingPage .landingWrap #existing_user .signin_login .home_pearl {
+          font-family: "Arvo", serif;
+          color: #E67A7A;
+          text-align: center;
+          font-size: 3em;
+          padding: 5% 0;
+          box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          letter-spacing: 2px;
+          text-shadow: 1px 1px white; }
+        #landingPage .landingWrap #existing_user .signin_login .home_h3 {
+          padding: 2% 25%;
+          line-height: 1.5;
+          font-size: 1.2em;
+          color: #3aa2a2;
+          font-family: "Fugaz One", cursive;
+          text-align: center;
+          letter-spacing: .5px;
+          text-shadow: 1px 1px white; }
+        #landingPage .landingWrap #existing_user .signin_login img {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          margin: -40% 0%;
+          z-index: -1; }
+      #landingPage .landingWrap #about_pearl {
+        width: 100%;
+        position: absolute;
+        margin: 50% 0 0;
+        padding-bottom: 40%; }
+        #landingPage .landingWrap #about_pearl .home_h3 {
+          margin: 10% auto 0;
+          padding: 5% 5% 0;
+          line-height: 1em;
+          font-size: 1.7em;
+          color: #3aa2a2; }
+        #landingPage .landingWrap #about_pearl .home_content {
+          margin: 5%;
+          color: #9E9E9E;
+          line-height: 1.5em;
+          font-size: 1.1em; }
+        #landingPage .landingWrap #about_pearl ul {
+          text-align: center; }
+          #landingPage .landingWrap #about_pearl ul .badgeContainer {
+            display: inline-block;
+            margin: 5% auto;
+            width: 30%; }
+            #landingPage .landingWrap #about_pearl ul .badgeContainer .badgeText {
+              margin: 5% 10%;
+              color: #9E9E9E; } }
+#searchOuterWrapper img {
+  position: relative;
+  left: 3.5%; }
+#searchOuterWrapper #searchPageWrapper #searchPage-inputs {
+  position: relative;
+  margin: auto;
+  list-style: none;
+  width: 80%;
+  margin: 10% auto 0% auto;
+  padding: 5%; }
+  #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizNameHere, #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizAddressHere {
+    margin: 5% auto;
+    width: 100%;
+    outline: none;
+    border-style: none;
+    border-bottom: solid #E67A7A 1px;
+    font-size: 1em;
+    letter-spacing: 2px; }
+  #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizSetupSearch {
+    width: 100%;
+    outline: none;
+    border-style: none;
+    padding: 3%;
+    border-radius: 3px;
+    margin: 10% auto;
+    background-color: #E67A7A;
+    color: #FFF4E1;
+    font-style: "Roboto", sans-serif;
+    font-size: 1.25em; }
+#searchOuterWrapper #searchPageWrapper .findBusinesses {
+  font-family: "Roboto", sans-serif;
+  color: #9E9E9E;
+  letter-spacing: 1.2px;
+  margin-bottom: 20%; }
+  #searchOuterWrapper #searchPageWrapper .findBusinesses li {
+    border: solid #E67A7A 1px;
+    border-radius: 7px;
+    margin: 3%;
+    padding: 3%; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li #bizName {
+      font-size: 1.2em;
+      letter-spacing: 1.5px; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li div {
+      margin: 2% 0; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li #chevron {
+      font-size: .5em;
+      position: relative;
+      float: right;
+      padding: 5% 1%; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp {
+      font-size: .5em;
+      position: relative;
+      left: 78%;
+      margin-top: 6%;
+      padding: 2%; }
+#searchOuterWrapper #searchPageWrapper #bottomWrapper {
+  height: 3em;
+  position: fixed;
+  bottom: 0;
+  width: 400px;
+  background-color: #E0E0E0;
+  padding: 2% 2% 3% 0%;
+  margin-top: 10%;
+  width: 100%; }
+  #searchOuterWrapper #searchPageWrapper #bottomWrapper a {
+    text-decoration: none; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a .fa {
+      display: inline-block;
+      font-size: 2.6em;
+      padding: 2% 12% 5% 12%;
+      color: #9E9E9E; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a:active {
+      text-decoration: none; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a:visited {
+      text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */

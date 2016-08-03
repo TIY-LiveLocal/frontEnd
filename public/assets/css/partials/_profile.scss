@@ -1,169 +1,410 @@
-#businessInfoWrap{
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    font-family: Roboto, sans-serif;
-    color: $blue;
-		li{
-			list-style: none;
-		}
-  #profileHeader{
-    color: $blue;
-    width: 100%;
-    .pearlLogo{
-      display: inline-block;
-      position: relative;
-			width: 15%;
-      }
-      #profileHeader-contain{
-        position: relative;
-        margin: 1% 5%;
-        .pearlLogo-text{
-          font-size: 3em;
-          font-family: $font5;
-          display: inline-block;
-          position:relative;
-          padding-bottom: 2%;
+@media only screen and (min-width: 480px) and (max-width: 1020px) {
+    #businessInfoWrap {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        font-family: Roboto, sans-serif;
+        color: $blue;
+        li {
+            list-style: none;
         }
-        .dropdownMenu{
-          display: inline-block;
-          float: right;
-          margin: 5%;
-  				#hamburgerNav{
-  					position: relative;
-  				  font-size: 3em;
-  				}
-        }
-				.dropdownMenu-list--item{
-					position: relative;
-					left: 25%;
-					display: none;
-				}
-        .profileHeader-search{
-          position: relative;
-          left: 40%;
-          font-size: 1.5em;
-          padding-bottom: 3%;
-          input{
-            height: 1.5em;
-            border-style: none;
-            outline: none;
-            margin-left: .65%;
-            width: 40%;
-            padding: .11%;
-            border-radius: 1px;
-						background-color: #EEE;
-          }
-          button{
-            margin-left: -3%;
-            height: 1.73em;
-            border-radius:0 2px 2px 0;
-            background-color: $red;
-            color: $tan;
-            border-style: none;
-            outline: none;
-          }
-        }
-      }
-    }
-  #profileWrapper{
-    font-family: Roboto, sans-serif;
-    margin: auto;
-    width: 100%;
-		.content{
-	    .businessName{
-	      font-family: Roboto, sans-serif;
-				letter-spacing: 2px;
-				font-size: 30px;
-	      padding: 1%;
-	      margin: 6%;
-	      color: $darkGrey;
-	      position: relative;
-	    }
-		}
-		#businessInfo{
-	    .businessInfo{
-				margin: 7.5%;
-	      position: relative;
-	      color: $darkGrey;
-	      letter-spacing:1.5px;
-				font-size: 16px;
-				.uniqueInfo{
-					font-size: 12px;
-					margin: 3% 0;
-				}
-	      }
-		}
-		.qaWrap{
-	    #qASectionContain{
-	      position: relative;
-				color: $darkGrey;
-				display: block;
-				margin: 0 auto;
-				#qASectionHead{
-					display: block;
-					width: 80%;
-					background-color: #EEE;
-					outline: none;
-					border: none;
-					margin: 0 auto;
-					font-size: 1.25em;
-					padding: 3%;
-				}
-				button{
-					display: block;
-			    border-radius: 2px;
-			    background-color: #E67A7A;
-			    color: #FFF4E1;
-			    border-style: none;
-			    outline: none;
-			    margin: 0 auto;
-			    width: 86%;
-			    font-size: 1em;
-			    padding: 1%;
-				}
-	      #qASectionContent{
-	        padding: 5% 10%;
-	      }
-        #map{
-          margin: 2% 10%;
-          .angular-google-map-container {
-            height: 300px;
-            margin: 0 0 5% 0;
-          }
-          .form-horizontal{
-            .form-group{
-              margin: 2%;
-              width: 100%;
-              input{
-                border: none;
-                font-size: 16px;
-                font-family: $font4;
-                color: $red;
-                margin: 1%;
-              }
-              .col-sm-8{
-                float: none;
+        #profileHeader {
+            color: $blue;
+            width: 100%;
+            .pearlLogo {
                 display: inline-block;
-                width: 100%;
+                position: relative;
+                width: 15%;
+            }
+            #profileHeader-contain {
+                position: relative;
+                margin: 1% 5%;
+                .pearlLogo-text {
+                    font-size: 3em;
+                    font-family: $font5;
+                    display: inline-block;
+                    position: relative;
+                    padding-bottom: 2%;
+                }
+                .dropdownMenu {
+                    display: inline-block;
+                    float: right;
+                    margin: 5%;
+                    #hamburgerNav {
+                        position: relative;
+                        font-size: 3em;
+                    }
+                }
+                .dropdownMenu-list--item {
+                    position: relative;
+                    left: 25%;
+                    display: none;
+                }
+                .profileHeader-search {
+                    position: relative;
+                    left: 40%;
+                    font-size: 1.5em;
+                    padding-bottom: 3%;
+                    input {
+                        height: 1.5em;
+                        border-style: none;
+                        outline: none;
+                        margin-left: 0.65%;
+                        width: 40%;
+                        padding: 0.11%;
+                        border-radius: 1px;
+                        background-color: #EEE;
+                    }
+                    button {
+                        margin-left: -3%;
+                        height: 1.73em;
+                        border-radius: 0 2px 2px 0;
+                        background-color: $red;
+                        color: $tan;
+                        border-style: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
+        #profileWrapper {
+            font-family: Roboto, sans-serif;
+            margin: auto;
+            width: 100%;
+            .content {
+                .businessName {
+                    font-family: Roboto, sans-serif;
+                    letter-spacing: 2px;
+                    font-size: 30px;
+                    padding: 1%;
+                    margin: 6%;
+                    color: $darkGrey;
+                    position: relative;
+                }
+            }
+            #businessInfo {
+                .businessInfo {
+                    margin: 7.5%;
+                    position: relative;
+                    color: $darkGrey;
+                    letter-spacing: 1.5px;
+                    font-size: 16px;
+                    .uniqueInfo {
+                        font-size: 12px;
+                        margin: 3% 0;
+                    }
+                }
+            }
+            .qaWrap {
+                #qASectionContain {
+                    position: relative;
+                    color: $darkGrey;
+                    display: block;
+                    margin: 0 auto;
+                    #qASectionHead {
+                        display: block;
+                        width: 80%;
+                        background-color: #EEE;
+                        outline: none;
+                        border: none;
+                        margin: 0 auto;
+                        font-size: 1.25em;
+                        padding: 5% 3%;
+                    }
+                    button {
+                        display: block;
+                        border-radius: 2px;
+                        background-color: #E67A7A;
+                        color: #FFF4E1;
+                        border-style: none;
+                        outline: none;
+                        margin: 0 auto;
+                        width: 86%;
+                        font-size: 1em;
+                        padding: 5%;
+                    }
+                    #qASectionContent {
+                        padding: 5% 10%;
+                    }
+                    #map {
+                        margin: 2% 10%;
+                        .angular-google-map-container {
+                            height: 300px;
+                            margin: 0 0 5%;
+                        }
+                        .form-horizontal {
+                            .form-group {
+                                margin: 2%;
+                                width: 100%;
+                                input {
+                                    border: none;
+                                    font-size: 16px;
+                                    font-family: $font4;
+                                    color: $red;
+                                    margin: 1%;
+                                }
+                                .col-sm-8 {
+                                    float: none;
+                                    display: inline-block;
+                                    width: 100%;
+                                }
+                                #mapOD {
+                                    float: none;
+                                    display: inline-block;
+                                    font-size: 20px;
+                                }
+                                button {
+                                    display: inline-block;
+                                    width: 95%;
+                                }
+                                #mapBtn {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }//qASectionContain ENDS
+            }//qaWrap ENDS
+        }//profileWrapper ENDS
+        #qaSectionContainer {
+            #qaSectionWrap {
+                margin: 5% 10%;
+                display: inline-block;
+                form {
+                    margin: 5%;
+                }
+            }
+        }
+    } //businessInfoWrap ENDS
+}
+@media only screen and (max-width: 480px) {
+    #businessInfoWrap {
+      li {
+          list-style: none;
+      }
+        #headerNavBar {
+            .logo {
+                display: block;
+                box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+                margin: 0;
+                padding: 1%;
+                #pearlH1 {
+                    font-size: 3em;
+                    display: inline-block;
+                    padding: 1% 1% 1% 4%;
+                    color: $red;
+                    letter-spacing: 2px;
+                    font-family: $font5;
+                    cursor: pointer;
+                }
+                img {
+                    width: 11%;
+                }
+                .dropdownMenu {
+                    position: absolute;
+                    top: .5%;
+                    right: 5%;
+                    .dropdownbtn {
+                        background-color: white;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 1em;
+                        margin: 2%;
+                        &:focus {
+                            outline: none;
+                        }
+                        .fa-bars {
+                            position: relative;
+                            font-size: 3em;
+                            color: $red;
+                        }
+                    }
+                    .dropdownMenu-list {
+                        position: absolute;
+                        background-color: $blue;
+                        right: 0;
+                        text-align: right;
+                        padding: 15% 30%;
+                        box-shadow: 1px 5px 10px 0 rgba(42,119,119,0.5);
+                        border-radius: 2px;
+                        z-index: 2;
+                        .dropdownMenu-list--item {
+                            font-family: $font2;
+                            font-size: 2em;
+                            display: block;
+                            text-decoration: none;
+                            color: $red;
+                            border-bottom: 1px dotted #E67A7A;
+                            line-height: 1.7;
+                            margin-bottom: 10%;
+                            text-shadow: 1px 1px rgba(42, 119, 119, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+        #profileWrapper {
+            font-family: Roboto, sans-serif;
+            margin: auto;
+            width: 100%;
+            .content {
+                .businessName {
+                    font-family: Roboto, sans-serif;
+                    letter-spacing: 2px;
+                    font-size: 30px;
+                    padding: 1%;
+                    margin: 6%;
+                    color: $darkGrey;
+                    position: relative;
+                }
+            }
+            #businessInfo {
+                .businessInfo {
+                    margin: 7.5%;
+                    position: relative;
+                    color: $darkGrey;
+                    letter-spacing: 1.5px;
+                    font-size: 16px;
+                    .uniqueInfo {
+                        font-size: 12px;
+                        margin: 3% 0;
+                    }
+                }
+            }
+            .qaWrap {
+                #qASectionContain {
+                    position: relative;
+                    color: $darkGrey;
+                    display: block;
+                    margin: 0 auto;
+                    #map {
+                        margin: 2% 10%;
+                        .angular-google-map-container {
+                            height: 300px;
+                            margin: 0 0 5%;
+                        }
+                        .form-horizontal {
+                            .form-group {
+                                margin: 2%;
+                                width: 100%;
+                                input {
+                                    border: none;
+                                    font-size: 16px;
+                                    font-family: $font4;
+                                    color: $red;
+                                    margin: 1%;
+                                }
+                                .col-sm-8 {
+                                    float: none;
+                                    display: inline-block;
+                                    width: 100%;
+                                }
+                                #mapOD {
+                                    float: none;
+                                    display: inline-block;
+                                    font-size: 20px;
+                                }
+                                button {
+                                    display: inline-block;
+                                    width: 95%;
+                                }
+                                #mapBtn {
+                                    padding: 0;
+                                    #get_directions{
+                                      display: block;
+                                      border-radius: 2px;
+                                      background-color: #E67A7A;
+                                      color: #FFF4E1;
+                                      border-style: none;
+                                      outline: none;
+                                      margin: 0 auto;
+                                      font-size: 2em;
+                                      padding: 5%;
+                                      font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    //map ENDS
+                }
+                //qASectionContain ENDS
+            }
+            //qaWrap ENDS
+        }
+        //profilewrap ENDS
+        #qaSectionContainer {
+            #qaSectionWrap {
+                margin: 15% 10%;
+                display: block;
+                form {
+                    margin: 5%;
+                  #ask_question{
+                    display: block;
+                    border-radius: 2px;
+                    background-color: white;
+                    color: $darkBlue;
+                    border-style: none;
+                    border-bottom: 1px solid $blue;
+                    outline: none;
+                    margin: 0 auto;
+                    font-size: 1em;
+                    padding: 5%;
+                    width: 90%;
+                  }
+                  #ask_button{
+                    display: block;
+                    border-radius: 2px;
+                    background-color: #E67A7A;
+                    color: #FFF4E1;
+                    border-style: none;
+                    outline: none;
+                    margin: 5% auto;
+                    font-size: 2em;
+                    font-weight: 700;
+                    padding: 5%;
+                    float: right;
+                    width: 50%;
+                  }
+                }
+            }
+            #qaResponses{
+              .GETquestions{
+                ul{
+                  .question_header{
+                  font-family: $font4;
+                  font-size: 26px;
+                  font-weight: 700;
+                  color: $red;
+                  margin: 5% 5%;
+                  }
+                  .author{
+                    font-size: 12px;
+                  }
+                  li{
+                    .answer_subheader{
+                    color: $darkBlue;
+                    font-family: $font4;
+                    font-size: 24px;
+                    font-weight: 300;
+                    margin: 7.5% 10% 10% 15%;
+                    padding: 2% 0% 0 10%;
+                    text-align: right;
+                    border-top: 1px dotted $red;
 
-              }
-              #mapOD{
-                float: none;
-                display: inline-block;
-                font-size: 20px;
-              }
-              button{
-                display: inline-block;
-                width: 95%;
-              }
-              #mapBtn{
-                padding: 0;
+                    .created_at{
+                      position: absolute;
+                      left: 0%;
+                      width: 20%;
+                      font-size: 10px;
+                      line-height: 1.5;
+                      letter-spacing: .1px;
+                    }
+                    }
+                  }
+                }
               }
             }
-          }
         }
-	    }
-		}
-	}
+    }
 }

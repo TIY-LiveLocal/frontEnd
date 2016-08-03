@@ -7,13 +7,21 @@ app.config(function($routeProvider){
     templateUrl: 'views/login.html',
     controller: 'loginController'
   })
+  .when('/home',{
+    templateUrl: 'views/home.html',
+    controller: 'loginController'
+  })
   .when('/signup',{
     templateUrl: 'views/signup.html',
     controller: 'signupController'
   })
-  .when('/dashboard',{
+  .when('/discover',{
     templateUrl: 'views/dashboard.html',
     controller: 'dashboardCtrl'
+  })
+  .when('/you',{
+    templateUrl: 'views/matches.html',
+    controller: 'matchesCtrl'
   })
   .when('/business_questionnaire',{
     templateUrl: 'views/business_questionnaire.html',
@@ -28,17 +36,22 @@ app.config(function($routeProvider){
   })
 
   .when('/business_edit', {
-    templateUrl: 'views/bus_edit_profile.html'
+    templateUrl: 'views/bus_edit_profileNEW.html'
   })
+
   .when('/factory',{
     templateUrl: 'views/yelp.html',
     controller: 'yelpCtrl'
   })
-  .when('/business_search', {
+  .when('/search', {
     templateUrl: 'views/biz_search.html',
-    controller: 'bizSearchController'
+    controller: 'bizSearchCtrl'
+  })
+  .when('/survey_results', {
+    templateUrl: 'views/survey_results.html',
+    controller: 'surveyResultsController'
   })
   .otherwise({
-    redirectTo: 'login'
+    redirectTo: 'home'
   });
 });

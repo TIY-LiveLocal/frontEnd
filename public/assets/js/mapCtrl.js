@@ -40,7 +40,7 @@ app.controller('mapCtrl', function($scope, $document, mapFactory) {
       latitude: localStorage.getItem('latitude'),
       longitude: localStorage.getItem('longitude')
     }
-  }
+  };
 
   // instantiate google map objects for directions
   var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -52,10 +52,10 @@ app.controller('mapCtrl', function($scope, $document, mapFactory) {
     origin: "Current Location",
     destination: localStorage.getItem('name'),
     showList: false
-  }
+  };
 
   // get directions using google maps api
-  $scope.getGMap = function () {
+  $scope.getDirections = function () {
     origin = $scope.marker.center.latitude + ", " + $scope.marker.center.longitude;
     destination = $scope.map.center.latitude + ", " + $scope.map.center.longitude;
     var request = {
@@ -74,7 +74,7 @@ app.controller('mapCtrl', function($scope, $document, mapFactory) {
         alert('Google route unsuccesfull!');
       }
     });
-  }
+  };
 });
 
 

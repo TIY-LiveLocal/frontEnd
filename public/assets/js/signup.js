@@ -1,4 +1,4 @@
-app.controller('signupController', ['$http', '$scope','$location', function($http, $scope, $location) {
+app.controller('signupController', ['$http', '$scope', '$timeout', '$location', function($http, $scope,$timeout, $location) {
 
   $scope.getStarted = function(){
 
@@ -16,13 +16,25 @@ app.controller('signupController', ['$http', '$scope','$location', function($htt
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/sign_up",
+    // url: "https://57e91829.ngrok.io/sign_up",
     data: data
     }).then(function success(response){
       localStorage.setItem('token',response.data.token);
-      $location.path('/consumer_questionnaire');
+
+      $timeout(function(){
+        $scope.signupMSG = response.data.message;
+      },200);
+
+      $timeout(function(){
+        $location.path('/consumer_questionnaire');
+      }, 2000);
+
 
     console.log(response);
   }, function errorCallback(error){
+    $scope.signupMSG = 'Something went wrong.';
+
+
     $scope.first_nameErr =  error.data.message.first_name;
     $scope.last_nameErr =  error.data.message.last_name;
     $scope.usernameErr =  error.data.message.username;
@@ -30,10 +42,6 @@ app.controller('signupController', ['$http', '$scope','$location', function($htt
     $scope.passwordErr =  error.data.message.password;
     $scope.confirm_passwordErr =  error.data.message.confirm_password;
     $scope.zip_codeErr =  error.data.message.zip_code;
-    // alert(error.data.message.email);
-    // $scope.validate = {
-    //   email: error.data.message.email
-    // };
 
     console.log(error.data.message);
   });

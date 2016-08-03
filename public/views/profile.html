@@ -94,6 +94,7 @@
               <br>
               <span class="author">{{q.question.author}}</span>
             </p>
+
             <li ng-repeat="answer in q.answers">
               <p class="answer_subheader">
 
@@ -103,6 +104,8 @@
                 <span class="author">{{answer.author}}</span>
               </p>
             </li>
+            <input id="reply_button" type="submit" name="button" value="Reply" ng-click="replyButton()">
+
           </ul>
           <!-- ng-repeat for GET /answers -->
 

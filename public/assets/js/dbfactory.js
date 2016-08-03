@@ -1,7 +1,6 @@
 app.factory('dbFactory', ['$http', function($http){
 
   var yelpUrl = 'https://livelocalrails.herokuapp.com/businesses';
-  // var yelpUrl = 'https://f3abb483.ngrok.io/businesses';
   var dbFactory = {};
   var token = localStorage.getItem('token');
 

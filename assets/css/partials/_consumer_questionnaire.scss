@@ -8,7 +8,6 @@ li{
     .checkBoxWrap{
       width: 40%;
       margin: 5em auto;
-      // box-shadow: 5px 5px 35px 1px $darkGrey;
       padding-bottom: .5%;
     }
     h2{
@@ -23,8 +22,6 @@ li{
     .checkBoxForm{
       display: block;
       font-family: $font4;
-      // font-size: 1.5em;
-      // color:$darkGrey;
 
 
       .signUpInput{
@@ -80,7 +77,10 @@ li{
   }
 }
 // MOBILE VIEW BELOW
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 480px) {
+  input[type="checkbox"]{
+    display: none;
+  }
   #headerNavBar{
         .logo{
           display: block;
@@ -160,10 +160,6 @@ li{
         letter-spacing: 2px;
       }
 
-      // .checkboxItems{
-      //   color:$darkGrey;
-      //   font-size: 1em;
-      // }
 
       img{
         width: 100%;
@@ -173,22 +169,19 @@ li{
         z-index: -1;
       }
     }
-    .signUpWrap{
-      margin: 5% 0 0;
     .checkBoxWrap{
-      padding-bottom: 3%;
-      margin: 12% 1%;
+      margin: 1%;
       border-radius: 5%;
 
-    h2{
-      background: $red;
-      display: block;
-      font-family: $font4;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      padding: 5%;
-    }
+      #matters_toyou{
+        background: $red;
+        display: block;
+        font-family: $font4;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        padding: 5%;
+      }
     }
 
     .checkBoxForm{
@@ -218,6 +211,7 @@ li{
       label, input{
         cursor: pointer;
         cursor: hand;
+
       }
 
       .black{
@@ -232,7 +226,6 @@ li{
         margin: 5% 1%;
         display:none;
         padding: 5%;
-      }
       }
 
       .claimBus{

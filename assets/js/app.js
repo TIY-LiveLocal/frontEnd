@@ -7,6 +7,10 @@ app.config(function($routeProvider){
     templateUrl: 'views/login.html',
     controller: 'loginController'
   })
+  .when('/home',{
+    templateUrl: 'views/home.html',
+    controller: 'loginController'
+  })
   .when('/signup',{
     templateUrl: 'views/signup.html',
     controller: 'signupController'
@@ -39,7 +43,7 @@ app.config(function($routeProvider){
     templateUrl: 'views/yelp.html',
     controller: 'yelpCtrl'
   })
-  .when('/business_search', {
+  .when('/search', {
     templateUrl: 'views/biz_search.html',
     controller: 'bizSearchController'
   })
@@ -48,6 +52,6 @@ app.config(function($routeProvider){
     controller: 'surveyResultsController'
   })
   .otherwise({
-    redirectTo: 'login'
+    redirectTo: 'home'
   });
 });

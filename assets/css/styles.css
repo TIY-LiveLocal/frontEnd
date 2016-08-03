@@ -820,6 +820,8 @@ select:-webkit-autofill:focus {
         font-family: "Roboto", sans-serif;
         border: 1px solid #9DDCDC;
         border-radius: 2px; }
+    #signUp .signUpForm #signUpZipcode {
+      margin-bottom: 20%; }
     #signUp .signUpForm .submit {
       background: #E67A7A;
       display: block;
@@ -1143,6 +1145,64 @@ select:-webkit-autofill:focus {
           line-height: 1.7;
           margin-bottom: 10%;
           text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+  #dashboard #mainDashboard .btm_nav {
+    font-family: "Roboto", sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background: white; }
+    #dashboard #mainDashboard .btm_nav #discover {
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      text-align: center;
+      box-shadow: 0px 5px 10px 1px #9E9E9E; }
+      #dashboard #mainDashboard .btm_nav #discover #liNearby {
+        display: inline-block;
+        padding: 2%;
+        font-size: 1.25em;
+        width: 20%; }
+        #dashboard #mainDashboard .btm_nav #discover #liNearby a {
+          color: #9E9E9E;
+          font-size: 2em;
+          text-align: left;
+          letter-spacing: 2px;
+          text-decoration: none; }
+      #dashboard #mainDashboard .btm_nav #discover #liHome {
+        display: inline-block;
+        padding: 2%;
+        font-size: 1.75em;
+        width: 30%; }
+        #dashboard #mainDashboard .btm_nav #discover #liHome a {
+          color: #9E9E9E;
+          font-size: 2em;
+          text-align: left;
+          letter-spacing: 2px;
+          text-decoration: none; }
+        #dashboard #mainDashboard .btm_nav #discover #liHome:hover {
+          border-bottom: 1px solid #E67A7A; }
+      #dashboard #mainDashboard .btm_nav #discover #liSearch {
+        display: inline-block;
+        padding: 2%;
+        font-size: 1.25em;
+        width: 20%; }
+        #dashboard #mainDashboard .btm_nav #discover #liSearch a {
+          color: #9E9E9E;
+          font-size: 2em;
+          text-align: left;
+          letter-spacing: 2px;
+          text-decoration: none; }
+        #dashboard #mainDashboard .btm_nav #discover #liSearch:hover {
+          border-bottom: 1px solid #E67A7A; }
+  #dashboard #mainDashboard .userResults {
+    margin: 0 5%; }
+    #dashboard #mainDashboard .userResults h3 {
+      color: #3aa2a2;
+      font-family: "Galada", cursive;
+      margin: 2% 0;
+      font-size: 1.5em;
+      letter-spacing: .5px; }
   #dashboard #mainDashboard .profileHeader {
     font-family: "Arvo", serif;
     color: #E67A7A;
@@ -1401,15 +1461,20 @@ select:-webkit-autofill:focus {
       font-family: "Roboto", sans-serif;
       position: fixed;
       bottom: 0;
-      border: 1px solid black; }
+      width: 100%;
+      z-index: 10;
+      background: white; }
       #matches #mainDashboard .btm_nav #discover {
         margin: 0 auto;
         display: block;
-        position: relative; }
+        position: relative;
+        text-align: center;
+        box-shadow: 0px 5px 10px 1px #9E9E9E; }
         #matches #mainDashboard .btm_nav #discover #liNearby {
           display: inline-block;
-          border: 2px solid #E67A7A;
-          padding: 2%; }
+          padding: 2%;
+          font-size: 1.25em;
+          width: 20%; }
           #matches #mainDashboard .btm_nav #discover #liNearby a {
             color: #9E9E9E;
             font-size: 2em;
@@ -1418,8 +1483,9 @@ select:-webkit-autofill:focus {
             text-decoration: none; }
         #matches #mainDashboard .btm_nav #discover #liHome {
           display: inline-block;
-          border: 2px dotted #E67A7A;
-          padding: 2%; }
+          padding: 2%;
+          font-size: 1.75em;
+          width: 30%; }
           #matches #mainDashboard .btm_nav #discover #liHome a {
             color: #9E9E9E;
             font-size: 2em;
@@ -1430,8 +1496,9 @@ select:-webkit-autofill:focus {
             border-bottom: 1px solid #E67A7A; }
         #matches #mainDashboard .btm_nav #discover #liSearch {
           display: inline-block;
-          border: 2px dotted #E67A7A;
-          padding: 2%; }
+          padding: 2%;
+          font-size: 1.25em;
+          width: 20%; }
           #matches #mainDashboard .btm_nav #discover #liSearch a {
             color: #9E9E9E;
             font-size: 2em;
@@ -1440,12 +1507,14 @@ select:-webkit-autofill:focus {
             text-decoration: none; }
           #matches #mainDashboard .btm_nav #discover #liSearch:hover {
             border-bottom: 1px solid #E67A7A; }
-    #matches #mainDashboard .userResults h3 {
-      color: #3aa2a2;
-      font-family: "Galada", cursive;
-      margin: 2% 0;
-      font-size: 1.5em;
-      letter-spacing: .5px; }
+    #matches #mainDashboard .userResults {
+      margin: 0 5%; }
+      #matches #mainDashboard .userResults h3 {
+        color: #3aa2a2;
+        font-family: "Galada", cursive;
+        margin: 2% 0;
+        font-size: 1.5em;
+        letter-spacing: .5px; }
   #matches .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #matches .ngDashboard .match {
@@ -1545,7 +1614,10 @@ select:-webkit-autofill:focus {
       margin: 1% auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 480px) {
+  input[type="checkbox"] {
+    display: none; }
+
   #headerNavBar .logo {
     display: block;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
@@ -1616,49 +1688,46 @@ select:-webkit-autofill:focus {
       top: 0;
       margin: -65% 0%;
       z-index: -1; }
-  #signUp .signUpWrap {
-    margin: 5% 0 0; }
-    #signUp .signUpWrap .checkBoxWrap {
-      padding-bottom: 3%;
-      margin: 12% 1%;
-      border-radius: 5%; }
-      #signUp .signUpWrap .checkBoxWrap h2 {
-        background: #E67A7A;
-        display: block;
-        font-family: "Roboto", sans-serif;
-        color: white;
-        text-align: left;
-        font-size: 2em;
-        padding: 5%; }
-    #signUp .signUpWrap .checkBoxForm {
+  #signUp .checkBoxWrap {
+    margin: 1%;
+    border-radius: 5%; }
+    #signUp .checkBoxWrap #matters_toyou {
+      background: #E67A7A;
       display: block;
       font-family: "Roboto", sans-serif;
-      font-size: 1.3em;
-      color: #9E9E9E; }
-    #signUp .signUpWrap ul {
-      margin: 2%; }
-    #signUp .signUpWrap .signUpInput {
-      width: 90%;
-      display: block;
-      font-size: 1.5em;
-      border: none;
-      border-bottom: 1px solid #9DDCDC;
-      padding: 1%;
-      line-height: 1.5em;
-      margin: 4%; }
-      #signUp .signUpWrap .signUpInput:focus {
-        outline: none; }
-    #signUp .signUpWrap label, #signUp .signUpWrap input {
-      cursor: pointer;
-      cursor: hand; }
-    #signUp .signUpWrap .black {
-      color: black; }
-    #signUp .signUpWrap li.black {
-      color: black; }
-    #signUp .signUpWrap .inputCheckbox {
-      margin: 5% 1%;
-      display: none;
+      color: white;
+      text-align: left;
+      font-size: 2em;
       padding: 5%; }
+  #signUp .checkBoxForm {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    color: #9E9E9E; }
+  #signUp ul {
+    margin: 2%; }
+  #signUp .signUpInput {
+    width: 90%;
+    display: block;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid #9DDCDC;
+    padding: 1%;
+    line-height: 1.5em;
+    margin: 4%; }
+    #signUp .signUpInput:focus {
+      outline: none; }
+  #signUp label, #signUp input {
+    cursor: pointer;
+    cursor: hand; }
+  #signUp .black {
+    color: black; }
+  #signUp li.black {
+    color: black; }
+  #signUp .inputCheckbox {
+    margin: 5% 1%;
+    display: none;
+    padding: 5%; }
   #signUp .claimBus {
     color: #E67A7A;
     margin: 5% 2% 0%;
@@ -2184,5 +2253,93 @@ select:-webkit-autofill:focus {
     cursor: pointer;
     letter-spacing: 2px;
     font-weight: 700; } }
+@media only screen and (max-width: 480px) {
+  #landingPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #landingPage .landingWrap {
+      position: relative; }
+      #landingPage .landingWrap #existing_user {
+        position: absolute;
+        width: 100%; }
+        #landingPage .landingWrap #existing_user .get_started {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          z-index: 5;
+          background: white; }
+          #landingPage .landingWrap #existing_user .get_started #login {
+            background: #E67A7A;
+            color: white;
+            border: none;
+            padding: 5% 20%;
+            font-size: 1.5em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            display: block;
+            text-decoration: none; }
+          #landingPage .landingWrap #existing_user .get_started #signup {
+            color: #9E9E9E;
+            border: none;
+            padding: 5% 20%;
+            font-size: 1.5em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            display: block;
+            text-decoration: none; }
+        #landingPage .landingWrap #existing_user .signin_login .home_pearl {
+          font-family: "Arvo", serif;
+          color: #E67A7A;
+          text-align: center;
+          font-size: 3em;
+          padding: 5% 0;
+          box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          letter-spacing: 2px;
+          text-shadow: 1px 1px white; }
+        #landingPage .landingWrap #existing_user .signin_login .home_h3 {
+          padding: 2% 25%;
+          line-height: 1.5;
+          font-size: 1.2em;
+          color: #3aa2a2;
+          font-family: "Fugaz One", cursive;
+          text-align: center;
+          letter-spacing: .5px;
+          text-shadow: 1px 1px white; }
+        #landingPage .landingWrap #existing_user .signin_login img {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          margin: -40% 0%;
+          z-index: -1; }
+      #landingPage .landingWrap #about_pearl {
+        width: 100%;
+        position: absolute;
+        margin: 50% 0 0;
+        padding-bottom: 40%; }
+        #landingPage .landingWrap #about_pearl .home_h3 {
+          margin: 10% auto 0;
+          padding: 5% 5% 0;
+          line-height: 1em;
+          font-size: 1.7em;
+          color: #3aa2a2; }
+        #landingPage .landingWrap #about_pearl .home_content {
+          margin: 5%;
+          color: #9E9E9E;
+          line-height: 1.5em;
+          font-size: 1.1em; }
+        #landingPage .landingWrap #about_pearl ul {
+          text-align: center; }
+          #landingPage .landingWrap #about_pearl ul .badgeContainer {
+            display: inline-block;
+            margin: 5% auto;
+            width: 30%; }
+            #landingPage .landingWrap #about_pearl ul .badgeContainer .badgeText {
+              margin: 5% 10%;
+              color: #9E9E9E; } }
 
 /*# sourceMappingURL=styles.css.map */

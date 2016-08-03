@@ -9,7 +9,7 @@ app.controller('loginController', ['$http', '$scope', '$location', function($htt
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/sign_in",
-    // url: "https://a40bd000.ngrok.io/sign_in",
+    // url: "https://57e91829.ngrok.io/sign_in",
     data: data,
     headers: {'Authorization': 'firebaseToken'}
   }).then(function success(response){

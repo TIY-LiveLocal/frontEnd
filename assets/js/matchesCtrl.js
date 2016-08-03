@@ -7,7 +7,7 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
   $http({
     method: 'GET',
     url: "https://livelocalrails.herokuapp.com/surveys",
-    // url: "https://a40bd000.ngrok.io/surveys",
+    // url: "https://57e91829.ngrok.io/surveys",
     headers: {'Authorization': token}
   }).then(function success(response){
 
@@ -19,7 +19,7 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
   $http({
     method: 'GET',
     url: "https://livelocalrails.herokuapp.com/surveys/matches",
-    // url: "https://a40bd000.ngrok.io/surveys/matches",
+    // url: "https://57e91829.ngrok.io/surveys/matches",
     headers: {'Authorization': token}
   }).then(function success(response){
 
@@ -44,6 +44,8 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
       // $location.path('/business');
     };
 
+  }, function error(res){
+    console.log(res);
   });
 
 //  if response.data[0].survey results contain petFriend,

@@ -18,10 +18,6 @@ app.controller('cqController', ['$http', '$scope','$location',
   $scope.veganPeta = false;
   $scope.claimBusiness = false;
 
-  $('li').click(function(){
-  $(this).addClass('black');
-});
-
 $scope.clicked = function(){
 
   console.log($scope.claimBusiness);
@@ -48,12 +44,12 @@ $scope.clicked = function(){
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/surveys",
-    // url: "https://a40bd000.ngrok.io/surveys",
+    // url: "https://57e91829.ngrok.io/surveys",
     data:data,
     headers:{'Authorization': token}
   }).then(function success(response){
     console.log(response);
-    // $location.path('/you');
+    $location.path('/you');
   }, function error(response){
     console.log(response);
   });

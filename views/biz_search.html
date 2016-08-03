@@ -1,33 +1,78 @@
-<div id = "searchPageWrapper">
-<form id = "searchPage-inputs">
+<div id=searchOuterWrapper>
+    <header id=headerNavBar>
+        <div class="logo">
+            <h1 id="pearlH1">Pearl</h1>
+            <img src="assets/img/pearlLogo-1.svg" alt="" />
+
+            <div class="dropdownMenu">
+                <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                    <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+                </button>
+                <div class="dropdownMenu-list" ng-show="dropDown">
+                    <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+                    <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+                    <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div id="searchPageWrapper" ng-controller="bizSearchCtrl">
+        <div id="searchPage-inputs">
+
+            <ul>
+                <li>
+                    <input id="bizNameHere" ng-model="bizNameInput" type="text" placeholder="Name of business"></input>
+                </li>
+
+                <li>
+                    <input id="bizAddressHere" type="text" placeholder="Business address"></input>
+                </li>
+                <li>
+                    <button ng-click="seekBusiness()" id="bizSetupSearch">
+                        search
+                    </button>
+                </li>
+            </ul>
+
+        </div>
 
 
-  <input class = "searchPage-inputs--name" type='text' name= 'term' ng-model='term' placeholder="Business Name or Search Term">
+        <!--business listings modal-->
 
-  <input class = "searchPage-inputs--address"
-  type='text' name= 'location' ng-model='location' placeholder="Zipcode or City">
-
-  <input class="submit" type="submit" ng-click="searchToClaim()" value=" Search">
-
-<!--business listings modal-->
-
-<div class = "businessInfo">
-  <ul class="ngDashboard">
-    <li ng-repeat="biz in businesses" class="biz">
-      <div id="bizName"> {{biz.name}}</div>
-      <div id="bizOwner"> {{biz.owner}}</div>
-      <div id="bizOwner"> {{biz.location.city}},{{biz.location.state_code}}</div>
-      <!-- <img ng-src="{{biz.image_url}}" alt="" /> -->
-      <div id="bizInfo">
-        {{biz.phone}}
-        <br>
-        {{biz.location.address[0]}}
+        <ul class="findBusinesses">
+            <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
+                <a href="#/places" id="chevron">
+                    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                </a>
+                <div id="bizName"> {{biz.name}}</div>
+                <div id="bizOwner"> {{biz.owner}}</div>
+                <div id="bizOwner">{{biz.address}}, {{biz.city}}</div>
+                <div id="bizInfo">
+                    {{biz.phone}}
+                    <br>
 
 
-        <a href="{{biz.url}}">
-        <i class="fa fa-yelp" aria-hidden="true"></i>
-        </a>
-      </div>
-    </li>
+                    <a href="{{biz.website_url}}" id="yelp">
+                        <i class="fa fa-yelp" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
 
-  </ul>
+        <footer id="bottomWrapper">
+            <a href="#/dashboard">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </a>
+
+            <a href="#/matches">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+
+            <a href="#/business_search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </footer>
+    </div>
+</div>

@@ -14,7 +14,8 @@ var token = localStorage.getItem('token');
 //   biz_descrip : $scope.biz_descrip
 // };
 
-$(document).on('click', '.editSubmitButton', function(e) {
+$('.editSubmitButton').on('click', function(e) {
+  console.log('submit edits clicked');
     e.preventDefault();
 
     $http({

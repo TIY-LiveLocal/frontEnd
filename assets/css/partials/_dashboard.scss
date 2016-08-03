@@ -104,8 +104,8 @@ select:-webkit-autofill:focus {
       .ngDashboard{
         font-family: $font4;
         .biz{
-          border: 4px solid #E67A7A;
-          border-radius: 2px;
+          border: 2px solid $blue;
+          border-radius: 7px;
           padding: 5%;
           margin: 5% 5%;
           display: block;
@@ -296,7 +296,7 @@ select:-webkit-autofill:focus {
         font-family: $font4;
         .biz{
           border: 4px solid #E67A7A;
-          border-radius: 2px;
+          border-radius: 7px;
           padding: 5%;
           margin: 5% 5%;
           display: block;
@@ -377,7 +377,7 @@ select:-webkit-autofill:focus {
             text-align: right;
             padding: 15% 30%;
             box-shadow: 1px 5px 10px 0px rgba(42,119,119,0.5);
-            border-radius: 2px;
+            border-radius: 5px;
             .dropdownMenu-list--item{
               font-family: $font2;
               font-size: 2em;
@@ -626,15 +626,15 @@ select:-webkit-autofill:focus {
       .ngDashboard{
         font-family: $font4;
         .biz{
-          border: 4px solid #E67A7A;
-          border-radius: 2px;
+          border: 2px solid $blue;
+          border-radius: 7px;
           padding: 5%;
           margin: 5% 5%;
           display: block;
           box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27);
           #chevron{
             margin: 1%;
-            color: $red;
+            color: $darkGrey;
             float: right;
           }
           img{
@@ -644,13 +644,16 @@ select:-webkit-autofill:focus {
           font-size: 2em;
           font-family: $font4;
           letter-spacing: 1.5px;
+          color: $darkGrey;
         }
         #bizOwner{
           font-size: 1.2em;
           letter-spacing: 1.5px;
+          color: $darkGrey;
         }
         #bizInfo{
           font-size: 1em;
+          color: $darkGrey;
           #yelp{
             margin: 1%;
             color: $red;

@@ -204,7 +204,7 @@ select:-webkit-autofill:focus {
         width: 100%;
         position: absolute;
         top: 0;
-        margin: -40% 0%;
+        margin: -50% 0%;
         z-index: -1;
       }
     }
@@ -215,7 +215,7 @@ select:-webkit-autofill:focus {
     #signup{
       padding: 5%;
       position: absolute;
-      top: 12%;
+      top: 15%;
       right: 0;
       background: $red;
       display: block;
@@ -282,14 +282,14 @@ select:-webkit-autofill:focus {
       #signUpZipcode{
         margin-bottom: 20%;
       }
-      .submit{
+      #getstartedSignup{
         background: $red;
         display: block;
         font-family: $font4;
         color: white;
         text-align: center;
         font-size: 2em;
-        padding: 5%;
+        padding: 4%;
         width: 100%;
         border: none;
         margin: 0 auto;

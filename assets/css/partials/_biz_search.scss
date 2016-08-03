@@ -1,114 +1,103 @@
-#searchOuterWrapper{
-  img{
-    position: relative;
-    left: 3.5%;
-  }
-  #searchPageWrapper{
-    #searchPage-inputs{
-      position: relative;
-      margin: auto;
-      list-style: none;
-      width: 80%;
-      margin: 10% auto 0% auto;
-      padding: 5%;
-      #bizNameHere{
-        margin: 5% auto;
-        width: 100%;
-        outline: none;
-        border-style: none;
-        border-bottom: solid $red 1px;
-        font-size: 1em;
-        letter-spacing: 2px;
-      }
-      #bizAddressHere{
-        @extend #bizNameHere
-      }
-      #bizSetupSearch{
-        width: 100%;
-        outline: none;
-        border-style: none;
-        padding:3%;
-        border-radius: 3px;
-        margin: 10% auto;
-        background-color: $red;
-        color: $tan;
-        font-style: $font4;
-        font-size: 1.25em;
-      }
+#mainBiz_search {
+    top: 8%;
+    position: absolute;
+    width: 100%;
+    #searchOuterWrapper {
+        img {
+            position: relative;
+            left: 3.5%;
+        }
+        #searchPageWrapper {
+            #searchPage-inputs {
+                position: relative;
+                margin: auto;
+                list-style: none;
+                width: 80%;
+                margin: 10% auto 0;
+                padding: 5%;
+                #bizNameHere {
+                    margin: 5% auto;
+                    width: 100%;
+                    outline: none;
+                    border-style: none;
+                    border-bottom: solid $red 1px;
+                    font-size: 1em;
+                    letter-spacing: 2px;
+                    line-height: 3;
+                    color: $darkGrey;
+                }
+                #bizAddressHere {
+                    margin: 5% auto;
+                    width: 100%;
+                    outline: none;
+                    border-style: none;
+                    border-bottom: solid $red 1px;
+                    font-size: 1em;
+                    letter-spacing: 2px;
+                    line-height: 3;
+                    color: $darkGrey;
+                }
+                #bizSetupSearch {
+                    width: 100%;
+                    outline: none;
+                    border-style: none;
+                    padding: 3%;
+                    border-radius: 3px;
+                    margin: 10% auto;
+                    background-color: $red;
+                    color: $tan;
+                    font-style: $font4;
+                    font-size: 1.5em;
+                }
+            }
+            .findBusinesses {
+                font-family: $font4;
+                color: $darkGrey;
+                letter-spacing: 1.2px;
+                margin-bottom: 20%;
+                li {
+                    border: solid $red 1px;
+                    border-radius: 7px;
+                    margin: 3%;
+                    padding: 3%;
+                    a {
+                        text-decoration: none;
+                        &:visited {
+                            text-decoration: none;
+                        }
+                    }
+                    #bizName {
+                        font-size: 1.2em;
+                        letter-spacing: 1.5px;
+                    }
+                    div {
+                        margin: 2% 0;
+                    }
+                    #chevron {
+                        font-size: 0.5em;
+                        position: relative;
+                        float: right;
+                        padding: 5% 1%;
+                        color: $red;
+                    }
+                    #yelp {
+                        font-size: 0.5em;
+                        position: relative;
+                        left: 78%;
+                        margin-top: 6%;
+                        padding: 2%;
+                        color: $red;
+                        &:visited {
+                            text-decoration: none;
+                        }
+                        .fa {
+                            float: right;
+                            font-size: 2em;
+                            margin-right: 4%;
+                        }
+                    }
+                }
+            }
+        }
     }
-    .findBusinesses{
-      font-family:$font4;
-      color: $darkGrey;
-      letter-spacing: 1.2px;
-      margin-bottom: 20%;
-      li{
-        border: solid $red 1px;
-        border-radius: 7px;
-        margin: 3%;
-        padding: 3%;
-        a{
-          text-decoration: none;
-          &:visited{
-            text-decoration: none;
-          }
-        }
-        #bizName{
-          font-size: 1.2em;
-          letter-spacing: 1.5px;
-        }
-        div{
-          margin: 2% 0;
-        }
-        #chevron{
-          font-size: .5em;
-          position: relative;
-          float: right;
-          padding: 5% 1%;
-          color: $red;
-        }
-        #yelp{
-          font-size: .5em;
-          position: relative;
-          left: 78%;
-          margin-top: 6%;
-          padding: 2%;
-          color: $red;
-          &:visited{
-            text-decoration: none;
-          }
-          .fa{
-            float: right;
-            font-size: 2em;
-            margin-right: 4%;
-          }
-        }
-      }
-    }
-    #bottomWrapper{
-      height:3em;
-      position: fixed;
-      bottom: 0;
-      width: 400px;
-      background-color: #E0E0E0;
-      padding: 2% 2% 3% 0%;
-      margin-top: 10%;
-      width: 100%;
-
-      a{
-        text-decoration: none;
-        .fa{
-          display: inline-block;
-          font-size: 2.6em;
-          padding: 2% 12% 5% 12%;
-          color: #9E9E9E;
-        }
-        &:active{
-          text-decoration: none;
-        }
-        &:visited{
-          text-decoration: none;
-        }
-      }
-    }
-  }
 }

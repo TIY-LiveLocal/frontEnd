@@ -55,5 +55,54 @@ $scope.clicked = function(){
 
 };
 
+  $scope.check_hiring = false;
+  $scope.checkedHiring = function(){
+    $scope.check_hiring = !$scope.check_hiring;
+  };
+  $scope.check_glutFree = false;
+  $scope.checkedGlutFree = function(){
+    $scope.check_glutFree = !$scope.check_glutFree;
+  };
+  $scope.check_musicians = false;
+  $scope.checkedMusic = function(){
+    $scope.check_musicians = !$scope.check_musicians;
+  };
+  $scope.check_lgbt = false;
+  $scope.checkedLgbt = function(){
+    $scope.check_lgbt = !$scope.check_lgbt;
+  };
+  $scope.check_localFood = false;
+  $scope.checkedFood = function(){
+    $scope.check_localFood = !$scope.check_localFood;
+  };
+  $scope.check_minorityOwned = false;
+  $scope.checkedMinOwned = function(){
+    $scope.check_minorityOwned = !$scope.check_minorityOwned;
+  };
+  $scope.check_livWage = false;
+  $scope.checkedWage = function(){
+    $scope.check_livWage = !$scope.check_livWage;
+  };
+  $scope.check_petFriend = false;
+  $scope.checkedPets = function(){
+    $scope.check_petFriend = !$scope.check_petFriend;
+  };
+  $scope.check_artsCrafts = false;
+  $scope.checkedArtsCrafts = function(){
+    $scope.check_artsCrafts = !$scope.check_artsCrafts;
+  };
+  $scope.check_charNonProf = false;
+  $scope.checkedNonProf = function(){
+    $scope.check_charNonProf = !$scope.check_charNonProf;
+  };
+  $scope.check_sustain = false;
+  $scope.checkedSustain = function(){
+    $scope.check_sustain = !$scope.check_sustain;
+  };
+  $scope.check_veganPeta = false;
+  $scope.checkedVeganPeta = function(){
+    $scope.check_veganPeta = !$scope.check_veganPeta;
+  };
+
 
 }]);

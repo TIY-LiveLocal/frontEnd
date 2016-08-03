@@ -16,7 +16,8 @@ li{
       color: $red;
       text-align: left;
       font-size: 2em;
-      padding: 5%;
+      padding: 3%;
+      margin: 4% 2%;
     }
 
     .checkBoxForm{
@@ -180,7 +181,8 @@ li{
         color: white;
         text-align: left;
         font-size: 2em;
-        padding: 5%;
+        padding: 3%;
+        margin: 2%;
       }
     }
 
@@ -194,7 +196,22 @@ li{
       margin: 2%;
       li{
         padding: 2%;
+        margin: 2px;
         border-radius: 5px;
+        letter-spacing: .2px;
+        vertical-align: super;
+
+      }
+      .survey_opts{
+        background-color: white;
+        img{
+          vertical-align: middle;
+          margin: 0 3%;
+        }
+      }
+      .checked{
+        background-color: #eee;
+        color: $darkBlue;
       }
     }
 
@@ -244,8 +261,8 @@ li{
         font-family: $font4;
         color: white;
         text-align: center;
-        font-size: 1.5em;
-        padding: 5%;
+        font-size: 2em;
+        padding: 4%;
         width: 100%;
         border: none;
         margin: 1% auto;

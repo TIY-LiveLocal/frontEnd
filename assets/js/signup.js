@@ -16,7 +16,6 @@ app.controller('signupController', ['$http', '$scope', '$timeout', '$location', 
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/sign_up",
-    // url: "https://57e91829.ngrok.io/sign_up",
     data: data
     }).then(function success(response){
       localStorage.setItem('token',response.data.token);

@@ -312,15 +312,17 @@ table {
         margin: 5% auto;
         font-size: 2em;
         font-weight: 700;
-        padding: 5%;
-        float: right;
-        width: 50%; }
+        padding: 3%;
+        float: left;
+        width: 100%;
+        text-align: left; }
   #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .question_header {
     font-family: "Roboto", sans-serif;
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 300;
     color: #E67A7A;
-    margin: 5% 5%; }
+    margin: 5% 5%;
+    padding-top: 10%; }
   #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .author {
     font-size: 12px; }
   #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader {
@@ -328,7 +330,7 @@ table {
     font-family: "Roboto", sans-serif;
     font-size: 24px;
     font-weight: 300;
-    margin: 7.5% 10% 10% 15%;
+    margin: 0% 10% 10% 15%;
     padding: 2% 0% 0 10%;
     text-align: right;
     border-top: 1px dotted #E67A7A; }
@@ -338,7 +340,20 @@ table {
       width: 20%;
       font-size: 10px;
       line-height: 1.5;
-      letter-spacing: .1px; } }
+      letter-spacing: .1px; }
+  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions #reply_button {
+    display: block;
+    border-radius: 2px;
+    background-color: #3aa2a2;
+    color: #FFF4E1;
+    border-style: none;
+    outline: none;
+    margin: 5% auto;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 2%;
+    width: 70%;
+    text-align: right; } }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
@@ -1149,17 +1164,19 @@ select:-webkit-autofill:focus {
     height: 3.5em;
     position: fixed;
     bottom: 0;
-    background-color: #eee;
+    background: linear-gradient(#eee, #dedede);
     padding: 2% 2% 3% 0%;
     margin-top: 10%;
-    width: 100%; }
+    width: 100%;
+    box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.5); }
     #dashboard #mainDashboard #bottomWrapper a {
       text-decoration: none; }
       #dashboard #mainDashboard #bottomWrapper a .fa {
         display: inline-block;
         font-size: 2.6em;
         padding: 2% 12% 5% 12%;
-        color: #3aa2a2; }
+        color: #3aa2a2;
+        text-shadow: 0px 1px 1px #FFF4E1; }
       #dashboard #mainDashboard #bottomWrapper a:active {
         text-decoration: none; }
       #dashboard #mainDashboard #bottomWrapper a:visited {
@@ -1529,7 +1546,8 @@ select:-webkit-autofill:focus {
     color: #E67A7A;
     text-align: left;
     font-size: 2em;
-    padding: 5%; }
+    padding: 3%;
+    margin: 4% 2%; }
   #consumerQuestionnaire .checkBoxForm {
     display: block;
     font-family: "Roboto", sans-serif; }
@@ -1652,7 +1670,8 @@ select:-webkit-autofill:focus {
       color: white;
       text-align: left;
       font-size: 2em;
-      padding: 5%; }
+      padding: 3%;
+      margin: 2% 0%; }
   #signUp .checkBoxForm {
     display: block;
     font-family: "Roboto", sans-serif;
@@ -1662,7 +1681,18 @@ select:-webkit-autofill:focus {
     margin: 2%; }
     #signUp ul li {
       padding: 2%;
-      border-radius: 5px; }
+      margin: 2px;
+      border-radius: 5px;
+      letter-spacing: .2px;
+      vertical-align: super; }
+    #signUp ul .survey_opts {
+      background-color: white; }
+      #signUp ul .survey_opts img {
+        vertical-align: middle;
+        margin: 0 3%; }
+    #signUp ul .checked {
+      background-color: #eee;
+      color: #2a7777; }
   #signUp .signUpInput {
     width: 90%;
     display: block;
@@ -1695,8 +1725,8 @@ select:-webkit-autofill:focus {
     font-family: "Roboto", sans-serif;
     color: white;
     text-align: center;
-    font-size: 1.5em;
-    padding: 5%;
+    font-size: 2em;
+    padding: 4%;
     width: 100%;
     border: none;
     margin: 1% auto;
@@ -2337,6 +2367,10 @@ select:-webkit-autofill:focus {
     border-radius: 7px;
     margin: 3%;
     padding: 3%; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li a {
+      text-decoration: none; }
+      #searchOuterWrapper #searchPageWrapper .findBusinesses li a:visited {
+        text-decoration: none; }
     #searchOuterWrapper #searchPageWrapper .findBusinesses li #bizName {
       font-size: 1.2em;
       letter-spacing: 1.5px; }
@@ -2346,13 +2380,21 @@ select:-webkit-autofill:focus {
       font-size: .5em;
       position: relative;
       float: right;
-      padding: 5% 1%; }
+      padding: 5% 1%;
+      color: #E67A7A; }
     #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp {
       font-size: .5em;
       position: relative;
       left: 78%;
       margin-top: 6%;
-      padding: 2%; }
+      padding: 2%;
+      color: #E67A7A; }
+      #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp:visited {
+        text-decoration: none; }
+      #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp .fa {
+        float: right;
+        font-size: 2em;
+        margin-right: 4%; }
 #searchOuterWrapper #searchPageWrapper #bottomWrapper {
   height: 3em;
   position: fixed;

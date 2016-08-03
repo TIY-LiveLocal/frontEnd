@@ -45,7 +45,7 @@ app.config(function($routeProvider){
   })
   .when('/search', {
     templateUrl: 'views/biz_search.html',
-    controller: 'bizSearchController'
+    controller: 'bizSearchCtrl'
   })
   .when('/survey_results', {
     templateUrl: 'views/survey_results.html',

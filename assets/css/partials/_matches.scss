@@ -71,6 +71,7 @@
       position: absolute;
       top: 10%;
       width: 100%;
+      margin-bottom: 20%;
       #loading{
         color: $blue;
         margin: 5%;
@@ -118,72 +119,36 @@
           bottom: 3%;
         }
       }
-      .btm_nav{
-        font-family: $font4;
+      #bottomWrapper{
+        height:3em;
         position: fixed;
         bottom: 0;
+        background-color: #eee;
+        padding: 2% 2% 3% 0%;
+        margin-top: 10%;
         width: 100%;
-        z-index: 10;
-        background: white;
-        #discover{
-          margin: 0 auto;
-          display: block;
-          position: relative;
-          text-align: center;
-          box-shadow: 0px 5px 10px 1px $darkGrey;
-
-          #liNearby{
+        z-index: 5;
+        a{
+          text-decoration: none;
+          .fa{
             display: inline-block;
-            padding: 2%;
-            font-size: 1.25em;
-            width: 20%;
-            a{
-              color: #9E9E9E;
-              font-size: 2em;
-              text-align: left;
-              letter-spacing: 2px;
-              text-decoration: none;
-            }
+            font-size: 2.6em;
+            padding: 2% 12% 5% 12%;
+            color: $medBlue;
           }
-          #liHome{
-            display: inline-block;
-            padding: 2%;
-            font-size: 1.75em;
-            width: 30%;
-            a{
-              color: #9E9E9E;
-              font-size: 2em;
-              text-align: left;
-              letter-spacing: 2px;
-              text-decoration: none;
-            }
-            &:hover{
-              border-bottom: 1px solid $red;
-            }
+          &:active{
+            text-decoration: none;
           }
-          #liSearch{
-            display: inline-block;
-            padding: 2%;
-            font-size: 1.25em;
-            width: 20%;
-            a{
-              color: #9E9E9E;
-              font-size: 2em;
-              text-align: left;
-              letter-spacing: 2px;
-              text-decoration: none;
-            }
-            &:hover{
-              border-bottom: 1px solid $red;
-            }
+          &:visited{
+            text-decoration: none;
           }
         }
       }
       .userResults{
         margin: 0 5%;
         h3{
-          color: $medBlue;
-          font-family: $font1;
+          color: $blue;
+          font-family: $font5;
           margin: 2% 0;
           font-size: 1.5em;
           letter-spacing: .5px;
@@ -193,10 +158,10 @@
     .ngDashboard{
       font-family: $font4;
       .match{
-        border: 4px solid $red;
+        border: 1px solid $red;
         border-radius: 2px;
-        padding: 5%;
-        margin: 5%;
+        padding: 5% 2% 5% 5%;
+        margin: 4%;
         display: block;
         box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27);
         position: relative;
@@ -206,13 +171,16 @@
           float: right;
         }
         #matchName{
-          font-size: 2em;
+          font-size: 1.5em;
           font-family: $font4;
-          letter-spacing: 1.5px;
+          letter-spacing: 2px;
+          color: $darkGrey;
         }
         #matchOwner{
-          font-size: 1.2em;
+          font-size: 1em;
           letter-spacing: 1.5px;
+          color: $darkGrey;
+          margin: 3% 0;
         }
         #matchInfo{
           font-size: 1em;

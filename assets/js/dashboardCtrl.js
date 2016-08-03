@@ -10,6 +10,7 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
         console.log(response);
         $scope.businesses = response.data;
         $scope.firstname = localStorage.getItem('firstname');
+        $scope.zip_code = localStorage.getItem('zip');
 
         //click & get index of clicked dataThang
           $scope.logID = function(){

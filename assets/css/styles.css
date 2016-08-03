@@ -1145,64 +1145,37 @@ select:-webkit-autofill:focus {
           line-height: 1.7;
           margin-bottom: 10%;
           text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
-  #dashboard #mainDashboard .btm_nav {
-    font-family: "Roboto", sans-serif;
+  #dashboard #mainDashboard #bottomWrapper {
+    height: 3.5em;
     position: fixed;
     bottom: 0;
-    width: 100%;
-    z-index: 10;
-    background: white; }
-    #dashboard #mainDashboard .btm_nav #discover {
-      margin: 0 auto;
-      display: block;
-      position: relative;
-      text-align: center;
-      box-shadow: 0px 5px 10px 1px #9E9E9E; }
-      #dashboard #mainDashboard .btm_nav #discover #liNearby {
+    background-color: #eee;
+    padding: 2% 2% 3% 0%;
+    margin-top: 10%;
+    width: 100%; }
+    #dashboard #mainDashboard #bottomWrapper a {
+      text-decoration: none; }
+      #dashboard #mainDashboard #bottomWrapper a .fa {
         display: inline-block;
-        padding: 2%;
-        font-size: 1.25em;
-        width: 20%; }
-        #dashboard #mainDashboard .btm_nav #discover #liNearby a {
-          color: #9E9E9E;
-          font-size: 2em;
-          text-align: left;
-          letter-spacing: 2px;
-          text-decoration: none; }
-      #dashboard #mainDashboard .btm_nav #discover #liHome {
-        display: inline-block;
-        padding: 2%;
-        font-size: 1.75em;
-        width: 30%; }
-        #dashboard #mainDashboard .btm_nav #discover #liHome a {
-          color: #9E9E9E;
-          font-size: 2em;
-          text-align: left;
-          letter-spacing: 2px;
-          text-decoration: none; }
-        #dashboard #mainDashboard .btm_nav #discover #liHome:hover {
-          border-bottom: 1px solid #E67A7A; }
-      #dashboard #mainDashboard .btm_nav #discover #liSearch {
-        display: inline-block;
-        padding: 2%;
-        font-size: 1.25em;
-        width: 20%; }
-        #dashboard #mainDashboard .btm_nav #discover #liSearch a {
-          color: #9E9E9E;
-          font-size: 2em;
-          text-align: left;
-          letter-spacing: 2px;
-          text-decoration: none; }
-        #dashboard #mainDashboard .btm_nav #discover #liSearch:hover {
-          border-bottom: 1px solid #E67A7A; }
+        font-size: 2.6em;
+        padding: 2% 12% 5% 12%;
+        color: #3aa2a2; }
+      #dashboard #mainDashboard #bottomWrapper a:active {
+        text-decoration: none; }
+      #dashboard #mainDashboard #bottomWrapper a:visited {
+        text-decoration: none; }
   #dashboard #mainDashboard .userResults {
     margin: 0 5%; }
     #dashboard #mainDashboard .userResults h3 {
-      color: #3aa2a2;
-      font-family: "Galada", cursive;
-      margin: 2% 0;
+      color: #9DDCDC;
+      font-family: "Arvo", serif;
+      margin: 6% 0;
       font-size: 1.5em;
       letter-spacing: .5px; }
+      #dashboard #mainDashboard .userResults h3 #dash_zip {
+        font-size: 1.2em;
+        color: #E67A7A;
+        letter-spacing: 2px; }
   #dashboard #mainDashboard .profileHeader {
     font-family: "Arvo", serif;
     color: #E67A7A;
@@ -1330,12 +1303,13 @@ select:-webkit-autofill:focus {
       letter-spacing: 1.5px; }
 
   .ngDashboard {
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20%; }
     .ngDashboard .biz {
-      border: 4px solid #E67A7A;
+      border: 1px solid #E67A7A;
       border-radius: 2px;
-      padding: 5%;
-      margin: 5% 5%;
+      padding: 5% 2% 5% 5%;
+      margin: 4%;
       display: block;
       box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
       .ngDashboard .biz #chevron {
@@ -1345,17 +1319,23 @@ select:-webkit-autofill:focus {
       .ngDashboard .biz img {
         width: 10%; }
       .ngDashboard .biz #bizName {
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: "Roboto", sans-serif;
-        letter-spacing: 1.5px; }
+        letter-spacing: 2px;
+        color: #9E9E9E; }
       .ngDashboard .biz #bizOwner {
-        font-size: 1.2em;
-        letter-spacing: 1.5px; }
+        font-size: 1em;
+        letter-spacing: 1.5px;
+        color: #9E9E9E;
+        margin: 3% 0; }
       .ngDashboard .biz #bizInfo {
-        font-size: 1em; }
+        font-size: 1em;
+        color: #9E9E9E;
+        margin: 3%; }
         .ngDashboard .biz #bizInfo #yelp {
           margin: 1%;
-          color: #E67A7A; } }
+          color: #E67A7A;
+          float: right; } }
 @media only screen and (max-width: 480px) {
   #matches #headerNavBar .logo {
     display: block;
@@ -1415,7 +1395,8 @@ select:-webkit-autofill:focus {
   #matches #mainDashboard {
     position: absolute;
     top: 10%;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 20%; }
     #matches #mainDashboard #loading {
       color: #9DDCDC;
       margin: 5%;
@@ -1457,71 +1438,41 @@ select:-webkit-autofill:focus {
         right: 5%;
         position: absolute;
         bottom: 3%; }
-    #matches #mainDashboard .btm_nav {
-      font-family: "Roboto", sans-serif;
+    #matches #mainDashboard #bottomWrapper {
+      height: 3em;
       position: fixed;
       bottom: 0;
+      background-color: #eee;
+      padding: 2% 2% 3% 0%;
+      margin-top: 10%;
       width: 100%;
-      z-index: 10;
-      background: white; }
-      #matches #mainDashboard .btm_nav #discover {
-        margin: 0 auto;
-        display: block;
-        position: relative;
-        text-align: center;
-        box-shadow: 0px 5px 10px 1px #9E9E9E; }
-        #matches #mainDashboard .btm_nav #discover #liNearby {
+      z-index: 5; }
+      #matches #mainDashboard #bottomWrapper a {
+        text-decoration: none; }
+        #matches #mainDashboard #bottomWrapper a .fa {
           display: inline-block;
-          padding: 2%;
-          font-size: 1.25em;
-          width: 20%; }
-          #matches #mainDashboard .btm_nav #discover #liNearby a {
-            color: #9E9E9E;
-            font-size: 2em;
-            text-align: left;
-            letter-spacing: 2px;
-            text-decoration: none; }
-        #matches #mainDashboard .btm_nav #discover #liHome {
-          display: inline-block;
-          padding: 2%;
-          font-size: 1.75em;
-          width: 30%; }
-          #matches #mainDashboard .btm_nav #discover #liHome a {
-            color: #9E9E9E;
-            font-size: 2em;
-            text-align: left;
-            letter-spacing: 2px;
-            text-decoration: none; }
-          #matches #mainDashboard .btm_nav #discover #liHome:hover {
-            border-bottom: 1px solid #E67A7A; }
-        #matches #mainDashboard .btm_nav #discover #liSearch {
-          display: inline-block;
-          padding: 2%;
-          font-size: 1.25em;
-          width: 20%; }
-          #matches #mainDashboard .btm_nav #discover #liSearch a {
-            color: #9E9E9E;
-            font-size: 2em;
-            text-align: left;
-            letter-spacing: 2px;
-            text-decoration: none; }
-          #matches #mainDashboard .btm_nav #discover #liSearch:hover {
-            border-bottom: 1px solid #E67A7A; }
+          font-size: 2.6em;
+          padding: 2% 12% 5% 12%;
+          color: #3aa2a2; }
+        #matches #mainDashboard #bottomWrapper a:active {
+          text-decoration: none; }
+        #matches #mainDashboard #bottomWrapper a:visited {
+          text-decoration: none; }
     #matches #mainDashboard .userResults {
       margin: 0 5%; }
       #matches #mainDashboard .userResults h3 {
-        color: #3aa2a2;
-        font-family: "Galada", cursive;
+        color: #9DDCDC;
+        font-family: "Arvo", serif;
         margin: 2% 0;
         font-size: 1.5em;
         letter-spacing: .5px; }
   #matches .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #matches .ngDashboard .match {
-      border: 4px solid #E67A7A;
+      border: 1px solid #E67A7A;
       border-radius: 2px;
-      padding: 5%;
-      margin: 5%;
+      padding: 5% 2% 5% 5%;
+      margin: 4%;
       display: block;
       box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27);
       position: relative; }
@@ -1530,12 +1481,15 @@ select:-webkit-autofill:focus {
         color: #E67A7A;
         float: right; }
       #matches .ngDashboard .match #matchName {
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: "Roboto", sans-serif;
-        letter-spacing: 1.5px; }
+        letter-spacing: 2px;
+        color: #9E9E9E; }
       #matches .ngDashboard .match #matchOwner {
-        font-size: 1.2em;
-        letter-spacing: 1.5px; }
+        font-size: 1em;
+        letter-spacing: 1.5px;
+        color: #9E9E9E;
+        margin: 3% 0; }
       #matches .ngDashboard .match #matchInfo {
         font-size: 1em; }
         #matches .ngDashboard .match #matchInfo .phone {
@@ -2341,5 +2295,80 @@ select:-webkit-autofill:focus {
             #landingPage .landingWrap #about_pearl ul .badgeContainer .badgeText {
               margin: 5% 10%;
               color: #9E9E9E; } }
+#searchOuterWrapper img {
+  position: relative;
+  left: 3.5%; }
+#searchOuterWrapper #searchPageWrapper #searchPage-inputs {
+  position: relative;
+  margin: auto;
+  list-style: none;
+  width: 80%;
+  margin: 10% auto 0% auto;
+  padding: 5%; }
+  #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizNameHere, #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizAddressHere {
+    margin: 5% auto;
+    width: 100%;
+    outline: none;
+    border-style: none;
+    border-bottom: solid #E67A7A 1px;
+    font-size: 1em;
+    letter-spacing: 2px; }
+  #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizSetupSearch {
+    width: 100%;
+    outline: none;
+    border-style: none;
+    padding: 3%;
+    border-radius: 3px;
+    margin: 10% auto;
+    background-color: #E67A7A;
+    color: #FFF4E1;
+    font-style: "Roboto", sans-serif;
+    font-size: 1.25em; }
+#searchOuterWrapper #searchPageWrapper .findBusinesses {
+  font-family: "Roboto", sans-serif;
+  color: #9E9E9E;
+  letter-spacing: 1.2px;
+  margin-bottom: 20%; }
+  #searchOuterWrapper #searchPageWrapper .findBusinesses li {
+    border: solid #E67A7A 1px;
+    border-radius: 7px;
+    margin: 3%;
+    padding: 3%; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li #bizName {
+      font-size: 1.2em;
+      letter-spacing: 1.5px; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li div {
+      margin: 2% 0; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li #chevron {
+      font-size: .5em;
+      position: relative;
+      float: right;
+      padding: 5% 1%; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp {
+      font-size: .5em;
+      position: relative;
+      left: 78%;
+      margin-top: 6%;
+      padding: 2%; }
+#searchOuterWrapper #searchPageWrapper #bottomWrapper {
+  height: 3em;
+  position: fixed;
+  bottom: 0;
+  width: 400px;
+  background-color: #E0E0E0;
+  padding: 2% 2% 3% 0%;
+  margin-top: 10%;
+  width: 100%; }
+  #searchOuterWrapper #searchPageWrapper #bottomWrapper a {
+    text-decoration: none; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a .fa {
+      display: inline-block;
+      font-size: 2.6em;
+      padding: 2% 12% 5% 12%;
+      color: #9E9E9E; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a:active {
+      text-decoration: none; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a:visited {
+      text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */

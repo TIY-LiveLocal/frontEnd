@@ -12,6 +12,7 @@
             <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
             <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
             <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+            <a class="dropdownMenu-list--item" href="#/logout">Logout</a>
         </div>
 
       </div>
@@ -44,25 +45,25 @@
       <img class ='badges' src="assets/img/veganpeta.svg"  ng-if="userResults.veganPeta===true" height="30" width="30">
     </div>
 
-    <div class="btm_nav">
-      <ul id="discover">
-        <li id="liNearby">
-          <a href="#/you"><i class="fa fa-map"></i></a>
-        </li>
-        <li id="liHome">
-          <a href="#/discover"><i class="fa fa-home"></i></a>
-        </li>
-        <li id="liSearch">
-          <a href="#/search"><i class="fa fa-search"></i></a>
-        </li>
-      </ul>
-    </div>
+    <footer id="bottomWrapper">
+        <a href="#/discover">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </a>
+
+        <a href="#/you">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
+
+        <a href="#/search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+    </footer>
 
 <!-- MATCH TEST -->
   <ul class="ngDashboard">
     <li ng-repeat="match in matches" class="match" ng-click="viewBiz()">
       <a href="#/places" id="chevron">
-        <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+        <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
       </a>
       <div id="matchName"> {{match.name}}</div>
       <div id="matchOwner"> {{match.owner}}</div>

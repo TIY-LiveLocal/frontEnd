@@ -7,7 +7,6 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
   $http({
     method: 'GET',
     url: "https://livelocalrails.herokuapp.com/surveys",
-    // url: "https://57e91829.ngrok.io/surveys",
     headers: {'Authorization': token}
   }).then(function success(response){
 
@@ -19,7 +18,6 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
   $http({
     method: 'GET',
     url: "https://livelocalrails.herokuapp.com/surveys/matches",
-    // url: "https://57e91829.ngrok.io/surveys/matches",
     headers: {'Authorization': token}
   }).then(function success(response){
 
@@ -40,8 +38,15 @@ app.controller('matchesCtrl', ['$scope','$http','$location', function($scope,$ht
 
       console.log(arr);
 
-
-      // $location.path('/business');
+      localStorage.setItem('name',vm.name);
+      localStorage.setItem('address',vm.address);
+      localStorage.setItem('city',vm.city);
+      localStorage.setItem('zip',vm.zip_code);
+      localStorage.setItem('phone',vm.phone);
+      localStorage.setItem('longitude',vm.location[1]);
+      localStorage.setItem('latitude',vm.location[0]);
+      localStorage.setItem('id',vm.id);
+      $location.path('/business');
     };
 
   }, function error(res){

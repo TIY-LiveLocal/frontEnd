@@ -44,7 +44,6 @@ $scope.clicked = function(){
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/surveys",
-    // url: "https://57e91829.ngrok.io/surveys",
     data:data,
     headers:{'Authorization': token}
   }).then(function success(response){

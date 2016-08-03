@@ -61,7 +61,7 @@
 
 <!-- MATCH TEST -->
   <ul class="ngDashboard">
-    <li ng-repeat="match in matches" class="match" ng-click="viewBiz()">
+    <li ng-repeat="match in matches" class="match" id={{match.id}} ng-click="viewBiz()">
       <a href="#/places" id="chevron">
         <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
       </a>
@@ -75,7 +75,6 @@
 
 
         <a href="{{match.website_url}}" id="yelp">
-          <!-- <span>Yelp</span> -->
           <i class="fa fa-yelp" aria-hidden="true"></i>
         </a>
 

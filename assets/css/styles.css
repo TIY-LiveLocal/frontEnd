@@ -1660,6 +1660,9 @@ select:-webkit-autofill:focus {
     color: #9E9E9E; }
   #signUp ul {
     margin: 2%; }
+    #signUp ul li {
+      padding: 2%;
+      border-radius: 5px; }
   #signUp .signUpInput {
     width: 90%;
     display: block;

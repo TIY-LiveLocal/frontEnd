@@ -30,211 +30,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*
-  Simple Grid
-  Project Page - http://thisisdallas.github.com/Simple-Grid/
-  Author - Dallas Bass
-  Site - http://dallasbass.com
-*/
-.grid:after,
-[class*='col-'],
-[class*='grid'],
-[class*='mobile-'] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-[class*='col-'] {
-  float: left;
-  min-height: 1px;
-  padding-right: 20px;
-  /* column-space */ }
-
-[class*='col-'] [class*='col-']:last-child {
-  padding-right: 0; }
-
-.grid {
-  width: 100%;
-  max-width: 1140px;
-  min-width: 748px;
-  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
-  margin: 0 auto;
-  overflow: hidden; }
-
-.grid:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.grid-pad {
-  padding-top: 20px;
-  padding-left: 20px;
-  /* grid-space to left */
-  padding-right: 0;
-  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
-
-.push-right {
-  float: right; }
-
-/* Content Columns */
-.col-1-2,
-.col-6-12 {
-  width: 40%; }
-
-.col-1-3,
-.col-4-12 {
-  width: 33.33%;
-  position: relative;
-  margin: auto; }
-
-.col-1-4,
-.col-3-12 {
-  width: 25%; }
-
-.col-1-5 {
-  width: 20%; }
-
-.col-1-6,
-.col-2-12 {
-  width: 16.667%; }
-
-.col-1-7 {
-  width: 14.28%; }
-
-.col-1-8 {
-  width: 12.5%; }
-
-.col-1-9 {
-  width: 11.1%; }
-
-.col-1-10 {
-  width: 10%; }
-
-.col-1-11 {
-  width: 9.09%; }
-
-.col-1-12 {
-  width: 8.33%; }
-
-/* Layout Columns */
-.col-11-12 {
-  width: 91.66%; }
-
-.col-10-12 {
-  width: 83.333%; }
-
-.col-9-12 {
-  width: 75%; }
-
-.col-5-12 {
-  width: 41.66%; }
-
-.col-7-12 {
-  width: 58.33%; }
-
-/* Pushing blocks */
-.push-2-3,
-.push-8-12 {
-  margin-left: 66.66%; }
-
-.push-1-2,
-.push-6-12 {
-  margin-left: 50%; }
-
-.push-1-3,
-.push-4-12 {
-  margin-left: 33.33%; }
-
-.push-1-4,
-.push-3-12 {
-  margin-left: 25%; }
-
-.push-1-5 {
-  margin-left: 20%; }
-
-.push-1-6,
-.push-2-12 {
-  margin-left: 16.667%; }
-
-.push-1-7 {
-  margin-left: 14.28%; }
-
-.push-1-8 {
-  margin-left: 12.5%; }
-
-.push-1-9 {
-  margin-left: 11.1%; }
-
-.push-1-10 {
-  margin-left: 10%; }
-
-.push-1-11 {
-  margin-left: 9.09%; }
-
-.push-1-12 {
-  margin-left: 8.33%; }
-
-/*end grid styling*/
-#businessEditPage body {
-  background-color: #FFEBB7; }
-#businessEditPage #businessEditPage-wrapper {
-  width: 80%;
-  margin: auto;
-  font-family: Rubik, sans-serif;
-  color: #E67A7A; }
-  #businessEditPage #businessEditPage-wrapper #profileHeader {
-    width: 100%; }
-    #businessEditPage #businessEditPage-wrapper #profileHeader .pearlLogo {
-      display: inline-block;
-      width: 5%;
-      height: 5%;
-      padding-top: 2%;
-      position: relative;
-      left: 48%; }
-  #businessEditPage #businessEditPage-wrapper #profileHeader-contain {
-    width: 80%;
-    position: relative;
-    left: 45%; }
-    #businessEditPage #businessEditPage-wrapper #profileHeader-contain .pearlLogo-text {
-      left: 45%;
-      color: #E67A7A;
-      font-size: 3em;
-      font-family: Arvo;
-      width: 10%;
-      display: block;
-      position: relative;
-      left: 0;
-      padding-bottom: 2%; }
-    #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search {
-      position: relative;
-      left: -15%;
-      font-size: 1.5em;
-      padding-bottom: 3%; }
-      #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search input {
-        height: 1.5em;
-        border-style: none;
-        outline: none;
-        margin-left: 0.65%;
-        width: 40%;
-        padding: 0.11%;
-        border-radius: 1px; }
-      #businessEditPage #businessEditPage-wrapper #profileHeader-contain .profileHeader-search button {
-        margin-left: -3%;
-        height: 1.73em;
-        border-radius: 0 2px 2px 0;
-        background-color: #9DDCDC;
-        color: #FFF4E1;
-        border-style: none;
-        outline: none; }
-#businessEditPage li {
-  list-style: none; }
-#businessEditPage .businessHours-hours {
-  position: relative;
-  left: -15%; }
-#businessEditPage .businessBio {
-  width: 80%;
-  height: 15em; }
-
 @media only screen and (min-width: 480px) and (max-width: 1020px) {
   #businessInfoWrap {
     width: 100%;
@@ -280,9 +75,9 @@ table {
             height: 1.5em;
             border-style: none;
             outline: none;
-            margin-left: .65%;
+            margin-left: 0.65%;
             width: 40%;
-            padding: .11%;
+            padding: 0.11%;
             border-radius: 1px;
             background-color: #EEE; }
           #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search button {
@@ -345,7 +140,7 @@ table {
           margin: 2% 10%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
             height: 300px;
-            margin: 0 0 5% 0; }
+            margin: 0 0 5%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
             margin: 2%;
             width: 100%; }
@@ -367,12 +162,19 @@ table {
               display: inline-block;
               width: 95%; }
             #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
-              padding: 0; } }
+              padding: 0; }
+    #businessInfoWrap #qaSectionContainer #qaSectionWrap {
+      margin: 5% 10%;
+      display: inline-block; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
+        margin: 5%; } }
 @media only screen and (max-width: 480px) {
+  #businessInfoWrap li {
+    list-style: none; }
   #businessInfoWrap #headerNavBar .logo {
     display: block;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
-    margin: 0%;
+    margin: 0;
     padding: 1%; }
     #businessInfoWrap #headerNavBar .logo #pearlH1 {
       font-size: 3em;
@@ -386,7 +188,7 @@ table {
       width: 11%; }
     #businessInfoWrap #headerNavBar .logo .dropdownMenu {
       position: absolute;
-      top: 1%;
+      top: .5%;
       right: 5%; }
       #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn {
         background-color: white;
@@ -403,10 +205,10 @@ table {
       #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
         position: absolute;
         background-color: #9DDCDC;
-        right: 0%;
+        right: 0;
         text-align: right;
         padding: 15% 30%;
-        box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
+        box-shadow: 1px 5px 10px 0 rgba(42, 119, 119, 0.5);
         border-radius: 2px;
         z-index: 2; }
         #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
@@ -420,7 +222,6 @@ table {
           margin-bottom: 10%;
           text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
   #businessInfoWrap #profileWrapper {
-    list-decoration: none;
     font-family: Roboto, sans-serif;
     margin: auto;
     width: 100%; }
@@ -445,72 +246,12 @@ table {
       position: relative;
       color: #9E9E9E;
       display: block;
-      margin: 5% auto; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionHead {
-        display: block;
-        width: 80%;
-        background-color: #EEE;
-        outline: none;
-        border: none;
-        margin: 0 auto;
-        font-size: 1.25em;
-        padding: 3%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #askButton {
-        display: block;
-        border-radius: 2px;
-        background-color: #E67A7A;
-        color: #FFF4E1;
-        border-style: none;
-        outline: none;
-        margin: 0 auto;
-        width: 86%;
-        font-size: 1em;
-        padding: 1%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
-        padding: 5% 10%; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain {
-        position: relative;
-        display: block;
-        margin: auto;
-        margin-top: 8%;
-        background-color: #EEE;
-        width: 80%;
-        padding: 3%;
-        color: #9E9E9E; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain .newPost-post {
-          margin: auto;
-          font-size: 1.25em;
-          padding: 3% 0; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain .newPost-post-delete {
-          position: relative;
-          display: block;
-          float: right;
-          font-size: .7em; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingPostsContain #answerButton {
-          position: relative;
-          display: block;
-          float: right;
-          outline: none;
-          border: none;
-          background-color: #EEE;
-          font-size: 1.05em;
-          color: #E67A7A; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #answerInput {
-        background-color: #E0E0E0;
-        width: 100%;
-        padding: -3%;
-        border: none;
-        outline: none;
-        font-size: 1.1em; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #existingAnswersContain {
-        background-color: #E0E0E0;
-        width: 100%;
-        padding: 0 -3%; }
+      margin: 0 auto; }
       #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
         margin: 2% 10%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
           height: 300px;
-          margin: 0 0 5% 0; }
+          margin: 0 0 5%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
           margin: 2%;
           width: 100%; }
@@ -522,7 +263,8 @@ table {
             margin: 1%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group .col-sm-8 {
             float: none;
-            display: inline-block; }
+            display: inline-block;
+            width: 100%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapOD {
             float: none;
             display: inline-block;
@@ -531,7 +273,109 @@ table {
             display: inline-block;
             width: 95%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
-            padding: 0; } }
+            padding: 0; }
+            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn #get_directions {
+              display: block;
+              border-radius: 2px;
+              background-color: #E67A7A;
+              color: #FFF4E1;
+              border-style: none;
+              outline: none;
+              margin: 0 auto;
+              font-size: 2em;
+              padding: 5%;
+              font-weight: 700; }
+  #businessInfoWrap #qaSectionContainer #qaSectionWrap {
+    margin: 15% 10%;
+    display: block; }
+    #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
+      margin: 5%; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_question {
+        display: block;
+        border-radius: 2px;
+        background-color: white;
+        color: #2a7777;
+        border-style: none;
+        border-bottom: 1px solid #9DDCDC;
+        outline: none;
+        margin: 0 auto;
+        font-size: 1em;
+        padding: 5%;
+        width: 90%; }
+      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_button {
+        display: block;
+        border-radius: 2px;
+        background-color: #E67A7A;
+        color: #FFF4E1;
+        border-style: none;
+        outline: none;
+        margin: 5% auto;
+        font-size: 2em;
+        font-weight: 700;
+        padding: 3%;
+        float: left;
+        width: 100%;
+        text-align: left; }
+  #businessInfoWrap #qaSectionContainer #qaResponses {
+    margin-bottom: 50%; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .question_header {
+      font-family: "Roboto", sans-serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: #E67A7A;
+      margin: 5% 5%;
+      padding-top: 10%; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .author {
+      font-size: 12px; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader {
+      color: #2a7777;
+      font-family: "Roboto", sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      margin: 0% 10% 10% 15%;
+      padding: 2% 0% 0 10%;
+      text-align: right;
+      border-top: 1px dotted #E67A7A; }
+      #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader .created_at {
+        position: absolute;
+        left: 0%;
+        width: 20%;
+        font-size: 10px;
+        line-height: 1.5;
+        letter-spacing: .1px; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions #reply_button {
+      display: block;
+      border-radius: 2px;
+      background-color: #3aa2a2;
+      color: #FFF4E1;
+      border-style: none;
+      outline: none;
+      margin: 5% auto;
+      font-size: 2em;
+      font-weight: 700;
+      padding: 2%;
+      width: 70%;
+      text-align: right; }
+  #businessInfoWrap #bottomWrapper {
+    height: 3em;
+    position: fixed;
+    bottom: 0;
+    width: 400px;
+    background-color: #E0E0E0;
+    padding: 2% 2% 3% 0%;
+    margin-top: 10%;
+    width: 100%; }
+    #businessInfoWrap #bottomWrapper a {
+      text-decoration: none; }
+      #businessInfoWrap #bottomWrapper a .fa {
+        display: inline-block;
+        font-size: 2.6em;
+        padding: 2% 12% 5% 12%;
+        color: #3aa2a2; }
+      #businessInfoWrap #bottomWrapper a:active {
+        text-decoration: none; }
+      #businessInfoWrap #bottomWrapper a:visited {
+        text-decoration: none; } }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
@@ -1013,6 +857,8 @@ select:-webkit-autofill:focus {
         font-family: "Roboto", sans-serif;
         border: 1px solid #9DDCDC;
         border-radius: 2px; }
+    #signUp .signUpForm #signUpZipcode {
+      margin-bottom: 20%; }
     #signUp .signUpForm .submit {
       background: #E67A7A;
       display: block;
@@ -1117,8 +963,8 @@ select:-webkit-autofill:focus {
   #dashboard .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #dashboard .ngDashboard .biz {
-      border: 2px solid #9DDCDC;
-      border-radius: 7px;
+      border: 4px solid #E67A7A;
+      border-radius: 2px;
       padding: 5%;
       margin: 5% 5%;
       display: block;
@@ -1262,7 +1108,7 @@ select:-webkit-autofill:focus {
     font-family: "Roboto", sans-serif; }
     #dashboard .ngDashboard .biz {
       border: 4px solid #E67A7A;
-      border-radius: 7px;
+      border-radius: 2px;
       padding: 5%;
       margin: 5% 5%;
       display: block;
@@ -1325,7 +1171,7 @@ select:-webkit-autofill:focus {
         text-align: right;
         padding: 15% 30%;
         box-shadow: 1px 5px 10px 0px rgba(42, 119, 119, 0.5);
-        border-radius: 5px; }
+        border-radius: 2px; }
         #dashboard #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
           font-family: "Arimo", sans-serif;
           font-size: 2em;
@@ -1336,6 +1182,39 @@ select:-webkit-autofill:focus {
           line-height: 1.7;
           margin-bottom: 10%;
           text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
+  #dashboard #mainDashboard #bottomWrapper {
+    height: 3.5em;
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(#eee, #dedede);
+    padding: 2% 2% 3% 0%;
+    margin-top: 10%;
+    width: 100%;
+    box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.5); }
+    #dashboard #mainDashboard #bottomWrapper a {
+      text-decoration: none; }
+      #dashboard #mainDashboard #bottomWrapper a .fa {
+        display: inline-block;
+        font-size: 2.6em;
+        padding: 2% 12% 5% 12%;
+        color: #3aa2a2;
+        text-shadow: 0px 1px 1px #FFF4E1; }
+      #dashboard #mainDashboard #bottomWrapper a:active {
+        text-decoration: none; }
+      #dashboard #mainDashboard #bottomWrapper a:visited {
+        text-decoration: none; }
+  #dashboard #mainDashboard .userResults {
+    margin: 0 5%; }
+    #dashboard #mainDashboard .userResults h3 {
+      color: #9DDCDC;
+      font-family: "Arvo", serif;
+      margin: 6% 0;
+      font-size: 1.5em;
+      letter-spacing: .5px; }
+      #dashboard #mainDashboard .userResults h3 #dash_zip {
+        font-size: 1.2em;
+        color: #E67A7A;
+        letter-spacing: 2px; }
   #dashboard #mainDashboard .profileHeader {
     font-family: "Arvo", serif;
     color: #E67A7A;
@@ -1431,8 +1310,7 @@ select:-webkit-autofill:focus {
         color: #9DDCDC; }
 
   .options {
-    font-family: "Roboto", sans-serif;
-    margin: 3% 5%; }
+    font-family: "Roboto", sans-serif; }
     .options #discover #liDiscover {
       margin: 1% 2%;
       display: inline-block;
@@ -1464,35 +1342,39 @@ select:-webkit-autofill:focus {
       letter-spacing: 1.5px; }
 
   .ngDashboard {
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20%; }
     .ngDashboard .biz {
-      border: 2px solid #9DDCDC;
-      border-radius: 7px;
-      padding: 5%;
-      margin: 5% 5%;
+      border: 1px solid #E67A7A;
+      border-radius: 2px;
+      padding: 5% 2% 5% 5%;
+      margin: 4%;
       display: block;
       box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27); }
       .ngDashboard .biz #chevron {
         margin: 1%;
-        color: #9E9E9E;
+        color: #E67A7A;
         float: right; }
       .ngDashboard .biz img {
         width: 10%; }
       .ngDashboard .biz #bizName {
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: "Roboto", sans-serif;
-        letter-spacing: 1.5px;
+        letter-spacing: 2px;
         color: #9E9E9E; }
       .ngDashboard .biz #bizOwner {
-        font-size: 1.2em;
+        font-size: 1em;
         letter-spacing: 1.5px;
-        color: #9E9E9E; }
+        color: #9E9E9E;
+        margin: 3% 0; }
       .ngDashboard .biz #bizInfo {
         font-size: 1em;
-        color: #9E9E9E; }
+        color: #9E9E9E;
+        margin: 3%; }
         .ngDashboard .biz #bizInfo #yelp {
           margin: 1%;
-          color: #E67A7A; } }
+          color: #E67A7A;
+          float: right; } }
 @media only screen and (max-width: 480px) {
   #matches #headerNavBar .logo {
     display: block;
@@ -1551,7 +1433,20 @@ select:-webkit-autofill:focus {
           text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
   #matches #mainDashboard {
     position: absolute;
-    top: 10%; }
+    top: 10%;
+    width: 100%;
+    margin-bottom: 20%; }
+    #matches #mainDashboard #loading {
+      color: #9DDCDC;
+      margin: 5%;
+      display: block;
+      letter-spacing: 1.5px;
+      font-family: "Roboto", sans-serif;
+      background: #FFF4E1;
+      border: 1px solid #9DDCDC;
+      font-size: 1.25em;
+      border-radius: 2px;
+      padding: 2% 5%; }
     #matches #mainDashboard .profileHeader {
       font-family: "Arvo", serif;
       color: #E67A7A;
@@ -1582,13 +1477,41 @@ select:-webkit-autofill:focus {
         right: 5%;
         position: absolute;
         bottom: 3%; }
+    #matches #mainDashboard #bottomWrapper {
+      height: 3em;
+      position: fixed;
+      bottom: 0;
+      background-color: #eee;
+      padding: 2% 2% 3% 0%;
+      margin-top: 10%;
+      width: 100%;
+      z-index: 5; }
+      #matches #mainDashboard #bottomWrapper a {
+        text-decoration: none; }
+        #matches #mainDashboard #bottomWrapper a .fa {
+          display: inline-block;
+          font-size: 2.6em;
+          padding: 2% 12% 5% 12%;
+          color: #3aa2a2; }
+        #matches #mainDashboard #bottomWrapper a:active {
+          text-decoration: none; }
+        #matches #mainDashboard #bottomWrapper a:visited {
+          text-decoration: none; }
+    #matches #mainDashboard .userResults {
+      margin: 0 5%; }
+      #matches #mainDashboard .userResults h3 {
+        color: #9DDCDC;
+        font-family: "Arvo", serif;
+        margin: 2% 0;
+        font-size: 1.5em;
+        letter-spacing: .5px; }
   #matches .ngDashboard {
     font-family: "Roboto", sans-serif; }
     #matches .ngDashboard .match {
-      border: 4px solid #E67A7A;
+      border: 1px solid #E67A7A;
       border-radius: 2px;
-      padding: 5%;
-      margin: 5%;
+      padding: 5% 2% 5% 5%;
+      margin: 4%;
       display: block;
       box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.27);
       position: relative; }
@@ -1597,18 +1520,21 @@ select:-webkit-autofill:focus {
         color: #E67A7A;
         float: right; }
       #matches .ngDashboard .match #matchName {
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: "Roboto", sans-serif;
-        letter-spacing: 1.5px; }
+        letter-spacing: 2px;
+        color: #9E9E9E; }
       #matches .ngDashboard .match #matchOwner {
-        font-size: 1.2em;
-        letter-spacing: 1.5px; }
+        font-size: 1em;
+        letter-spacing: 1.5px;
+        color: #9E9E9E;
+        margin: 3% 0; }
       #matches .ngDashboard .match #matchInfo {
         font-size: 1em; }
         #matches .ngDashboard .match #matchInfo .phone {
           text-decoration: none;
           color: #2a7777; }
-        #matches .ngDashboard .match #matchInfo .fa {
+        #matches .ngDashboard .match #matchInfo .badges {
           color: #9DDCDC;
           font-size: 2em; }
         #matches .ngDashboard .match #matchInfo #yelp {
@@ -1642,7 +1568,8 @@ select:-webkit-autofill:focus {
     color: #E67A7A;
     text-align: left;
     font-size: 2em;
-    padding: 5%; }
+    padding: 3%;
+    margin: 4% 2%; }
   #consumerQuestionnaire .checkBoxForm {
     display: block;
     font-family: "Roboto", sans-serif; }
@@ -1681,7 +1608,10 @@ select:-webkit-autofill:focus {
       margin: 1% auto;
       cursor: pointer;
       letter-spacing: 1.5px; } }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 480px) {
+  input[type="checkbox"] {
+    display: none; }
+
   #headerNavBar .logo {
     display: block;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
@@ -1752,49 +1682,61 @@ select:-webkit-autofill:focus {
       top: 0;
       margin: -65% 0%;
       z-index: -1; }
-  #signUp .signUpWrap {
-    margin: 5% 0 0; }
-    #signUp .signUpWrap .checkBoxWrap {
-      padding-bottom: 3%;
-      margin: 12% 1%;
-      border-radius: 5%; }
-      #signUp .signUpWrap .checkBoxWrap h2 {
-        background: #E67A7A;
-        display: block;
-        font-family: "Roboto", sans-serif;
-        color: white;
-        text-align: left;
-        font-size: 2em;
-        padding: 5%; }
-    #signUp .signUpWrap .checkBoxForm {
+  #signUp .checkBoxWrap {
+    margin: 1%;
+    border-radius: 5%; }
+    #signUp .checkBoxWrap #matters_toyou {
+      background: #E67A7A;
       display: block;
       font-family: "Roboto", sans-serif;
-      font-size: 1.3em;
-      color: #9E9E9E; }
-    #signUp .signUpWrap ul {
-      margin: 2%; }
-    #signUp .signUpWrap .signUpInput {
-      width: 90%;
-      display: block;
-      font-size: 1.5em;
-      border: none;
-      border-bottom: 1px solid #9DDCDC;
-      padding: 1%;
-      line-height: 1.5em;
-      margin: 4%; }
-      #signUp .signUpWrap .signUpInput:focus {
-        outline: none; }
-    #signUp .signUpWrap label, #signUp .signUpWrap input {
-      cursor: pointer;
-      cursor: hand; }
-    #signUp .signUpWrap .black {
-      color: black; }
-    #signUp .signUpWrap li.black {
-      color: black; }
-    #signUp .signUpWrap .inputCheckbox {
-      margin: 5% 1%;
-      display: none;
-      padding: 5%; }
+      color: white;
+      text-align: left;
+      font-size: 2em;
+      padding: 3%;
+      margin: 2% 0%; }
+  #signUp .checkBoxForm {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    color: #9E9E9E; }
+  #signUp ul {
+    margin: 2%; }
+    #signUp ul li {
+      padding: 2%;
+      margin: 2px;
+      border-radius: 5px;
+      letter-spacing: .2px;
+      vertical-align: super; }
+    #signUp ul .survey_opts {
+      background-color: white; }
+      #signUp ul .survey_opts img {
+        vertical-align: middle;
+        margin: 0 3%; }
+    #signUp ul .checked {
+      background-color: #eee;
+      color: #2a7777; }
+  #signUp .signUpInput {
+    width: 90%;
+    display: block;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid #9DDCDC;
+    padding: 1%;
+    line-height: 1.5em;
+    margin: 4%; }
+    #signUp .signUpInput:focus {
+      outline: none; }
+  #signUp label, #signUp input {
+    cursor: pointer;
+    cursor: hand; }
+  #signUp .black {
+    color: black; }
+  #signUp li.black {
+    color: black; }
+  #signUp .inputCheckbox {
+    margin: 5% 1%;
+    display: none;
+    padding: 5%; }
   #signUp .claimBus {
     color: #E67A7A;
     margin: 5% 2% 0%;
@@ -1805,8 +1747,8 @@ select:-webkit-autofill:focus {
     font-family: "Roboto", sans-serif;
     color: white;
     text-align: center;
-    font-size: 1.5em;
-    padding: 5%;
+    font-size: 2em;
+    padding: 4%;
     width: 100%;
     border: none;
     margin: 1% auto;
@@ -2305,7 +2247,109 @@ select:-webkit-autofill:focus {
         font-size: 1em; }
         #bus_edit_profile .ngDashboard .biz #bizInfo #yelp {
           margin: 1%;
-          color: #E67A7A; } }
+          color: #E67A7A; }
+  #bus_edit_profile #editPatch {
+    background: #E67A7A;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding: 5%;
+    width: 100%;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 700; } }
+@media only screen and (max-width: 480px) {
+  #landingPage {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Arimo", sans-serif; }
+    #landingPage .landingWrap {
+      position: relative; }
+      #landingPage .landingWrap #existing_user {
+        position: absolute;
+        width: 100%; }
+        #landingPage .landingWrap #existing_user .get_started {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          z-index: 5;
+          background: white; }
+          #landingPage .landingWrap #existing_user .get_started #login {
+            background: #E67A7A;
+            color: white;
+            border: none;
+            padding: 5% 20%;
+            font-size: 1.5em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            display: block;
+            text-decoration: none; }
+          #landingPage .landingWrap #existing_user .get_started #signup {
+            color: #9E9E9E;
+            border: none;
+            padding: 5% 20%;
+            font-size: 1.5em;
+            font-weight: 500;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            display: block;
+            text-decoration: none; }
+        #landingPage .landingWrap #existing_user .signin_login .home_pearl {
+          font-family: "Arvo", serif;
+          color: #E67A7A;
+          text-align: center;
+          font-size: 3em;
+          padding: 5% 0;
+          box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          letter-spacing: 2px;
+          text-shadow: 1px 1px white; }
+        #landingPage .landingWrap #existing_user .signin_login .home_h3 {
+          padding: 2% 25%;
+          line-height: 1.5;
+          font-size: 1.2em;
+          color: #3aa2a2;
+          font-family: "Fugaz One", cursive;
+          text-align: center;
+          letter-spacing: .5px;
+          text-shadow: 1px 1px white; }
+        #landingPage .landingWrap #existing_user .signin_login img {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          margin: -40% 0%;
+          z-index: -1; }
+      #landingPage .landingWrap #about_pearl {
+        width: 100%;
+        position: absolute;
+        margin: 50% 0 0;
+        padding-bottom: 40%; }
+        #landingPage .landingWrap #about_pearl .home_h3 {
+          margin: 10% auto 0;
+          padding: 5% 5% 0;
+          line-height: 1em;
+          font-size: 1.7em;
+          color: #3aa2a2; }
+        #landingPage .landingWrap #about_pearl .home_content {
+          margin: 5%;
+          color: #9E9E9E;
+          line-height: 1.5em;
+          font-size: 1.1em; }
+        #landingPage .landingWrap #about_pearl ul {
+          text-align: center; }
+          #landingPage .landingWrap #about_pearl ul .badgeContainer {
+            display: inline-block;
+            margin: 5% auto;
+            width: 30%; }
+            #landingPage .landingWrap #about_pearl ul .badgeContainer .badgeText {
+              margin: 5% 10%;
+              color: #9E9E9E; } }
 #searchOuterWrapper img {
   position: relative;
   left: 3.5%; }
@@ -2338,25 +2382,41 @@ select:-webkit-autofill:focus {
 #searchOuterWrapper #searchPageWrapper .findBusinesses {
   font-family: "Roboto", sans-serif;
   color: #9E9E9E;
-  letter-spacing: 2px; }
+  letter-spacing: 1.2px;
+  margin-bottom: 20%; }
   #searchOuterWrapper #searchPageWrapper .findBusinesses li {
     border: solid #E67A7A 1px;
     border-radius: 7px;
     margin: 3%;
     padding: 3%; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li a {
+      text-decoration: none; }
+      #searchOuterWrapper #searchPageWrapper .findBusinesses li a:visited {
+        text-decoration: none; }
+    #searchOuterWrapper #searchPageWrapper .findBusinesses li #bizName {
+      font-size: 1.2em;
+      letter-spacing: 1.5px; }
     #searchOuterWrapper #searchPageWrapper .findBusinesses li div {
       margin: 2% 0; }
     #searchOuterWrapper #searchPageWrapper .findBusinesses li #chevron {
       font-size: .5em;
       position: relative;
       float: right;
-      padding: 5% 1%; }
+      padding: 5% 1%;
+      color: #E67A7A; }
     #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp {
       font-size: .5em;
       position: relative;
       left: 78%;
       margin-top: 6%;
-      padding: 2%; }
+      padding: 2%;
+      color: #E67A7A; }
+      #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp:visited {
+        text-decoration: none; }
+      #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp .fa {
+        float: right;
+        font-size: 2em;
+        margin-right: 4%; }
 #searchOuterWrapper #searchPageWrapper #bottomWrapper {
   height: 3em;
   position: fixed;
@@ -2364,17 +2424,18 @@ select:-webkit-autofill:focus {
   width: 400px;
   background-color: #E0E0E0;
   padding: 2% 2% 3% 0%;
-  margin-top: 10%; }
-#searchOuterWrapper #searchPageWrapper a {
-  text-decoration: none; }
-  #searchOuterWrapper #searchPageWrapper a .fa {
-    display: inline-block;
-    font-size: 2.6em;
-    padding: 2% 12% 5% 12%;
-    color: #9E9E9E; }
-  #searchOuterWrapper #searchPageWrapper a:active {
+  margin-top: 10%;
+  width: 100%; }
+  #searchOuterWrapper #searchPageWrapper #bottomWrapper a {
     text-decoration: none; }
-  #searchOuterWrapper #searchPageWrapper a:visited {
-    text-decoration: none; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a .fa {
+      display: inline-block;
+      font-size: 2.6em;
+      padding: 2% 12% 5% 12%;
+      color: #3aa2a2; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a:active {
+      text-decoration: none; }
+    #searchOuterWrapper #searchPageWrapper #bottomWrapper a:visited {
+      text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */

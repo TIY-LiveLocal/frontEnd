@@ -9,9 +9,11 @@
                     <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
                 </button>
                 <div class="dropdownMenu-list" ng-show="dropDown">
-                    <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
-                    <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+                    <a class="dropdownMenu-list--item" href="#/you">Home</a>
+                    <a class="dropdownMenu-list--item" href="#/search">Search</a>
                     <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                    <a class="dropdownMenu-list--item" href="#/login">Logout</a>
+
                 </div>
 
             </div>
@@ -23,11 +25,11 @@
 
             <ul>
                 <li>
-                    <input id="bizNameHere" ng-model="bizNameInput" type="text" placeholder="Name of business"></input>
+                    <input id="bizNameHere" ng-model="bizNameInput" type="text" placeholder="name or business description"></input>
                 </li>
 
                 <li>
-                    <input id="bizAddressHere" type="text" placeholder="Business address"></input>
+                    <input id="bizAddressHere" type="text" placeholder="location"></input>
                 </li>
                 <li>
                     <button ng-click="seekBusiness()" id="bizSetupSearch">
@@ -37,7 +39,6 @@
             </ul>
 
         </div>
-
 
         <!--business listings modal-->
 
@@ -62,15 +63,15 @@
         </ul>
 
         <footer id="bottomWrapper">
-            <a href="#/dashboard">
+            <a href="#/discover">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
             </a>
 
-            <a href="#/matches">
+            <a href="#/you">
                 <i class="fa fa-home" aria-hidden="true"></i>
             </a>
 
-            <a href="#/business_search">
+            <a href="#/search">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </a>
         </footer>

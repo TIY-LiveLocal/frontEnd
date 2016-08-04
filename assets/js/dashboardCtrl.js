@@ -1,14 +1,16 @@
 app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($scope, $location, dbFactory){
 
-  getYelp();
 
-  function getYelp(){
-    dbFactory.getYelp()
+
+  callOne();
+
+  function callOne(){
+    dbFactory.callOne()
       .then(function(response){
         console.log(response);
         $scope.businesses = response.data;
-        $scope.username = response.config.headers.Authorization;
-
+        $scope.firstname = localStorage.getItem('firstname');
+        $scope.user_zipcode = localStorage.getItem('user_zipcode');
 
         //click & get index of clicked dataThang
           $scope.logID = function(){
@@ -32,6 +34,7 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
           localStorage.setItem('username', vm.user_id);
           localStorage.setItem('longitude',vm.location[1]);
           localStorage.setItem('latitude',vm.location[0]);
+          localStorage.setItem('id',vm.id);
 
         //redirect user to business profile dashboard page
             $location.path('/business');

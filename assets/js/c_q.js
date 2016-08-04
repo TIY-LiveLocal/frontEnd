@@ -1,8 +1,8 @@
 app.controller('cqController', ['$http', '$scope','$location',
  function($http, $scope,$location) {
 
-   //nav bar toggle
-     $scope.dropDown = false;
+//nav bar toggle
+  $scope.dropDown = false;
 
   $scope.hiring = false;
   $scope.glutFree = false;
@@ -12,58 +12,13 @@ app.controller('cqController', ['$http', '$scope','$location',
   $scope.localFood = false;
   $scope.minorityOwned = false;
   $scope.petFriend = false;
-  $scope.artCrafts = false;
+  $scope.artsCrafts = false;
   $scope.charNonprof = false;
   $scope.sustain = false;
   $scope.veganPeta = false;
   $scope.claimBusiness = false;
 
-  // $('li').click(function(){
-  //   $(this).css('color','black');
-  // });
-
-  $('li').click(function(){
-  $(this).addClass('black');
-});
-
-  // //////  below doesn't seem to work  //////////////
-  // $( "li" ).toggleClass(function() {
-  //   if ( $(this) parent().is("signUpForm") ) {
-  //     return "black";
-  //   } else {
-  //     return "signUpForm";
-  //   }
-  // });
-  // ////////////////////
-  // function textColorToggle() {
-  //     var color = document.getElementById('li').style.color;
-  //     if (color == "#9E9E9E")
-  //         document.getElementById('li').style.color="black";
-  //     else
-  //         document.getElementById('li').style.color="#9E9E9E";
-  // }
-  // document.getElementById('li).onclick = function(e){
-  //     textColorToggle();// call the function
-  // };
-  // /////////////////
-
 $scope.clicked = function(){
-// //////////////////////
-  // $('.checkBox').click(function() {
-  //     $(this).toggleClass('signUpFormClicked');
-  //     $(this).toggleClass('signUpForm');
-  // });
-  // //////////////////////
-
-    // if ($scope.claimBusiness === false){
-    //   $location.path('/dashboard');
-    // } else{
-    //   $location.path("/business_search");
-    // }
-
-
-      $location.path('/dashboard');
-
 
   console.log($scope.claimBusiness);
 
@@ -76,7 +31,7 @@ $scope.clicked = function(){
     localFood : $scope.localFood,
     minorityOwned : $scope.minorityOwned,
     petFriend : $scope.petFriend,
-    artCrafts : $scope.artCrafts,
+    artsCrafts : $scope.artsCrafts,
     charNonprof : $scope.charNonprof,
     sustain : $scope.sustain,
     veganPeta : $scope.veganPeta
@@ -89,14 +44,65 @@ $scope.clicked = function(){
   $http({
     method: 'POST',
     url: "https://livelocalrails.herokuapp.com/surveys",
-    // url: "https://62d39126.ngrok.io/surveys",
     data:data,
     headers:{'Authorization': token}
   }).then(function success(response){
     console.log(response);
+    $location.path('/you');
+  }, function error(response){
+    console.log(response);
   });
 
 };
+
+  $scope.check_hiring = false;
+  $scope.checkedHiring = function(){
+    $scope.check_hiring = !$scope.check_hiring;
+  };
+  $scope.check_glutFree = false;
+  $scope.checkedGlutFree = function(){
+    $scope.check_glutFree = !$scope.check_glutFree;
+  };
+  $scope.check_musicians = false;
+  $scope.checkedMusic = function(){
+    $scope.check_musicians = !$scope.check_musicians;
+  };
+  $scope.check_lgbt = false;
+  $scope.checkedLgbt = function(){
+    $scope.check_lgbt = !$scope.check_lgbt;
+  };
+  $scope.check_localFood = false;
+  $scope.checkedFood = function(){
+    $scope.check_localFood = !$scope.check_localFood;
+  };
+  $scope.check_minorityOwned = false;
+  $scope.checkedMinOwned = function(){
+    $scope.check_minorityOwned = !$scope.check_minorityOwned;
+  };
+  $scope.check_livWage = false;
+  $scope.checkedWage = function(){
+    $scope.check_livWage = !$scope.check_livWage;
+  };
+  $scope.check_petFriend = false;
+  $scope.checkedPets = function(){
+    $scope.check_petFriend = !$scope.check_petFriend;
+  };
+  $scope.check_artsCrafts = false;
+  $scope.checkedArtsCrafts = function(){
+    $scope.check_artsCrafts = !$scope.check_artsCrafts;
+  };
+  $scope.check_charNonProf = false;
+  $scope.checkedNonProf = function(){
+    $scope.check_charNonProf = !$scope.check_charNonProf;
+  };
+  $scope.check_sustain = false;
+  $scope.checkedSustain = function(){
+    $scope.check_sustain = !$scope.check_sustain;
+  };
+  $scope.check_veganPeta = false;
+  $scope.checkedVeganPeta = function(){
+    $scope.check_veganPeta = !$scope.check_veganPeta;
+  };
 
 
 }]);

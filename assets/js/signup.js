@@ -42,10 +42,6 @@ app.controller('signupController', ['$http', '$scope', '$timeout', '$location', 
     $scope.passwordErr =  error.data.message.password;
     $scope.confirm_passwordErr =  error.data.message.confirm_password;
     $scope.zip_codeErr =  error.data.message.zip_code;
-    // alert(error.data.message.email);
-    // $scope.validate = {
-    //   email: error.data.message.email
-    // };
 
     console.log(error.data.message);
   });

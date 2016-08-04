@@ -46,6 +46,12 @@
         border-radius: 7px;
         margin: 3%;
         padding: 3%;
+        a{
+          text-decoration: none;
+          &:visited{
+            text-decoration: none;
+          }
+        }
         #bizName{
           font-size: 1.2em;
           letter-spacing: 1.5px;
@@ -58,6 +64,7 @@
           position: relative;
           float: right;
           padding: 5% 1%;
+          color: $red;
         }
         #yelp{
           font-size: .5em;
@@ -65,7 +72,15 @@
           left: 78%;
           margin-top: 6%;
           padding: 2%;
-
+          color: $red;
+          &:visited{
+            text-decoration: none;
+          }
+          .fa{
+            float: right;
+            font-size: 2em;
+            margin-right: 4%;
+          }
         }
       }
     }
@@ -77,20 +92,22 @@
       background-color: #E0E0E0;
       padding: 2% 2% 3% 0%;
       margin-top: 10%;
-    }
-    a{
-      text-decoration: none;
-      .fa{
-        display: inline-block;
-        font-size: 2.6em;
-        padding: 2% 12% 5% 12%;
-        color: #9E9E9E;
-      }
-      &:active{
+      width: 100%;
+
+      a{
         text-decoration: none;
-      }
-      &:visited{
-        text-decoration: none;
+        .fa{
+          display: inline-block;
+          font-size: 2.6em;
+          padding: 2% 12% 5% 12%;
+          color: $medBlue;
+        }
+        &:active{
+          text-decoration: none;
+        }
+        &:visited{
+          text-decoration: none;
+        }
       }
     }
   }

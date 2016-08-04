@@ -8,7 +8,6 @@ li{
     .checkBoxWrap{
       width: 40%;
       margin: 5em auto;
-      // box-shadow: 5px 5px 35px 1px $darkGrey;
       padding-bottom: .5%;
     }
     h2{
@@ -17,14 +16,13 @@ li{
       color: $red;
       text-align: left;
       font-size: 2em;
-      padding: 5%;
+      padding: 3%;
+      margin: 4% 2%;
     }
 
     .checkBoxForm{
       display: block;
       font-family: $font4;
-      // font-size: 1.5em;
-      // color:$darkGrey;
 
 
       .signUpInput{
@@ -80,7 +78,10 @@ li{
   }
 }
 // MOBILE VIEW BELOW
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 480px) {
+  input[type="checkbox"]{
+    display: none;
+  }
   #headerNavBar{
         .logo{
           display: block;
@@ -160,10 +161,6 @@ li{
         letter-spacing: 2px;
       }
 
-      // .checkboxItems{
-      //   color:$darkGrey;
-      //   font-size: 1em;
-      // }
 
       img{
         width: 100%;
@@ -173,22 +170,20 @@ li{
         z-index: -1;
       }
     }
-    .signUpWrap{
-      margin: 5% 0 0;
     .checkBoxWrap{
-      padding-bottom: 3%;
-      margin: 12% 1%;
+      margin: 1%;
       border-radius: 5%;
 
-    h2{
-      background: $red;
-      display: block;
-      font-family: $font4;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      padding: 5%;
-    }
+      #matters_toyou{
+        background: $red;
+        display: block;
+        font-family: $font4;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        padding: 3%;
+        margin: 2% 0%;
+      }
     }
 
     .checkBoxForm{
@@ -199,6 +194,25 @@ li{
     }
     ul{
       margin: 2%;
+      li{
+        padding: 2%;
+        margin: 2px;
+        border-radius: 5px;
+        letter-spacing: .2px;
+        vertical-align: super;
+
+      }
+      .survey_opts{
+        background-color: white;
+        img{
+          vertical-align: middle;
+          margin: 0 3%;
+        }
+      }
+      .checked{
+        background-color: #eee;
+        color: $darkBlue;
+      }
     }
 
       .signUpInput{
@@ -218,6 +232,7 @@ li{
       label, input{
         cursor: pointer;
         cursor: hand;
+
       }
 
       .black{
@@ -233,7 +248,6 @@ li{
         display:none;
         padding: 5%;
       }
-      }
 
       .claimBus{
         color:$red;
@@ -247,8 +261,8 @@ li{
         font-family: $font4;
         color: white;
         text-align: center;
-        font-size: 1.5em;
-        padding: 5%;
+        font-size: 2em;
+        padding: 4%;
         width: 100%;
         border: none;
         margin: 1% auto;

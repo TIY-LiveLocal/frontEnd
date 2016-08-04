@@ -1,135 +1,131 @@
-
 <div id="businessInfoWrap" ng-controller="bizController as biz">
-  <header id=headerNavBar>
-    <div class="logo">
-      <h1 id="pearlH1">Pearl</h1>
-      <img src="assets/img/pearlLogo-1.svg" alt="" />
+    <header id=headerNavBar>
+        <div class="logo">
+            <h1 id="pearlH1">Pearl</h1>
+            <img src="assets/img/pearlLogo-1.svg" alt="" />
 
+            <div class="dropdownMenu">
+                <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                    <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+                </button>
+                <div class="dropdownMenu-list" ng-show="dropDown">
+                    <a class="dropdownMenu-list--item" href="#/you">Home</a>
+                    <a class="dropdownMenu-list--item" href="#/search">Search</a>
+                    <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                    <a class="dropdownMenu-list--item" href="#/login">Logout</a>
 
-      <div class="dropdownMenu">
-        <button ng-click="dropDown = !dropDown" class="dropdownbtn">
-          <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
-        </button>
-        <div class="dropdownMenu-list" ng-show="dropDown">
-            <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
-            <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
-            <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                </div>
+
+            </div>
         </div>
-
-      </div>
-    </div>
-  </header>
+    </header>
 
     <!--begin actual content-->
     <div id="profileWrapper">
-        <div id="actualBusinessProfile" ng-controller="bizController as biz">
-            <div class="content">
-                <h2 class="businessName">{{biz.data.name}}</h2>
-            </div>
-            <div id="businessInfo">
-                <li class="businessInfo">Location:
-                    <div class="uniqueInfo">
-                        {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}
-                    </div>
-                </li>
-                <li class="businessInfo">Phone Number:
-                    <div class="uniqueInfo">
-                        tel: {{biz.data.phone}}
-                    </div>
-                </li>
-            </div>
+
+        <div class="content">
+            <h2 class="businessName">{{biz.data.name}}</h2>
+        </div>
+        <div id="businessInfo">
+            <li class="businessInfo">Location:
+                <div class="uniqueInfo">
+                    {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}
+                </div>
+            </li>
+            <li class="businessInfo">Phone Number:
+                <div class="uniqueInfo">
+                    <a href=”tel:+{{biz.data.phone}}″>{{biz.data.phone}}</a>
+                </div>
+            </li>
         </div>
 
-            <!-- <p><button ng-click="getDirections()">Locate</button></p> -->
-            <div id="out"></div>
-            <div id="map" ng-controller="mapCtrl">
-                <!-- <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-                    <p ng-model="coords"> -->
-                <ui-gmap-google-map control="map.control" center="map.center" zoom="map.zoom">
-                    <marker coords="marker.center"></marker>
-                </ui-gmap-google-map>
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <label id="mapOD" for="origin" class="col-sm-2 control-label">Origin</label>
-                        <div class="col-sm-8">
-                            <input type="text" id="origin" class="form-control" ng-model="directions.origin" />
+        <!-- GOOGLE MAPS -->
+        <div class="qaWrap">
+            <div id="qASectionContain" ng-controller="mapCtrl">
+
+                <div id="map">
+
+                    <ui-gmap-google-map control="map.control" center="map.center" zoom="map.zoom">
+                        <marker coords="marker.center"></marker>
+                    </ui-gmap-google-map>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label id="mapOD" for="origin" class="col-sm-2 control-label">Origin</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="origin" class="form-control" ng-model="directions.origin" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label id="mapOD" for="destination" class="col-sm-2 control-label">Destination</label>
-                        <div class="col-sm-8">
-                            <input type="text" id="destination" class="form-control" ng-model="directions.destination" />
+                        <div class="form-group">
+                            <label id="mapOD" for="destination" class="col-sm-2 control-label">Destination</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="destination" class="form-control" ng-model="directions.destination" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
-                            <button class="btn btn-primary" ng-click="getGMap()">Get Directions</button>
+                        <div class="form-group">
+                            <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
+                                <button id="get_directions" class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-                <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
-                <!--  </p> -->
+                    </form>
+                    <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
+                </div>
             </div>
-
-            <div class="qaWrap">
-                <!-- <div class="content"> -->
-
-                <div id="qASectionContain" ng-controller="qCtrl">
-                    <input id="qASectionHead" ng-model="newPost" placeholder="ask this business a question">
-                    </input>
-                    <button ng-click="askButton()" id="askButton">ask
-                      </button>
-
-                    <ul>
-                      <div id="existingPostsContain">
-                        <li class="newPost-post" ng-repeat="post in posts">
-                            {{post.content}}
-                            <span class="newPost-post-delete" ng-click="deleteThing($index)">delete
-                            </span>
-                            <!--sub ul-->
-                            <ul ng-controller="answerCtrl">
-                              <input id="answerInput" ng-model="newAnswer" placeholder="reply">
-                              </input>
-                                <button ng-click="answerButton()" id="answerButton">
-                                    reply
-                                </button>
-
-                                <div id="existingAnswersContain">
-                                <li class="newAnswer-answer" ng-repeat="answer in answers">
-                                    {{answer.aContent}}
-                                    <span class="newAnswer-answer-delete" ng-click="deleteThing($index)">delete
-                              </span>
-                                </li>
-                              </div>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                              <!-- <div class="form-group">
-                                <label id="mapOD" for="destination" class="col-sm-2 control-label">Destination</label>
-                                <div class="col-sm-8">
-                                  <input type="text" id="destination" class="form-control" ng-model="directions.destination" />
-                                </div>
-                              </div>
-                              <div class="form-group">
-                                <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
-                                  <button class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
-                                </div>
-                              </div>
-                            </form>
-                            <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
-                  <!  </p> -->
-                  </div>
-
-              </div>
-            <div id="previouslyPostedQA" ng-controller="loadQACtrl">
-                <div id="previouslyPostedQA-entries" ng-model="allPosts">
-                    <ul ng-repeat="ent in entries">
-                      <li>
-                        {{ent.eContent}}
-                      </li>
-                </div>
         </div>
     </div>
-  </div>
+    <!-- QUESTION / ANSWER SECTION -->
+    <div id="qaSectionContainer" ng-controller="qaCtrl">
+        <div id="qaSectionWrap">
+            <form>
+                <input id="ask_question" type="text" name="userQuestion" value="Question" ng-model="userQuestion" placeholder="ask this business a question">
+                <input id="ask_button" type="submit" name="button" value="Ask" ng-click="askButton()">
+            </form>
+            <!-- <div class="questionPost">
+          {{userQuestion}}
+
+        </div>
+        <div class="answerPost">
+          {{userAnswer}}
+        </div> -->
+        </div>
+        <div id="qaResponses">
+            <div class="GETquestions">
+                <!-- ng-repeat for GET /questions -->
+                <ul ng-repeat="q in questionGet">
+                    <p class="question_header">
+                        {{q.question.question_text}}
+                        <br>
+                        <span class="author">{{q.question.author}}</span>
+                    </p>
+
+                    <li ng-repeat="answer in q.answers">
+                        <p class="answer_subheader">
+
+                            <span class="created_at">{{answer.created_at | date: 'medium'}}</span> {{answer.answer_text}}
+                            <br>
+                            <span class="author">{{answer.author}}</span>
+                        </p>
+                    </li>
+                    <input id="reply_button" type="submit" name="button" value="Reply" ng-click="replyButton()">
+
+                </ul>
+                <!-- ng-repeat for GET /answers -->
+
+            </div>
+        </div>
+    </div>
+
+      <footer id="bottomWrapper">
+            <a href="#/discover">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </a>
+
+            <a href="#/you">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+
+            <a href="#/search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+    </footer>
+
 </div>

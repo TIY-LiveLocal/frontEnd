@@ -1,4 +1,9 @@
-app.controller('cqController', ['$http', '$scope','$location', function($http, $scope,$location) {
+app.controller('cqController', ['$http', '$scope','$location',
+ function($http, $scope,$location) {
+
+//nav bar toggle
+  $scope.dropDown = false;
+
   $scope.hiring = false;
   $scope.glutFree = false;
   $scope.musicians = false;
@@ -7,30 +12,15 @@ app.controller('cqController', ['$http', '$scope','$location', function($http, $
   $scope.localFood = false;
   $scope.minorityOwned = false;
   $scope.petFriend = false;
-  $scope.artCrafts = false;
+  $scope.artsCrafts = false;
   $scope.charNonprof = false;
   $scope.sustain = false;
   $scope.veganPeta = false;
   $scope.claimBusiness = false;
 
 $scope.clicked = function(){
-// //////////////////////
-  $('.checkBox').click(function() {
-      $(this).toggleClass('signUpFormClicked');
-      $(this).toggleClass('signUpForm');
-  });
-  // //////////////////////
-
-    if ($scope.claimBusiness === false){
-      $location.path('/dashboard');
-    } else{
-      $location.path("/business_search");
-    }
 
   console.log($scope.claimBusiness);
-
-
-
 
   data = {
     hiring : $scope.hiring,
@@ -41,7 +31,7 @@ $scope.clicked = function(){
     localFood : $scope.localFood,
     minorityOwned : $scope.minorityOwned,
     petFriend : $scope.petFriend,
-    artCrafts : $scope.artCrafts,
+    artsCrafts : $scope.artsCrafts,
     charNonprof : $scope.charNonprof,
     sustain : $scope.sustain,
     veganPeta : $scope.veganPeta
@@ -57,6 +47,9 @@ $scope.clicked = function(){
     data:data,
     headers:{'Authorization': token}
   }).then(function success(response){
+    console.log(response);
+    $location.path('/you');
+  }, function error(response){
     console.log(response);
   });
 

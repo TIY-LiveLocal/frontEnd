@@ -1,23 +1,23 @@
-<div id="businessInfoWrap" ng-controller="bizController as biz">
-  <header id=headerNavBar>
+<header id=headerNavBar>
     <div class="logo">
-      <h1 id="pearlH1">Pearl</h1>
-      <img src="assets/img/pearlLogo-1.svg" alt="" />
+        <h1 id="pearlH1"><a href="#/you">Pearl</a></h1>
+        <img src="assets/img/pearlLogo-1.svg" alt="" />
 
-      <div class="dropdownMenu">
-        <button ng-click="dropDown = !dropDown" class="dropdownbtn">
-          <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
-        </button>
-        <div class="dropdownMenu-list" ng-show="dropDown">
-            <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
-            <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
-            <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+        <div class="dropdownMenu">
+            <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+            </button>
+            <div class="dropdownMenu-list" ng-show="dropDown">
+                <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+                <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+                <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                <a class="dropdownMenu-list--item" href="#/logout">Logout</a>
+            </div>
+
         </div>
-
-      </div>
     </div>
-  </header>
-
+</header>
+<div id="businessInfoWrap" ng-controller="bizController as biz">
     <!--begin actual content-->
     <div id="profileWrapper">
 

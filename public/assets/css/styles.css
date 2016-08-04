@@ -117,64 +117,61 @@ table {
     #bottomWrapper a:visited {
       text-decoration: none; }
 
-@media only screen and (min-width: 480px) and (max-width: 1020px) {
+@media only screen and (max-width: 480px) {
   #businessInfoWrap {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    font-family: Roboto, sans-serif;
-    color: #9DDCDC; }
+    margin-top: 25%; }
     #businessInfoWrap li {
       list-style: none; }
-    #businessInfoWrap #profileHeader {
-      color: #9DDCDC;
-      width: 100%; }
-      #businessInfoWrap #profileHeader .pearlLogo {
+    #businessInfoWrap #headerNavBar .logo {
+      display: block;
+      box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+      margin: 0;
+      padding: 1%; }
+      #businessInfoWrap #headerNavBar .logo #pearlH1 {
+        font-size: 3em;
         display: inline-block;
-        position: relative;
-        width: 15%; }
-      #businessInfoWrap #profileHeader #profileHeader-contain {
-        position: relative;
-        margin: 1% 5%; }
-        #businessInfoWrap #profileHeader #profileHeader-contain .pearlLogo-text {
-          font-size: 3em;
-          font-family: "Arvo", serif;
-          display: inline-block;
-          position: relative;
-          padding-bottom: 2%; }
-        #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu {
-          display: inline-block;
-          float: right;
-          margin: 5%; }
-          #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu #hamburgerNav {
-            position: relative;
-            font-size: 3em; }
-        #businessInfoWrap #profileHeader #profileHeader-contain .dropdownMenu-list--item {
-          position: relative;
-          left: 25%;
-          display: none; }
-        #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search {
-          position: relative;
-          left: 40%;
-          font-size: 1.5em;
-          padding-bottom: 3%; }
-          #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search input {
-            height: 1.5em;
-            border-style: none;
-            outline: none;
-            margin-left: 0.65%;
-            width: 40%;
-            padding: 0.11%;
-            border-radius: 1px;
-            background-color: #EEE; }
-          #businessInfoWrap #profileHeader #profileHeader-contain .profileHeader-search button {
-            margin-left: -3%;
-            height: 1.73em;
-            border-radius: 0 2px 2px 0;
-            background-color: #E67A7A;
-            color: #FFF4E1;
-            border-style: none;
+        padding: 1% 1% 1% 4%;
+        color: #E67A7A;
+        letter-spacing: 2px;
+        font-family: "Arvo", serif;
+        cursor: pointer; }
+      #businessInfoWrap #headerNavBar .logo img {
+        width: 11%; }
+      #businessInfoWrap #headerNavBar .logo .dropdownMenu {
+        position: absolute;
+        top: .5%;
+        right: 5%; }
+        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn {
+          background-color: white;
+          border: none;
+          cursor: pointer;
+          font-size: 1em;
+          margin: 2%; }
+          #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
             outline: none; }
+          #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+            position: relative;
+            font-size: 3em;
+            color: #E67A7A; }
+        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+          position: absolute;
+          background-color: #9DDCDC;
+          right: 0;
+          text-align: right;
+          padding: 15% 30%;
+          box-shadow: 1px 5px 10px 0 rgba(42, 119, 119, 0.5);
+          border-radius: 2px;
+          z-index: 2; }
+          #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+            font-family: "Arimo", sans-serif;
+            font-size: 2em;
+            display: block;
+            text-decoration: none;
+            color: #E67A7A;
+            border-bottom: 1px dotted #E67A7A;
+            line-height: 1.7;
+            margin-bottom: 10%;
+            text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
     #businessInfoWrap #profileWrapper {
       font-family: Roboto, sans-serif;
       margin: auto;
@@ -201,28 +198,6 @@ table {
         color: #9E9E9E;
         display: block;
         margin: 0 auto; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionHead {
-          display: block;
-          width: 80%;
-          background-color: #EEE;
-          outline: none;
-          border: none;
-          margin: 0 auto;
-          font-size: 1.25em;
-          padding: 5% 3%; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain button {
-          display: block;
-          border-radius: 2px;
-          background-color: #E67A7A;
-          color: #FFF4E1;
-          border-style: none;
-          outline: none;
-          margin: 0 auto;
-          width: 86%;
-          font-size: 1em;
-          padding: 5%; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #qASectionContent {
-          padding: 5% 10%; }
         #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
           margin: 2% 10%; }
           #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
@@ -250,197 +225,104 @@ table {
               width: 95%; }
             #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
               padding: 0; }
+              #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn #get_directions {
+                display: block;
+                border-radius: 2px;
+                background-color: #E67A7A;
+                color: #FFF4E1;
+                border-style: none;
+                outline: none;
+                margin: 0 auto;
+                font-size: 2em;
+                padding: 5%;
+                font-weight: 700; }
     #businessInfoWrap #qaSectionContainer #qaSectionWrap {
-      margin: 5% 10%;
-      display: inline-block; }
+      margin: 15% 10%;
+      display: block; }
       #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
-        margin: 5%; } }
-@media only screen and (max-width: 480px) {
-  #businessInfoWrap li {
-    list-style: none; }
-  #businessInfoWrap #headerNavBar .logo {
-    display: block;
-    box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
-    margin: 0;
-    padding: 1%; }
-    #businessInfoWrap #headerNavBar .logo #pearlH1 {
-      font-size: 3em;
-      display: inline-block;
-      padding: 1% 1% 1% 4%;
-      color: #E67A7A;
-      letter-spacing: 2px;
-      font-family: "Arvo", serif;
-      cursor: pointer; }
-    #businessInfoWrap #headerNavBar .logo img {
-      width: 11%; }
-    #businessInfoWrap #headerNavBar .logo .dropdownMenu {
-      position: absolute;
-      top: .5%;
-      right: 5%; }
-      #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn {
-        background-color: white;
-        border: none;
-        cursor: pointer;
-        font-size: 1em;
-        margin: 2%; }
-        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
-          outline: none; }
-        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
-          position: relative;
-          font-size: 3em;
-          color: #E67A7A; }
-      #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
-        position: absolute;
-        background-color: #9DDCDC;
-        right: 0;
-        text-align: right;
-        padding: 15% 30%;
-        box-shadow: 1px 5px 10px 0 rgba(42, 119, 119, 0.5);
-        border-radius: 2px;
-        z-index: 2; }
-        #businessInfoWrap #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
-          font-family: "Arimo", sans-serif;
-          font-size: 2em;
+        margin: 5%; }
+        #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_question {
           display: block;
-          text-decoration: none;
-          color: #E67A7A;
-          border-bottom: 1px dotted #E67A7A;
-          line-height: 1.7;
-          margin-bottom: 10%;
-          text-shadow: 1px 1px rgba(42, 119, 119, 0.5); }
-  #businessInfoWrap #profileWrapper {
-    font-family: Roboto, sans-serif;
-    margin: auto;
-    width: 100%; }
-    #businessInfoWrap #profileWrapper .content .businessName {
-      font-family: Roboto, sans-serif;
-      letter-spacing: 2px;
-      font-size: 30px;
-      padding: 1%;
-      margin: 6%;
-      color: #9E9E9E;
-      position: relative; }
-    #businessInfoWrap #profileWrapper #businessInfo .businessInfo {
-      margin: 7.5%;
-      position: relative;
-      color: #9E9E9E;
-      letter-spacing: 1.5px;
-      font-size: 16px; }
-      #businessInfoWrap #profileWrapper #businessInfo .businessInfo .uniqueInfo {
-        font-size: 12px;
-        margin: 3% 0; }
-    #businessInfoWrap #profileWrapper .qaWrap #qASectionContain {
-      position: relative;
-      color: #9E9E9E;
+          border-radius: 2px;
+          background-color: white;
+          color: #2a7777;
+          border-style: none;
+          border-bottom: 1px solid #9DDCDC;
+          outline: none;
+          margin: 0 auto;
+          font-size: 1em;
+          padding: 5%;
+          width: 90%; }
+        #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_button {
+          display: block;
+          border-radius: 2px;
+          background-color: #E67A7A;
+          color: #FFF4E1;
+          border-style: none;
+          outline: none;
+          margin: 5% auto;
+          font-size: 2em;
+          font-weight: 700;
+          padding: 3%;
+          float: left;
+          width: 40%;
+          text-align: left;
+          position: absolute;
+          left: 0; }
+        #businessInfoWrap #qaSectionContainer #qaSectionWrap form #reply_button {
+          display: block;
+          border-radius: 2px;
+          background-color: #3aa2a2;
+          color: #FFF4E1;
+          border-style: none;
+          outline: none;
+          margin: 5% auto;
+          font-size: 2em;
+          font-weight: 700;
+          padding: 3%;
+          float: left;
+          width: 40%;
+          text-align: right;
+          position: absolute;
+          right: 0; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .question_header {
+      font-family: "Roboto", sans-serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: #E67A7A;
+      margin: 5% 5%;
+      padding-top: 10%; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .author {
+      font-size: 12px; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader {
+      color: #2a7777;
+      font-family: "Roboto", sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      margin: 0% 10% 10% 15%;
+      padding: 2% 0% 0 10%;
+      text-align: right;
+      border-top: 1px dotted #E67A7A; }
+      #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader .created_at {
+        position: absolute;
+        left: 0%;
+        width: 20%;
+        font-size: 10px;
+        line-height: 1.5;
+        letter-spacing: .1px; }
+    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions #reply_button {
       display: block;
-      margin: 0 auto; }
-      #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map {
-        margin: 2% 10%; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .angular-google-map-container {
-          height: 300px;
-          margin: 0 0 5%; }
-        #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group {
-          margin: 2%;
-          width: 100%; }
-          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group input {
-            border: none;
-            font-size: 16px;
-            font-family: "Roboto", sans-serif;
-            color: #E67A7A;
-            margin: 1%; }
-          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group .col-sm-8 {
-            float: none;
-            display: inline-block;
-            width: 100%; }
-          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapOD {
-            float: none;
-            display: inline-block;
-            font-size: 20px; }
-          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group button {
-            display: inline-block;
-            width: 95%; }
-          #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn {
-            padding: 0; }
-            #businessInfoWrap #profileWrapper .qaWrap #qASectionContain #map .form-horizontal .form-group #mapBtn #get_directions {
-              display: block;
-              border-radius: 2px;
-              background-color: #E67A7A;
-              color: #FFF4E1;
-              border-style: none;
-              outline: none;
-              margin: 0 auto;
-              font-size: 2em;
-              padding: 5%;
-              font-weight: 700; }
-  #businessInfoWrap #qaSectionContainer #qaSectionWrap {
-    margin: 15% 10%;
-    display: block; }
-    #businessInfoWrap #qaSectionContainer #qaSectionWrap form {
-      margin: 5%; }
-      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_question {
-        display: block;
-        border-radius: 2px;
-        background-color: white;
-        color: #2a7777;
-        border-style: none;
-        border-bottom: 1px solid #9DDCDC;
-        outline: none;
-        margin: 0 auto;
-        font-size: 1em;
-        padding: 5%;
-        width: 90%; }
-      #businessInfoWrap #qaSectionContainer #qaSectionWrap form #ask_button {
-        display: block;
-        border-radius: 2px;
-        background-color: #E67A7A;
-        color: #FFF4E1;
-        border-style: none;
-        outline: none;
-        margin: 5% auto;
-        font-size: 2em;
-        font-weight: 700;
-        padding: 3%;
-        float: left;
-        width: 100%;
-        text-align: left; }
-  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .question_header {
-    font-family: "Roboto", sans-serif;
-    font-size: 26px;
-    font-weight: 300;
-    color: #E67A7A;
-    margin: 5% 5%;
-    padding-top: 10%; }
-  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul .author {
-    font-size: 12px; }
-  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader {
-    color: #2a7777;
-    font-family: "Roboto", sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    margin: 0% 10% 10% 15%;
-    padding: 2% 0% 0 10%;
-    text-align: right;
-    border-top: 1px dotted #E67A7A; }
-    #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions ul li .answer_subheader .created_at {
-      position: absolute;
-      left: 0%;
-      width: 20%;
-      font-size: 10px;
-      line-height: 1.5;
-      letter-spacing: .1px; }
-  #businessInfoWrap #qaSectionContainer #qaResponses .GETquestions #reply_button {
-    display: block;
-    border-radius: 2px;
-    background-color: #3aa2a2;
-    color: #FFF4E1;
-    border-style: none;
-    outline: none;
-    margin: 5% auto;
-    font-size: 2em;
-    font-weight: 700;
-    padding: 2%;
-    width: 70%;
-    text-align: right; } }
+      border-radius: 2px;
+      background-color: #3aa2a2;
+      color: #FFF4E1;
+      border-style: none;
+      outline: none;
+      margin: 5% auto;
+      font-size: 2em;
+      font-weight: 700;
+      padding: 2%;
+      width: 70%;
+      text-align: right; } }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
@@ -709,141 +591,21 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   transition: background-color 5000s ease-in-out 0s; }
 
-@media only screen and (min-width: 1020px) {
-  #signUp .headerWrap {
-    display: block;
-    position: relative; }
-    #signUp .headerWrap h2 {
-      font-family: "Arvo", serif;
-      color: #E67A7A;
-      text-align: center;
-      font-size: 3em;
-      padding: 2% 0;
-      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      letter-spacing: 2px; }
-    #signUp .headerWrap img {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      margin: -65% 0%;
-      z-index: -1; }
-  #signUp .signUpWrap {
-    width: 40%;
-    margin: 3% auto;
-    padding-bottom: 1%;
-    background-color: white; }
-    #signUp .signUpWrap h2 {
-      background: #E67A7A;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      padding: 5%;
-      letter-spacing: 2px; }
-  #signUp .signUpForm {
-    display: block; }
-    #signUp .signUpForm .signUpInput {
-      width: 90%;
-      display: block;
-      font-size: 1.1em;
-      border: none;
-      border-bottom: 1px solid #9DDCDC;
-      padding: 1%;
-      margin: 4%;
-      letter-spacing: 1px; }
-      #signUp .signUpForm .signUpInput:focus {
-        outline: none; }
-    #signUp .signUpForm .submit {
-      background: #E67A7A;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: center;
-      font-size: 1.5em;
-      padding: 2%;
-      width: 90%;
-      border: none;
-      margin: 0 auto;
-      cursor: pointer;
-      letter-spacing: 1.5px; } }
-@media only screen and (min-width: 480px) and (max-width: 1020px) {
-  #signUp .headerWrap {
-    width: 100%;
-    display: block;
-    position: relative;
-    margin: 0; }
-    #signUp .headerWrap h2 {
-      font-family: "Arvo", serif;
-      color: #E67A7A;
-      text-align: center;
-      font-size: 3em;
-      padding: 2% 0;
-      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      letter-spacing: 2px; }
-    #signUp .headerWrap img {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      margin: -60% 0%;
-      z-index: -1; }
-  #signUp .signUpWrap {
-    padding-bottom: 3%;
-    margin: 12% 1%; }
-    #signUp .signUpWrap h2 {
-      background: #E67A7A;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      padding: 3%; }
-    #signUp .signUpWrap #signupMSG {
-      font-size: 20px;
-      color: #2a7777;
-      margin: 0 auto;
-      background: #FFF4E1;
-      width: 85%;
-      text-align: center;
-      padding: 1% 2%;
-      border: 1px solid #9DDCDC;
-      border-radius: 2px;
-      font-family: "Roboto", sans-serif;
-      display: none; }
-  #signUp .signUpForm {
-    display: block; }
-    #signUp .signUpForm .signUpInput {
-      width: 90%;
-      display: block;
-      font-size: 1em;
-      border: none;
-      border-bottom: 1px solid #9DDCDC;
-      padding: 1%;
-      line-height: 2em;
-      margin: 2% 4%; }
-      #signUp .signUpForm .signUpInput:focus {
-        outline: none; }
-      #signUp .signUpForm .signUpInput input {
-        font-size: 1.5em;
-        border: none; }
-    #signUp .signUpForm .submit {
-      background: #E67A7A;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: center;
-      font-size: 1.5em;
-      padding: 2%;
-      width: 90%;
-      border: none;
-      margin: 0 auto;
-      cursor: pointer;
-      letter-spacing: 1.5px; } }
+a {
+  outline: none;
+  text-decoration: none; }
+  a:visited {
+    text-decoration: none;
+    color: #E67A7A; }
+  a:active {
+    text-decoration: none;
+    color: #E67A7A; }
+
 @media only screen and (max-width: 480px) {
+  #signUp #signupheaderwrap {
+    width: 65%; }
   #signUp .headerWrap {
-    width: 75%;
+    width: 60%;
     display: block;
     position: relative; }
     #signUp .headerWrap #Pearl {
@@ -867,7 +629,7 @@ select:-webkit-autofill:focus {
     #signUp .signUpWrap #signup {
       padding: 5%;
       position: absolute;
-      top: 15%;
+      top: 5%;
       right: 0;
       background: #E67A7A;
       display: block;
@@ -905,8 +667,8 @@ select:-webkit-autofill:focus {
       border: none;
       border-bottom: 1px solid #9DDCDC;
       padding: 1%;
-      line-height: 2.5em;
-      margin: 2% 4%; }
+      line-height: 2em;
+      margin: 0% 4%; }
       #signUp .signUpForm .signUpInput:focus {
         outline: none; }
       #signUp .signUpForm .signUpInput input {
@@ -1285,39 +1047,34 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
       top: 0;
       margin: -65% 0%;
       z-index: -1; }
-  #signUp .checkBoxWrap {
-    margin: 1%;
-    border-radius: 5%; }
-    #signUp .checkBoxWrap #matters_toyou {
-      background: #E67A7A;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      padding: 3%;
-      margin: 2% 0%; }
+  #signUp .checkBoxWrap #matters_toyou {
+    background: #E67A7A;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 2em;
+    padding: 3%;
+    margin: 2% 0%; }
   #signUp .checkBoxForm {
     display: block;
     font-family: "Roboto", sans-serif;
     font-size: 1.3em;
     color: #9E9E9E; }
+    #signUp .checkBoxForm .shadow {
+      background: #eee;
+      color: #2a7777;
+      display: block; }
   #signUp ul {
-    margin: 2%; }
+    margin: 6% 2%; }
     #signUp ul li {
-      padding: 2%;
-      margin: 2px;
+      font-size: 1.3em;
       border-radius: 5px;
       letter-spacing: .2px;
-      vertical-align: super; }
-    #signUp ul .survey_opts {
-      background-color: white; }
-      #signUp ul .survey_opts img {
-        vertical-align: middle;
-        margin: 0 3%; }
-    #signUp ul .checked {
-      background-color: #eee;
-      color: #2a7777; }
+      vertical-align: super;
+      margin: 2px; }
+      #signUp ul li img {
+        margin: 0 5%; }
   #signUp .signUpInput {
     width: 90%;
     display: block;
@@ -1331,7 +1088,9 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
       outline: none; }
   #signUp label, #signUp input {
     cursor: pointer;
-    cursor: hand; }
+    cursor: hand;
+    display: block;
+    padding: 4% 1%; }
   #signUp .black {
     color: black; }
   #signUp li.black {
@@ -1351,75 +1110,10 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
     color: white;
     text-align: center;
     font-size: 2em;
-    padding: 4%;
     width: 100%;
     border: none;
-    margin: 1% auto;
     cursor: pointer;
     letter-spacing: 1.5px; } }
-@media screen and (max-width: 1020px) {
-  #signUp .headerWrap {
-    width: 100%;
-    display: block;
-    position: relative; }
-    #signUp .headerWrap h2 {
-      font-family: "Arvo", serif;
-      color: #E67A7A;
-      text-align: center;
-      font-size: 3em;
-      padding: 2% 0;
-      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      letter-spacing: 2px; }
-    #signUp .headerWrap img {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      margin: -65% 0%;
-      z-index: -1; }
-  #signUp .signUpWrap {
-    margin: 5% 0 0;
-    border-radius: 5%; }
-    #signUp .signUpWrap h2 {
-      background: #E67A7A;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: left;
-      font-size: 30px;
-      padding: 5%; }
-  #signUp .signUpForm {
-    display: block; }
-    #signUp .signUpForm .checkboxItems {
-      font-family: "Roboto", sans-serif;
-      font-size: .9em;
-      color: #9E9E9E; }
-    #signUp .signUpForm .signUpInput {
-      width: 90%;
-      display: block;
-      font-size: 1em;
-      border: none;
-      border-bottom: 1px solid #9DDCDC;
-      padding: 1%;
-      line-height: 1.5em;
-      margin: 5% 4%; }
-      #signUp .signUpForm .signUpInput:focus {
-        outline: none; }
-    #signUp .signUpForm .submit {
-      background: #E67A7A;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: center;
-      font-size: 1.5em;
-      padding: 5%;
-      width: 100%;
-      border: none;
-      margin: 0% auto;
-      cursor: pointer;
-      letter-spacing: 1.5px;
-      position: absolute;
-      bottom: 0; } }
 @media screen and (min-width: 1000px) {
   #bus_edit_profile .control {
     width: 90%;

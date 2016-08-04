@@ -19,7 +19,7 @@ $(document).on('click', '.editSubmitButton', function(e) {
 
     $http({
         method: 'PATCH',
-        url:"https://0e2ee143.ngrok.io/questions/28",
+        url:"https://0e2ee143.ngrok.io/questions",
         data: stringData, //be able to pass business id from local storage
         headers: {
             'Authorization': 'token'

@@ -3,7 +3,6 @@ app.controller('cqController', ['$http', '$scope', '$location',
 
         //nav bar toggle
         $scope.dropDown = false;
-
         $scope.hiring = false;
         $scope.glutFree = false;
         $scope.musicians = false;
@@ -45,11 +44,8 @@ app.controller('cqController', ['$http', '$scope', '$location',
                     'Authorization': token
                 }
             }).then(function success(response) {
-                console.log(response);
                 $location.path('/you');
-            }, function error(response) {
-                console.log(response);
-            });
+            }, function error(response) {});
 
         };
     }

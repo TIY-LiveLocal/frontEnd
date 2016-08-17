@@ -1,4 +1,26 @@
 app.factory('mapFactory', function($q, $rootScope){
+
+  return{
+    getCoords: function() {
+      var printGeo = [];
+      navigator.geolocation.getCurrentPosition(success, error);
+
+      function success(position){
+        var userLatitude = position.coords.latitude;
+        var userLongitude = position.coords.longitude;
+
+        printGeo.push(userLatitude);
+        printGeo = [userLatitude, userLongitude];
+      }
+
+      function error() {
+        console.log("Unable to retrieve your location");
+      }
+    return printGeo;
+    }
+  };
+});
+
 //
 //   var locate = function(){
 //     var deferred = $q.defer();
@@ -15,34 +37,6 @@ app.factory('mapFactory', function($q, $rootScope){
 // });
 
 //REFERENCE http://embed.plnkr.co/onrmfu/
-
-  return{
-    getCoords: function() {
-      var printGeo = [];
-      navigator.geolocation.getCurrentPosition(success, error);
-
-      // if (!navigator.geolocation){
-      //   console.log('Not supported');
-      //   // return;
-      // }
-      function success(position){
-        var userLatitude = position.coords.latitude;
-        var userLongitude = position.coords.longitude;
-
-        printGeo.push(userLatitude);
-        printGeo = [userLatitude, userLongitude];
-        console.log(printGeo);
-      }
-
-      function error() {
-        console.log("Unable to retrieve your location");
-      }
-    return printGeo;
-    }
-  };
-});
-
-
 
 
 

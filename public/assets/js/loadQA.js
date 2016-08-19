@@ -8,7 +8,8 @@ app.controller('qaCtrl', ['$scope', '$http', function($scope, $http){
     url: 'https://livelocalrails.herokuapp.com/questions/all',
     method: 'GET',
     headers: {'Authorization':token},
-    params: {'business_id':id}
+    data: {business_id: id},
+    params: {'id':id}
   }).then(function(response){
     $scope.questionGet = response.data;
     // $scope.answerGet = response.data[4].answers;

@@ -1,6 +1,6 @@
 <div id="signUp">
-  <div class="headerWrap">
-      <h2 id="Pearl">Pearl</h2>
+  <div class="headerWrap" id="signupheaderwrap">
+      <h2 id="Pearl"><a href="#/home">Pearl</a></h2>
       <img id="ll-pearl" src="assets/img/pearlLogo-1.svg" alt="" />
   </div>
   <div class="signUpWrap">
@@ -36,7 +36,7 @@
         <input ng-style="myStyle" type="text" ng-model="zip_code" placeholder="Zipcode">
       </div>
 
-      <input class="submit" type="submit" ng-click="getStarted(); myStyle={'display':'block'}" value="Get Started">
+      <input class="submit" id="getstartedSignup" type="submit" ng-click="getStarted(); myStyle={'display':'block'}" value="Get Started">
     </form>
       <div id="signupMSG" ng-style="myStyle">
         {{signupMSG}}

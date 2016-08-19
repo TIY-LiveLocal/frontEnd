@@ -1,192 +1,35 @@
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 1px solid white;
-  -webkit-text-fill-color: $darkBlue;
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
 
-
-@media only screen
-  and (min-width: 1020px) {
-  #signUp{
-    .headerWrap{
-      display: block;
-      position: relative;
-      h2{
-        font-family: $font5;
-        color: $red;
-        text-align: center;
-        font-size: 3em;
-        padding: 2% 0;
-        box-shadow: 0px 10px 100px 20px rgba(255,255,255,0.5);
-        border-radius: 50%;
-        letter-spacing: 2px;
-      }
-      img{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        margin: -65% 0%;
-        z-index: -1;
-      }
-    }
-    .signUpWrap{
-      width: 40%;
-      margin: 3% auto;
-      // box-shadow: 0px 5px 5px 1px $darkGrey;
-      padding-bottom: 1%;
-      background-color: white;
-      h2{
-        background: $red;
-        display: block;
-        font-family: $font4;
-        color: white;
-        text-align: left;
-        font-size: 2em;
-        padding: 5%;
-        letter-spacing: 2px;
-      }
-    }
-    .signUpForm{
-      display: block;
-
-      .signUpInput{
-        width: 90%;
-        display: block;
-        font-size: 1.1em;
-        border: none;
-        border-bottom: 1px solid $blue;
-        padding: 1%;
-        margin: 4%;
-        letter-spacing: 1px;
-
-        &:focus{
-          outline: none;
-        }
-      }
-      .submit{
-        background: $red;
-        display: block;
-        font-family: $font4;
-        color: white;
-        text-align: center;
-        font-size: 1.5em;
-        padding: 2%;
-        width: 90%;
-        border: none;
-        margin: 0 auto;
-        cursor: pointer;
-        letter-spacing: 1.5px;
-      }
-    }
+a{
+  outline: none;
+  text-decoration: none;
+  &:visited{
+    text-decoration: none;
+    color: $red;
+  }
+  &:active{
+    text-decoration: none;
+    color: $red;
   }
 }
+
+////////////  DESKTOP VIEW  ////////////
+@media only screen
+  and (min-width: 1020px) {
+  }
+////////////  TABLET VIEW  ////////////
 @media only screen
   and (min-width: 480px)
   and (max-width: 1020px){
-  #signUp{
-    .headerWrap{
-      width: 100%;
-      display: block;
-      position: relative;
-      margin: 0;
-      h2{
-        font-family: $font5;
-        color: $red;
-        text-align: center;
-        font-size: 3em;
-        padding: 2% 0;
-        box-shadow: 0px 10px 100px 20px rgba(255,255,255,0.5);
-        border-radius: 50%;
-        letter-spacing: 2px;
-
-      }
-      img{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        margin: -60% 0%;
-        z-index: -1;
-      }
-    }
-    .signUpWrap{
-      padding-bottom: 3%;
-      margin: 12% 1%;
-
-    h2{
-      background: $red;
-      display: block;
-      font-family: $font4;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      padding: 3%;
-    }
-    #signupMSG{
-      font-size: 20px;
-      color: $darkBlue;
-      margin: 0 auto;
-      background: $tan;
-      width: 85%;
-      text-align: center;
-      padding: 1% 2%;
-      border: 1px solid $blue;
-      border-radius: 2px;
-      font-family: $font4;
-      display: none;
-    }
-    }
-    .signUpForm{
-      display: block;
-
-      .signUpInput{
-        width: 90%;
-        display: block;
-        font-size: 1em;
-        border: none;
-        border-bottom: 1px solid #9DDCDC;
-        padding: 1%;
-        line-height: 2em;
-        margin: 2% 4%;
-        &:focus{
-          outline: none;
-        }
-        input{
-          font-size: 1.5em;
-          border: none;
-        }
-      }
-      .submit{
-        background: $red;
-        display: block;
-        font-family: $font4;
-        color: white;
-        text-align: center;
-        font-size: 1.5em;
-        padding: 2%;
-        width: 90%;
-        border: none;
-        margin: 0 auto;
-        cursor: pointer;
-        letter-spacing: 1.5px;
-      }
-    }
   }
-}
-@media only screen
-  and (max-width: 480px){
+////////////  MOBILE VIEW  ////////////
+@media only screen and (max-width: 480px) {
   #signUp{
+    #signupheaderwrap{
+      width: 70%;
+      margin: 0 auto;
+    }
     .headerWrap{
-      width: 75%;
+      width: 60%;
       display: block;
       position: relative;
       #Pearl{
@@ -212,22 +55,7 @@ select:-webkit-autofill:focus {
       margin: 0;
       border-radius: 5%;
 
-    #signup{
-      padding: 5%;
-      position: absolute;
-      top: 12%;
-      right: 0;
-      background: $red;
-      display: block;
-      font-family: $font4;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      border-radius: 3px;
-      letter-spacing: 2px;
-      font-weight: 700;
 
-    }
     #signupMSG{
       font-size: 20px;
       color: $darkBlue;
@@ -250,6 +78,18 @@ select:-webkit-autofill:focus {
       position: absolute;
       width: 100%;
       background: white;
+      #sign_header{
+        padding: 5%;
+        background: $red;
+        display: block;
+        font-family: $font4;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        letter-spacing: 2px;
+        font-weight: 700;
+
+      }
       .signUpInput{
         width: 90%;
         display: inline-block;
@@ -257,13 +97,13 @@ select:-webkit-autofill:focus {
         border: none;
         border-bottom: 1px solid #9DDCDC;
         padding: 1%;
-        line-height: 2.5em;
-        margin: 2% 4%;
+        line-height: 1.75;
+        margin: 0% 4%;
         &:focus{
           outline: none;
         }
         input{
-          font-size: 1.5em;
+          font-size: 1.4em;
           border: none;
           display: inline-block;
           &:focus{
@@ -282,21 +122,22 @@ select:-webkit-autofill:focus {
       #signUpZipcode{
         margin-bottom: 20%;
       }
-      .submit{
-        background: $red;
-        display: block;
-        font-family: $font4;
-        color: white;
-        text-align: center;
-        font-size: 2em;
-        padding: 5%;
-        width: 100%;
-        border: none;
-        margin: 0 auto;
-        cursor: pointer;
-        letter-spacing: 2px;
-        font-weight: 700;
-      }
+    }
+    #getstartedSignup{
+      background: $red;
+      display: block;
+      font-family: $font4;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      padding: 4%;
+      width: 100%;
+      border: none;
+      position: fixed;
+      bottom: 0;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-weight: 700;
     }
     .signUpForm.ng-invalid{
       border: 1px solid red;

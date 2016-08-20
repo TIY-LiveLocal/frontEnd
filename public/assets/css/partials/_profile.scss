@@ -1,9 +1,20 @@
-@media only screen and (max-width: 480px) {
+////////////  DESKTOP VIEW  ////////////
+@media only screen
+  and (min-width: 1020px) {
+  }
+////////////  TABLET VIEW  ////////////
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 1020px){
+  }
+////////////  MOBILE VIEW  ////////////
+@media only screen
+  and (max-width: 480px){
     #businessInfoWrap {
-      margin-top: 25%;
-      li {
-          list-style: none;
-      }
+        margin-top: 25%;
+        li {
+            list-style: none;
+        }
         #headerNavBar {
             .logo {
                 display: block;
@@ -24,7 +35,7 @@
                 }
                 .dropdownMenu {
                     position: absolute;
-                    top: .5%;
+                    top: 0.5%;
                     right: 5%;
                     .dropdownbtn {
                         background-color: white;
@@ -115,6 +126,7 @@
                                     font-family: $font4;
                                     color: $red;
                                     margin: 1%;
+                                    width: 100%;
                                 }
                                 .col-sm-8 {
                                     float: none;
@@ -132,17 +144,17 @@
                                 }
                                 #mapBtn {
                                     padding: 0;
-                                    #get_directions{
-                                      display: block;
-                                      border-radius: 2px;
-                                      background-color: #E67A7A;
-                                      color: #FFF4E1;
-                                      border-style: none;
-                                      outline: none;
-                                      margin: 0 auto;
-                                      font-size: 2em;
-                                      padding: 5%;
-                                      font-weight: 700;
+                                    #get_directions {
+                                        display: block;
+                                        border-radius: 2px;
+                                        background-color: #E67A7A;
+                                        color: #FFF4E1;
+                                        border-style: none;
+                                        outline: none;
+                                        margin: 0 auto;
+                                        font-size: 2em;
+                                        padding: 5%;
+                                        font-weight: 700;
                                     }
                                 }
                             }
@@ -161,106 +173,107 @@
                 display: block;
                 form {
                     margin: 5%;
-                  #ask_question{
-                    display: block;
-                    border-radius: 2px;
-                    background-color: white;
-                    color: $darkBlue;
-                    border-style: none;
-                    border-bottom: 1px solid $blue;
-                    outline: none;
-                    margin: 0 auto;
-                    font-size: 1em;
-                    padding: 5%;
-                    width: 90%;
-                  }
-                  #ask_button{
-                    display: block;
-                    border-radius: 2px;
-                    background-color: #E67A7A;
-                    color: #FFF4E1;
-                    border-style: none;
-                    outline: none;
-                    margin: 5% auto;
-                    font-size: 2em;
-                    font-weight: 700;
-                    padding: 3%;
-                    float: left;
-                    width: 40%;
-                    text-align: left;
-                    position: absolute;
-                    left: 0;
-                  }
-                  #reply_button{
-                    display: block;
-                    border-radius: 2px;
-                    background-color: $medBlue;
-                    color: #FFF4E1;
-                    border-style: none;
-                    outline: none;
-                    margin: 5% auto;
-                    font-size: 2em;
-                    font-weight: 700;
-                    padding: 3%;
-                    float: left;
-                    width: 40%;
-                    text-align: right;
-                    position: absolute;
-                    right: 0;
-                  }
+                    #ask_question {
+                        display: block;
+                        border-radius: 2px;
+                        background-color: white;
+                        color: $darkBlue;
+                        border-style: none;
+                        border-bottom: 1px solid $blue;
+                        outline: none;
+                        margin: 0 auto;
+                        font-size: 1em;
+                        padding: 5%;
+                        width: 90%;
+                    }
+                    #ask_button {
+                        display: block;
+                        border-radius: 2px;
+                        background-color: #E67A7A;
+                        color: #FFF4E1;
+                        border-style: none;
+                        outline: none;
+                        margin: 5% auto;
+                        font-size: 2em;
+                        font-weight: 700;
+                        padding: 3%;
+                        float: left;
+                        width: 40%;
+                        text-align: left;
+                        position: absolute;
+                        left: 0;
+                    }
+                    #reply_button {
+                        display: block;
+                        border-radius: 2px;
+                        background-color: $medBlue;
+                        color: #FFF4E1;
+                        border-style: none;
+                        outline: none;
+                        margin: 5% auto;
+                        font-size: 2em;
+                        font-weight: 700;
+                        padding: 3%;
+                        float: left;
+                        width: 40%;
+                        text-align: right;
+                        position: absolute;
+                        right: 0;
+                    }
                 }
             }
-            #qaResponses{
-              .GETquestions{
-                ul{
-                  .question_header{
-                  font-family: $font4;
-                  font-size: 26px;
-                  font-weight: 300;
-                  color: $red;
-                  margin: 5% 5%;
-                  padding-top: 10%;
-                  }
-                  .author{
-                    font-size: 12px;
-                  }
-                  li{
-                    .answer_subheader{
-                    color: $darkBlue;
-                    font-family: $font4;
-                    font-size: 24px;
-                    font-weight: 300;
-                    margin: 0% 10% 10% 15%;
-                    padding: 2% 0% 0 10%;
-                    text-align: right;
-                    border-top: 1px dotted $red;
-
-                    .created_at{
-                      position: absolute;
-                      left: 0%;
-                      width: 20%;
-                      font-size: 10px;
-                      line-height: 1.5;
-                      letter-spacing: .1px;
+            #qaResponses {
+                .GETquestions {
+                    ul {
+                        .question_header {
+                            font-family: $font4;
+                            font-size: 26px;
+                            font-weight: 300;
+                            color: $red;
+                            margin: 5%;
+                            padding-top: 10%;
+                        }
+                        .author {
+                            font-size: 12px;
+                        }
+                        li {
+                            .answer_subheader {
+                                color: $darkBlue;
+                                font-family: $font4;
+                                font-size: 24px;
+                                font-weight: 300;
+                                margin: 0 10% 5% 15%;
+                                padding: 2% 0 0 10%;
+                                text-align: right;
+                                border-top: 1px dotted $red;
+                                .created_at {
+                                    position: absolute;
+                                    left: 0;
+                                    width: 20%;
+                                    font-size: 10px;
+                                    line-height: 1.5;
+                                    letter-spacing: 0.1px;
+                                }
+                            }
+                        }
                     }
+                    #reply_button {
+                        display: block;
+                        border-radius: 2px;
+                        background-color: $medBlue;
+                        color: #FFF4E1;
+                        border-style: none;
+                        outline: none;
+                        font-size: 2em;
+                        font-weight: 700;
+                        padding: 3%;
+                        text-align: right;
+                        position: absolute;
+                        right: 0;
+                        width: 40%;
+                        margin: 5% 0;
                     }
-                  }
                 }
-                #reply_button{
-                  display: block;
-                  border-radius: 2px;
-                  background-color: $medBlue;
-                  color: #FFF4E1;
-                  border-style: none;
-                  outline: none;
-                  margin: 5% auto;
-                  font-size: 2em;
-                  font-weight: 700;
-                  padding: 2%;
-                  width: 70%;
-                  text-align: right;
-                }
-              }
             }
         }
     }

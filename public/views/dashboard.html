@@ -1,41 +1,73 @@
-<div id="dashboard">
-  <header>
+<header id=headerNavBar>
     <div class="logo">
-      <h1>Pearl</h1>
-      <img src="assets/img/pearlLogo-1.svg" alt="" />
-      <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
-      <a href="#/consumer_questionnaire">User Survey</a>
-      <a href="#/business_questionnaire">Business Survey</a>
-    </div>
-  </header>
-  <main>
-    <div class="options">
-      <h3 id="discover">Discover</h3>
-      <h3>NAME</h3>
-      <h3>Around</h3>
-    </div>
+        <h1 id="pearlH1"><a href="#/you">Pearl</a></h1>
+        <img src="assets/img/pearlLogo-1.svg" alt="" />
 
-    <ul   class="ngDashboard">
-      <li ng-repeat="biz in businesses" class="biz" >
-        <div id="bizName"> {{biz.name}}</div>
-        <div id="bizOwner"> {{biz.owner}}</div>
-        <div id="bizOwner"> {{biz.location.city}},{{biz.location.state_code}}</div>
-        <!-- <img ng-src="{{biz.image_url}}" alt="" /> -->
-        <div id="bizInfo">
-          {{biz.phone}}
-          <br>
-          {{biz.location.address[0]}}
+        <div class="dropdownMenu">
+            <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+            </button>
+            <div class="dropdownMenu-list" ng-show="dropDown">
+                <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+                <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+                <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                <a class="dropdownMenu-list--item" href="#/logout">Logout</a>
 
-
-          <a href="{{biz.url}}" id="yelp">
-            <i class="fa fa-yelp" aria-hidden="true"></i>
-          </a>
-          <a href="#/places" id="chevron">
-            <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
-          </a>
+            </div>
         </div>
-      </li>
+    </div>
+</header>
+<main id="mainDashboard">
+    <div id="dashboard">
 
-    </ul>
-  </main>
-</div>
+
+
+        <div class="options">
+            <h2 id="loading" ng-if="!businesses">Finding Treasures...</h2>
+
+            <div class="userResults">
+                <h3>Based on your zipcode: <span id="dash_zip">{{user_zipcode}}</span></h3>
+            </div>
+
+        </div>
+
+        <ul class="ngDashboard">
+            <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
+                <a href="#/business" id="chevron">
+                    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                </a>
+                <div id="bizName"> {{biz.name}}</div>
+                <div id="bizOwner"> {{biz.owner}}</div>
+                <div id="bizOwner">{{biz.address}}</div>
+                <div id="bizOwner">{{biz.city}}</div>
+                <div id="bizInfo">
+                    <!-- {{biz.phone}} -->
+                    <br>
+
+
+
+                    <a href="{{biz.website_url}}" id="yelp">
+                        <i class="fa fa-yelp" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </li>
+            <li ng-repeat="two in callTwo">
+
+            </li>
+        </ul>
+    </div>
+</main>
+
+<footer id="bottomWrapper">
+    <a href="#/discover">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+    </a>
+
+    <a href="#/you">
+        <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+
+    <a href="#/search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </a>
+</footer>

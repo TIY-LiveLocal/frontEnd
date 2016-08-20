@@ -1,50 +1,41 @@
-
 var app = angular.module("app", ['ngRoute', "firebase" , "uiGmapgoogle-maps"]);
 
 app.config(function($routeProvider){
   $routeProvider
+  .when('/home',{
+    templateUrl: 'assets/views/home.html',
+  })
   .when('/login',{
-    templateUrl: 'views/login.html',
+    templateUrl: 'assets/views/login.html',
     controller: 'loginController'
   })
   .when('/signup',{
-    templateUrl: 'views/signup.html',
+    templateUrl: 'assets/views/signup.html',
     controller: 'signupController'
   })
-  .when('/dashboard',{
-    templateUrl: 'views/dashboard.html',
+  .when('/discover',{
+    templateUrl: 'assets/views/dashboard.html',
     controller: 'dashboardCtrl'
   })
-  .when('/business_questionnaire',{
-    templateUrl: 'views/business_questionnaire.html',
-    controller: 'bqController'
+  .when('/you',{
+    templateUrl: 'assets/views/matches.html',
+    controller: 'matchesCtrl'
   })
-  .when('/consumer_questionnaire',{
-    templateUrl: 'views/consumer_questionnaire.html',
+  .when('/survey',{
+    templateUrl: 'assets/views/survey.html',
     controller: 'cqController'
   })
   .when('/business', {
-    templateUrl: 'views/profile.html'
+    templateUrl: 'assets/views/profile.html'
   })
-
-  .when('/business_edit', {
-    templateUrl: 'views/bus_edit_profileNEW.html',
-    controller: 'bizEditController'
+  .when('/edit', {
+    templateUrl: 'assets/views/edit.html'
   })
-
-  .when('/factory',{
-    templateUrl: 'views/yelp.html',
-    controller: 'yelpCtrl'
-  })
-  .when('/business_search', {
-    templateUrl: 'views/biz_search.html',
-    controller: 'bizSearchController'
-  })
-  .when('/survey_results', {
-    templateUrl: 'views/survey_results.html',
-    controller: 'surveyResultsController'
+  .when('/search', {
+    templateUrl: 'assets/views/biz_search.html',
+    controller: 'bizSearchCtrl'
   })
   .otherwise({
-    redirectTo: 'login'
+    redirectTo: 'home'
   });
 });

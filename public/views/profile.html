@@ -1,55 +1,115 @@
-  <div id = "profilePage">
-      <div id = "profileHeader">
-        <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
-        <div id = "profileHeader-contain">
-        <span class = "pearlLogo-text"> Pearl </span>
-        <p class = "profileHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-          <span><button>
-            search
-          </button></span>
-        </p>
-      </div>
-      </div>
+<header id=headerNavBar>
+    <div class="logo">
+        <h1 id="pearlH1"><a href="#/you">Pearl</a></h1>
+        <img src="assets/img/pearlLogo-1.svg" alt="" />
 
-<!--begin actual content-->
-      <div id = "profileWrapper">
+        <div class="dropdownMenu">
+            <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+            </button>
+            <div class="dropdownMenu-list" ng-show="dropDown">
+                <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+                <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+                <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                <a class="dropdownMenu-list--item" href="#/logout">Logout</a>
+            </div>
 
-<!--grid for infomration from business-->
-    <div class="grid grid-pad">
-    <ul>
-      <li>
-    <div class="col-1-2" id = "leftColumn">
-       <div class="content">
-         <h2 class = "businessName">{{businesses[0].name}}</h2>
-            <img class = "businessPic" ng-src = "{{businesses[0].image_url}}">
         </div>
-      </li>
-
-      <li>
-       <!-- <div class="content"> -->
-         <div id = "qASectionContain">
-           <input id = "qASectionHead" placeholder= "ask this business a question"></input>
-           <span><button>
-             ask
-           </button></span>
-           <div id = "qASectionContent">
-               <h3> Q </h3> Person asks question about shop here. Stuff and things. Yay. Cool. Do you allow dogs at your restaurant?</p>
-               <br>
-               <h3> A </h3> <p>Hi, yes, this is the restaurant. Thanks for asking your question. We do allow dogs here because they are perfect</p>
-
-  </li>
-</div>
-
-<!--info about place-->
-
-  <div class="col-1-2" id = "rightColumn" >
-    <li class = "businessInfo">Business Owner: {{businesses[0].owner}}</li>
-    <li class = "businessInfo">Location:  {{businesses[0].location.city}}, {{businesses[1].location.state_code}}</li>
-    <li class = "businessInfo">Rating: {{businesses[0].rating}} stars</li>
-    <li class = "businessInfo">Phone Number: {{businesses[0].display_phone}}</li>
     </div>
-  </div>
-</div>
+</header>
+<div id="businessInfoWrap" ng-controller="bizController as biz">
+    <!--begin actual content-->
+    <div id="profileWrapper">
 
-  </div>
+        <div class="content">
+            <h2 class="businessName">{{biz.data.name}}</h2>
+        </div>
+        <div id="businessInfo">
+            <li class="businessInfo">Location:
+              <div class="uniqueInfo">
+                {{biz.data.address}}, {{biz.data.city}}, {{biz.data.zip}}
+              </div>
+            </li>
+            <li class="businessInfo">Phone Number:
+              <div class="uniqueInfo">
+                <a href=”tel:+{{biz.data.phone}}″>{{biz.data.phone}}</a>
+              </div>
+            </li>
+        </div>
+
+<!-- GOOGLE MAPS -->
+        <div class="qaWrap">
+              <div id="qASectionContain" ng-controller="mapCtrl">
+
+                  <div id="map">
+
+                    <ui-gmap-google-map control="map.control" center="map.center" zoom="map.zoom">
+                              <marker coords="marker.center"></marker>
+                            </ui-gmap-google-map>
+                            <form class="form-horizontal" role="form">
+                              <div class="form-group">
+                                <label id="mapOD" for="origin" class="col-sm-2 control-label">Origin</label>
+                                <div class="col-sm-8">
+                                  <input type="text" id="origin" class="form-control" ng-model="directions.origin" />
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label id="mapOD" for="destination" class="col-sm-2 control-label">Destination</label>
+                                <div class="col-sm-8">
+                                  <input type="text" id="destination" class="form-control" ng-model="directions.destination" />
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div id="mapBtn" class="col-sm-offset-2 col-sm-8">
+                                  <button id="get_directions" class="btn btn-primary" ng-click="getDirections()">Get Directions</button>
+                                </div>
+                              </div>
+                            </form>
+                            <div id="directionsList" ng-show="directions.showList" class="panel panel-primary"></div>
+                  </div>
+              </div>
+        </div>
+    </div>
+<!-- QUESTION / ANSWER SECTION -->
+    <div id="qaSectionContainer" ng-controller="qaCtrl">
+      <div id="qaSectionWrap">
+        <form>
+          <input id="ask_question" type="text" name="userQuestion" value="Question" ng-model="userQuestion" placeholder="ask this business a question">
+          <input id="ask_button" type="submit" name="button" value="Ask" ng-click="askButton()">
+        </form>
+        <!-- <div class="questionPost">
+          {{userQuestion}}
+
+        </div>
+        <div class="answerPost">
+          {{userAnswer}}
+        </div> -->
+      </div>
+      <div id="qaResponses">
+        <div class="GETquestions">
+          <!-- ng-repeat for GET /questions -->
+          <ul ng-repeat="q in questionGet">
+            <p class="question_header">
+              {{q.question.question_text}}
+              <br>
+              <span class="author">{{q.question.author}}</span>
+            </p>
+
+            <li ng-repeat="answer in q.answers">
+              <p class="answer_subheader">
+
+                <span class="created_at">{{answer.created_at | date: 'medium'}}</span>
+                {{answer.answer_text}}
+                <br>
+                <span class="author">{{answer.author}}</span>
+              </p>
+            </li>
+            <input id="reply_button" type="submit" name="button" value="Reply" ng-click="replyButton()">
+
+          </ul>
+          <!-- ng-repeat for GET /answers -->
+
+        </div>
+      </div>
+    </div>
 </div>

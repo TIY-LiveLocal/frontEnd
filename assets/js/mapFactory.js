@@ -1,47 +1,42 @@
 app.factory('mapFactory', function($q, $rootScope){
 
-  var locate = function(){
-    var deferred = $q.defer();
-    navigator.geolocation.getCurrentPosition(success,error);
-    function success(position){
-      $rootScope.$apply(function () {deferred.resolve(position.coords);});
+  return{
+    getCoords: function() {
+      var printGeo = [];
+      navigator.geolocation.getCurrentPosition(success, error);
+
+      function success(position){
+        var userLatitude = position.coords.latitude;
+        var userLongitude = position.coords.longitude;
+
+        printGeo.push(userLatitude);
+        printGeo = [userLatitude, userLongitude];
+      }
+
+      function error() {
+        console.log("Unable to retrieve your location");
+      }
+    return printGeo;
     }
-    function error(error){
-      $rootScope.$apply(function (){deferred.reject(error);});
-    }
-    return deferred.promise;
   };
-  return {locate : locate};
 });
 
-//REFERENCE http://embed.plnkr.co/onrmfu/
-
-//   return{
-//     getCoords: function() {
-//       var printGeo;
-//       navigator.geolocation.getCurrentPosition(success, error);
 //
-//       // if (!navigator.geolocation){
-//       //   console.log('Not supported');
-//       //   // return;
-//       // }
-//       function success(position){
-//         var userLatitude = position.coords.latitude;
-//         var userLongitude = position.coords.longitude;
-//
-//         printGeo = [userLatitude, userLongitude];
-//         console.log(printGeo);
-//       }
-//
-//       function error() {
-//         console.log("Unable to retrieve your location");
-//       }
-//     return 42;
+//   var locate = function(){
+//     var deferred = $q.defer();
+//     navigator.geolocation.getCurrentPosition(success,error);
+//     function success(position){
+//       $rootScope.$apply(function () {deferred.resolve(position.coords);});
 //     }
+//     function error(error){
+//       $rootScope.$apply(function (){deferred.reject(error);});
+//     }
+//     return deferred.promise;
 //   };
+//   return {locate : locate};
 // });
 
-
+//REFERENCE http://embed.plnkr.co/onrmfu/
 
 
 

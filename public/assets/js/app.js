@@ -1,5 +1,5 @@
 
-var app = angular.module("app", ['ngRoute', "firebase"]);
+var app = angular.module("app", ['ngRoute', "firebase" , "uiGmapgoogle-maps"]);
 
 app.config(function($routeProvider){
   $routeProvider
@@ -7,13 +7,21 @@ app.config(function($routeProvider){
     templateUrl: 'views/login.html',
     controller: 'loginController'
   })
+  .when('/home',{
+    templateUrl: 'views/home.html',
+    controller: 'loginController'
+  })
   .when('/signup',{
     templateUrl: 'views/signup.html',
     controller: 'signupController'
   })
-  .when('/dashboard',{
+  .when('/discover',{
     templateUrl: 'views/dashboard.html',
-    controller: 'testController'
+    controller: 'dashboardCtrl'
+  })
+  .when('/you',{
+    templateUrl: 'views/matches.html',
+    controller: 'matchesCtrl'
   })
   .when('/business_questionnaire',{
     templateUrl: 'views/business_questionnaire.html',
@@ -23,14 +31,27 @@ app.config(function($routeProvider){
     templateUrl: 'views/consumer_questionnaire.html',
     controller: 'cqController'
   })
-  .when('/places', {
-    templateUrl: 'views/profile.html',
-    controller: 'bizController'
+  .when('/business', {
+    templateUrl: 'views/profile.html'
   })
+
   .when('/business_edit', {
-    templateUrl: 'views/bus_edit_profile.html'
+    templateUrl: 'views/bus_edit_profileNEW.html'
+  })
+
+  .when('/factory',{
+    templateUrl: 'views/yelp.html',
+    controller: 'yelpCtrl'
+  })
+  .when('/search', {
+    templateUrl: 'views/biz_search.html',
+    controller: 'bizSearchCtrl'
+  })
+  .when('/survey_results', {
+    templateUrl: 'views/survey_results.html',
+    controller: 'surveyResultsController'
   })
   .otherwise({
-    redirectTo: 'login'
+    redirectTo: 'home'
   });
 });

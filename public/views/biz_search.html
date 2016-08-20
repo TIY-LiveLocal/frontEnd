@@ -1,0 +1,80 @@
+<header id=headerNavBar>
+    <div class="logo">
+        <h1 id="pearlH1"><a href="#/you">Pearl</a></h1>
+        <img src="assets/img/pearlLogo-1.svg" alt="" />
+
+        <div class="dropdownMenu">
+            <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+            </button>
+            <div class="dropdownMenu-list" ng-show="dropDown">
+                <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+                <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+                <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                <a class="dropdownMenu-list--item" href="#/logout">Logout</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+<main id="mainBiz_search">
+    <div id=searchOuterWrapper>
+        <div id="searchPageWrapper" ng-controller="bizSearchCtrl">
+            <div id="searchPage-inputs">
+
+                <ul>
+                    <li>
+                        <input id="bizNameHere" ng-model="bizNameInput" type="text" placeholder="name or business description"></input>
+                    </li>
+
+                    <li>
+                        <input id="bizAddressHere" type="text" placeholder="location"></input>
+                    </li>
+                    <li>
+                        <button ng-click="seekBusiness()" id="bizSetupSearch">
+                            search
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!--business listings modal-->
+
+            <ul class="findBusinesses">
+                <li ng-repeat="biz in businesses" class="biz" id={{biz.id}} ng-click="logID()">
+                    <a href="#/places" id="chevron">
+                        <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    </a>
+                    <div id="bizName"> {{biz.name}}</div>
+                    <div id="bizOwner"> {{biz.owner}}</div>
+                    <div id="bizOwner">{{biz.address}}</div>
+                    <div id="bizOwner">{{biz.city}}</div>
+                    <div id="bizInfo">
+                        {{biz.phone}}
+                        <br>
+
+
+                        <a href="{{biz.website_url}}" id="yelp">
+                            <i class="fa fa-yelp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer id="bottomWrapper">
+    <a href="#/discover">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+    </a>
+
+    <a href="#/you">
+        <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+
+    <a href="#/search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </a>
+</footer>

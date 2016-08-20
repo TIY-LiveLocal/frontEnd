@@ -1,27 +1,21 @@
 app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($scope, $location, dbFactory){
 
-  getYelp();
+  callOne();
 
-  function getYelp(){
-    dbFactory.getYelp()
+  function callOne(){
+    dbFactory.callOne()
       .then(function(response){
         console.log(response);
         $scope.businesses = response.data;
-        $scope.username = response.config.headers.Authorization;
+        $scope.firstname = localStorage.getItem('firstname');
+        $scope.user_zipcode = localStorage.getItem('user_zipcode');
 
-
-        //click & get index of clicked dataThang
+        //click & get index of clicked 
           $scope.logID = function(){
             var vm = this.biz;
 
-            myDataThing = $scope.businesses;
-        //an object
-          console.log(typeof myDataThing);
-
-            clicked = $(this).myDataThing;
-
-        //logs the object information that has been clicked
-          console.log(vm, vm.location[0]);
+            dataclick = $scope.businesses;
+            clicked = $(this).dataclick;
 
           localStorage.setItem('name',vm.name);
           localStorage.setItem('address',vm.address);
@@ -30,6 +24,7 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
           localStorage.setItem('phone',vm.phone);
           localStorage.setItem('longitude',vm.location[1]);
           localStorage.setItem('latitude',vm.location[0]);
+          localStorage.setItem('id',vm.id);
 
         //redirect user to business profile dashboard page
             $location.path('/business');
@@ -37,4 +32,7 @@ app.controller('dashboardCtrl', ['$scope','$location','dbFactory', function($sco
           };
       });
   }
+
+//nav bar toggle
+  $scope.dropDown = false;
 }]);

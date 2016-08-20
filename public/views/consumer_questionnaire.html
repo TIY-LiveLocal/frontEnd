@@ -1,81 +1,39 @@
+<header id=headerNavBar>
+    <div class="logo">
+      <h1 id="pearlH1">Pearl</h1>
+      <img src="assets/img/pearlLogo-1.svg" alt="" />
 
+    </div>
+  </header>
 <div id='consumerQuestionnaire'>
-    <div id = "consumerQuestionnaireHeader">
-      <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
-      <div id = "consumerQuestionnaireHeader-contain">
-      <span class = "pearlLogo-text"> Pearl </span>
-      <!-- <p class = "businessQuestionnaireHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-        <span><button>
-          search
-        </button></span>
-      </p> -->
-    </div>
-    </div>
-<div id='consumerQuestionnaireWrapper'>
-      <!-- <div class='pageTitle'></div> -->
-    <div class='instructions'>What business features matter to you?</div><br>
-
-    <div>
-      <form class='questions' action=''>
-        <input type="checkbox" name="hiring"  ng-model='hiring' > Currently Hiring<br>
-        <input type="checkbox" name="glutFree" ng-model='glutFree' > Gluten Free Options<br>
-        <input type="checkbox" name="musicians" ng-model='musicians' > Host Local Musicians<br>
-        <input type="checkbox" name="lgbt" ng-model='lgbt' > LGBT Friendly<br>
-        <input type="checkbox" name="localFood" ng-model='localFood' > Locally Sourced Food<br>
-        <input type="checkbox" name="minorityOwned" ng-model='pocOwned' > Minority Owned<br>
-        <input type="checkbox" name="livWage" ng-model='livWage' > Pay a Living Wage<br>
-        <input type="checkbox" name="petFriend" ng-model='petFriend' > Pet Friendly<br>
-        <input type="checkbox" name="artCrafts" ng-model=artCrafts > Sell Local Art/Crafts<br>
-        <input type="checkbox" name="charNonprof" ng-model='charNonprof' > Support Local Charities/Non-Profits<br>
-        <input type="checkbox" name="sustain" ng-model='sustain' > Sustainable Practices<br>
-        <input type="checkbox" name="veganPeta" ng-model='veganPeta'> Vegan/PETA Friendly<br>
-        <!-- clicked is a function -->
-      <div class=submitButton input type="submit" ng-click="clicked()"  value="Submit">It Matters!</div>
-      </form>
-    </div>
-</div>
-
-<!-- ..................................................................... -->
-
-  <!-- <div id='consumerQuestionnaire'>
-    <div class='container'>
-      <div id = "consumerQuestionnaireHeader">
-        <img class = "pearlLogo" src = "assets/images/pearlLogo.svg">
-        <div id = "consumerQuestionnaireHeader-contain">
-        <span class = "pearlLogo-text"> Pearl </span> -->
-
-
-        <!-- <p class = "businessQuestionnaireHeader-search"> find me <input type = "text" placeholder = "i.e. waffles"></input>
-          <span><button>
-            search
-          </button></span>
-        </p> -->
-
-
-      <!-- </div>
-      </div>
-
-    <div class='instructions'>What matters to you</div>
-    <div class='instructions2'>in a local business?</div>
-
-    <div class='questions'>
-      <form action="demo_form.asp" method="get">
-        <input type="checkbox" name="" value="hiring"> Currently Hiring<br>
-        <input type="checkbox" name="" value="envResp"> Environmentally Responsible<br>
-        <input type="checkbox" name="" value="musicians"> Host Local Musicians<br>
-        <input type="checkbox" name="" value="lgbtq"> LGBTQ Friendly<br>
-        <input type="checkbox" name="" value="localFood"> Locally Sourced Food<br>
-        <input type="checkbox" name="" value="pocOwned"> Owned by People of Color<br>
-        <input type="checkbox" name="" value="livWage"> Pay a Living Wage<br>
-        <input type="checkbox" name="" value="petFriend"> Pet Friendly<br>
-        <input type="checkbox" name="" value="artCrafts"> Sell Local Art/Crafts<br>
-        <input type="checkbox" name="" value="charNonprof"> Support Local Charities/Non-Profits<br>
-        <input type="checkbox" name="" value="suatain"> Sustainable Practices<br>
-        <input type="checkbox" name="" value="veganPeta"> Vegan/PETA Friendly<br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-
-</div>
-</div>
+  <div id='consumerQuestionnaireWrapper'>
+    <div id="signUp">
+<!-- <div class="headerWrap">
+    <h2>Pearl</h2>
+    <img src="assets/img/pearlLogo-1.svg" alt="" />
 </div> -->
+<div class="checkBoxWrap">
+  <h2 id="matters_toyou">What matters to you?</h2>
+
+    <form class="checkBoxForm">
+        <ul>
+         <li ng-class="{shadow: hiring}"><label><img class ='svg' src="assets/img/currentlyhiring.svg" alt="currently hiring" height="30" width="30" > <input  type="checkbox" class="inputCheckbox" name="hiring"  ng-model='hiring'> Currently Hiring</label></li>
+         <li ng-class="{shadow: glutFree}"><label><img src="assets/img/glutenfree.svg" alt="gluten free" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="glutFree" ng-model='glutFree' > Gluten Free Options</label></li>
+         <li ng-class="{shadow: musicians}"><label><img src="assets/img/localmusic.svg" alt="local musicians" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="musicians" ng-model='musicians' > Host Local Musicians</label></li>
+         <li ng-class="{shadow: lgbt}"><label><img src="assets/img/lgbtfriendly.svg" alt="LGBT friendly" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="lgbt" ng-model='lgbt' > LGBT Friendly</label></li>
+         <li ng-class="{shadow: localFood}"><label><img src="assets/img/locallysourcedfood.svg" alt="locally sourced food" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="localFood" ng-model='localFood' > Locally Sourced Food</label></li>
+         <li ng-class="{shadow: minorityOwned}"><label><img src="assets/img/minorityowned.svg" alt="minority owned" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="minorityOwned" ng-model='minorityOwned' > Minority Owned</label></li>
+         <li ng-class="{shadow: livWage}"><label><img src="assets/img/livingwage.svg" alt="living wage" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="livWage" ng-model='livWage' > Pay a Living Wage</label></li>
+         <li ng-class="{shadow: petFriend}"><label><img src="assets/img/petfriendly.svg" alt="pet friendly" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="petFriend" ng-model='petFriend' > Pet Friendly</label></li>
+         <li ng-class="{shadow: artsCrafts}"><label><img src="assets/img/localartcrafts.svg" alt="local art crafts" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="artsCrafts" ng-model="artsCrafts" > Local Arts / Crafts</label></li>
+         <li ng-class="{shadow: charNonprof}"><label><img src="assets/img/charitiesnonprofits.svg" alt="charities non-profits" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="charNonprof" ng-model='charNonprof' > Local Charities </label></li>
+         <li ng-class="{shadow: sustain}"><label><img src="assets/img/sustainablepractices.svg" alt="csustainable practices" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="sustain" ng-model='sustain' > Sustainable Practices</label></li>
+         <li ng-class="{shadow: veganPeta}"><label><img src="assets/img/veganpeta.svg" alt="veagn PETA" height="30" width="30"><input type="checkbox" class="inputCheckbox" name="veganPeta" ng-model='veganPeta'> Vegan / PETA Friendly</label></li>
+       </ul>
+      <input class="submit" type="submit" ng-click="clicked()" value="Next">
+    </form>
+
+
+</div>
+  </div>
+</div>

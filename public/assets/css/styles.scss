@@ -19,9 +19,17 @@ $darkBlue: #2a7777;
 $medBlue: #3aa2a2;
 
 
+
+
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/profile";
 @import "partials/login";
 @import "partials/signup";
 @import "partials/dashboard";
+@import "partials/matches";
 @import "partials/consumer_questionnaire";
-@import "partials/business_questionnaire";
-@import "partials/profile";
+@import "partials/bus_editNEW";
+@import "partials/home";
+@import "partials/biz_search";

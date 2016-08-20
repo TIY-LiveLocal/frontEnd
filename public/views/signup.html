@@ -1,24 +1,47 @@
 <div id="signUp">
+  <div class="headerWrap" id="signupheaderwrap">
+      <h2 id="Pearl"><a href="#/home">Pearl</a></h2>
+      <img id="ll-pearl" src="assets/img/pearlLogo-1.svg" alt="" />
+  </div>
   <div class="signUpWrap">
-    <h2>Sign Up</h2>
-    <form class="signUpForm">
-      <input class="signUpInput" type="text" ng-model="first_name" placeholder="First Name">
-      <input class="signUpInput" type="text" ng-model="last_name" placeholder="Last Name">
-      <input class="signUpInput" type="text" ng-model="username" placeholder="Username">
-      <input class="signUpInput" type="email" ng-model="email" placeholder="Email">
-      <input class="signUpInput" type="password" ng-model="password" placeholder="Password">
-      <input class="signUpInput" type="password" ng-model="confirm_password" placeholder="Confirm Password">
-      <input class="signUpInput" type="text" ng-model="zip_code" placeholder="Zipcode">
-      <input class="submit" type="submit" ng-click="getStarted()" value="Get Started">
+
+    <h2 id="signup">Sign Up</h2>
+    <form class="signUpForm" name="suForm" required>
+      <div class="signUpInput">
+        <span>{{first_nameErr}}</span>
+        <input ng-style="myStyle" type="text" name="firstname" ng-model="first_name" placeholder="First Name" >
+      </div>
+      <div class="signUpInput">
+        <span>{{last_nameErr}}</span>
+        <input ng-style="myStyle" type="text" ng-model="last_name" placeholder="Last Name">
+      </div>
+      <div class="signUpInput">
+        <span>{{usernameErr}}</span>
+        <input ng-style="myStyle" type="text" ng-model="username" placeholder="Username">
+      </div>
+      <div class="signUpInput">
+        <span>{{emailErr}}</span>
+        <input ng-style="myStyle" type="email" ng-model="email" placeholder="Email">
+      </div>
+      <div class="signUpInput">
+        <span>{{passwordErr}}</span>
+        <input ng-style="myStyle" type="password" ng-model="password" placeholder="Password">
+      </div>
+      <div class="signUpInput">
+        <span>{{confirm_passwordErr}}</span>
+        <input ng-style="myStyle" type="password" ng-model="confirm_password" placeholder="Confirm Password">
+      </div>
+      <div class="signUpInput" id="signUpZipcode">
+        <span>{{zip_codeErr}}</span>
+        <input ng-style="myStyle" type="text" ng-model="zip_code" placeholder="Zipcode">
+      </div>
+
+      <input class="submit" id="getstartedSignup" type="submit" ng-click="getStarted(); myStyle={'display':'block'}" value="Get Started">
     </form>
-    <ul>
-      <li>{{first_nameErr}}</li>
-      <li>{{last_nameErr}}</li>
-      <li>{{usernameErr}}</li>
-      <li>{{emailErr}}</li>
-      <li>{{passwordErr}}</li>
-      <li>{{confirm_passwordErr}}</li>
-      <li>{{zip_codeErr}}</li>
-    </ul>
+      <div id="signupMSG" ng-style="myStyle">
+        {{signupMSG}}
+      </div>
+
+
   </div>
 </div>

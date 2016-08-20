@@ -1,81 +1,337 @@
-#loginPage{
-  width: 60%;
-  margin: 0 auto;
-  font-family: $font2;
-  input{
-    &:focus{
-      outline: none;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: $darkBlue;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+@media only screen
+  and (min-width: 1020px) {
+  #loginPage{
+    width: 100%;
+    margin: 0 auto;
+    font-family: $font2;
+    input{
+      &:focus{
+        outline: none;
+      }
+    }
+    .loginWrap{
+
+      .leftWrap{
+        width: 100%;
+        h2{
+          box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          padding: 2% 50% 2% 30%;
+          margin: 5% 0;
+          font-family: $font5;
+          color: $red;
+          font-size: 5em;
+          position: absolute;
+        }
+        img{
+          width: 100%;
+          position: absolute;
+          z-index: -1;
+          margin: -20% 0;
+        }
+      }
+      .rightWrap{
+        width: 100%;
+        position: absolute;
+        .new_user{
+          margin: 20% 0 2%;
+          .field{
+            width: 30%;
+            margin: 1% 22%;
+            #user_email{
+              font-size: 1.1em;
+              border: none;
+              border-bottom: 1px solid $blue;
+              padding: 2%;
+              width: 100%;
+              height: 2em;
+              letter-spacing: 2px;
+
+            }
+            #user_password{
+              font-size: 1.1em;
+              border: none;
+              border-bottom: 1px solid $blue;
+              padding: 2%;
+              width: 100%;
+              height: 2em;
+              letter-spacing: 2px;
+
+            }
+            .rememberMe{
+              font-size: .75em;
+            }
+          }
+          .actions{
+            margin: 3% 19%;
+            input{
+              background: #E67A7A;
+              color: white;
+              border: none;
+              padding: 2% 25%;
+              margin: 0.5%;
+              font-size: 1em;
+              font-weight: 500;
+              border-radius: 1px;
+              letter-spacing: 2px;
+
+            }
+          }
+        }
+        .help{
+          margin: 1% 22%;
+          display: block;
+          font-size: .6em;
+          color: $darkBlue;
+          line-height: 2em;
+          letter-spacing: 2px;
+          &:visited{
+            color: $medBlue;
+          }
+        }
+      }
     }
   }
-  .loginWrap{
-    border: 2px solid $blue;
-    border-radius: 10px;
-    margin: 4%;
-    padding: 5% 1%;
-    position: relative;
-    height: 20em;
-    box-shadow: 1px 1px 20px 1px rgba(42, 119, 119, 0.29);
-    .leftWrap{
-      width: 50%;
-      position: absolute;
-      h2{
-        font-family: $font5;
-        color: $red;
-        text-align: center;
-        font-size: 3em;
-        padding: 1%;
-      }
-      img{
-        width: 75%;
+}
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 1020px){
+  #loginPage{
+    width: 100%;
+    margin: 0 auto;
+    font-family: $font2;
+    input{
+      &:focus{
+        outline: none;
       }
     }
-    .rightWrap{
-      width: 60%;
-      position: absolute;
-      right: 0;
-      top: 20%;
-      .new_user{
-        .field{
-          width: 60%;
-          margin: 0em auto;
-          padding: 1%;
-          line-height: 3em;
-          #user_email{
-            font-size: 1.1em;
-            border: none;
-            border-bottom: 1px solid $blue;
+    .loginWrap{
+      position: relative;
+      margin: 5%;
+      .leftWrap{
+        width: 100%;
+        position: absolute;
+        h2{
+          font-family: $font5;
+          color: $red;
+          text-align: center;
+          font-size: 3em;
+          padding: 5% 0;
+          box-shadow: 0px 10px 100px 20px rgba(255,255,255,0.5);
+          border-radius: 50%;
+          letter-spacing: 2px;
+
+        }
+        img{
+          width: 100%;
+          position: absolute;
+          top: 0;
+          margin: -48% 0%;
+          z-index: -1;
+        }
+      }
+      .rightWrap{
+        width: 100%;
+        position: absolute;
+        margin: 50% 0 0;
+        .new_user{
+
+          .field{
+            width: 80%;
+            margin: 0em auto;
             padding: 1%;
-            width: 100%;
+            line-height: 3em;
+
+            #user_email{
+              font-size: 1.1em;
+              border: none;
+              border-bottom: 1px solid $blue;
+              padding: 3% 2%;
+              width: 100%;
+              letter-spacing: 2px;
+
+            }
+            #user_password{
+              font-size: 1.1em;
+              border: none;
+              border-bottom: 1px solid $blue;
+              padding: 3% 2%;
+              width: 100%;
+              letter-spacing: 2px;
+
+            }
+            .rememberMe{
+              font-size: .75em;
+            }
           }
-          #user_password{
-            @extend #user_email;
-          }
-          .rememberMe{
-            font-size: .75em;
+          .actions{
+            margin: 5% 10% 5%;
+            input{
+              width: 100%;
+              background: $red;
+              color: white;
+              border: none;
+              padding: 5% 30%;
+              margin: 5% auto;
+              font-size: 1em;
+              font-weight: 500;
+              border-radius: 2px;
+              letter-spacing: 1px;
+            }
           }
         }
-        .actions{
-          width: 60%;
-          margin: 0 auto;
-          input{
-            background: $red;
-            color: white;
-            border: none;
-            padding: 3% 30%;
-            margin: 5% auto;
-            font-size: 1em;
-            font-weight: 500;
-            border-radius: 1px;
+        .help{
+          margin: 2% 10%;
+          font-size: .8em;
+          color: $darkBlue;
+          line-height: 2em;
+          text-decoration: none;
+          border-bottom: 1px solid $blue;
+          padding: .5%;
+          display: inline-block;
+          letter-spacing: 2px;
+
+          &:visited{
+            color: $medBlue;
+            text-decoration: none;
+
           }
         }
       }
-      .help{
-        margin: 20%;
-        font-size: .6em;
-        color: $darkBlue;
-        line-height: 2em;
-        &:visited{
-          color: $medBlue;
+    }
+  }
+}
+@media only screen
+  and (max-width: 480px){
+  #loginPage{
+    width: 100%;
+    margin: 0 auto;
+    font-family: $font2;
+    input{
+      &:focus{
+        outline: none;
+      }
+    }
+    .loginWrap{
+      .leftWrap{
+        width: 100%;
+        position: absolute;
+        h2{
+          font-family: $font5;
+          color: $red;
+          text-align: center;
+          font-size: 3em;
+          padding: 5% 0;
+          box-shadow: 0px 10px 100px 20px rgba(255,255,255,0.5);
+          border-radius: 50%;
+          letter-spacing: 2px;
+
+        }
+        img{
+          width: 100%;
+          position: absolute;
+          top: 0;
+          margin: -50% 0%;
+          z-index: -1;
+        }
+      }
+      .rightWrap{
+        width: 95%;
+        position: absolute;
+        margin: 50% 3% 0;
+        .new_user{
+
+          .field{
+            width: 90%;
+            margin: 0em auto;
+            padding: 5% 0;
+            line-height: 3em;
+
+            #user_email{
+              font-size: 1.1em;
+              border: none;
+              border-bottom: 1px solid $blue;
+              padding: 5% 0%;
+              width: 100%;
+              letter-spacing: 2px;
+
+            }
+            #user_password{
+              font-size: 1.1em;
+              border: none;
+              border-bottom: 1px solid $blue;
+              padding: 5% 0%;
+              width: 100%;
+              letter-spacing: 2px;
+
+            }
+            .rememberMe{
+              font-size: .75em;
+            }
+          }
+          .actions{
+            margin: 5%;
+            h1{
+              font-size: 20px;
+              color: $darkBlue;
+              margin: 0 auto;
+              background: $tan;
+              width: 85%;
+              text-align: center;
+              padding: 1% 2%;
+              border: 1px solid $blue;
+              border-radius: 2px;
+              font-family: $font4;
+              display: none;
+              padding: 2%;
+            }
+            input{
+              width: 100%;
+              background: $red;
+              color: white;
+              border: none;
+              padding: 5% 0;
+              margin: 5% auto;
+              font-size: 2em;
+              font-weight: 500;
+              border-radius: 2px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+        .help{
+          margin: 2% 5%;
+          font-size: .8em;
+          color: $darkBlue;
+          line-height: 2em;
+          text-decoration: none;
+          border-bottom: 1px solid $blue;
+          padding: .5%;
+          display: inline-block;
+          letter-spacing: 2px;
+
+          &:visited{
+            color: $medBlue;
+            text-decoration: none;
+
+          }
         }
       }
     }

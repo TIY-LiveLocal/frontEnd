@@ -1,155 +1,22 @@
-// DESKTOP VIEW BELOW
-@media screen and (min-width: 1020px) {
-  #consumerQuestionnaire{
-li{
-  font-size: 1.5em;
-  color:$darkGrey;
-}
-    .checkBoxWrap{
-      width: 40%;
-      margin: 5em auto;
-      box-shadow: 5px 5px 35px 1px $darkGrey;
-      padding-bottom: .5%;
-    }
-    h2{
-      display: block;
-      font-family: $font4;
-      color: $red;
-      text-align: left;
-      font-size: 2em;
-      padding: 5%;
-    }
-
-    .checkBoxForm{
-      display: block;
-      font-family: $font4;
-      // font-size: 1.5em;
-      // color:$darkGrey;
-
-
-      .signUpInput{
-        width: 90%;
-        display: block;
-        font-size: 1.1em;
-        border: none;
-        border-bottom: 1px solid $blue;
-        padding: 1%;
-        margin: 4%;
-        &:focus{
-          outline: none;
-        }
-      }
-
-      label, input{
-        cursor: pointer;
-        cursor: hand;
-      }
-
-    .black{
-      color:black;
-    }
-
-      input{
-        margin: 5% 1%;
-        display:none;
-      }
-
-      li.black {
-        color:black;
-      }
-
-      .claimBus{
-        color:$red;
-      }
-
-      .submit{
-        background: $red;
-        display: block;
-        font-family: $font4;
-        color: white;
-        text-align: center;
-        font-size: 1.5em;
-        padding: 2%;
-        width: 90%;
-        border: none;
-        margin: 1% auto;
-        cursor: pointer;
-        letter-spacing: 1.5px;
-      }
-    }
+////////////  DESKTOP VIEW  ////////////
+@media only screen
+  and (min-width: 1020px) {
   }
-}
-// MOBILE VIEW BELOW
-@media screen and (max-width: 1020px) {
-  #headerNavBar{
-        .logo{
-          display: block;
-          box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
-          margin: 0%;
-          padding: 1%;
-          #pearlH1{
-            font-size: 3em;
-            display: inline-block;
-            padding: 1% 1% 1% 4%;
-            color: $red;
-            letter-spacing: 2px;
-            font-family: $font5;
-            cursor: pointer;
-          }
-          img{
-            width: 11%;
-          }
-          .dropdownMenu{
-            position: absolute;
-            top: 1%;
-            right: 5%;
-            z-index: 2;
-            .dropdownbtn{
-              background-color: white;
-              border: none;
-              cursor: pointer;
-              font-size: 1em;
-              margin: 2%;
-              &:focus{
-                outline: none;
-              }
-              .fa-bars{
-                position: relative;
-                font-size: 3em;
-                color: $red;
-              }
-            }
-            .dropdownMenu-list{
-              position: absolute;
-              background-color: $blue;
-              right: 0%;
-              text-align: right;
-              padding: 15% 30%;
-              box-shadow: 1px 5px 10px 0px rgba(42,119,119,0.5);
-              border-radius: 2px;
-              .dropdownMenu-list--item{
-                font-family: $font2;
-                font-size: 2em;
-                display: block;
-                text-decoration: none;
-                color: $red;
-                border-bottom: 1px dotted #E67A7A;
-                line-height: 1.7;
-                margin-bottom: 10%;
-                text-shadow: 1px 1px rgba(42, 119, 119, 0.5);
-              }
-            }
-          }
-        }
-      }
-      // end of header navbar//////////////////////////
-
+////////////  TABLET VIEW  ////////////
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 1020px){
+  }
+////////////  MOBILE VIEW  ////////////
+@media only screen and (max-width: 480px) {
+  input[type="checkbox"]{
+    display: none;
+  }
   #signUp{
     .headerWrap{
-      width: 98%;
+      width: 100%;
       display: block;
       position: relative;
-      margin: 0 2%;
       h2{
         font-family: $font5;
         color: $red;
@@ -161,10 +28,6 @@ li{
         letter-spacing: 2px;
       }
 
-      // .checkboxItems{
-      //   color:$darkGrey;
-      //   font-size: 1em;
-      // }
 
       img{
         width: 100%;
@@ -175,20 +38,16 @@ li{
       }
     }
     .checkBoxWrap{
-      box-shadow: 0px 5px 15px 1px rgba(42, 119, 119, 0.1);
-      padding-bottom: 3%;
-      margin: 12% 1%;
-      border-radius: 5%;
-
-    h2{
-      background: $red;
-      display: block;
-      font-family: $font4;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      padding: 3%;
-    }
+      #matters_toyou{
+        background: $red;
+        display: block;
+        font-family: $font4;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        padding: 3%;
+        margin: 2% 0%;
+      }
     }
 
     .checkBoxForm{
@@ -196,9 +55,24 @@ li{
       font-family: $font4;
       font-size: 1.3em;
       color:$darkGrey;
+      .shadow{
+        background: #eee;
+        color: $darkBlue;
+        display: block;
+      }
     }
     ul{
-      margin: 2%;
+      margin: 6% 2%;
+      li{
+        font-size: 1.3em;
+        border-radius: 5px;
+        letter-spacing: .2px;
+        vertical-align: super;
+        margin: 2px;
+        img{
+          margin: 0 5%;
+        }
+      }
     }
 
       .signUpInput{
@@ -218,6 +92,8 @@ li{
       label, input{
         cursor: pointer;
         cursor: hand;
+        display: block;
+        padding: 4% 1%;
       }
 
       .black{
@@ -233,7 +109,6 @@ li{
         display:none;
         padding: 5%;
       }
-      }
 
       .claimBus{
         color:$red;
@@ -247,13 +122,12 @@ li{
         font-family: $font4;
         color: white;
         text-align: center;
-        font-size: 1.5em;
-        padding: 2%;
-        width: 90%;
+        font-size: 2em;
+        width: 100%;
         border: none;
-        margin: 1% auto;
         cursor: pointer;
         letter-spacing: 1.5px;
       }
 
+  }
   }

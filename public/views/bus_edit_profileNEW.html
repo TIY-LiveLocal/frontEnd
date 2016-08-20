@@ -1,0 +1,62 @@
+<div id="bus_edit_profile">
+    <header id=headerNavBar>
+        <div class="logo">
+            <h1 id="pearlH1">Pearl</h1>
+            <img src="assets/img/pearlLogo-1.svg" alt="" />
+
+            <div class="dropdownMenu">
+                <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                    <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+                </button>
+                <div class="dropdownMenu-list" ng-show="dropDown">
+                    <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+                    <a class="dropdownMenu-list--item" href="#/business_search">Search</a>
+                    <a class="dropdownMenu-list--item" href="#/business_edit">Settings</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <p class="profileHeader-search"> find me
+            <input id="searchNearMe" type="text" placeholder="i.e. waffles"></input>
+            <span><button id = "searchNearMeBtn">
+          search
+        </button></span>
+        </p>
+        <div class="options">
+            <h3 id="edit">Edit your business listing</h3>
+            <!-- <h3 >{{username}}</h3> -->
+        </div>
+        <ul>
+            <li>
+                <input class="control" type="text" name='name' ng-model="name" placeholder="Business Name">
+            </li>
+            <li>
+                <input class="control" type='text' name='address' ng-model='street' placeholder='Street Address'>
+            </li>
+            <li>
+                <input class="control" type="text" name='city' ng-model="city" placeholder="City">
+            </li>
+            <li>
+                <input class="control" type="zipcode" name='zipcode' ng-model="zipcode" placeholder="Zipcode">
+            </li>
+            <li>
+                <input class="control" type="text" name="phone" ng-model="phone" placeholder="Phone">
+            </li>
+            <li>
+                <input class="control" type="text" name='website_url' ng-model="website_url" placeholder="Website URL (include http://)">
+            </li>
+            <li>
+                <input class="control" type="text" name='image_url' ng-model="image_url" placeholder="Image URL (include http://)">
+            </li>
+            <li>
+                <input class="control" type="text" name='biz_descrip' ng-model="biz_descrip" placeholder="Business Description">
+            </li>
+            <li>
+                <input id="editPatch" class="submit" type="submit" ng-click="editSubmitButton()" value="Edit My Listing">
+            </li>
+        </ul>
+
+  </main>
+</div>

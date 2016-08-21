@@ -4,7 +4,6 @@ app.factory('dbFactory', ['$http', function($http){
   var dbFactory = {};
   var token = localStorage.getItem('token');
 
-
   dbFactory.callOne = function(){
     return $http({
         method: 'GET',
@@ -13,7 +12,5 @@ app.factory('dbFactory', ['$http', function($http){
         // params: {'page':3}
     });
   };
-
-  console.log(dbFactory);
   return dbFactory;
 }]);

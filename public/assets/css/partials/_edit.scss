@@ -1,5 +1,12 @@
-// laptop view
-@media screen and (min-width: 1000px) {
+////////////  DESKTOP VIEW  ////////////
+@media only screen
+  and (min-width: 1020px) {
+  }
+////////////  TABLET VIEW  ////////////
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 1020px){
+
   #bus_edit_profile{
 
 .control{
@@ -198,8 +205,9 @@
       }
     }
   }
-  // mobile view
-@media screen and (max-width: 1000px) {
+
+////////////  MOBILE VIEW  ////////////
+@media only screen and (max-width: 480px) {
   #bus_edit_profile{
     #headerNavBar{
           .logo{

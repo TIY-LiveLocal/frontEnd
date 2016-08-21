@@ -1,18 +1,4 @@
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 1px solid white;
-  -webkit-text-fill-color: $darkBlue;
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
+
 a{
   outline: none;
   text-decoration: none;
@@ -25,11 +11,22 @@ a{
     color: $red;
   }
 }
+
+////////////  DESKTOP VIEW  ////////////
 @media only screen
-  and (max-width: 480px){
+  and (min-width: 1020px) {
+  }
+////////////  TABLET VIEW  ////////////
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 1020px){
+  }
+////////////  MOBILE VIEW  ////////////
+@media only screen and (max-width: 480px) {
   #signUp{
     #signupheaderwrap{
-      width: 65%;
+      width: 70%;
+      margin: 0 auto;
     }
     .headerWrap{
       width: 60%;
@@ -50,7 +47,7 @@ a{
         width: 100%;
         position: absolute;
         top: 0;
-        margin: -50% 0%;
+        margin: -40% 0%;
         z-index: -1;
       }
     }
@@ -58,22 +55,7 @@ a{
       margin: 0;
       border-radius: 5%;
 
-    #signup{
-      padding: 5%;
-      position: absolute;
-      top: 5%;
-      right: 0;
-      background: $red;
-      display: block;
-      font-family: $font4;
-      color: white;
-      text-align: left;
-      font-size: 2em;
-      border-radius: 3px;
-      letter-spacing: 2px;
-      font-weight: 700;
 
-    }
     #signupMSG{
       font-size: 20px;
       color: $darkBlue;
@@ -96,6 +78,18 @@ a{
       position: absolute;
       width: 100%;
       background: white;
+      #sign_header{
+        padding: 5%;
+        background: $red;
+        display: block;
+        font-family: $font4;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        letter-spacing: 2px;
+        font-weight: 700;
+
+      }
       .signUpInput{
         width: 90%;
         display: inline-block;
@@ -103,13 +97,13 @@ a{
         border: none;
         border-bottom: 1px solid #9DDCDC;
         padding: 1%;
-        line-height: 2em;
+        line-height: 1.75;
         margin: 0% 4%;
         &:focus{
           outline: none;
         }
         input{
-          font-size: 1.5em;
+          font-size: 1.4em;
           border: none;
           display: inline-block;
           &:focus{
@@ -128,21 +122,22 @@ a{
       #signUpZipcode{
         margin-bottom: 20%;
       }
-      #getstartedSignup{
-        background: $red;
-        display: block;
-        font-family: $font4;
-        color: white;
-        text-align: center;
-        font-size: 2em;
-        padding: 4%;
-        width: 100%;
-        border: none;
-        margin: 0 auto;
-        cursor: pointer;
-        letter-spacing: 2px;
-        font-weight: 700;
-      }
+    }
+    #getstartedSignup{
+      background: $red;
+      display: block;
+      font-family: $font4;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      padding: 4%;
+      width: 100%;
+      border: none;
+      position: fixed;
+      bottom: 0;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-weight: 700;
     }
     .signUpForm.ng-invalid{
       border: 1px solid red;

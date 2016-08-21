@@ -1,16 +1,13 @@
-input:-webkit-autofill,
-input:-webkit-autofill:focus input:-webkit-autofill,
-input:-webkit-autofill:hover,
-select:-webkit-autofill,
-select:-webkit-autofill:focus,
-select:-webkit-autofill:hover,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
-    border: 1px solid white;
-    -webkit-text-fill-color: $darkBlue;
-    -webkit-box-shadow: 0 0 0 1000px white inset;
-    transition: background-color 5000s ease-in-out 0s;
-}
+////////////  DESKTOP VIEW  ////////////
+@media only screen
+  and (min-width: 1020px) {
+  }
+////////////  TABLET VIEW  ////////////
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 1020px){
+  }
+////////////  MOBILE VIEW  ////////////
 @media only screen and (max-width: 480px) {
     #mainDashboard {
         #dashboard {

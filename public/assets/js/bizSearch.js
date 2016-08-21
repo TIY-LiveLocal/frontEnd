@@ -6,10 +6,6 @@ var bizNameLoc  = $('input[id="bizAddressHere"]').val();
 
   $scope.seekBusiness = function(){
 
-    console.log('search has been clicked');
-    console.log('user has typed '+ $('input[id="bizNameHere"]').val());
-    console.log('user has typed '+ $('input[id="bizAddressHere"]').val());
-
     $http({
       method: 'GET',
       url: 'https://livelocalrails.herokuapp.com/find_business',
@@ -18,20 +14,16 @@ var bizNameLoc  = $('input[id="bizAddressHere"]').val();
                 'location': $('input[id="bizAddressHere"]').val()}
       }).then(function successCallback(response){
         $scope.businesses = response.data; //placed at the right bracket of the response, helps define response and tells it what you need
-        console.log(response);
       }, function errorCallback (response){
-        console.log(response);
       });
 
       //click & get index of clicked dataThang
         $scope.logID = function(){
           var vm = this.biz;
 
-          myDataThing = $scope.businesses;
-      //an object
-        console.log(typeof myDataThing);
+          dataclicked = $scope.businesses;
 
-          clicked = $(this).myDataThing;
+          clicked = $(this).dataclicked;
 
       //logs the object information that has been clicked
 

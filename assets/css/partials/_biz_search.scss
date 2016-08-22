@@ -1,6 +1,116 @@
 ////////////  DESKTOP VIEW  ////////////
 @media only screen
   and (min-width: 1020px) {
+    #mainBiz_search {
+        // top: 8%;
+        position: absolute;
+        width: 100%;
+        #searchOuterWrapper {
+            img {
+                position: relative;
+                left: 3.5%;
+            }
+            #searchPageWrapper {
+                #searchPage-inputs {
+                    position: relative;
+                    margin: auto;
+                    list-style: none;
+                    width: 80%;
+                    margin: 10% auto 0;
+                    padding: 5%;
+                    #bizNameHere {
+                        position: relative;
+                        left: 20%;
+                        margin: 5% auto;
+                        width: 60%;
+                        outline: none;
+                        border-style: none;
+                        border-bottom: solid $red 1px;
+                        font-size: 2em;
+                        letter-spacing: 2px;
+                        line-height: 3;
+                        color: $darkGrey;
+                    }
+                    #bizAddressHere {
+                        position: relative;
+                        left: 20%;
+                        margin: 5% auto;
+                        width: 60%;
+                        outline: none;
+                        border-style: none;
+                        border-bottom: solid $red 1px;
+                        font-size: 2em;
+                        letter-spacing: 2px;
+                        line-height: 3;
+                        color: $darkGrey;
+                    }
+                    #bizSetupSearch {
+                        width: 30%;
+                        position: relative;
+                        left: 35%;
+                        outline: none;
+                        border-style: none;
+                        padding: 2%;
+                        border-radius: 3px;
+                        margin: 10% 0;
+                        background-color: $red;
+                        color: $tan;
+                        font-style: $font4;
+                        font-size: 2em;
+                    }
+                }
+                .findBusinesses {
+                    font-family: $font4;
+                    color: $darkGrey;
+                    letter-spacing: 1.2px;
+                    margin-bottom: 20%;
+                    li {
+                        border: solid $red 1px;
+                        border-radius: 7px;
+                        margin: 3%;
+                        padding: 3%;
+                        a {
+                            text-decoration: none;
+                            &:visited {
+                                text-decoration: none;
+                            }
+                        }
+                        #bizName {
+                            font-size: 1.2em;
+                            letter-spacing: 1.5px;
+                        }
+                        div {
+                            margin: 2% 0;
+                        }
+                        #chevron {
+                            font-size: 0.5em;
+                            position: relative;
+                            float: right;
+                            padding: 5% 1%;
+                            color: $red;
+                        }
+                        #yelp {
+                            font-size: 0.5em;
+                            position: relative;
+                            left: 78%;
+                            margin-top: 6%;
+                            padding: 2%;
+                            color: $red;
+                            &:visited {
+                                text-decoration: none;
+                            }
+                            .fa {
+                                float: right;
+                                font-size: 2em;
+                                margin-right: 4%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
   }
 ////////////  TABLET VIEW  ////////////
 @media only screen

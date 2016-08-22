@@ -45,7 +45,78 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   transition: background-color 5000s ease-in-out 0s; }
 
+@media only screen and (min-width: 1020px) {
+  #headerNavBar {
+    top: 0;
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    padding: 1% 0;
+    background: linear-gradient(white, snow); }
+    #headerNavBar .desktopMenu {
+      z-index: 10;
+      display: block;
+      position: relative; }
+      #headerNavBar .desktopMenu .dekstopMenu-item {
+        color: #E67A7A;
+        font-family: "Roboto", sans-serif; }
+    #headerNavBar .logo {
+      display: block;
+      box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.27);
+      margin: 0;
+      padding: 2% 1%; }
+      #headerNavBar .logo #pearlH1 {
+        font-size: 3em;
+        display: inline-block;
+        padding: 1% 1% 1% 4%;
+        color: #E67A7A;
+        letter-spacing: 2px;
+        font-family: "Arvo", serif;
+        cursor: pointer; }
+      #headerNavBar .logo img {
+        width: 5%;
+        position: relative;
+        left: 32%; }
+      #headerNavBar .logo .dropdownMenu {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        z-index: 2;
+        padding: 1%; }
+        #headerNavBar .logo .dropdownMenu .dropdownbtn {
+          background: linear-gradient(white, snow);
+          border: none;
+          cursor: pointer;
+          font-size: 1em;
+          margin: 2%; }
+          #headerNavBar .logo .dropdownMenu .dropdownbtn:focus {
+            outline: none; }
+          #headerNavBar .logo .dropdownMenu .dropdownbtn .fa-bars {
+            position: relative;
+            font-size: 3em;
+            color: #E67A7A; }
+        #headerNavBar .logo .dropdownMenu .dropdownMenu-list {
+          position: absolute;
+          background-color: #E67A7A;
+          right: 0;
+          text-align: center;
+          padding: 15% 30%;
+          box-shadow: 1px 5px 10px 0 rgba(42, 119, 119, 0.5);
+          border-radius: .3em; }
+          #headerNavBar .logo .dropdownMenu .dropdownMenu-list .dropdownMenu-list--item {
+            font-family: "Arimo", sans-serif;
+            font-size: 1.5em;
+            display: block;
+            text-decoration: none;
+            color: #FFF4E1;
+            border-bottom: 1px dotted #E67A7A;
+            line-height: 1.7;
+            margin-bottom: 10%;
+            border-bottom: #FFF4E1 solid 0.05em; } }
 @media only screen and (max-width: 480px) {
+  .desktopNav {
+    display: none; }
+
   #headerNavBar {
     top: 0;
     z-index: 5;
@@ -104,6 +175,9 @@ select:-webkit-autofill:focus {
             line-height: 1.7;
             margin-bottom: 10%;
             text-shadow: 1px 1px rgba(42, 119, 119, 0.5); } }
+@media only screen and (min-width: 1020px) {
+  #bottomWrapper {
+    display: none; } }
 @media only screen and (max-width: 480px) {
   #bottomWrapper {
     text-align: center;
@@ -1071,6 +1145,52 @@ a {
           margin: 1%;
           color: #E67A7A;
           float: right; } }
+@media only screen and (min-width: 1020px) {
+  #mainDashboard {
+    top: 12.5%;
+    width: 80%;
+    margin: auto; }
+    #mainDashboard #loading {
+      margin-top: 15em;
+      padding: 1em;
+      border: solid #9DDCDC 0.05em;
+      background-color: #FFF4E1;
+      color: #9DDCDC;
+      font-family: "Roboto", sans-serif; }
+    #mainDashboard .userResults {
+      padding-top: 6em;
+      color: #9DDCDC;
+      font-family: "Arvo", serif;
+      font-size: 2em; }
+      #mainDashboard .userResults #dash_zip {
+        padding-top: 2em; }
+      #mainDashboard .userResults .badges {
+        padding-top: .75em; }
+    #mainDashboard ul {
+      width: 100%; }
+      #mainDashboard ul li {
+        position: relative;
+        left: -4%;
+        width: 100%;
+        color: #9E9E9E;
+        font-size: 2em;
+        letter-spacing: 2px;
+        font-family: "Roboto", sans-serif;
+        border: #E67A7A solid 0.15em;
+        border-radius: 0.5em;
+        margin: 2%;
+        padding: 2%;
+        box-shadow: 0.2em 0.2em 1em 0 rgba(128, 128, 128, 0.27); }
+        #mainDashboard ul li .fa-chevron-right {
+          display: inline;
+          top: 1.25em;
+          color: #E67A7A;
+          size: 3em;
+          position: relative;
+          left: 90%;
+          padding: 5% 1%; }
+        #mainDashboard ul li .fa-yelp {
+          color: #9DDCDC; } }
 @media only screen and (max-width: 480px) {
   #mainDashboard {
     top: 12.5%;
@@ -1966,6 +2086,95 @@ a {
     transform: translateY(-2px); }
   60% {
     transform: translateY(-4px); } }
+@media only screen and (min-width: 1020px) {
+  #mainBiz_search {
+    position: absolute;
+    width: 100%; }
+    #mainBiz_search #searchOuterWrapper img {
+      position: relative;
+      left: 3.5%; }
+    #mainBiz_search #searchOuterWrapper #searchPageWrapper #searchPage-inputs {
+      position: relative;
+      margin: auto;
+      list-style: none;
+      width: 80%;
+      margin: 10% auto 0;
+      padding: 5%; }
+      #mainBiz_search #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizNameHere {
+        position: relative;
+        left: 20%;
+        margin: 5% auto;
+        width: 60%;
+        outline: none;
+        border-style: none;
+        border-bottom: solid #E67A7A 1px;
+        font-size: 2em;
+        letter-spacing: 2px;
+        line-height: 3;
+        color: #9E9E9E; }
+      #mainBiz_search #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizAddressHere {
+        position: relative;
+        left: 20%;
+        margin: 5% auto;
+        width: 60%;
+        outline: none;
+        border-style: none;
+        border-bottom: solid #E67A7A 1px;
+        font-size: 2em;
+        letter-spacing: 2px;
+        line-height: 3;
+        color: #9E9E9E; }
+      #mainBiz_search #searchOuterWrapper #searchPageWrapper #searchPage-inputs #bizSetupSearch {
+        width: 30%;
+        position: relative;
+        left: 35%;
+        outline: none;
+        border-style: none;
+        padding: 2%;
+        border-radius: 3px;
+        margin: 10% 0;
+        background-color: #E67A7A;
+        color: #FFF4E1;
+        font-style: "Roboto", sans-serif;
+        font-size: 2em; }
+    #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses {
+      font-family: "Roboto", sans-serif;
+      color: #9E9E9E;
+      letter-spacing: 1.2px;
+      margin-bottom: 20%; }
+      #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li {
+        border: solid #E67A7A 1px;
+        border-radius: 7px;
+        margin: 3%;
+        padding: 3%; }
+        #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li a {
+          text-decoration: none; }
+          #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li a:visited {
+            text-decoration: none; }
+        #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li #bizName {
+          font-size: 1.2em;
+          letter-spacing: 1.5px; }
+        #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li div {
+          margin: 2% 0; }
+        #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li #chevron {
+          font-size: 0.5em;
+          position: relative;
+          float: right;
+          padding: 5% 1%;
+          color: #E67A7A; }
+        #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp {
+          font-size: 0.5em;
+          position: relative;
+          left: 78%;
+          margin-top: 6%;
+          padding: 2%;
+          color: #E67A7A; }
+          #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp:visited {
+            text-decoration: none; }
+          #mainBiz_search #searchOuterWrapper #searchPageWrapper .findBusinesses li #yelp .fa {
+            float: right;
+            font-size: 2em;
+            margin-right: 4%; } }
 @media only screen and (max-width: 480px) {
   #mainBiz_search {
     top: 8%;

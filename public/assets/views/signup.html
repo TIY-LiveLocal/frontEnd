@@ -1,0 +1,49 @@
+<div id="signUp">
+  <div class="headerWrap" id="signupheaderwrap">
+      <h2 id="Pearl"><a href="#/home">Pearl</a></h2>
+      <img id="ll-pearl" src="assets/img/pearlLogo-1.svg" alt="" />
+  </div>
+  <div class="signUpWrap">
+
+    <form class="signUpForm" name="suForm" required>
+      <h2 id="sign_header">Sign Up</h2>
+
+      <div id="first_name_ib" class="signUpInput">
+        <span>{{first_nameErr}}</span>
+        <input ng-style="myStyle" type="text" name="firstname" ng-model="first_name" placeholder="First Name" >
+      </div>
+      <div id="last_name_ib" class="signUpInput">
+        <span>{{last_nameErr}}</span>
+        <input ng-style="myStyle" type="text" ng-model="last_name" placeholder="Last Name">
+      </div>
+      <div class="signUpInput">
+        <span>{{usernameErr}}</span>
+        <input ng-style="myStyle" type="text" ng-model="username" placeholder="Username">
+      </div>
+      <div class="signUpInput">
+        <span>{{emailErr}}</span>
+        <input ng-style="myStyle" type="email" ng-model="email" placeholder="Email">
+      </div>
+      <div class="signUpInput">
+        <span>{{passwordErr}}</span>
+        <input ng-style="myStyle" type="password" ng-model="password" placeholder="Password">
+      </div>
+      <div class="signUpInput">
+        <span>{{confirm_passwordErr}}</span>
+        <input ng-style="myStyle" type="password" ng-model="confirm_password" placeholder="Confirm Password">
+      </div>
+      <div class="signUpInput" id="signUpZipcode">
+        <span>{{zip_codeErr}}</span>
+        <input ng-style="myStyle" type="text" ng-model="zip_code" placeholder="Zipcode">
+      </div>
+
+    </form>
+    <input class="submit" id="getstartedSignup" type="submit" ng-click="getStarted(); myStyle={'display':'block'}" value="Get Started">
+
+      <div id="signupMSG" ng-style="myStyle">
+        {{signupMSG}}
+      </div>
+
+
+  </div>
+</div>

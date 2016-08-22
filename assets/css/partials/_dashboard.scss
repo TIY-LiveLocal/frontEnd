@@ -1,0 +1,232 @@
+////////////  DESKTOP VIEW  ////////////
+@media only screen
+  and (min-width: 1020px) {
+  }
+////////////  TABLET VIEW  ////////////
+@media only screen
+  and (min-width: 480px)
+  and (max-width: 1020px){
+  }
+////////////  MOBILE VIEW  ////////////
+@media only screen and (max-width: 480px) {
+    #mainDashboard {
+        #dashboard {
+            .userResults {
+                margin-left: 3%;
+                h3 {
+                    color: $blue;
+                    font-family: $font5;
+                    margin: 3% 0 6%;
+                    font-size: 1.5em;
+                    letter-spacing: 0.5px;
+                    #dash_zip {
+                        font-size: 1.2em;
+                        color: $red;
+                        letter-spacing: 2px;
+                        margin-left: 2%;
+                        border-bottom: 1px dotted #e67a7a;
+                    }
+                }
+            }
+            .profileHeader {
+                font-family: $font5;
+                color: $red;
+                display: block;
+                width: 100%;
+                margin: 3% auto;
+                position: relative;
+                .fa-search {
+                    color: $red;
+                    font-size: 2em;
+                    margin: 2% 2% 0 5%;
+                    position: absolute;
+                    top: 0;
+                }
+                #searchNearMe {
+                    font-size: 1.1em;
+                    border: none;
+                    border-bottom: 2px solid $blue;
+                    padding: 1%;
+                    margin: 1% 16%;
+                    letter-spacing: 1px;
+                }
+                #searchNearMeBtn {
+                    border-radius: 2px;
+                    font-size: 20px;
+                    padding: 1% 2%;
+                    background-color: $red;
+                    color: white;
+                    border: none;
+                    right: 5%;
+                    position: absolute;
+                    bottom: 3%;
+                }
+            }
+        }
+    }
+    #headerSiteNav {
+        ul {
+            display: inline-block;
+            float: right;
+            position: absolute;
+            top: 1%;
+            right: 1%;
+            li {
+                button {
+                    border: none;
+                    background-color: $red;
+                    color: white;
+                    font-family: $font4;
+                    margin: 15%;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    border-radius: 2px;
+                }
+                span {
+                    a {
+                        color: $red;
+                        font-family: Roboto, sans-serif;
+                        letter-spacing: 1.5px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    #rightLogo {
+        display: inline;
+        i {
+            float: right;
+            color: $grey;
+            margin: 0 5%;
+            font-size: 1.5em;
+            span {
+                font-family: $font4;
+                padding: 6%;
+                font-size: 1em;
+                position: absolute;
+                right: 0;
+                color: $red;
+            }
+        }
+        #userSurvey {
+            display: none;
+            font-family: $font4;
+            text-decoration: none;
+            margin: 1.5%;
+            position: absolute;
+            top: 11%;
+            right: 0;
+            text-decoration: none;
+            color: $blue;
+            &:visited {
+                text-decoration: none;
+                color: $blue;
+            }
+        }
+        #bizSurvey {
+            display: none;
+            font-family: $font4;
+            text-decoration: none;
+            margin: 1.5%;
+            position: absolute;
+            top: 14%;
+            right: 0;
+            text-decoration: none;
+            color: $blue;
+            &:visited {
+                text-decoration: none;
+                color: $blue;
+            }
+        }
+    }
+    .options {
+        font-family: $font4;
+        #discover {
+            #liDiscover {
+                margin: 1% 2%;
+                display: inline-block;
+                border-bottom: 2px solid $red;
+                padding: 1%;
+                a {
+                    color: #9E9E9E;
+                    font-size: 1.5em;
+                    text-align: left;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                }
+            }
+            #liName {
+                margin: 0 2%;
+                display: inline-block;
+                border-bottom: 1px dotted $red;
+                padding: 1%;
+                a {
+                    color: #9E9E9E;
+                    font-size: 1.5em;
+                    text-align: left;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                }
+                &:hover {
+                    border-bottom: 1px solid $red;
+                }
+            }
+        }
+        #loading {
+            color: $blue;
+            margin: 5%;
+            display: block;
+            letter-spacing: 1.5px;
+            font-family: $font4;
+            background: $tan;
+            border: 1px solid $blue;
+            font-size: 1.25em;
+            border-radius: 2px;
+            padding: 2% 5%;
+        }
+    }
+    .ngDashboard {
+        font-family: $font4;
+        margin-bottom: 20%;
+        .biz {
+            border: 1px solid #E67A7A;
+            border-radius: 2px;
+            padding: 5% 2% 5% 5%;
+            margin: 4%;
+            display: block;
+            box-shadow: 1px 1px 10px 0 rgba(128, 128, 128, 0.27);
+            #chevron {
+                margin: 1%;
+                color: $red;
+                float: right;
+            }
+            img {
+                width: 10%;
+            }
+            #bizName {
+                font-size: 1.5em;
+                font-family: $font4;
+                letter-spacing: 2px;
+                color: $darkGrey;
+            }
+            #bizOwner {
+                font-size: 1em;
+                letter-spacing: 1.5px;
+                color: $darkGrey;
+                margin: 3% 0;
+            }
+            #bizInfo {
+                font-size: 1em;
+                color: $darkGrey;
+                margin: 3%;
+                #yelp {
+                    margin: 1%;
+                    color: $red;
+                    float: right;
+                }
+            }
+        }
+    }
+}

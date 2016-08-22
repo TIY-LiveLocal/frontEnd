@@ -1,0 +1,96 @@
+<header id=headerNavBar>
+    <div class="logo">
+        <h1 id="pearlH1"><a href="#/you">Pearl</a></h1>
+        <img src="assets/img/pearlLogo-1.svg" alt="" />
+
+        <div class="dropdownMenu">
+            <button ng-click="dropDown = !dropDown" class="dropdownbtn">
+                <i class="fa fa-bars" id="hamburgerNav" aria-hidden="true"></i>
+            </button>
+            <div class="dropdownMenu-list" ng-show="dropDown">
+                <a class="dropdownMenu-list--item" href="#/dashboard">Home</a>
+                <a class="dropdownMenu-list--item" href="#/search">Search</a>
+                <a class="dropdownMenu-list--item" href="#/edit">Settings</a>
+                <a class="dropdownMenu-list--item" href="#/logout">Logout</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<main id="mainDashboard">
+    <div id="matches">
+        <h2 id="loading" ng-if="!matches">Finding Treasures...</h2>
+
+        <div class="userResults">
+            <h3>Based on your survey results: </h3>
+            <img class='badges' src="assets/img/localartcrafts.svg" ng-if="userResults.artsCrafts===true" height="30" width="30">
+            <img class='badges' src="assets/img/currentlyhiring.svg" ng-if="userResults.hiring===true" height="30" width="30">
+            <img class='badges' src="assets/img/glutenfree.svg" ng-if="userResults.glutFree===true" height="30" width="30">
+            <img class='badges' src="assets/img/localmusic.svg" ng-if="userResults.musicians===true" height="30" width="30">
+            <img class='badges' src="assets/img/lgbtfriendly.svg" ng-if="userResults.lgbt===true" height="30" width="30">
+            <img class='badges' src="assets/img/livingwage.svg" ng-if="userResults.livWage===true" height="30" width="30">
+            <img class='badges' src="assets/img/locallysourcedfood.svg" ng-if="userResults.localFood===true" height="30" width="30">
+            <img class='badges' src="assets/img/minorityowned.svg" ng-if="userResults.minorityOwned===true" height="30" width="30">
+            <img class='badges' src="assets/img/petfriendly.svg" ng-if="userResults.petFriend===true" height="30" width="30">
+            <img class='badges' src="assets/img/charitiesnonprofits.svg" ng-if="userResults.charNonprof===true" height="30" width="30">
+            <img class='badges' src="assets/img/sustainablepractices.svg" ng-if="userResults.sustain===true" height="30" width="30">
+            <img class='badges' src="assets/img/veganpeta.svg" ng-if="userResults.veganPeta===true" height="30" width="30">
+        </div>
+
+
+
+        <!-- MATCH TEST -->
+        <ul class="ngDashboard">
+            <li ng-repeat="match in matches" class="match" id={{match.id}} ng-click="viewBiz()">
+                <a href="#/business" id="chevron">
+                    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                </a>
+                <div id="matchName"> {{match.name}}</div>
+                <div id="matchOwner"> {{match.owner}}</div>
+                <div id="matchOwner">{{match.address}}</div>
+                <div id="matchOwner">{{match.city}}</div>
+                <div id="matchInfo">
+                    <!-- <a href="tel:+{{match.phone}}" class="phone">{{match.phone}}</a> -->
+                    <br>
+
+
+
+                    <a href="{{match.website_url}}" id="yelp">
+                        <i class="fa fa-yelp" aria-hidden="true"></i>
+                    </a>
+
+
+
+                    <img class='badges' src="assets/img/localartcrafts.svg" ng-if="match.artsCrafts===true" height="30" width="30">
+                    <img class='badges' src="assets/img/currentlyhiring.svg" ng-if="match.hiring===true" height="30" width="30">
+                    <img class='badges' src="assets/img/glutenfree.svg" ng-if="match.glutFree===true" height="30" width="30">
+                    <img class='badges' src="assets/img/localmusic.svg" ng-if="match.musicians===true" height="30" width="30">
+                    <img class='badges' src="assets/img/lgbtfriendly.svg" ng-if="match.lgbt===true" height="30" width="30">
+                    <img class='badges' src="assets/img/livingwage.svg" ng-if="match.livWage===true" height="30" width="30">
+                    <img class='badges' src="assets/img/locallysourcedfood.svg" ng-if="match.localFood===true" height="30" width="30">
+                    <img class='badges' src="assets/img/minorityowned.svg" ng-if="match.minorityOwned===true" height="30" width="30">
+                    <img class='badges' src="assets/img/petfriendly.svg" ng-if="match.petFriend===true" height="30" width="30">
+                    <img class='badges' src="assets/img/charitiesnonprofits.svg" ng-if="match.charNonprof===true" height="30" width="30">
+                    <img class='badges' src="assets/img/sustainablepractices.svg" ng-if="match.sustain===true" height="30" width="30">
+                    <img class='badges' src="assets/img/veganpeta.svg" ng-if="match.veganPeta===true" height="30" width="30">
+                    <i class="fa fa-hand" ng-if="match.claimBusiness===true"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<footer id="bottomWrapper">
+    <a href="#/discover">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+    </a>
+
+    <a href="#/you">
+        <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
+
+    <a href="#/search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </a>
+</footer>

@@ -348,69 +348,78 @@ select:-webkit-autofill:focus {
     font-family: "Arimo", sans-serif; }
     #loginPage input:focus {
       outline: none; }
-    #loginPage .loginWrap .leftWrap {
-      width: 100%; }
-      #loginPage .loginWrap .leftWrap h2 {
-        box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-        padding: 2% 50% 2% 30%;
-        margin: 5% 0;
-        font-family: "Arvo", serif;
-        color: #E67A7A;
-        font-size: 5em;
-        position: absolute; }
-      #loginPage .loginWrap .leftWrap img {
+    #loginPage .loginWrap {
+      margin-top: 1%; }
+      #loginPage .loginWrap .leftWrap {
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        width: 50%; }
+        #loginPage .loginWrap .leftWrap h2 {
+          box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          padding: 0% 0% 0% 50%;
+          margin: 10% 0 0;
+          font-family: "Arvo", serif;
+          color: #E67A7A;
+          font-size: 5em;
+          position: absolute; }
+        #loginPage .loginWrap .leftWrap img {
+          width: 40%;
+          position: absolute;
+          z-index: -1;
+          margin: 0% auto; }
+      #loginPage .loginWrap .rightWrap {
         width: 100%;
         position: absolute;
-        z-index: -1;
-        margin: -20% 0; }
-    #loginPage .loginWrap .rightWrap {
-      width: 100%;
-      position: absolute; }
-      #loginPage .loginWrap .rightWrap .new_user {
-        margin: 20% 0 2%; }
-        #loginPage .loginWrap .rightWrap .new_user .field {
-          width: 30%;
-          margin: 1% 22%; }
-          #loginPage .loginWrap .rightWrap .new_user .field #user_email {
-            font-size: 1.1em;
-            border: none;
-            border-bottom: 1px solid #9DDCDC;
-            padding: 2%;
-            width: 100%;
-            height: 2em;
-            letter-spacing: 2px; }
-          #loginPage .loginWrap .rightWrap .new_user .field #user_password {
-            font-size: 1.1em;
-            border: none;
-            border-bottom: 1px solid #9DDCDC;
-            padding: 2%;
-            width: 100%;
-            height: 2em;
-            letter-spacing: 2px; }
-          #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
-            font-size: .75em; }
-        #loginPage .loginWrap .rightWrap .new_user .actions {
-          margin: 3% 19%; }
-          #loginPage .loginWrap .rightWrap .new_user .actions input {
-            background: #E67A7A;
-            color: white;
-            border: none;
-            padding: 2% 25%;
-            margin: 0.5%;
-            font-size: 1em;
-            font-weight: 500;
-            border-radius: 1px;
-            letter-spacing: 2px; }
-      #loginPage .loginWrap .rightWrap .help {
-        margin: 1% 22%;
-        display: block;
-        font-size: .6em;
-        color: #2a7777;
-        line-height: 2em;
-        letter-spacing: 2px; }
-        #loginPage .loginWrap .rightWrap .help:visited {
-          color: #3aa2a2; } }
+        margin: 2% auto;
+        text-align: center; }
+        #loginPage .loginWrap .rightWrap .new_user {
+          margin: 19% auto 0; }
+          #loginPage .loginWrap .rightWrap .new_user .field {
+            width: 35%;
+            margin: 3% 35%; }
+            #loginPage .loginWrap .rightWrap .new_user .field #user_email {
+              font-size: 1.5em;
+              border: none;
+              border-bottom: 1px solid #9DDCDC;
+              padding: 2%;
+              width: 100%;
+              height: 2em;
+              letter-spacing: 2px; }
+            #loginPage .loginWrap .rightWrap .new_user .field #user_password {
+              font-size: 1.5em;
+              border: none;
+              border-bottom: 1px solid #9DDCDC;
+              padding: 2%;
+              width: 100%;
+              height: 2em;
+              letter-spacing: 2px; }
+            #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
+              font-size: .75em; }
+          #loginPage .loginWrap .rightWrap .new_user .actions {
+            margin: 4% auto;
+            text-align: center; }
+            #loginPage .loginWrap .rightWrap .new_user .actions input {
+              background: #E67A7A;
+              color: white;
+              border: none;
+              padding: 2% 16%;
+              margin: 0% 0 0 8%;
+              font-size: 1.5em;
+              font-weight: 500;
+              border-radius: 1px;
+              letter-spacing: 2px; }
+        #loginPage .loginWrap .rightWrap .help {
+          margin: 0 4%;
+          display: inline-block;
+          border-bottom: 1px solid #9DDCDC;
+          font-size: .8em;
+          color: #2a7777;
+          line-height: 2em;
+          letter-spacing: 2px; }
+          #loginPage .loginWrap .rightWrap .help:visited {
+            color: #3aa2a2; } }
 @media only screen and (min-width: 480px) and (max-width: 1020px) {
   #loginPage {
     width: 100%;
@@ -420,7 +429,7 @@ select:-webkit-autofill:focus {
       outline: none; }
     #loginPage .loginWrap {
       position: relative;
-      margin: 5%; }
+      margin: 0 5%; }
       #loginPage .loginWrap .leftWrap {
         width: 100%;
         position: absolute; }
@@ -434,15 +443,16 @@ select:-webkit-autofill:focus {
           border-radius: 50%;
           letter-spacing: 2px; }
         #loginPage .loginWrap .leftWrap img {
-          width: 100%;
+          width: 60%;
           position: absolute;
           top: 0;
-          margin: -40% 0%;
+          left: 20%;
+          margin: -20% auto;
           z-index: -1; }
       #loginPage .loginWrap .rightWrap {
         width: 100%;
         position: absolute;
-        margin: 50% 0 0; }
+        margin: 40% 0 0; }
         #loginPage .loginWrap .rightWrap .new_user .field {
           width: 80%;
           margin: 0em auto;
@@ -465,7 +475,7 @@ select:-webkit-autofill:focus {
           #loginPage .loginWrap .rightWrap .new_user .field .rememberMe {
             font-size: .75em; }
         #loginPage .loginWrap .rightWrap .new_user .actions {
-          margin: 5% 10% 5%; }
+          margin: 0% 5% 0%; }
           #loginPage .loginWrap .rightWrap .new_user .actions input {
             width: 100%;
             background: #E67A7A;
@@ -589,6 +599,198 @@ a {
     text-decoration: none;
     color: #E67A7A; }
 
+@media only screen and (min-width: 1020px) {
+  #signUp #signupheaderwrap {
+    font-family: "Arvo", serif;
+    color: #E67A7A;
+    margin: 0 auto;
+    width: 70%; }
+    #signUp #signupheaderwrap #Pearl {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 4em;
+      padding: 3% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px white; }
+    #signUp #signupheaderwrap #ll-pearl {
+      width: 50%;
+      position: absolute;
+      top: -40%;
+      z-index: -1;
+      left: 25%; }
+  #signUp .signUpWrap {
+    margin: -1% 20%;
+    background: white; }
+    #signUp .signUpWrap .signUpForm {
+      border: 5px solid #E67A7A;
+      border-radius: 2px;
+      padding-bottom: 2%;
+      margin-bottom: 2%;
+      text-align: center;
+      box-shadow: 0px 2px 10px 5px white; }
+      #signUp .signUpWrap .signUpForm #sign_header {
+        padding: 3%;
+        background: #E67A7A;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        letter-spacing: 2px;
+        font-weight: 700; }
+      #signUp .signUpWrap .signUpForm #first_name_ib {
+        display: inline-block;
+        width: auto;
+        margin: 2%;
+        text-align: center; }
+      #signUp .signUpWrap .signUpForm #last_name_ib {
+        display: inline-block;
+        width: auto;
+        margin: 2%;
+        text-align: center; }
+      #signUp .signUpWrap .signUpForm #signUpZipcode {
+        width: auto;
+        text-align: center; }
+      #signUp .signUpWrap .signUpForm .signUpInput {
+        width: auto;
+        margin: 2%;
+        text-align: center;
+        display: inline-block;
+        font-size: 1em;
+        border: none;
+        border-bottom: 1px solid #9DDCDC;
+        padding: 1%;
+        line-height: 3; }
+        #signUp .signUpWrap .signUpForm .signUpInput:focus {
+          outline: none; }
+        #signUp .signUpWrap .signUpForm .signUpInput input {
+          font-size: 1.4em;
+          border: none;
+          display: inline-block; }
+          #signUp .signUpWrap .signUpForm .signUpInput input:focus {
+            outline: none; }
+        #signUp .signUpWrap .signUpForm .signUpInput span {
+          float: right;
+          background: #FFF4E1;
+          color: #2a7777;
+          font-family: "Roboto", sans-serif;
+          border: 1px solid #9DDCDC;
+          border-radius: 2px; }
+    #signUp .signUpWrap #getstartedSignup {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      padding: 4% 6%;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin: 0 auto;
+      margin-bottom: 1%; }
+    #signUp .signUpWrap .signUpForm.ng-invalid {
+      border: 1px solid red; } }
+@media only screen and (min-width: 480px) and (max-width: 1020px) {
+  #signUp #signupheaderwrap {
+    font-family: "Arvo", serif;
+    color: #E67A7A;
+    margin: 0 auto;
+    width: 70%; }
+    #signUp #signupheaderwrap #Pearl {
+      font-family: "Arvo", serif;
+      color: #E67A7A;
+      text-align: center;
+      font-size: 4em;
+      padding: 3% 0;
+      box-shadow: 0px 10px 100px 20px rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px white; }
+    #signUp #signupheaderwrap #ll-pearl {
+      width: 75%;
+      position: absolute;
+      top: -20%;
+      z-index: -1;
+      left: 20%; }
+  #signUp .signUpWrap {
+    margin: 0 5%;
+    background: white; }
+    #signUp .signUpWrap .signUpForm {
+      border: 5px solid #E67A7A;
+      border-radius: 2px;
+      padding-bottom: 2%;
+      margin-bottom: 2%;
+      text-align: center;
+      box-shadow: 0px 2px 10px 5px white; }
+      #signUp .signUpWrap .signUpForm #sign_header {
+        padding: 3%;
+        background: #E67A7A;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        letter-spacing: 2px;
+        font-weight: 700; }
+      #signUp .signUpWrap .signUpForm #first_name_ib {
+        display: inline-block;
+        width: auto;
+        margin: 2%;
+        text-align: center; }
+      #signUp .signUpWrap .signUpForm #last_name_ib {
+        display: inline-block;
+        width: auto;
+        margin: 2%;
+        text-align: center; }
+      #signUp .signUpWrap .signUpForm #signUpZipcode {
+        width: auto;
+        text-align: center; }
+      #signUp .signUpWrap .signUpForm .signUpInput {
+        width: auto;
+        margin: 2%;
+        text-align: center;
+        display: inline-block;
+        font-size: 1em;
+        border: none;
+        border-bottom: 1px solid #9DDCDC;
+        padding: 1%;
+        line-height: 3; }
+        #signUp .signUpWrap .signUpForm .signUpInput:focus {
+          outline: none; }
+        #signUp .signUpWrap .signUpForm .signUpInput input {
+          font-size: 1.4em;
+          border: none;
+          display: inline-block; }
+          #signUp .signUpWrap .signUpForm .signUpInput input:focus {
+            outline: none; }
+        #signUp .signUpWrap .signUpForm .signUpInput span {
+          float: right;
+          background: #FFF4E1;
+          color: #2a7777;
+          font-family: "Roboto", sans-serif;
+          border: 1px solid #9DDCDC;
+          border-radius: 2px; }
+    #signUp .signUpWrap #getstartedSignup {
+      background: #E67A7A;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      padding: 4% 6%;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin: 0 auto;
+      margin-bottom: 1%; }
+    #signUp .signUpWrap .signUpForm.ng-invalid {
+      border: 1px solid red; } }
 @media only screen and (max-width: 480px) {
   #signUp #signupheaderwrap {
     width: 70%;

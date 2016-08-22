@@ -1,6 +1,9 @@
 ////////////  DESKTOP VIEW  ////////////
 @media only screen
   and (min-width: 1020px) {
+    #bottomWrapper{
+      display: none;
+    }
   }
 ////////////  TABLET VIEW  ////////////
 @media only screen

@@ -60,6 +60,60 @@
 @media only screen
   and (min-width: 480px)
   and (max-width: 1020px){
+    #mainDashboard {
+        top: 12.5%;
+        width: 80%;
+        margin: auto;
+        #loading{
+          margin-top: 15em;
+          padding: 1em;
+          border: solid $blue .05em;
+          background-color: $tan;
+          color: $blue;
+          font-family: $font4;
+        }
+        .userResults {
+            padding-top: 6em;
+            color: $blue;
+            font-family: $font5;
+            font-size: 2em;
+            #dash_zip{
+              padding-top: 2em;
+            }
+            .badges{
+              padding-top: .75em;
+            }
+        }
+        ul {
+            width: 100%;
+            li {
+                position: relative;
+                left: -4%;
+                width: 100%;
+                color: $darkGrey;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+                font-family: $font4;
+                border: $red solid 0.15em;
+                border-radius: 0.5em;
+                margin: 1% 2%;
+                padding: 1% 2%;
+                box-shadow: 0.2em 0.2em 1em 0 rgba(128, 128, 128, 0.27);
+                .fa-chevron-right {
+                    display: inline;
+                    top: 1.25em;
+                    color: $red;
+                    size: 2.5em;
+                    position: relative;
+                    left: 90%;
+                    padding: 5% 1%;
+                }
+                .fa-yelp {
+                    color: $blue;
+                }
+            }
+        }
+    }
   }
 ////////////  MOBILE VIEW  ////////////
 @media only screen and (max-width: 480px) {

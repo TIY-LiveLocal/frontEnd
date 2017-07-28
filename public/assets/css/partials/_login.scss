@@ -1,7 +1,17 @@
 ////////////  DESKTOP VIEW  ////////////
 @media only screen
   and (min-width: 1020px) {
+    .woopsWrongScreen{
+      width: 40%;
+      font-size: 3em;
+      color: #9E9E9E;
+      margin: 0 auto;
+      padding-top: 10%;
+      text-align: center;
+      font-family: 'Roboto'
+    }
   #loginPage{
+    display: none;
     width: 100%;
     margin: 0 auto;
     font-family: $font2;
@@ -11,6 +21,7 @@
       }
     }
     .loginWrap{
+      display: none;
       margin-top: 1%;
       .leftWrap{
         margin: 0 auto;
@@ -106,6 +117,9 @@
 @media only screen
   and (min-width: 480px)
   and (max-width: 1020px){
+    .woopsWrongScreen{
+      display: none;
+    }
   #loginPage{
     width: 100%;
     margin: 0 auto;
@@ -224,6 +238,9 @@
         outline: none;
       }
     }
+    .woopsWrongScreen{
+      display: none;
+      }
     .loginWrap{
       .leftWrap{
         width: 100%;
